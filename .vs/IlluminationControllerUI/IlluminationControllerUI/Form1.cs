@@ -136,6 +136,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(A_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(A_red_value, A_green_value, A_blue_value);
+                A_status.BackColor = newColour;
             }
 
         }
@@ -244,6 +246,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(A_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(A_red_value, A_green_value, A_blue_value);
+                A_status.BackColor = newColour;
             }
         }
 
@@ -331,6 +335,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(A_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(A_red_value, A_green_value, A_blue_value);
+                A_status.BackColor = newColour;
             }
 
         }
@@ -397,6 +403,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(B_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(B_red_value, B_green_value, B_blue_value);
+                B_status.BackColor = newColour;
             }
         }
 
@@ -414,6 +422,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(B_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(B_red_value, B_green_value, B_blue_value);
+                B_status.BackColor = newColour;
             }
         }
 
@@ -431,6 +441,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(B_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(B_red_value, B_green_value, B_blue_value);
+                B_status.BackColor = newColour;
             }
         }
 
@@ -494,6 +506,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(C_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(C_red_value, C_green_value, C_blue_value);
+                C_status.BackColor = newColour;
             }
         }
 
@@ -511,6 +525,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(C_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(C_red_value, C_green_value, C_blue_value);
+                C_status.BackColor = newColour;
             }
         }
 
@@ -528,6 +544,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(C_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(C_red_value, C_green_value, C_blue_value);
+                C_status.BackColor = newColour;
             }
         }
 
@@ -590,6 +608,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(D_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(D_red_value, D_green_value, D_blue_value);
+                D_status.BackColor = newColour;
             }
         }
 
@@ -607,6 +627,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(D_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(D_red_value, D_green_value, D_blue_value);
+                D_status.BackColor = newColour;
             }
         }
 
@@ -624,6 +646,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(D_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(D_red_value, D_green_value, D_blue_value);
+                D_status.BackColor = newColour;
             }
         }
 
@@ -686,6 +710,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(E_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(E_red_value, E_green_value, E_blue_value);
+                E_status.BackColor = newColour;
             }
         }
 
@@ -703,6 +729,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(E_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(E_red_value, E_green_value, E_blue_value);
+                E_status.BackColor = newColour;
             }
         }
 
@@ -720,6 +748,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(E_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(E_red_value, E_green_value, E_blue_value);
+                E_status.BackColor = newColour;
             }
         }
 
@@ -782,6 +812,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(F_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(F_red_value, F_green_value, F_blue_value);
+                F_status.BackColor = newColour;
             }
         }
 
@@ -799,6 +831,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(F_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(F_red_value, F_green_value, F_blue_value);
+                F_status.BackColor = newColour;
             }
         }
 
@@ -816,6 +850,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(F_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(F_red_value, F_green_value, F_blue_value);
+                F_status.BackColor = newColour;
             }
         }
 
@@ -878,6 +914,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(G_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(G_red_value, G_green_value, G_blue_value);
+                G_status.BackColor = newColour;
             }
         }
 
@@ -895,6 +933,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(G_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(G_red_value, G_green_value, G_blue_value);
+                G_status.BackColor = newColour;
             }
         }
 
@@ -912,6 +952,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(G_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(G_red_value, G_green_value, G_blue_value);
+                G_status.BackColor = newColour;
             }
         }
 
@@ -937,6 +979,7 @@ namespace IlluminationControllerUI
             if (intervals_valid(H_on_interval))
             {
                 Console.WriteLine("Interval Values are valid");
+                
             }
         }
 
@@ -974,6 +1017,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(H_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(H_red_value, H_green_value, H_blue_value);
+                H_status.BackColor = newColour;
             }
         }
 
@@ -991,6 +1036,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(H_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(H_red_value, H_green_value, H_blue_value);
+                H_status.BackColor = newColour;
             }
         }
 
@@ -1008,6 +1055,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(H_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(H_red_value, H_green_value, H_blue_value);
+                H_status.BackColor = newColour;
             }
         }
 
@@ -1070,6 +1119,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(I_red_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(I_red_value, I_green_value, I_blue_value);
+                I_status.BackColor = newColour;
             }
         }
 
@@ -1087,6 +1138,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(I_green_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(I_red_value, I_green_value, I_blue_value);
+                I_status.BackColor = newColour;
             }
         }
 
@@ -1104,6 +1157,8 @@ namespace IlluminationControllerUI
             if (rgb_valid(I_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
+                Color newColour = Color.FromArgb(I_red_value, I_green_value, I_blue_value);
+                I_status.BackColor = newColour;
             }
         }
 
