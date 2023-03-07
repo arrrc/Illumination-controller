@@ -220,6 +220,15 @@
             this.settingsButton = new System.Windows.Forms.Button();
             this.filenameDate = new System.Windows.Forms.Label();
             this.filenameTitle = new System.Windows.Forms.Label();
+            this.IntensityA = new System.Windows.Forms.Label();
+            this.intensityD = new System.Windows.Forms.Label();
+            this.InetnsityG = new System.Windows.Forms.Label();
+            this.intensityB = new System.Windows.Forms.Label();
+            this.IntensityE = new System.Windows.Forms.Label();
+            this.IntensityH = new System.Windows.Forms.Label();
+            this.intensityC = new System.Windows.Forms.Label();
+            this.IntensityF = new System.Windows.Forms.Label();
+            this.IntensityI = new System.Windows.Forms.Label();
             filedate1 = new System.Windows.Forms.Label();
             filedate2 = new System.Windows.Forms.Label();
             filedate3 = new System.Windows.Forms.Label();
@@ -317,6 +326,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.IntensityA);
             this.panel4.Controls.Add(this.A_intensity);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label9);
@@ -409,6 +419,7 @@
             this.A_red.Name = "A_red";
             this.A_red.Size = new System.Drawing.Size(40, 20);
             this.A_red.TabIndex = 6;
+            this.A_red.TextChanged += new System.EventHandler(this.A_red_TextChanged);
             // 
             // A_green
             // 
@@ -435,6 +446,7 @@
             this.A_blue.Name = "A_blue";
             this.A_blue.Size = new System.Drawing.Size(40, 20);
             this.A_blue.TabIndex = 8;
+            this.A_blue.TextChanged += new System.EventHandler(this.A_blue_TextChanged);
             // 
             // button4
             // 
@@ -471,6 +483,7 @@
             this.A_on.Name = "A_on";
             this.A_on.Size = new System.Drawing.Size(40, 20);
             this.A_on.TabIndex = 9;
+            this.A_on.TextChanged += new System.EventHandler(this.A_on_TextChanged);
             // 
             // A_off
             // 
@@ -478,6 +491,7 @@
             this.A_off.Name = "A_off";
             this.A_off.Size = new System.Drawing.Size(40, 20);
             this.A_off.TabIndex = 11;
+            this.A_off.TextChanged += new System.EventHandler(this.A_off_TextChanged);
             // 
             // label7
             // 
@@ -524,9 +538,11 @@
             this.A_intensity.Name = "A_intensity";
             this.A_intensity.Size = new System.Drawing.Size(202, 45);
             this.A_intensity.TabIndex = 16;
+            this.A_intensity.Scroll += new System.EventHandler(this.A_intensity_Scroll);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.intensityC);
             this.panel6.Controls.Add(this.C_trackbar);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label12);
@@ -556,6 +572,7 @@
             this.C_trackbar.Name = "C_trackbar";
             this.C_trackbar.Size = new System.Drawing.Size(202, 45);
             this.C_trackbar.TabIndex = 16;
+            this.C_trackbar.Scroll += new System.EventHandler(this.C_trackbar_Scroll);
             // 
             // label11
             // 
@@ -599,6 +616,7 @@
             this.C_blue.Name = "C_blue";
             this.C_blue.Size = new System.Drawing.Size(40, 20);
             this.C_blue.TabIndex = 8;
+            this.C_blue.TextChanged += new System.EventHandler(this.C_blue_TextChanged);
             // 
             // button5
             // 
@@ -616,6 +634,7 @@
             this.C_off.Name = "C_off";
             this.C_off.Size = new System.Drawing.Size(40, 20);
             this.C_off.TabIndex = 11;
+            this.C_off.TextChanged += new System.EventHandler(this.C_off_TextChanged);
             // 
             // C_on
             // 
@@ -623,6 +642,7 @@
             this.C_on.Name = "C_on";
             this.C_on.Size = new System.Drawing.Size(40, 20);
             this.C_on.TabIndex = 9;
+            this.C_on.TextChanged += new System.EventHandler(this.C_on_TextChanged);
             // 
             // label15
             // 
@@ -648,6 +668,7 @@
             this.C_red.Name = "C_red";
             this.C_red.Size = new System.Drawing.Size(40, 20);
             this.C_red.TabIndex = 6;
+            this.C_red.TextChanged += new System.EventHandler(this.C_red_TextChanged);
             // 
             // button6
             // 
@@ -685,6 +706,7 @@
             this.C_green.Name = "C_green";
             this.C_green.Size = new System.Drawing.Size(40, 20);
             this.C_green.TabIndex = 8;
+            this.C_green.TextChanged += new System.EventHandler(this.C_green_TextChanged);
             // 
             // button8
             // 
@@ -698,6 +720,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.intensityB);
             this.panel5.Controls.Add(this.B_trackbar);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label19);
@@ -727,6 +750,7 @@
             this.B_trackbar.Name = "B_trackbar";
             this.B_trackbar.Size = new System.Drawing.Size(202, 45);
             this.B_trackbar.TabIndex = 16;
+            this.B_trackbar.Scroll += new System.EventHandler(this.B_trackbar_Scroll);
             // 
             // label18
             // 
@@ -770,6 +794,7 @@
             this.B_blue.Name = "B_blue";
             this.B_blue.Size = new System.Drawing.Size(40, 20);
             this.B_blue.TabIndex = 8;
+            this.B_blue.TextChanged += new System.EventHandler(this.B_blue_TextChanged);
             // 
             // button9
             // 
@@ -787,6 +812,7 @@
             this.B_off.Name = "B_off";
             this.B_off.Size = new System.Drawing.Size(40, 20);
             this.B_off.TabIndex = 11;
+            this.B_off.TextChanged += new System.EventHandler(this.B_off_TextChanged);
             // 
             // B_on
             // 
@@ -794,6 +820,7 @@
             this.B_on.Name = "B_on";
             this.B_on.Size = new System.Drawing.Size(40, 20);
             this.B_on.TabIndex = 9;
+            this.B_on.TextChanged += new System.EventHandler(this.B_on_TextChanged);
             // 
             // label22
             // 
@@ -819,6 +846,7 @@
             this.B_red.Name = "B_red";
             this.B_red.Size = new System.Drawing.Size(40, 20);
             this.B_red.TabIndex = 6;
+            this.B_red.TextChanged += new System.EventHandler(this.B_red_TextChanged);
             // 
             // button10
             // 
@@ -855,6 +883,7 @@
             this.B_green.Name = "B_green";
             this.B_green.Size = new System.Drawing.Size(40, 20);
             this.B_green.TabIndex = 8;
+            this.B_green.TextChanged += new System.EventHandler(this.B_green_TextChanged);
             // 
             // button12
             // 
@@ -896,6 +925,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.intensityD);
             this.panel7.Controls.Add(this.D_trackbar);
             this.panel7.Controls.Add(this.label28);
             this.panel7.Controls.Add(this.label29);
@@ -925,6 +955,7 @@
             this.D_trackbar.Name = "D_trackbar";
             this.D_trackbar.Size = new System.Drawing.Size(202, 45);
             this.D_trackbar.TabIndex = 16;
+            this.D_trackbar.Scroll += new System.EventHandler(this.D_trackbar_Scroll);
             // 
             // label28
             // 
@@ -968,6 +999,7 @@
             this.D_blue.Name = "D_blue";
             this.D_blue.Size = new System.Drawing.Size(40, 20);
             this.D_blue.TabIndex = 8;
+            this.D_blue.TextChanged += new System.EventHandler(this.D_blue_TextChanged);
             // 
             // button13
             // 
@@ -985,6 +1017,7 @@
             this.D_off.Name = "D_off";
             this.D_off.Size = new System.Drawing.Size(40, 20);
             this.D_off.TabIndex = 11;
+            this.D_off.TextChanged += new System.EventHandler(this.D_off_TextChanged);
             // 
             // D_on
             // 
@@ -992,6 +1025,7 @@
             this.D_on.Name = "D_on";
             this.D_on.Size = new System.Drawing.Size(40, 20);
             this.D_on.TabIndex = 9;
+            this.D_on.TextChanged += new System.EventHandler(this.D_on_TextChanged);
             // 
             // label32
             // 
@@ -1017,6 +1051,7 @@
             this.D_red.Name = "D_red";
             this.D_red.Size = new System.Drawing.Size(40, 20);
             this.D_red.TabIndex = 6;
+            this.D_red.TextChanged += new System.EventHandler(this.D_red_TextChanged);
             // 
             // button14
             // 
@@ -1053,6 +1088,7 @@
             this.D_green.Name = "D_green";
             this.D_green.Size = new System.Drawing.Size(40, 20);
             this.D_green.TabIndex = 8;
+            this.D_green.TextChanged += new System.EventHandler(this.D_green_TextChanged);
             // 
             // button16
             // 
@@ -1066,6 +1102,7 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.IntensityE);
             this.panel8.Controls.Add(this.E_trackbar);
             this.panel8.Controls.Add(this.label35);
             this.panel8.Controls.Add(this.label36);
@@ -1094,6 +1131,7 @@
             this.E_trackbar.Name = "E_trackbar";
             this.E_trackbar.Size = new System.Drawing.Size(202, 45);
             this.E_trackbar.TabIndex = 16;
+            this.E_trackbar.Scroll += new System.EventHandler(this.E_trackbar_Scroll);
             // 
             // label35
             // 
@@ -1137,6 +1175,7 @@
             this.E_blue.Name = "E_blue";
             this.E_blue.Size = new System.Drawing.Size(40, 20);
             this.E_blue.TabIndex = 8;
+            this.E_blue.TextChanged += new System.EventHandler(this.E_blue_TextChanged);
             // 
             // button17
             // 
@@ -1154,6 +1193,7 @@
             this.E_off.Name = "E_off";
             this.E_off.Size = new System.Drawing.Size(40, 20);
             this.E_off.TabIndex = 11;
+            this.E_off.TextChanged += new System.EventHandler(this.E_off_TextChanged);
             // 
             // E_on
             // 
@@ -1161,6 +1201,7 @@
             this.E_on.Name = "E_on";
             this.E_on.Size = new System.Drawing.Size(40, 20);
             this.E_on.TabIndex = 9;
+            this.E_on.TextChanged += new System.EventHandler(this.E_on_TextChanged);
             // 
             // label39
             // 
@@ -1186,6 +1227,7 @@
             this.E_red.Name = "E_red";
             this.E_red.Size = new System.Drawing.Size(40, 20);
             this.E_red.TabIndex = 6;
+            this.E_red.TextChanged += new System.EventHandler(this.E_red_TextChanged);
             // 
             // button18
             // 
@@ -1222,6 +1264,7 @@
             this.E_green.Name = "E_green";
             this.E_green.Size = new System.Drawing.Size(40, 20);
             this.E_green.TabIndex = 8;
+            this.E_green.TextChanged += new System.EventHandler(this.E_green_TextChanged);
             // 
             // button20
             // 
@@ -1235,6 +1278,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.IntensityF);
             this.panel9.Controls.Add(this.F_trackbar);
             this.panel9.Controls.Add(this.label42);
             this.panel9.Controls.Add(this.label43);
@@ -1263,6 +1307,7 @@
             this.F_trackbar.Name = "F_trackbar";
             this.F_trackbar.Size = new System.Drawing.Size(202, 45);
             this.F_trackbar.TabIndex = 16;
+            this.F_trackbar.Scroll += new System.EventHandler(this.F_trackbar_Scroll);
             // 
             // label42
             // 
@@ -1306,6 +1351,7 @@
             this.F_blue.Name = "F_blue";
             this.F_blue.Size = new System.Drawing.Size(40, 20);
             this.F_blue.TabIndex = 8;
+            this.F_blue.TextChanged += new System.EventHandler(this.F_blue_TextChanged);
             // 
             // button21
             // 
@@ -1323,6 +1369,7 @@
             this.F_off.Name = "F_off";
             this.F_off.Size = new System.Drawing.Size(40, 20);
             this.F_off.TabIndex = 11;
+            this.F_off.TextChanged += new System.EventHandler(this.F_off_TextChanged);
             // 
             // F_on
             // 
@@ -1330,6 +1377,7 @@
             this.F_on.Name = "F_on";
             this.F_on.Size = new System.Drawing.Size(40, 20);
             this.F_on.TabIndex = 9;
+            this.F_on.TextChanged += new System.EventHandler(this.F_on_TextChanged);
             // 
             // label46
             // 
@@ -1355,6 +1403,7 @@
             this.F_red.Name = "F_red";
             this.F_red.Size = new System.Drawing.Size(40, 20);
             this.F_red.TabIndex = 6;
+            this.F_red.TextChanged += new System.EventHandler(this.F_red_TextChanged);
             // 
             // button22
             // 
@@ -1391,6 +1440,7 @@
             this.F_green.Name = "F_green";
             this.F_green.Size = new System.Drawing.Size(40, 20);
             this.F_green.TabIndex = 8;
+            this.F_green.TextChanged += new System.EventHandler(this.F_green_TextChanged);
             // 
             // button24
             // 
@@ -1432,6 +1482,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.InetnsityG);
             this.panel10.Controls.Add(this.G_trackbar);
             this.panel10.Controls.Add(this.label52);
             this.panel10.Controls.Add(this.label53);
@@ -1460,6 +1511,7 @@
             this.G_trackbar.Name = "G_trackbar";
             this.G_trackbar.Size = new System.Drawing.Size(202, 45);
             this.G_trackbar.TabIndex = 16;
+            this.G_trackbar.Scroll += new System.EventHandler(this.G_trackbar_Scroll);
             // 
             // label52
             // 
@@ -1503,6 +1555,7 @@
             this.G_blue.Name = "G_blue";
             this.G_blue.Size = new System.Drawing.Size(40, 20);
             this.G_blue.TabIndex = 8;
+            this.G_blue.TextChanged += new System.EventHandler(this.G_blue_TextChanged);
             // 
             // button25
             // 
@@ -1520,6 +1573,7 @@
             this.G_off.Name = "G_off";
             this.G_off.Size = new System.Drawing.Size(40, 20);
             this.G_off.TabIndex = 11;
+            this.G_off.TextChanged += new System.EventHandler(this.G_off_TextChanged);
             // 
             // G_on
             // 
@@ -1527,6 +1581,7 @@
             this.G_on.Name = "G_on";
             this.G_on.Size = new System.Drawing.Size(40, 20);
             this.G_on.TabIndex = 9;
+            this.G_on.TextChanged += new System.EventHandler(this.G_on_TextChanged);
             // 
             // label56
             // 
@@ -1552,6 +1607,7 @@
             this.G_red.Name = "G_red";
             this.G_red.Size = new System.Drawing.Size(40, 20);
             this.G_red.TabIndex = 6;
+            this.G_red.TextChanged += new System.EventHandler(this.G_red_TextChanged);
             // 
             // button26
             // 
@@ -1588,6 +1644,7 @@
             this.G_green.Name = "G_green";
             this.G_green.Size = new System.Drawing.Size(40, 20);
             this.G_green.TabIndex = 8;
+            this.G_green.TextChanged += new System.EventHandler(this.G_green_TextChanged);
             // 
             // button28
             // 
@@ -1601,6 +1658,7 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.IntensityH);
             this.panel11.Controls.Add(this.H_trackbar);
             this.panel11.Controls.Add(this.label59);
             this.panel11.Controls.Add(this.label60);
@@ -1629,6 +1687,7 @@
             this.H_trackbar.Name = "H_trackbar";
             this.H_trackbar.Size = new System.Drawing.Size(202, 45);
             this.H_trackbar.TabIndex = 16;
+            this.H_trackbar.Scroll += new System.EventHandler(this.H_trackbar_Scroll);
             // 
             // label59
             // 
@@ -1672,6 +1731,7 @@
             this.H_blue.Name = "H_blue";
             this.H_blue.Size = new System.Drawing.Size(40, 20);
             this.H_blue.TabIndex = 8;
+            this.H_blue.TextChanged += new System.EventHandler(this.H_blue_TextChanged);
             // 
             // button29
             // 
@@ -1689,6 +1749,7 @@
             this.H_off.Name = "H_off";
             this.H_off.Size = new System.Drawing.Size(40, 20);
             this.H_off.TabIndex = 11;
+            this.H_off.TextChanged += new System.EventHandler(this.H_off_TextChanged);
             // 
             // H_on
             // 
@@ -1696,6 +1757,7 @@
             this.H_on.Name = "H_on";
             this.H_on.Size = new System.Drawing.Size(40, 20);
             this.H_on.TabIndex = 9;
+            this.H_on.TextChanged += new System.EventHandler(this.H_on_TextChanged);
             // 
             // label63
             // 
@@ -1721,6 +1783,7 @@
             this.H_red.Name = "H_red";
             this.H_red.Size = new System.Drawing.Size(40, 20);
             this.H_red.TabIndex = 6;
+            this.H_red.TextChanged += new System.EventHandler(this.H_red_TextChanged);
             // 
             // button30
             // 
@@ -1757,6 +1820,7 @@
             this.H_green.Name = "H_green";
             this.H_green.Size = new System.Drawing.Size(40, 20);
             this.H_green.TabIndex = 8;
+            this.H_green.TextChanged += new System.EventHandler(this.H_green_TextChanged);
             // 
             // button32
             // 
@@ -1770,6 +1834,7 @@
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.IntensityI);
             this.panel12.Controls.Add(this.I_trackbar);
             this.panel12.Controls.Add(this.label66);
             this.panel12.Controls.Add(this.label67);
@@ -1798,6 +1863,7 @@
             this.I_trackbar.Name = "I_trackbar";
             this.I_trackbar.Size = new System.Drawing.Size(202, 45);
             this.I_trackbar.TabIndex = 16;
+            this.I_trackbar.Scroll += new System.EventHandler(this.I_trackbar_Scroll);
             // 
             // label66
             // 
@@ -1841,6 +1907,7 @@
             this.I_blue.Name = "I_blue";
             this.I_blue.Size = new System.Drawing.Size(40, 20);
             this.I_blue.TabIndex = 8;
+            this.I_blue.TextChanged += new System.EventHandler(this.I_blue_TextChanged);
             // 
             // button33
             // 
@@ -1858,6 +1925,7 @@
             this.I_off.Name = "I_off";
             this.I_off.Size = new System.Drawing.Size(40, 20);
             this.I_off.TabIndex = 11;
+            this.I_off.TextChanged += new System.EventHandler(this.I_off_TextChanged);
             // 
             // I_on
             // 
@@ -1865,6 +1933,7 @@
             this.I_on.Name = "I_on";
             this.I_on.Size = new System.Drawing.Size(40, 20);
             this.I_on.TabIndex = 9;
+            this.I_on.TextChanged += new System.EventHandler(this.I_on_TextChanged);
             // 
             // label70
             // 
@@ -1890,6 +1959,7 @@
             this.I_red.Name = "I_red";
             this.I_red.Size = new System.Drawing.Size(40, 20);
             this.I_red.TabIndex = 6;
+            this.I_red.TextChanged += new System.EventHandler(this.I_red_TextChanged);
             // 
             // button34
             // 
@@ -1926,6 +1996,7 @@
             this.I_green.Name = "I_green";
             this.I_green.Size = new System.Drawing.Size(40, 20);
             this.I_green.TabIndex = 8;
+            this.I_green.TextChanged += new System.EventHandler(this.I_green_TextChanged);
             // 
             // button36
             // 
@@ -2108,6 +2179,87 @@
             filename5.Size = new System.Drawing.Size(124, 13);
             filename5.TabIndex = 15;
             filename5.Text = "Configuration Filename E";
+            // 
+            // IntensityA
+            // 
+            this.IntensityA.AutoSize = true;
+            this.IntensityA.Location = new System.Drawing.Point(186, 139);
+            this.IntensityA.Name = "IntensityA";
+            this.IntensityA.Size = new System.Drawing.Size(27, 13);
+            this.IntensityA.TabIndex = 17;
+            this.IntensityA.Text = "25%";
+            // 
+            // intensityD
+            // 
+            this.intensityD.AutoSize = true;
+            this.intensityD.Location = new System.Drawing.Point(186, 139);
+            this.intensityD.Name = "intensityD";
+            this.intensityD.Size = new System.Drawing.Size(27, 13);
+            this.intensityD.TabIndex = 18;
+            this.intensityD.Text = "25%";
+            // 
+            // InetnsityG
+            // 
+            this.InetnsityG.AutoSize = true;
+            this.InetnsityG.Location = new System.Drawing.Point(186, 139);
+            this.InetnsityG.Name = "InetnsityG";
+            this.InetnsityG.Size = new System.Drawing.Size(27, 13);
+            this.InetnsityG.TabIndex = 19;
+            this.InetnsityG.Text = "25%";
+            // 
+            // intensityB
+            // 
+            this.intensityB.AutoSize = true;
+            this.intensityB.Location = new System.Drawing.Point(183, 139);
+            this.intensityB.Name = "intensityB";
+            this.intensityB.Size = new System.Drawing.Size(27, 13);
+            this.intensityB.TabIndex = 20;
+            this.intensityB.Text = "25%";
+            // 
+            // IntensityE
+            // 
+            this.IntensityE.AutoSize = true;
+            this.IntensityE.Location = new System.Drawing.Point(183, 139);
+            this.IntensityE.Name = "IntensityE";
+            this.IntensityE.Size = new System.Drawing.Size(27, 13);
+            this.IntensityE.TabIndex = 21;
+            this.IntensityE.Text = "25%";
+            // 
+            // IntensityH
+            // 
+            this.IntensityH.AutoSize = true;
+            this.IntensityH.Location = new System.Drawing.Point(183, 139);
+            this.IntensityH.Name = "IntensityH";
+            this.IntensityH.Size = new System.Drawing.Size(27, 13);
+            this.IntensityH.TabIndex = 22;
+            this.IntensityH.Text = "25%";
+            // 
+            // intensityC
+            // 
+            this.intensityC.AutoSize = true;
+            this.intensityC.Location = new System.Drawing.Point(183, 139);
+            this.intensityC.Name = "intensityC";
+            this.intensityC.Size = new System.Drawing.Size(27, 13);
+            this.intensityC.TabIndex = 23;
+            this.intensityC.Text = "25%";
+            // 
+            // IntensityF
+            // 
+            this.IntensityF.AutoSize = true;
+            this.IntensityF.Location = new System.Drawing.Point(183, 139);
+            this.IntensityF.Name = "IntensityF";
+            this.IntensityF.Size = new System.Drawing.Size(27, 13);
+            this.IntensityF.TabIndex = 24;
+            this.IntensityF.Text = "25%";
+            // 
+            // IntensityI
+            // 
+            this.IntensityI.AutoSize = true;
+            this.IntensityI.Location = new System.Drawing.Point(183, 139);
+            this.IntensityI.Name = "IntensityI";
+            this.IntensityI.Size = new System.Drawing.Size(27, 13);
+            this.IntensityI.TabIndex = 25;
+            this.IntensityI.Text = "25%";
             // 
             // Form1
             // 
@@ -2340,6 +2492,15 @@
         private System.Windows.Forms.Button fileSave;
         private System.Windows.Forms.Button fileOpen;
         private System.Windows.Forms.Label filenameTitle;
+        private System.Windows.Forms.Label IntensityI;
+        private System.Windows.Forms.Label IntensityH;
+        private System.Windows.Forms.Label InetnsityG;
+        private System.Windows.Forms.Label IntensityF;
+        private System.Windows.Forms.Label IntensityE;
+        private System.Windows.Forms.Label intensityD;
+        private System.Windows.Forms.Label intensityB;
+        private System.Windows.Forms.Label intensityC;
+        private System.Windows.Forms.Label IntensityA;
     }
 }
 
