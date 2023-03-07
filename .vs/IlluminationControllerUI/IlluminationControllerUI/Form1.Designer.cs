@@ -28,287 +28,287 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label label78;
-            System.Windows.Forms.Label label79;
-            System.Windows.Forms.Label label80;
-            System.Windows.Forms.Label label81;
-            System.Windows.Forms.Label label82;
-            System.Windows.Forms.Label label83;
-            System.Windows.Forms.Label label84;
-            System.Windows.Forms.Label label85;
-            System.Windows.Forms.Label label86;
-            System.Windows.Forms.Label label87;
+            System.Windows.Forms.Label filedate1;
+            System.Windows.Forms.Label filedate2;
+            System.Windows.Forms.Label filedate3;
+            System.Windows.Forms.Label filedate4;
+            System.Windows.Forms.Label filedate5;
+            System.Windows.Forms.Label filename1;
+            System.Windows.Forms.Label filename2;
+            System.Windows.Forms.Label filename3;
+            System.Windows.Forms.Label filename4;
+            System.Windows.Forms.Label filename5;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.CurrentFilename = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ControlPanel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.MapTitle = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.A_status = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.A_red = new System.Windows.Forms.TextBox();
+            this.A_green = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.A_blue = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.A_on = new System.Windows.Forms.TextBox();
+            this.A_off = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.A_intensity = new System.Windows.Forms.TrackBar();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.C_trackbar = new System.Windows.Forms.TrackBar();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.C_blue = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.C_off = new System.Windows.Forms.TextBox();
+            this.C_on = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.C_red = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.C_status = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.C_green = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.trackBar3 = new System.Windows.Forms.TrackBar();
+            this.B_trackbar = new System.Windows.Forms.TrackBar();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.B_blue = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.B_off = new System.Windows.Forms.TextBox();
+            this.B_on = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.B_red = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.B_status = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.B_green = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.A_title = new System.Windows.Forms.Label();
+            this.B_title = new System.Windows.Forms.Label();
+            this.C_title = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.trackBar4 = new System.Windows.Forms.TrackBar();
+            this.D_trackbar = new System.Windows.Forms.TrackBar();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.D_blue = new System.Windows.Forms.TextBox();
             this.button13 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.D_off = new System.Windows.Forms.TextBox();
+            this.D_on = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.D_red = new System.Windows.Forms.TextBox();
             this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.D_status = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.D_green = new System.Windows.Forms.TextBox();
             this.button16 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.trackBar5 = new System.Windows.Forms.TrackBar();
+            this.E_trackbar = new System.Windows.Forms.TrackBar();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.E_blue = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.E_off = new System.Windows.Forms.TextBox();
+            this.E_on = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.E_red = new System.Windows.Forms.TextBox();
             this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.E_status = new System.Windows.Forms.Button();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.E_green = new System.Windows.Forms.TextBox();
             this.button20 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.trackBar6 = new System.Windows.Forms.TrackBar();
+            this.F_trackbar = new System.Windows.Forms.TrackBar();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.F_blue = new System.Windows.Forms.TextBox();
             this.button21 = new System.Windows.Forms.Button();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.F_off = new System.Windows.Forms.TextBox();
+            this.F_on = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.F_red = new System.Windows.Forms.TextBox();
             this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.F_status = new System.Windows.Forms.Button();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.F_green = new System.Windows.Forms.TextBox();
             this.button24 = new System.Windows.Forms.Button();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
+            this.D_title = new System.Windows.Forms.Label();
+            this.E_title = new System.Windows.Forms.Label();
+            this.F_title = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.trackBar7 = new System.Windows.Forms.TrackBar();
+            this.G_trackbar = new System.Windows.Forms.TrackBar();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.G_blue = new System.Windows.Forms.TextBox();
             this.button25 = new System.Windows.Forms.Button();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.G_off = new System.Windows.Forms.TextBox();
+            this.G_on = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.G_red = new System.Windows.Forms.TextBox();
             this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
+            this.G_status = new System.Windows.Forms.Button();
             this.label58 = new System.Windows.Forms.Label();
-            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.G_green = new System.Windows.Forms.TextBox();
             this.button28 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.trackBar8 = new System.Windows.Forms.TrackBar();
+            this.H_trackbar = new System.Windows.Forms.TrackBar();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.H_blue = new System.Windows.Forms.TextBox();
             this.button29 = new System.Windows.Forms.Button();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.H_off = new System.Windows.Forms.TextBox();
+            this.H_on = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
-            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.H_red = new System.Windows.Forms.TextBox();
             this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
+            this.H_status = new System.Windows.Forms.Button();
             this.label65 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.H_green = new System.Windows.Forms.TextBox();
             this.button32 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.trackBar9 = new System.Windows.Forms.TrackBar();
+            this.I_trackbar = new System.Windows.Forms.TrackBar();
             this.label66 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
-            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.I_blue = new System.Windows.Forms.TextBox();
             this.button33 = new System.Windows.Forms.Button();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.I_off = new System.Windows.Forms.TextBox();
+            this.I_on = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.I_red = new System.Windows.Forms.TextBox();
             this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
+            this.I_status = new System.Windows.Forms.Button();
             this.label72 = new System.Windows.Forms.Label();
-            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.I_green = new System.Windows.Forms.TextBox();
             this.button36 = new System.Windows.Forms.Button();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            label78 = new System.Windows.Forms.Label();
-            label79 = new System.Windows.Forms.Label();
-            label80 = new System.Windows.Forms.Label();
-            label81 = new System.Windows.Forms.Label();
-            label82 = new System.Windows.Forms.Label();
-            label83 = new System.Windows.Forms.Label();
-            label84 = new System.Windows.Forms.Label();
-            label85 = new System.Windows.Forms.Label();
-            label86 = new System.Windows.Forms.Label();
-            label87 = new System.Windows.Forms.Label();
+            this.G_title = new System.Windows.Forms.Label();
+            this.H_title = new System.Windows.Forms.Label();
+            this.I_title = new System.Windows.Forms.Label();
+            this.fileOpen = new System.Windows.Forms.Button();
+            this.fileSave = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
+            this.filenameDate = new System.Windows.Forms.Label();
+            this.filenameTitle = new System.Windows.Forms.Label();
+            filedate1 = new System.Windows.Forms.Label();
+            filedate2 = new System.Windows.Forms.Label();
+            filedate3 = new System.Windows.Forms.Label();
+            filedate4 = new System.Windows.Forms.Label();
+            filedate5 = new System.Windows.Forms.Label();
+            filename1 = new System.Windows.Forms.Label();
+            filename2 = new System.Windows.Forms.Label();
+            filename3 = new System.Windows.Forms.Label();
+            filename4 = new System.Windows.Forms.Label();
+            filename5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A_intensity)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C_trackbar)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.B_trackbar)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D_trackbar)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_trackbar)).BeginInit();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.F_trackbar)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.G_trackbar)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H_trackbar)).BeginInit();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.I_trackbar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(label87);
-            this.panel1.Controls.Add(label86);
-            this.panel1.Controls.Add(label85);
-            this.panel1.Controls.Add(label84);
-            this.panel1.Controls.Add(label83);
-            this.panel1.Controls.Add(label82);
-            this.panel1.Controls.Add(label81);
-            this.panel1.Controls.Add(label80);
-            this.panel1.Controls.Add(label79);
-            this.panel1.Controls.Add(label78);
-            this.panel1.Controls.Add(this.label77);
-            this.panel1.Controls.Add(this.label76);
-            this.panel1.Controls.Add(this.button39);
-            this.panel1.Controls.Add(this.button38);
-            this.panel1.Controls.Add(this.button37);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(filename5);
+            this.panel1.Controls.Add(filename4);
+            this.panel1.Controls.Add(filename3);
+            this.panel1.Controls.Add(filename2);
+            this.panel1.Controls.Add(filename1);
+            this.panel1.Controls.Add(filedate5);
+            this.panel1.Controls.Add(filedate4);
+            this.panel1.Controls.Add(filedate3);
+            this.panel1.Controls.Add(filedate2);
+            this.panel1.Controls.Add(filedate1);
+            this.panel1.Controls.Add(this.filenameTitle);
+            this.panel1.Controls.Add(this.filenameDate);
+            this.panel1.Controls.Add(this.settingsButton);
+            this.panel1.Controls.Add(this.fileSave);
+            this.panel1.Controls.Add(this.fileOpen);
+            this.panel1.Controls.Add(this.CurrentFilename);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 250);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
+            // CurrentFilename
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Configuration File No. 2545";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.CurrentFilename.AutoSize = true;
+            this.CurrentFilename.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentFilename.Location = new System.Drawing.Point(9, 10);
+            this.CurrentFilename.Name = "CurrentFilename";
+            this.CurrentFilename.Size = new System.Drawing.Size(265, 26);
+            this.CurrentFilename.TabIndex = 0;
+            this.CurrentFilename.Text = "Configuration File No. 2545";
+            this.CurrentFilename.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label75);
-            this.panel2.Controls.Add(this.label74);
-            this.panel2.Controls.Add(this.label73);
+            this.panel2.Controls.Add(this.I_title);
+            this.panel2.Controls.Add(this.H_title);
+            this.panel2.Controls.Add(this.G_title);
             this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.label51);
-            this.panel2.Controls.Add(this.label50);
-            this.panel2.Controls.Add(this.label49);
+            this.panel2.Controls.Add(this.F_title);
+            this.panel2.Controls.Add(this.E_title);
+            this.panel2.Controls.Add(this.D_title);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.label27);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.C_title);
+            this.panel2.Controls.Add(this.B_title);
+            this.panel2.Controls.Add(this.A_title);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.ControlPanel);
             this.panel2.Location = new System.Drawing.Point(403, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(810, 795);
@@ -317,22 +317,22 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.trackBar1);
+            this.panel4.Controls.Add(this.A_intensity);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.A_blue);
             this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.A_off);
+            this.panel4.Controls.Add(this.A_on);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.A_red);
             this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.A_status);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.A_green);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Location = new System.Drawing.Point(14, 60);
             this.panel4.Name = "panel4";
@@ -340,34 +340,35 @@
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label1
+            // ControlPanel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Adjustment Controls";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.ControlPanel.AutoSize = true;
+            this.ControlPanel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ControlPanel.Location = new System.Drawing.Point(10, 10);
+            this.ControlPanel.Name = "ControlPanel";
+            this.ControlPanel.Size = new System.Drawing.Size(137, 20);
+            this.ControlPanel.TabIndex = 0;
+            this.ControlPanel.Text = "Adjustment Controls";
+            this.ControlPanel.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.MapTitle);
             this.panel3.Location = new System.Drawing.Point(3, 258);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(394, 539);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label3
+            // MapTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Control Map";
+            this.MapTitle.AutoSize = true;
+            this.MapTitle.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MapTitle.Location = new System.Drawing.Point(9, 9);
+            this.MapTitle.Name = "MapTitle";
+            this.MapTitle.Size = new System.Drawing.Size(85, 20);
+            this.MapTitle.TabIndex = 4;
+            this.MapTitle.Text = "Control Map";
             // 
             // label4
             // 
@@ -378,22 +379,23 @@
             this.label4.TabIndex = 0;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button1
+            // A_status
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCoral;
-            this.button1.Enabled = false;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(20, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 45);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.A_status.BackColor = System.Drawing.Color.LightCoral;
+            this.A_status.Enabled = false;
+            this.A_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.A_status.Location = new System.Drawing.Point(20, 18);
+            this.A_status.Name = "A_status";
+            this.A_status.Size = new System.Drawing.Size(60, 45);
+            this.A_status.TabIndex = 4;
+            this.A_status.UseVisualStyleBackColor = false;
+            this.A_status.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.Enabled = false;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(20, 106);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(26, 22);
@@ -401,24 +403,25 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // A_red
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 20);
-            this.textBox1.TabIndex = 6;
+            this.A_red.Location = new System.Drawing.Point(40, 107);
+            this.A_red.Name = "A_red";
+            this.A_red.Size = new System.Drawing.Size(40, 20);
+            this.A_red.TabIndex = 6;
             // 
-            // textBox2
+            // A_green
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 20);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.A_green.Location = new System.Drawing.Point(113, 107);
+            this.A_green.Name = "A_green";
+            this.A_green.Size = new System.Drawing.Size(40, 20);
+            this.A_green.TabIndex = 8;
+            this.A_green.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Lime;
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(93, 106);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(26, 22);
@@ -426,16 +429,17 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox3
+            // A_blue
             // 
-            this.textBox3.Location = new System.Drawing.Point(186, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(40, 20);
-            this.textBox3.TabIndex = 8;
+            this.A_blue.Location = new System.Drawing.Point(186, 107);
+            this.A_blue.Name = "A_blue";
+            this.A_blue.Size = new System.Drawing.Size(40, 20);
+            this.A_blue.TabIndex = 8;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Cyan;
+            this.button4.Enabled = false;
             this.button4.Location = new System.Drawing.Point(166, 106);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(26, 22);
@@ -461,19 +465,19 @@
             this.label6.Text = "Off Interval";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox4
+            // A_on
             // 
-            this.textBox4.Location = new System.Drawing.Point(176, 18);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(40, 20);
-            this.textBox4.TabIndex = 9;
+            this.A_on.Location = new System.Drawing.Point(176, 18);
+            this.A_on.Name = "A_on";
+            this.A_on.Size = new System.Drawing.Size(40, 20);
+            this.A_on.TabIndex = 9;
             // 
-            // textBox5
+            // A_off
             // 
-            this.textBox5.Location = new System.Drawing.Point(176, 48);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(40, 20);
-            this.textBox5.TabIndex = 11;
+            this.A_off.Location = new System.Drawing.Point(176, 48);
+            this.A_off.Name = "A_off";
+            this.A_off.Size = new System.Drawing.Size(40, 20);
+            this.A_off.TabIndex = 11;
             // 
             // label7
             // 
@@ -514,43 +518,44 @@
             this.label10.Text = "Light Intensity";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // trackBar1
+            // A_intensity
             // 
-            this.trackBar1.Location = new System.Drawing.Point(14, 166);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(202, 45);
-            this.trackBar1.TabIndex = 16;
+            this.A_intensity.Location = new System.Drawing.Point(14, 166);
+            this.A_intensity.Name = "A_intensity";
+            this.A_intensity.Size = new System.Drawing.Size(202, 45);
+            this.A_intensity.TabIndex = 16;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.trackBar2);
+            this.panel6.Controls.Add(this.C_trackbar);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.C_blue);
             this.panel6.Controls.Add(this.button5);
-            this.panel6.Controls.Add(this.textBox7);
-            this.panel6.Controls.Add(this.textBox8);
+            this.panel6.Controls.Add(this.C_off);
+            this.panel6.Controls.Add(this.C_on);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.C_red);
             this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.button7);
+            this.panel6.Controls.Add(this.C_status);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.textBox10);
+            this.panel6.Controls.Add(this.C_green);
             this.panel6.Controls.Add(this.button8);
             this.panel6.Location = new System.Drawing.Point(546, 60);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(247, 219);
             this.panel6.TabIndex = 17;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
-            // trackBar2
+            // C_trackbar
             // 
-            this.trackBar2.Location = new System.Drawing.Point(14, 166);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(202, 45);
-            this.trackBar2.TabIndex = 16;
+            this.C_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.C_trackbar.Name = "C_trackbar";
+            this.C_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.C_trackbar.TabIndex = 16;
             // 
             // label11
             // 
@@ -588,35 +593,36 @@
             this.label14.TabIndex = 12;
             this.label14.Text = "s";
             // 
-            // textBox6
+            // C_blue
             // 
-            this.textBox6.Location = new System.Drawing.Point(186, 107);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(40, 20);
-            this.textBox6.TabIndex = 8;
+            this.C_blue.Location = new System.Drawing.Point(186, 107);
+            this.C_blue.Name = "C_blue";
+            this.C_blue.Size = new System.Drawing.Size(40, 20);
+            this.C_blue.TabIndex = 8;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Cyan;
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(166, 106);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(26, 22);
             this.button5.TabIndex = 7;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // textBox7
+            // C_off
             // 
-            this.textBox7.Location = new System.Drawing.Point(176, 48);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(40, 20);
-            this.textBox7.TabIndex = 11;
+            this.C_off.Location = new System.Drawing.Point(176, 48);
+            this.C_off.Name = "C_off";
+            this.C_off.Size = new System.Drawing.Size(40, 20);
+            this.C_off.TabIndex = 11;
             // 
-            // textBox8
+            // C_on
             // 
-            this.textBox8.Location = new System.Drawing.Point(176, 18);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(40, 20);
-            this.textBox8.TabIndex = 9;
+            this.C_on.Location = new System.Drawing.Point(176, 18);
+            this.C_on.Name = "C_on";
+            this.C_on.Size = new System.Drawing.Size(40, 20);
+            this.C_on.TabIndex = 9;
             // 
             // label15
             // 
@@ -636,12 +642,12 @@
             this.label16.TabIndex = 9;
             this.label16.Text = "On Interval";
             // 
-            // textBox9
+            // C_red
             // 
-            this.textBox9.Location = new System.Drawing.Point(40, 107);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(40, 20);
-            this.textBox9.TabIndex = 6;
+            this.C_red.Location = new System.Drawing.Point(40, 107);
+            this.C_red.Name = "C_red";
+            this.C_red.Size = new System.Drawing.Size(40, 20);
+            this.C_red.TabIndex = 6;
             // 
             // button6
             // 
@@ -653,16 +659,17 @@
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // C_status
             // 
-            this.button7.BackColor = System.Drawing.Color.LightCoral;
-            this.button7.Enabled = false;
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button7.Location = new System.Drawing.Point(20, 18);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 45);
-            this.button7.TabIndex = 4;
-            this.button7.UseVisualStyleBackColor = false;
+            this.C_status.BackColor = System.Drawing.Color.LightCoral;
+            this.C_status.Enabled = false;
+            this.C_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.C_status.Location = new System.Drawing.Point(20, 18);
+            this.C_status.Name = "C_status";
+            this.C_status.Size = new System.Drawing.Size(60, 45);
+            this.C_status.TabIndex = 4;
+            this.C_status.UseVisualStyleBackColor = false;
+            this.C_status.Click += new System.EventHandler(this.button7_Click);
             // 
             // label17
             // 
@@ -672,16 +679,17 @@
             this.label17.Size = new System.Drawing.Size(0, 13);
             this.label17.TabIndex = 0;
             // 
-            // textBox10
+            // C_green
             // 
-            this.textBox10.Location = new System.Drawing.Point(113, 107);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(40, 20);
-            this.textBox10.TabIndex = 8;
+            this.C_green.Location = new System.Drawing.Point(113, 107);
+            this.C_green.Name = "C_green";
+            this.C_green.Size = new System.Drawing.Size(40, 20);
+            this.C_green.TabIndex = 8;
             // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Lime;
+            this.button8.Enabled = false;
             this.button8.Location = new System.Drawing.Point(93, 106);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(26, 22);
@@ -690,34 +698,35 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.trackBar3);
+            this.panel5.Controls.Add(this.B_trackbar);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label19);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.label21);
-            this.panel5.Controls.Add(this.textBox11);
+            this.panel5.Controls.Add(this.B_blue);
             this.panel5.Controls.Add(this.button9);
-            this.panel5.Controls.Add(this.textBox12);
-            this.panel5.Controls.Add(this.textBox13);
+            this.panel5.Controls.Add(this.B_off);
+            this.panel5.Controls.Add(this.B_on);
             this.panel5.Controls.Add(this.label22);
             this.panel5.Controls.Add(this.label23);
-            this.panel5.Controls.Add(this.textBox14);
+            this.panel5.Controls.Add(this.B_red);
             this.panel5.Controls.Add(this.button10);
-            this.panel5.Controls.Add(this.button11);
+            this.panel5.Controls.Add(this.B_status);
             this.panel5.Controls.Add(this.label24);
-            this.panel5.Controls.Add(this.textBox15);
+            this.panel5.Controls.Add(this.B_green);
             this.panel5.Controls.Add(this.button12);
             this.panel5.Location = new System.Drawing.Point(279, 60);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(247, 219);
             this.panel5.TabIndex = 17;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // trackBar3
+            // B_trackbar
             // 
-            this.trackBar3.Location = new System.Drawing.Point(14, 166);
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(202, 45);
-            this.trackBar3.TabIndex = 16;
+            this.B_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.B_trackbar.Name = "B_trackbar";
+            this.B_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.B_trackbar.TabIndex = 16;
             // 
             // label18
             // 
@@ -755,35 +764,36 @@
             this.label21.TabIndex = 12;
             this.label21.Text = "s";
             // 
-            // textBox11
+            // B_blue
             // 
-            this.textBox11.Location = new System.Drawing.Point(186, 107);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(40, 20);
-            this.textBox11.TabIndex = 8;
+            this.B_blue.Location = new System.Drawing.Point(186, 107);
+            this.B_blue.Name = "B_blue";
+            this.B_blue.Size = new System.Drawing.Size(40, 20);
+            this.B_blue.TabIndex = 8;
             // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Cyan;
+            this.button9.Enabled = false;
             this.button9.Location = new System.Drawing.Point(166, 106);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(26, 22);
             this.button9.TabIndex = 7;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // textBox12
+            // B_off
             // 
-            this.textBox12.Location = new System.Drawing.Point(176, 48);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(40, 20);
-            this.textBox12.TabIndex = 11;
+            this.B_off.Location = new System.Drawing.Point(176, 48);
+            this.B_off.Name = "B_off";
+            this.B_off.Size = new System.Drawing.Size(40, 20);
+            this.B_off.TabIndex = 11;
             // 
-            // textBox13
+            // B_on
             // 
-            this.textBox13.Location = new System.Drawing.Point(176, 18);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(40, 20);
-            this.textBox13.TabIndex = 9;
+            this.B_on.Location = new System.Drawing.Point(176, 18);
+            this.B_on.Name = "B_on";
+            this.B_on.Size = new System.Drawing.Size(40, 20);
+            this.B_on.TabIndex = 9;
             // 
             // label22
             // 
@@ -803,12 +813,12 @@
             this.label23.TabIndex = 9;
             this.label23.Text = "On Interval";
             // 
-            // textBox14
+            // B_red
             // 
-            this.textBox14.Location = new System.Drawing.Point(40, 107);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(40, 20);
-            this.textBox14.TabIndex = 6;
+            this.B_red.Location = new System.Drawing.Point(40, 107);
+            this.B_red.Name = "B_red";
+            this.B_red.Size = new System.Drawing.Size(40, 20);
+            this.B_red.TabIndex = 6;
             // 
             // button10
             // 
@@ -820,16 +830,16 @@
             this.button10.TabIndex = 5;
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // B_status
             // 
-            this.button11.BackColor = System.Drawing.Color.LightCoral;
-            this.button11.Enabled = false;
-            this.button11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button11.Location = new System.Drawing.Point(20, 18);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(60, 45);
-            this.button11.TabIndex = 4;
-            this.button11.UseVisualStyleBackColor = false;
+            this.B_status.BackColor = System.Drawing.Color.LightCoral;
+            this.B_status.Enabled = false;
+            this.B_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.B_status.Location = new System.Drawing.Point(20, 18);
+            this.B_status.Name = "B_status";
+            this.B_status.Size = new System.Drawing.Size(60, 45);
+            this.B_status.TabIndex = 4;
+            this.B_status.UseVisualStyleBackColor = false;
             // 
             // label24
             // 
@@ -839,80 +849,82 @@
             this.label24.Size = new System.Drawing.Size(0, 13);
             this.label24.TabIndex = 0;
             // 
-            // textBox15
+            // B_green
             // 
-            this.textBox15.Location = new System.Drawing.Point(113, 107);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(40, 20);
-            this.textBox15.TabIndex = 8;
+            this.B_green.Location = new System.Drawing.Point(113, 107);
+            this.B_green.Name = "B_green";
+            this.B_green.Size = new System.Drawing.Size(40, 20);
+            this.B_green.TabIndex = 8;
             // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.Lime;
+            this.button12.Enabled = false;
             this.button12.Location = new System.Drawing.Point(93, 106);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(26, 22);
             this.button12.TabIndex = 7;
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // label25
+            // A_title
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(11, 44);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(40, 13);
-            this.label25.TabIndex = 18;
-            this.label25.Text = "Light A";
+            this.A_title.AutoSize = true;
+            this.A_title.Location = new System.Drawing.Point(11, 44);
+            this.A_title.Name = "A_title";
+            this.A_title.Size = new System.Drawing.Size(40, 13);
+            this.A_title.TabIndex = 18;
+            this.A_title.Text = "Light A";
             // 
-            // label26
+            // B_title
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(276, 44);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(40, 13);
-            this.label26.TabIndex = 19;
-            this.label26.Text = "Light B";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
+            this.B_title.AutoSize = true;
+            this.B_title.Location = new System.Drawing.Point(276, 44);
+            this.B_title.Name = "B_title";
+            this.B_title.Size = new System.Drawing.Size(40, 13);
+            this.B_title.TabIndex = 19;
+            this.B_title.Text = "Light B";
+            this.B_title.Click += new System.EventHandler(this.label26_Click);
             // 
-            // label27
+            // C_title
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(543, 44);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(40, 13);
-            this.label27.TabIndex = 20;
-            this.label27.Text = "Light C";
+            this.C_title.AutoSize = true;
+            this.C_title.Location = new System.Drawing.Point(543, 44);
+            this.C_title.Name = "C_title";
+            this.C_title.Size = new System.Drawing.Size(40, 13);
+            this.C_title.TabIndex = 20;
+            this.C_title.Text = "Light C";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.trackBar4);
+            this.panel7.Controls.Add(this.D_trackbar);
             this.panel7.Controls.Add(this.label28);
             this.panel7.Controls.Add(this.label29);
             this.panel7.Controls.Add(this.label30);
             this.panel7.Controls.Add(this.label31);
-            this.panel7.Controls.Add(this.textBox16);
+            this.panel7.Controls.Add(this.D_blue);
             this.panel7.Controls.Add(this.button13);
-            this.panel7.Controls.Add(this.textBox17);
-            this.panel7.Controls.Add(this.textBox18);
+            this.panel7.Controls.Add(this.D_off);
+            this.panel7.Controls.Add(this.D_on);
             this.panel7.Controls.Add(this.label32);
             this.panel7.Controls.Add(this.label33);
-            this.panel7.Controls.Add(this.textBox19);
+            this.panel7.Controls.Add(this.D_red);
             this.panel7.Controls.Add(this.button14);
-            this.panel7.Controls.Add(this.button15);
+            this.panel7.Controls.Add(this.D_status);
             this.panel7.Controls.Add(this.label34);
-            this.panel7.Controls.Add(this.textBox20);
+            this.panel7.Controls.Add(this.D_green);
             this.panel7.Controls.Add(this.button16);
             this.panel7.Location = new System.Drawing.Point(14, 306);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(247, 219);
             this.panel7.TabIndex = 17;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
-            // trackBar4
+            // D_trackbar
             // 
-            this.trackBar4.Location = new System.Drawing.Point(14, 166);
-            this.trackBar4.Name = "trackBar4";
-            this.trackBar4.Size = new System.Drawing.Size(202, 45);
-            this.trackBar4.TabIndex = 16;
+            this.D_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.D_trackbar.Name = "D_trackbar";
+            this.D_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.D_trackbar.TabIndex = 16;
             // 
             // label28
             // 
@@ -950,35 +962,36 @@
             this.label31.TabIndex = 12;
             this.label31.Text = "s";
             // 
-            // textBox16
+            // D_blue
             // 
-            this.textBox16.Location = new System.Drawing.Point(186, 107);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(40, 20);
-            this.textBox16.TabIndex = 8;
+            this.D_blue.Location = new System.Drawing.Point(186, 107);
+            this.D_blue.Name = "D_blue";
+            this.D_blue.Size = new System.Drawing.Size(40, 20);
+            this.D_blue.TabIndex = 8;
             // 
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.Cyan;
+            this.button13.Enabled = false;
             this.button13.Location = new System.Drawing.Point(166, 106);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(26, 22);
             this.button13.TabIndex = 7;
             this.button13.UseVisualStyleBackColor = false;
             // 
-            // textBox17
+            // D_off
             // 
-            this.textBox17.Location = new System.Drawing.Point(176, 48);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(40, 20);
-            this.textBox17.TabIndex = 11;
+            this.D_off.Location = new System.Drawing.Point(176, 48);
+            this.D_off.Name = "D_off";
+            this.D_off.Size = new System.Drawing.Size(40, 20);
+            this.D_off.TabIndex = 11;
             // 
-            // textBox18
+            // D_on
             // 
-            this.textBox18.Location = new System.Drawing.Point(176, 18);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(40, 20);
-            this.textBox18.TabIndex = 9;
+            this.D_on.Location = new System.Drawing.Point(176, 18);
+            this.D_on.Name = "D_on";
+            this.D_on.Size = new System.Drawing.Size(40, 20);
+            this.D_on.TabIndex = 9;
             // 
             // label32
             // 
@@ -998,12 +1011,12 @@
             this.label33.TabIndex = 9;
             this.label33.Text = "On Interval";
             // 
-            // textBox19
+            // D_red
             // 
-            this.textBox19.Location = new System.Drawing.Point(40, 107);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(40, 20);
-            this.textBox19.TabIndex = 6;
+            this.D_red.Location = new System.Drawing.Point(40, 107);
+            this.D_red.Name = "D_red";
+            this.D_red.Size = new System.Drawing.Size(40, 20);
+            this.D_red.TabIndex = 6;
             // 
             // button14
             // 
@@ -1015,16 +1028,16 @@
             this.button14.TabIndex = 5;
             this.button14.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // D_status
             // 
-            this.button15.BackColor = System.Drawing.Color.LightCoral;
-            this.button15.Enabled = false;
-            this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button15.Location = new System.Drawing.Point(20, 18);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(60, 45);
-            this.button15.TabIndex = 4;
-            this.button15.UseVisualStyleBackColor = false;
+            this.D_status.BackColor = System.Drawing.Color.LightCoral;
+            this.D_status.Enabled = false;
+            this.D_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.D_status.Location = new System.Drawing.Point(20, 18);
+            this.D_status.Name = "D_status";
+            this.D_status.Size = new System.Drawing.Size(60, 45);
+            this.D_status.TabIndex = 4;
+            this.D_status.UseVisualStyleBackColor = false;
             // 
             // label34
             // 
@@ -1034,16 +1047,17 @@
             this.label34.Size = new System.Drawing.Size(0, 13);
             this.label34.TabIndex = 0;
             // 
-            // textBox20
+            // D_green
             // 
-            this.textBox20.Location = new System.Drawing.Point(113, 107);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(40, 20);
-            this.textBox20.TabIndex = 8;
+            this.D_green.Location = new System.Drawing.Point(113, 107);
+            this.D_green.Name = "D_green";
+            this.D_green.Size = new System.Drawing.Size(40, 20);
+            this.D_green.TabIndex = 8;
             // 
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.Lime;
+            this.button16.Enabled = false;
             this.button16.Location = new System.Drawing.Point(93, 106);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(26, 22);
@@ -1052,34 +1066,34 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.trackBar5);
+            this.panel8.Controls.Add(this.E_trackbar);
             this.panel8.Controls.Add(this.label35);
             this.panel8.Controls.Add(this.label36);
             this.panel8.Controls.Add(this.label37);
             this.panel8.Controls.Add(this.label38);
-            this.panel8.Controls.Add(this.textBox21);
+            this.panel8.Controls.Add(this.E_blue);
             this.panel8.Controls.Add(this.button17);
-            this.panel8.Controls.Add(this.textBox22);
-            this.panel8.Controls.Add(this.textBox23);
+            this.panel8.Controls.Add(this.E_off);
+            this.panel8.Controls.Add(this.E_on);
             this.panel8.Controls.Add(this.label39);
             this.panel8.Controls.Add(this.label40);
-            this.panel8.Controls.Add(this.textBox24);
+            this.panel8.Controls.Add(this.E_red);
             this.panel8.Controls.Add(this.button18);
-            this.panel8.Controls.Add(this.button19);
+            this.panel8.Controls.Add(this.E_status);
             this.panel8.Controls.Add(this.label41);
-            this.panel8.Controls.Add(this.textBox25);
+            this.panel8.Controls.Add(this.E_green);
             this.panel8.Controls.Add(this.button20);
             this.panel8.Location = new System.Drawing.Point(279, 306);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(247, 219);
             this.panel8.TabIndex = 21;
             // 
-            // trackBar5
+            // E_trackbar
             // 
-            this.trackBar5.Location = new System.Drawing.Point(14, 166);
-            this.trackBar5.Name = "trackBar5";
-            this.trackBar5.Size = new System.Drawing.Size(202, 45);
-            this.trackBar5.TabIndex = 16;
+            this.E_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.E_trackbar.Name = "E_trackbar";
+            this.E_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.E_trackbar.TabIndex = 16;
             // 
             // label35
             // 
@@ -1117,35 +1131,36 @@
             this.label38.TabIndex = 12;
             this.label38.Text = "s";
             // 
-            // textBox21
+            // E_blue
             // 
-            this.textBox21.Location = new System.Drawing.Point(186, 107);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(40, 20);
-            this.textBox21.TabIndex = 8;
+            this.E_blue.Location = new System.Drawing.Point(186, 107);
+            this.E_blue.Name = "E_blue";
+            this.E_blue.Size = new System.Drawing.Size(40, 20);
+            this.E_blue.TabIndex = 8;
             // 
             // button17
             // 
             this.button17.BackColor = System.Drawing.Color.Cyan;
+            this.button17.Enabled = false;
             this.button17.Location = new System.Drawing.Point(166, 106);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(26, 22);
             this.button17.TabIndex = 7;
             this.button17.UseVisualStyleBackColor = false;
             // 
-            // textBox22
+            // E_off
             // 
-            this.textBox22.Location = new System.Drawing.Point(176, 48);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(40, 20);
-            this.textBox22.TabIndex = 11;
+            this.E_off.Location = new System.Drawing.Point(176, 48);
+            this.E_off.Name = "E_off";
+            this.E_off.Size = new System.Drawing.Size(40, 20);
+            this.E_off.TabIndex = 11;
             // 
-            // textBox23
+            // E_on
             // 
-            this.textBox23.Location = new System.Drawing.Point(176, 18);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(40, 20);
-            this.textBox23.TabIndex = 9;
+            this.E_on.Location = new System.Drawing.Point(176, 18);
+            this.E_on.Name = "E_on";
+            this.E_on.Size = new System.Drawing.Size(40, 20);
+            this.E_on.TabIndex = 9;
             // 
             // label39
             // 
@@ -1165,12 +1180,12 @@
             this.label40.TabIndex = 9;
             this.label40.Text = "On Interval";
             // 
-            // textBox24
+            // E_red
             // 
-            this.textBox24.Location = new System.Drawing.Point(40, 107);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(40, 20);
-            this.textBox24.TabIndex = 6;
+            this.E_red.Location = new System.Drawing.Point(40, 107);
+            this.E_red.Name = "E_red";
+            this.E_red.Size = new System.Drawing.Size(40, 20);
+            this.E_red.TabIndex = 6;
             // 
             // button18
             // 
@@ -1182,16 +1197,16 @@
             this.button18.TabIndex = 5;
             this.button18.UseVisualStyleBackColor = false;
             // 
-            // button19
+            // E_status
             // 
-            this.button19.BackColor = System.Drawing.Color.LightCoral;
-            this.button19.Enabled = false;
-            this.button19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button19.Location = new System.Drawing.Point(20, 18);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(60, 45);
-            this.button19.TabIndex = 4;
-            this.button19.UseVisualStyleBackColor = false;
+            this.E_status.BackColor = System.Drawing.Color.LightCoral;
+            this.E_status.Enabled = false;
+            this.E_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.E_status.Location = new System.Drawing.Point(20, 18);
+            this.E_status.Name = "E_status";
+            this.E_status.Size = new System.Drawing.Size(60, 45);
+            this.E_status.TabIndex = 4;
+            this.E_status.UseVisualStyleBackColor = false;
             // 
             // label41
             // 
@@ -1201,16 +1216,17 @@
             this.label41.Size = new System.Drawing.Size(0, 13);
             this.label41.TabIndex = 0;
             // 
-            // textBox25
+            // E_green
             // 
-            this.textBox25.Location = new System.Drawing.Point(113, 107);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(40, 20);
-            this.textBox25.TabIndex = 8;
+            this.E_green.Location = new System.Drawing.Point(113, 107);
+            this.E_green.Name = "E_green";
+            this.E_green.Size = new System.Drawing.Size(40, 20);
+            this.E_green.TabIndex = 8;
             // 
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.Lime;
+            this.button20.Enabled = false;
             this.button20.Location = new System.Drawing.Point(93, 106);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(26, 22);
@@ -1219,34 +1235,34 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.trackBar6);
+            this.panel9.Controls.Add(this.F_trackbar);
             this.panel9.Controls.Add(this.label42);
             this.panel9.Controls.Add(this.label43);
             this.panel9.Controls.Add(this.label44);
             this.panel9.Controls.Add(this.label45);
-            this.panel9.Controls.Add(this.textBox26);
+            this.panel9.Controls.Add(this.F_blue);
             this.panel9.Controls.Add(this.button21);
-            this.panel9.Controls.Add(this.textBox27);
-            this.panel9.Controls.Add(this.textBox28);
+            this.panel9.Controls.Add(this.F_off);
+            this.panel9.Controls.Add(this.F_on);
             this.panel9.Controls.Add(this.label46);
             this.panel9.Controls.Add(this.label47);
-            this.panel9.Controls.Add(this.textBox29);
+            this.panel9.Controls.Add(this.F_red);
             this.panel9.Controls.Add(this.button22);
-            this.panel9.Controls.Add(this.button23);
+            this.panel9.Controls.Add(this.F_status);
             this.panel9.Controls.Add(this.label48);
-            this.panel9.Controls.Add(this.textBox30);
+            this.panel9.Controls.Add(this.F_green);
             this.panel9.Controls.Add(this.button24);
             this.panel9.Location = new System.Drawing.Point(546, 306);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(247, 219);
             this.panel9.TabIndex = 22;
             // 
-            // trackBar6
+            // F_trackbar
             // 
-            this.trackBar6.Location = new System.Drawing.Point(14, 166);
-            this.trackBar6.Name = "trackBar6";
-            this.trackBar6.Size = new System.Drawing.Size(202, 45);
-            this.trackBar6.TabIndex = 16;
+            this.F_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.F_trackbar.Name = "F_trackbar";
+            this.F_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.F_trackbar.TabIndex = 16;
             // 
             // label42
             // 
@@ -1284,35 +1300,36 @@
             this.label45.TabIndex = 12;
             this.label45.Text = "s";
             // 
-            // textBox26
+            // F_blue
             // 
-            this.textBox26.Location = new System.Drawing.Point(186, 107);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(40, 20);
-            this.textBox26.TabIndex = 8;
+            this.F_blue.Location = new System.Drawing.Point(186, 107);
+            this.F_blue.Name = "F_blue";
+            this.F_blue.Size = new System.Drawing.Size(40, 20);
+            this.F_blue.TabIndex = 8;
             // 
             // button21
             // 
             this.button21.BackColor = System.Drawing.Color.Cyan;
+            this.button21.Enabled = false;
             this.button21.Location = new System.Drawing.Point(166, 106);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(26, 22);
             this.button21.TabIndex = 7;
             this.button21.UseVisualStyleBackColor = false;
             // 
-            // textBox27
+            // F_off
             // 
-            this.textBox27.Location = new System.Drawing.Point(176, 48);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(40, 20);
-            this.textBox27.TabIndex = 11;
+            this.F_off.Location = new System.Drawing.Point(176, 48);
+            this.F_off.Name = "F_off";
+            this.F_off.Size = new System.Drawing.Size(40, 20);
+            this.F_off.TabIndex = 11;
             // 
-            // textBox28
+            // F_on
             // 
-            this.textBox28.Location = new System.Drawing.Point(176, 18);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(40, 20);
-            this.textBox28.TabIndex = 9;
+            this.F_on.Location = new System.Drawing.Point(176, 18);
+            this.F_on.Name = "F_on";
+            this.F_on.Size = new System.Drawing.Size(40, 20);
+            this.F_on.TabIndex = 9;
             // 
             // label46
             // 
@@ -1332,12 +1349,12 @@
             this.label47.TabIndex = 9;
             this.label47.Text = "On Interval";
             // 
-            // textBox29
+            // F_red
             // 
-            this.textBox29.Location = new System.Drawing.Point(40, 107);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(40, 20);
-            this.textBox29.TabIndex = 6;
+            this.F_red.Location = new System.Drawing.Point(40, 107);
+            this.F_red.Name = "F_red";
+            this.F_red.Size = new System.Drawing.Size(40, 20);
+            this.F_red.TabIndex = 6;
             // 
             // button22
             // 
@@ -1349,16 +1366,16 @@
             this.button22.TabIndex = 5;
             this.button22.UseVisualStyleBackColor = false;
             // 
-            // button23
+            // F_status
             // 
-            this.button23.BackColor = System.Drawing.Color.LightCoral;
-            this.button23.Enabled = false;
-            this.button23.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button23.Location = new System.Drawing.Point(20, 18);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(60, 45);
-            this.button23.TabIndex = 4;
-            this.button23.UseVisualStyleBackColor = false;
+            this.F_status.BackColor = System.Drawing.Color.LightCoral;
+            this.F_status.Enabled = false;
+            this.F_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.F_status.Location = new System.Drawing.Point(20, 18);
+            this.F_status.Name = "F_status";
+            this.F_status.Size = new System.Drawing.Size(60, 45);
+            this.F_status.TabIndex = 4;
+            this.F_status.UseVisualStyleBackColor = false;
             // 
             // label48
             // 
@@ -1368,80 +1385,81 @@
             this.label48.Size = new System.Drawing.Size(0, 13);
             this.label48.TabIndex = 0;
             // 
-            // textBox30
+            // F_green
             // 
-            this.textBox30.Location = new System.Drawing.Point(113, 107);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(40, 20);
-            this.textBox30.TabIndex = 8;
+            this.F_green.Location = new System.Drawing.Point(113, 107);
+            this.F_green.Name = "F_green";
+            this.F_green.Size = new System.Drawing.Size(40, 20);
+            this.F_green.TabIndex = 8;
             // 
             // button24
             // 
             this.button24.BackColor = System.Drawing.Color.Lime;
+            this.button24.Enabled = false;
             this.button24.Location = new System.Drawing.Point(93, 106);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(26, 22);
             this.button24.TabIndex = 7;
             this.button24.UseVisualStyleBackColor = false;
             // 
-            // label49
+            // D_title
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(11, 290);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(41, 13);
-            this.label49.TabIndex = 23;
-            this.label49.Text = "Light D";
-            this.label49.Click += new System.EventHandler(this.label49_Click);
+            this.D_title.AutoSize = true;
+            this.D_title.Location = new System.Drawing.Point(11, 290);
+            this.D_title.Name = "D_title";
+            this.D_title.Size = new System.Drawing.Size(41, 13);
+            this.D_title.TabIndex = 23;
+            this.D_title.Text = "Light D";
+            this.D_title.Click += new System.EventHandler(this.label49_Click);
             // 
-            // label50
+            // E_title
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(276, 290);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(40, 13);
-            this.label50.TabIndex = 24;
-            this.label50.Text = "Light E";
+            this.E_title.AutoSize = true;
+            this.E_title.Location = new System.Drawing.Point(276, 290);
+            this.E_title.Name = "E_title";
+            this.E_title.Size = new System.Drawing.Size(40, 13);
+            this.E_title.TabIndex = 24;
+            this.E_title.Text = "Light E";
             // 
-            // label51
+            // F_title
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(543, 290);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(39, 13);
-            this.label51.TabIndex = 25;
-            this.label51.Text = "Light F";
+            this.F_title.AutoSize = true;
+            this.F_title.Location = new System.Drawing.Point(543, 290);
+            this.F_title.Name = "F_title";
+            this.F_title.Size = new System.Drawing.Size(39, 13);
+            this.F_title.TabIndex = 25;
+            this.F_title.Text = "Light F";
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.trackBar7);
+            this.panel10.Controls.Add(this.G_trackbar);
             this.panel10.Controls.Add(this.label52);
             this.panel10.Controls.Add(this.label53);
             this.panel10.Controls.Add(this.label54);
             this.panel10.Controls.Add(this.label55);
-            this.panel10.Controls.Add(this.textBox31);
+            this.panel10.Controls.Add(this.G_blue);
             this.panel10.Controls.Add(this.button25);
-            this.panel10.Controls.Add(this.textBox32);
-            this.panel10.Controls.Add(this.textBox33);
+            this.panel10.Controls.Add(this.G_off);
+            this.panel10.Controls.Add(this.G_on);
             this.panel10.Controls.Add(this.label56);
             this.panel10.Controls.Add(this.label57);
-            this.panel10.Controls.Add(this.textBox34);
+            this.panel10.Controls.Add(this.G_red);
             this.panel10.Controls.Add(this.button26);
-            this.panel10.Controls.Add(this.button27);
+            this.panel10.Controls.Add(this.G_status);
             this.panel10.Controls.Add(this.label58);
-            this.panel10.Controls.Add(this.textBox35);
+            this.panel10.Controls.Add(this.G_green);
             this.panel10.Controls.Add(this.button28);
             this.panel10.Location = new System.Drawing.Point(14, 552);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(247, 219);
             this.panel10.TabIndex = 18;
             // 
-            // trackBar7
+            // G_trackbar
             // 
-            this.trackBar7.Location = new System.Drawing.Point(14, 166);
-            this.trackBar7.Name = "trackBar7";
-            this.trackBar7.Size = new System.Drawing.Size(202, 45);
-            this.trackBar7.TabIndex = 16;
+            this.G_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.G_trackbar.Name = "G_trackbar";
+            this.G_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.G_trackbar.TabIndex = 16;
             // 
             // label52
             // 
@@ -1479,35 +1497,36 @@
             this.label55.TabIndex = 12;
             this.label55.Text = "s";
             // 
-            // textBox31
+            // G_blue
             // 
-            this.textBox31.Location = new System.Drawing.Point(186, 107);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(40, 20);
-            this.textBox31.TabIndex = 8;
+            this.G_blue.Location = new System.Drawing.Point(186, 107);
+            this.G_blue.Name = "G_blue";
+            this.G_blue.Size = new System.Drawing.Size(40, 20);
+            this.G_blue.TabIndex = 8;
             // 
             // button25
             // 
             this.button25.BackColor = System.Drawing.Color.Cyan;
+            this.button25.Enabled = false;
             this.button25.Location = new System.Drawing.Point(166, 106);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(26, 22);
             this.button25.TabIndex = 7;
             this.button25.UseVisualStyleBackColor = false;
             // 
-            // textBox32
+            // G_off
             // 
-            this.textBox32.Location = new System.Drawing.Point(176, 48);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(40, 20);
-            this.textBox32.TabIndex = 11;
+            this.G_off.Location = new System.Drawing.Point(176, 48);
+            this.G_off.Name = "G_off";
+            this.G_off.Size = new System.Drawing.Size(40, 20);
+            this.G_off.TabIndex = 11;
             // 
-            // textBox33
+            // G_on
             // 
-            this.textBox33.Location = new System.Drawing.Point(176, 18);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(40, 20);
-            this.textBox33.TabIndex = 9;
+            this.G_on.Location = new System.Drawing.Point(176, 18);
+            this.G_on.Name = "G_on";
+            this.G_on.Size = new System.Drawing.Size(40, 20);
+            this.G_on.TabIndex = 9;
             // 
             // label56
             // 
@@ -1527,12 +1546,12 @@
             this.label57.TabIndex = 9;
             this.label57.Text = "On Interval";
             // 
-            // textBox34
+            // G_red
             // 
-            this.textBox34.Location = new System.Drawing.Point(40, 107);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(40, 20);
-            this.textBox34.TabIndex = 6;
+            this.G_red.Location = new System.Drawing.Point(40, 107);
+            this.G_red.Name = "G_red";
+            this.G_red.Size = new System.Drawing.Size(40, 20);
+            this.G_red.TabIndex = 6;
             // 
             // button26
             // 
@@ -1544,16 +1563,16 @@
             this.button26.TabIndex = 5;
             this.button26.UseVisualStyleBackColor = false;
             // 
-            // button27
+            // G_status
             // 
-            this.button27.BackColor = System.Drawing.Color.LightCoral;
-            this.button27.Enabled = false;
-            this.button27.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button27.Location = new System.Drawing.Point(20, 18);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(60, 45);
-            this.button27.TabIndex = 4;
-            this.button27.UseVisualStyleBackColor = false;
+            this.G_status.BackColor = System.Drawing.Color.LightCoral;
+            this.G_status.Enabled = false;
+            this.G_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.G_status.Location = new System.Drawing.Point(20, 18);
+            this.G_status.Name = "G_status";
+            this.G_status.Size = new System.Drawing.Size(60, 45);
+            this.G_status.TabIndex = 4;
+            this.G_status.UseVisualStyleBackColor = false;
             // 
             // label58
             // 
@@ -1563,16 +1582,17 @@
             this.label58.Size = new System.Drawing.Size(0, 13);
             this.label58.TabIndex = 0;
             // 
-            // textBox35
+            // G_green
             // 
-            this.textBox35.Location = new System.Drawing.Point(113, 107);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(40, 20);
-            this.textBox35.TabIndex = 8;
+            this.G_green.Location = new System.Drawing.Point(113, 107);
+            this.G_green.Name = "G_green";
+            this.G_green.Size = new System.Drawing.Size(40, 20);
+            this.G_green.TabIndex = 8;
             // 
             // button28
             // 
             this.button28.BackColor = System.Drawing.Color.Lime;
+            this.button28.Enabled = false;
             this.button28.Location = new System.Drawing.Point(93, 106);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(26, 22);
@@ -1581,34 +1601,34 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.trackBar8);
+            this.panel11.Controls.Add(this.H_trackbar);
             this.panel11.Controls.Add(this.label59);
             this.panel11.Controls.Add(this.label60);
             this.panel11.Controls.Add(this.label61);
             this.panel11.Controls.Add(this.label62);
-            this.panel11.Controls.Add(this.textBox36);
+            this.panel11.Controls.Add(this.H_blue);
             this.panel11.Controls.Add(this.button29);
-            this.panel11.Controls.Add(this.textBox37);
-            this.panel11.Controls.Add(this.textBox38);
+            this.panel11.Controls.Add(this.H_off);
+            this.panel11.Controls.Add(this.H_on);
             this.panel11.Controls.Add(this.label63);
             this.panel11.Controls.Add(this.label64);
-            this.panel11.Controls.Add(this.textBox39);
+            this.panel11.Controls.Add(this.H_red);
             this.panel11.Controls.Add(this.button30);
-            this.panel11.Controls.Add(this.button31);
+            this.panel11.Controls.Add(this.H_status);
             this.panel11.Controls.Add(this.label65);
-            this.panel11.Controls.Add(this.textBox40);
+            this.panel11.Controls.Add(this.H_green);
             this.panel11.Controls.Add(this.button32);
             this.panel11.Location = new System.Drawing.Point(279, 552);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(247, 219);
             this.panel11.TabIndex = 22;
             // 
-            // trackBar8
+            // H_trackbar
             // 
-            this.trackBar8.Location = new System.Drawing.Point(14, 166);
-            this.trackBar8.Name = "trackBar8";
-            this.trackBar8.Size = new System.Drawing.Size(202, 45);
-            this.trackBar8.TabIndex = 16;
+            this.H_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.H_trackbar.Name = "H_trackbar";
+            this.H_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.H_trackbar.TabIndex = 16;
             // 
             // label59
             // 
@@ -1646,35 +1666,36 @@
             this.label62.TabIndex = 12;
             this.label62.Text = "s";
             // 
-            // textBox36
+            // H_blue
             // 
-            this.textBox36.Location = new System.Drawing.Point(186, 107);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(40, 20);
-            this.textBox36.TabIndex = 8;
+            this.H_blue.Location = new System.Drawing.Point(186, 107);
+            this.H_blue.Name = "H_blue";
+            this.H_blue.Size = new System.Drawing.Size(40, 20);
+            this.H_blue.TabIndex = 8;
             // 
             // button29
             // 
             this.button29.BackColor = System.Drawing.Color.Cyan;
+            this.button29.Enabled = false;
             this.button29.Location = new System.Drawing.Point(166, 106);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(26, 22);
             this.button29.TabIndex = 7;
             this.button29.UseVisualStyleBackColor = false;
             // 
-            // textBox37
+            // H_off
             // 
-            this.textBox37.Location = new System.Drawing.Point(176, 48);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(40, 20);
-            this.textBox37.TabIndex = 11;
+            this.H_off.Location = new System.Drawing.Point(176, 48);
+            this.H_off.Name = "H_off";
+            this.H_off.Size = new System.Drawing.Size(40, 20);
+            this.H_off.TabIndex = 11;
             // 
-            // textBox38
+            // H_on
             // 
-            this.textBox38.Location = new System.Drawing.Point(176, 18);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(40, 20);
-            this.textBox38.TabIndex = 9;
+            this.H_on.Location = new System.Drawing.Point(176, 18);
+            this.H_on.Name = "H_on";
+            this.H_on.Size = new System.Drawing.Size(40, 20);
+            this.H_on.TabIndex = 9;
             // 
             // label63
             // 
@@ -1694,12 +1715,12 @@
             this.label64.TabIndex = 9;
             this.label64.Text = "On Interval";
             // 
-            // textBox39
+            // H_red
             // 
-            this.textBox39.Location = new System.Drawing.Point(40, 107);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(40, 20);
-            this.textBox39.TabIndex = 6;
+            this.H_red.Location = new System.Drawing.Point(40, 107);
+            this.H_red.Name = "H_red";
+            this.H_red.Size = new System.Drawing.Size(40, 20);
+            this.H_red.TabIndex = 6;
             // 
             // button30
             // 
@@ -1711,16 +1732,16 @@
             this.button30.TabIndex = 5;
             this.button30.UseVisualStyleBackColor = false;
             // 
-            // button31
+            // H_status
             // 
-            this.button31.BackColor = System.Drawing.Color.LightCoral;
-            this.button31.Enabled = false;
-            this.button31.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button31.Location = new System.Drawing.Point(20, 18);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(60, 45);
-            this.button31.TabIndex = 4;
-            this.button31.UseVisualStyleBackColor = false;
+            this.H_status.BackColor = System.Drawing.Color.LightCoral;
+            this.H_status.Enabled = false;
+            this.H_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.H_status.Location = new System.Drawing.Point(20, 18);
+            this.H_status.Name = "H_status";
+            this.H_status.Size = new System.Drawing.Size(60, 45);
+            this.H_status.TabIndex = 4;
+            this.H_status.UseVisualStyleBackColor = false;
             // 
             // label65
             // 
@@ -1730,16 +1751,17 @@
             this.label65.Size = new System.Drawing.Size(0, 13);
             this.label65.TabIndex = 0;
             // 
-            // textBox40
+            // H_green
             // 
-            this.textBox40.Location = new System.Drawing.Point(113, 107);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(40, 20);
-            this.textBox40.TabIndex = 8;
+            this.H_green.Location = new System.Drawing.Point(113, 107);
+            this.H_green.Name = "H_green";
+            this.H_green.Size = new System.Drawing.Size(40, 20);
+            this.H_green.TabIndex = 8;
             // 
             // button32
             // 
             this.button32.BackColor = System.Drawing.Color.Lime;
+            this.button32.Enabled = false;
             this.button32.Location = new System.Drawing.Point(93, 106);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(26, 22);
@@ -1748,34 +1770,34 @@
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.trackBar9);
+            this.panel12.Controls.Add(this.I_trackbar);
             this.panel12.Controls.Add(this.label66);
             this.panel12.Controls.Add(this.label67);
             this.panel12.Controls.Add(this.label68);
             this.panel12.Controls.Add(this.label69);
-            this.panel12.Controls.Add(this.textBox41);
+            this.panel12.Controls.Add(this.I_blue);
             this.panel12.Controls.Add(this.button33);
-            this.panel12.Controls.Add(this.textBox42);
-            this.panel12.Controls.Add(this.textBox43);
+            this.panel12.Controls.Add(this.I_off);
+            this.panel12.Controls.Add(this.I_on);
             this.panel12.Controls.Add(this.label70);
             this.panel12.Controls.Add(this.label71);
-            this.panel12.Controls.Add(this.textBox44);
+            this.panel12.Controls.Add(this.I_red);
             this.panel12.Controls.Add(this.button34);
-            this.panel12.Controls.Add(this.button35);
+            this.panel12.Controls.Add(this.I_status);
             this.panel12.Controls.Add(this.label72);
-            this.panel12.Controls.Add(this.textBox45);
+            this.panel12.Controls.Add(this.I_green);
             this.panel12.Controls.Add(this.button36);
             this.panel12.Location = new System.Drawing.Point(546, 552);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(247, 219);
             this.panel12.TabIndex = 23;
             // 
-            // trackBar9
+            // I_trackbar
             // 
-            this.trackBar9.Location = new System.Drawing.Point(14, 166);
-            this.trackBar9.Name = "trackBar9";
-            this.trackBar9.Size = new System.Drawing.Size(202, 45);
-            this.trackBar9.TabIndex = 16;
+            this.I_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.I_trackbar.Name = "I_trackbar";
+            this.I_trackbar.Size = new System.Drawing.Size(202, 45);
+            this.I_trackbar.TabIndex = 16;
             // 
             // label66
             // 
@@ -1813,35 +1835,36 @@
             this.label69.TabIndex = 12;
             this.label69.Text = "s";
             // 
-            // textBox41
+            // I_blue
             // 
-            this.textBox41.Location = new System.Drawing.Point(186, 107);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(40, 20);
-            this.textBox41.TabIndex = 8;
+            this.I_blue.Location = new System.Drawing.Point(186, 107);
+            this.I_blue.Name = "I_blue";
+            this.I_blue.Size = new System.Drawing.Size(40, 20);
+            this.I_blue.TabIndex = 8;
             // 
             // button33
             // 
             this.button33.BackColor = System.Drawing.Color.Cyan;
+            this.button33.Enabled = false;
             this.button33.Location = new System.Drawing.Point(166, 106);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(26, 22);
             this.button33.TabIndex = 7;
             this.button33.UseVisualStyleBackColor = false;
             // 
-            // textBox42
+            // I_off
             // 
-            this.textBox42.Location = new System.Drawing.Point(176, 48);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(40, 20);
-            this.textBox42.TabIndex = 11;
+            this.I_off.Location = new System.Drawing.Point(176, 48);
+            this.I_off.Name = "I_off";
+            this.I_off.Size = new System.Drawing.Size(40, 20);
+            this.I_off.TabIndex = 11;
             // 
-            // textBox43
+            // I_on
             // 
-            this.textBox43.Location = new System.Drawing.Point(176, 18);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(40, 20);
-            this.textBox43.TabIndex = 9;
+            this.I_on.Location = new System.Drawing.Point(176, 18);
+            this.I_on.Name = "I_on";
+            this.I_on.Size = new System.Drawing.Size(40, 20);
+            this.I_on.TabIndex = 9;
             // 
             // label70
             // 
@@ -1861,12 +1884,12 @@
             this.label71.TabIndex = 9;
             this.label71.Text = "On Interval";
             // 
-            // textBox44
+            // I_red
             // 
-            this.textBox44.Location = new System.Drawing.Point(40, 107);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(40, 20);
-            this.textBox44.TabIndex = 6;
+            this.I_red.Location = new System.Drawing.Point(40, 107);
+            this.I_red.Name = "I_red";
+            this.I_red.Size = new System.Drawing.Size(40, 20);
+            this.I_red.TabIndex = 6;
             // 
             // button34
             // 
@@ -1878,16 +1901,16 @@
             this.button34.TabIndex = 5;
             this.button34.UseVisualStyleBackColor = false;
             // 
-            // button35
+            // I_status
             // 
-            this.button35.BackColor = System.Drawing.Color.LightCoral;
-            this.button35.Enabled = false;
-            this.button35.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button35.Location = new System.Drawing.Point(20, 18);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(60, 45);
-            this.button35.TabIndex = 4;
-            this.button35.UseVisualStyleBackColor = false;
+            this.I_status.BackColor = System.Drawing.Color.LightCoral;
+            this.I_status.Enabled = false;
+            this.I_status.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.I_status.Location = new System.Drawing.Point(20, 18);
+            this.I_status.Name = "I_status";
+            this.I_status.Size = new System.Drawing.Size(60, 45);
+            this.I_status.TabIndex = 4;
+            this.I_status.UseVisualStyleBackColor = false;
             // 
             // label72
             // 
@@ -1897,192 +1920,194 @@
             this.label72.Size = new System.Drawing.Size(0, 13);
             this.label72.TabIndex = 0;
             // 
-            // textBox45
+            // I_green
             // 
-            this.textBox45.Location = new System.Drawing.Point(113, 107);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(40, 20);
-            this.textBox45.TabIndex = 8;
+            this.I_green.Location = new System.Drawing.Point(113, 107);
+            this.I_green.Name = "I_green";
+            this.I_green.Size = new System.Drawing.Size(40, 20);
+            this.I_green.TabIndex = 8;
             // 
             // button36
             // 
             this.button36.BackColor = System.Drawing.Color.Lime;
+            this.button36.Enabled = false;
             this.button36.Location = new System.Drawing.Point(93, 106);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(26, 22);
             this.button36.TabIndex = 7;
             this.button36.UseVisualStyleBackColor = false;
             // 
-            // label73
+            // G_title
             // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(11, 536);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(41, 13);
-            this.label73.TabIndex = 26;
-            this.label73.Text = "Light G";
-            this.label73.Click += new System.EventHandler(this.label73_Click);
+            this.G_title.AutoSize = true;
+            this.G_title.Location = new System.Drawing.Point(11, 536);
+            this.G_title.Name = "G_title";
+            this.G_title.Size = new System.Drawing.Size(41, 13);
+            this.G_title.TabIndex = 26;
+            this.G_title.Text = "Light G";
+            this.G_title.Click += new System.EventHandler(this.label73_Click);
             // 
-            // label74
+            // H_title
             // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(276, 536);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(41, 13);
-            this.label74.TabIndex = 27;
-            this.label74.Text = "Light H";
+            this.H_title.AutoSize = true;
+            this.H_title.Location = new System.Drawing.Point(276, 536);
+            this.H_title.Name = "H_title";
+            this.H_title.Size = new System.Drawing.Size(41, 13);
+            this.H_title.TabIndex = 27;
+            this.H_title.Text = "Light H";
             // 
-            // label75
+            // I_title
             // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(543, 536);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(36, 13);
-            this.label75.TabIndex = 28;
-            this.label75.Text = "Light I";
-            this.label75.Click += new System.EventHandler(this.label75_Click);
+            this.I_title.AutoSize = true;
+            this.I_title.Location = new System.Drawing.Point(543, 536);
+            this.I_title.Name = "I_title";
+            this.I_title.Size = new System.Drawing.Size(36, 13);
+            this.I_title.TabIndex = 28;
+            this.I_title.Text = "Light I";
+            this.I_title.Click += new System.EventHandler(this.label75_Click);
             // 
-            // button37
+            // fileOpen
             // 
-            this.button37.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button37.Location = new System.Drawing.Point(14, 43);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(62, 35);
-            this.button37.TabIndex = 1;
-            this.button37.Text = "Open";
-            this.button37.UseVisualStyleBackColor = true;
+            this.fileOpen.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileOpen.Location = new System.Drawing.Point(14, 43);
+            this.fileOpen.Name = "fileOpen";
+            this.fileOpen.Size = new System.Drawing.Size(62, 35);
+            this.fileOpen.TabIndex = 1;
+            this.fileOpen.Text = "Open";
+            this.fileOpen.UseVisualStyleBackColor = true;
             // 
-            // button38
+            // fileSave
             // 
-            this.button38.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button38.Location = new System.Drawing.Point(84, 43);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(62, 35);
-            this.button38.TabIndex = 2;
-            this.button38.Text = "Save";
-            this.button38.UseVisualStyleBackColor = true;
+            this.fileSave.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileSave.Location = new System.Drawing.Point(84, 43);
+            this.fileSave.Name = "fileSave";
+            this.fileSave.Size = new System.Drawing.Size(62, 35);
+            this.fileSave.TabIndex = 2;
+            this.fileSave.Text = "Save";
+            this.fileSave.UseVisualStyleBackColor = true;
+            this.fileSave.Click += new System.EventHandler(this.button38_Click);
             // 
-            // button39
+            // settingsButton
             // 
-            this.button39.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button39.Location = new System.Drawing.Point(153, 43);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(88, 35);
-            this.button39.TabIndex = 3;
-            this.button39.Text = "Settings";
-            this.button39.UseVisualStyleBackColor = true;
+            this.settingsButton.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.Location = new System.Drawing.Point(153, 43);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(88, 35);
+            this.settingsButton.TabIndex = 3;
+            this.settingsButton.Text = "Settings";
+            this.settingsButton.UseVisualStyleBackColor = true;
             // 
-            // label76
+            // filenameDate
             // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(16, 93);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(36, 16);
-            this.label76.TabIndex = 4;
-            this.label76.Text = "Date\r\n";
+            this.filenameDate.AutoSize = true;
+            this.filenameDate.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filenameDate.Location = new System.Drawing.Point(16, 93);
+            this.filenameDate.Name = "filenameDate";
+            this.filenameDate.Size = new System.Drawing.Size(36, 16);
+            this.filenameDate.TabIndex = 4;
+            this.filenameDate.Text = "Date\r\n";
             // 
-            // label77
+            // filenameTitle
             // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(104, 93);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(153, 16);
-            this.label77.TabIndex = 5;
-            this.label77.Text = "Configuration Filename";
+            this.filenameTitle.AutoSize = true;
+            this.filenameTitle.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filenameTitle.Location = new System.Drawing.Point(104, 93);
+            this.filenameTitle.Name = "filenameTitle";
+            this.filenameTitle.Size = new System.Drawing.Size(153, 16);
+            this.filenameTitle.TabIndex = 5;
+            this.filenameTitle.Text = "Configuration Filename";
             // 
-            // label78
+            // filedate1
             // 
-            label78.AutoSize = true;
-            label78.Location = new System.Drawing.Point(17, 118);
-            label78.Name = "label78";
-            label78.Size = new System.Drawing.Size(65, 13);
-            label78.TabIndex = 6;
-            label78.Text = "20/12/2019";
+            filedate1.AutoSize = true;
+            filedate1.Location = new System.Drawing.Point(17, 118);
+            filedate1.Name = "filedate1";
+            filedate1.Size = new System.Drawing.Size(65, 13);
+            filedate1.TabIndex = 6;
+            filedate1.Text = "20/12/2019";
             // 
-            // label79
+            // filedate2
             // 
-            label79.AutoSize = true;
-            label79.Location = new System.Drawing.Point(17, 139);
-            label79.Name = "label79";
-            label79.Size = new System.Drawing.Size(65, 13);
-            label79.TabIndex = 7;
-            label79.Text = "20/12/2019";
+            filedate2.AutoSize = true;
+            filedate2.Location = new System.Drawing.Point(17, 139);
+            filedate2.Name = "filedate2";
+            filedate2.Size = new System.Drawing.Size(65, 13);
+            filedate2.TabIndex = 7;
+            filedate2.Text = "20/12/2019";
             // 
-            // label80
+            // filedate3
             // 
-            label80.AutoSize = true;
-            label80.Location = new System.Drawing.Point(17, 159);
-            label80.Name = "label80";
-            label80.Size = new System.Drawing.Size(65, 13);
-            label80.TabIndex = 8;
-            label80.Text = "20/12/2019";
+            filedate3.AutoSize = true;
+            filedate3.Location = new System.Drawing.Point(17, 159);
+            filedate3.Name = "filedate3";
+            filedate3.Size = new System.Drawing.Size(65, 13);
+            filedate3.TabIndex = 8;
+            filedate3.Text = "20/12/2019";
             // 
-            // label81
+            // filedate4
             // 
-            label81.AutoSize = true;
-            label81.Location = new System.Drawing.Point(16, 179);
-            label81.Name = "label81";
-            label81.Size = new System.Drawing.Size(65, 13);
-            label81.TabIndex = 9;
-            label81.Text = "20/12/2019";
+            filedate4.AutoSize = true;
+            filedate4.Location = new System.Drawing.Point(16, 179);
+            filedate4.Name = "filedate4";
+            filedate4.Size = new System.Drawing.Size(65, 13);
+            filedate4.TabIndex = 9;
+            filedate4.Text = "20/12/2019";
             // 
-            // label82
+            // filedate5
             // 
-            label82.AutoSize = true;
-            label82.Location = new System.Drawing.Point(17, 199);
-            label82.Name = "label82";
-            label82.Size = new System.Drawing.Size(65, 13);
-            label82.TabIndex = 10;
-            label82.Text = "20/12/2019";
+            filedate5.AutoSize = true;
+            filedate5.Location = new System.Drawing.Point(17, 199);
+            filedate5.Name = "filedate5";
+            filedate5.Size = new System.Drawing.Size(65, 13);
+            filedate5.TabIndex = 10;
+            filedate5.Text = "20/12/2019";
             // 
-            // label83
+            // filename1
             // 
-            label83.AutoSize = true;
-            label83.Location = new System.Drawing.Point(104, 118);
-            label83.Name = "label83";
-            label83.Size = new System.Drawing.Size(124, 13);
-            label83.TabIndex = 11;
-            label83.Text = "Configuration Filename A";
-            label83.Click += new System.EventHandler(this.label83_Click);
+            filename1.AutoSize = true;
+            filename1.Location = new System.Drawing.Point(104, 118);
+            filename1.Name = "filename1";
+            filename1.Size = new System.Drawing.Size(124, 13);
+            filename1.TabIndex = 11;
+            filename1.Text = "Configuration Filename A";
+            filename1.Click += new System.EventHandler(this.label83_Click);
             // 
-            // label84
+            // filename2
             // 
-            label84.AutoSize = true;
-            label84.Location = new System.Drawing.Point(104, 139);
-            label84.Name = "label84";
-            label84.Size = new System.Drawing.Size(124, 13);
-            label84.TabIndex = 12;
-            label84.Text = "Configuration Filename B";
-            label84.Click += new System.EventHandler(this.label84_Click);
+            filename2.AutoSize = true;
+            filename2.Location = new System.Drawing.Point(104, 139);
+            filename2.Name = "filename2";
+            filename2.Size = new System.Drawing.Size(124, 13);
+            filename2.TabIndex = 12;
+            filename2.Text = "Configuration Filename B";
+            filename2.Click += new System.EventHandler(this.label84_Click);
             // 
-            // label85
+            // filename3
             // 
-            label85.AutoSize = true;
-            label85.Location = new System.Drawing.Point(104, 159);
-            label85.Name = "label85";
-            label85.Size = new System.Drawing.Size(124, 13);
-            label85.TabIndex = 13;
-            label85.Text = "Configuration Filename C";
+            filename3.AutoSize = true;
+            filename3.Location = new System.Drawing.Point(104, 159);
+            filename3.Name = "filename3";
+            filename3.Size = new System.Drawing.Size(124, 13);
+            filename3.TabIndex = 13;
+            filename3.Text = "Configuration Filename C";
             // 
-            // label86
+            // filename4
             // 
-            label86.AutoSize = true;
-            label86.Location = new System.Drawing.Point(104, 179);
-            label86.Name = "label86";
-            label86.Size = new System.Drawing.Size(125, 13);
-            label86.TabIndex = 14;
-            label86.Text = "Configuration Filename D";
+            filename4.AutoSize = true;
+            filename4.Location = new System.Drawing.Point(104, 179);
+            filename4.Name = "filename4";
+            filename4.Size = new System.Drawing.Size(125, 13);
+            filename4.TabIndex = 14;
+            filename4.Text = "Configuration Filename D";
             // 
-            // label87
+            // filename5
             // 
-            label87.AutoSize = true;
-            label87.Location = new System.Drawing.Point(104, 199);
-            label87.Name = "label87";
-            label87.Size = new System.Drawing.Size(124, 13);
-            label87.TabIndex = 15;
-            label87.Text = "Configuration Filename E";
+            filename5.AutoSize = true;
+            filename5.Location = new System.Drawing.Point(104, 199);
+            filename5.Name = "filename5";
+            filename5.Size = new System.Drawing.Size(124, 13);
+            filename5.TabIndex = 15;
+            filename5.Text = "Configuration Filename E";
             // 
             // Form1
             // 
@@ -2102,31 +2127,31 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A_intensity)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C_trackbar)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.B_trackbar)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D_trackbar)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E_trackbar)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.F_trackbar)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.G_trackbar)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H_trackbar)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.I_trackbar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2135,186 +2160,186 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ControlPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label CurrentFilename;
+        private System.Windows.Forms.Label MapTitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button A_status;
+        private System.Windows.Forms.TextBox A_blue;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox A_red;
+        private System.Windows.Forms.TextBox A_green;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox A_off;
+        private System.Windows.Forms.TextBox A_on;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TrackBar A_intensity;
+        private System.Windows.Forms.Label B_title;
+        private System.Windows.Forms.Label A_title;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TrackBar trackBar3;
+        private System.Windows.Forms.TrackBar B_trackbar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox B_blue;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox B_off;
+        private System.Windows.Forms.TextBox B_on;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox B_red;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button B_status;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox B_green;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.TrackBar C_trackbar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox C_blue;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox C_off;
+        private System.Windows.Forms.TextBox C_on;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox C_red;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button C_status;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox C_green;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label C_title;
+        private System.Windows.Forms.Label I_title;
+        private System.Windows.Forms.Label H_title;
+        private System.Windows.Forms.Label G_title;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TrackBar trackBar9;
+        private System.Windows.Forms.TrackBar I_trackbar;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox I_blue;
         private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
+        private System.Windows.Forms.TextBox I_off;
+        private System.Windows.Forms.TextBox I_on;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.TextBox textBox44;
+        private System.Windows.Forms.TextBox I_red;
         private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Button I_status;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox textBox45;
+        private System.Windows.Forms.TextBox I_green;
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TrackBar trackBar8;
+        private System.Windows.Forms.TrackBar H_trackbar;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox H_blue;
         private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.TextBox H_off;
+        private System.Windows.Forms.TextBox H_on;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.TextBox H_red;
         private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button H_status;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.TextBox H_green;
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TrackBar trackBar7;
+        private System.Windows.Forms.TrackBar G_trackbar;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox textBox31;
+        private System.Windows.Forms.TextBox G_blue;
         private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.TextBox G_off;
+        private System.Windows.Forms.TextBox G_on;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox G_red;
         private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button G_status;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.TextBox G_green;
         private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label F_title;
+        private System.Windows.Forms.Label E_title;
+        private System.Windows.Forms.Label D_title;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TrackBar trackBar6;
+        private System.Windows.Forms.TrackBar F_trackbar;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox F_blue;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.TextBox F_off;
+        private System.Windows.Forms.TextBox F_on;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox F_red;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button F_status;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox30;
+        private System.Windows.Forms.TextBox F_green;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TrackBar trackBar5;
+        private System.Windows.Forms.TrackBar E_trackbar;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox E_blue;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox E_off;
+        private System.Windows.Forms.TextBox E_on;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox E_red;
         private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button E_status;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox E_green;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TrackBar trackBar4;
+        private System.Windows.Forms.TrackBar D_trackbar;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox D_blue;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox D_off;
+        private System.Windows.Forms.TextBox D_on;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox D_red;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button D_status;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox D_green;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label filenameDate;
+        private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Button fileSave;
+        private System.Windows.Forms.Button fileOpen;
+        private System.Windows.Forms.Label filenameTitle;
     }
 }
 

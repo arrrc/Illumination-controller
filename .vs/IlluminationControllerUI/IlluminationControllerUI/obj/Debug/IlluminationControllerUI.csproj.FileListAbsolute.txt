@@ -1,0 +1,11 @@
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\bin\Debug\IlluminationControllerUI.exe.config
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\bin\Debug\IlluminationControllerUI.exe
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\bin\Debug\IlluminationControllerUI.pdb
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.csproj.AssemblyReference.cache
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.Form1.resources
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.Properties.Resources.resources
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.csproj.GenerateResource.cache
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.csproj.CoreCompileInputs.cache
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.exe
+C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\obj\Debug\IlluminationControllerUI.pdb
