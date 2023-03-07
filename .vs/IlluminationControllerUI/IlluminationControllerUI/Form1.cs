@@ -101,5 +101,25 @@ namespace IlluminationControllerUI
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label83_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label84_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label75_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
