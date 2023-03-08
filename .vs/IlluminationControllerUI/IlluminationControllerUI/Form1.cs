@@ -12,6 +12,13 @@ namespace IlluminationControllerUI
 {
     public partial class Form1 : Form
     {
+        // Trackbar Values
+        int trackbarMax = 100;
+        int trackbarMin = 0;
+        int trackbarDefault = 50;
+        
+
+        // Input Value Global Variables
         int A_on_interval;
         int A_off_interval;
         int A_red_value;
@@ -74,7 +81,7 @@ namespace IlluminationControllerUI
         int I_green_value;
         int I_blue_value;
         int I_intensity_value;
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -343,8 +350,10 @@ namespace IlluminationControllerUI
 
         private void A_intensity_Scroll(object sender, EventArgs e)
         {
-            A_intensity_value = Convert.ToInt32(A_intensity.Value);
+            A_intensity_value = Convert.ToInt32(A_trackbar.Value);
+            int calc_intensity = A_intensity_value * 10;
 
+            intensityA.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void B_on_TextChanged(object sender, EventArgs e)
@@ -450,6 +459,9 @@ namespace IlluminationControllerUI
         private void B_trackbar_Scroll(object sender, EventArgs e)
         {
             B_intensity_value = Convert.ToInt32(B_trackbar.Value);
+            int calc_intensity = B_intensity_value * 10;
+
+            intensityB.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void C_on_TextChanged(object sender, EventArgs e)
@@ -552,6 +564,9 @@ namespace IlluminationControllerUI
         private void C_trackbar_Scroll(object sender, EventArgs e)
         {
             C_intensity_value = Convert.ToInt32(C_trackbar.Value);
+            int calc_intensity = C_intensity_value * 10;
+
+            intensityC.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void D_on_TextChanged(object sender, EventArgs e)
@@ -654,6 +669,9 @@ namespace IlluminationControllerUI
         private void D_trackbar_Scroll(object sender, EventArgs e)
         {
             D_intensity_value = Convert.ToInt32(D_trackbar.Value);
+            int calc_intensity = D_intensity_value * 10;
+
+            intensityD.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void E_on_TextChanged(object sender, EventArgs e)
@@ -756,6 +774,9 @@ namespace IlluminationControllerUI
         private void E_trackbar_Scroll(object sender, EventArgs e)
         {
             E_intensity_value = Convert.ToInt32(E_trackbar.Value);
+            int calc_intensity = E_intensity_value * 10;
+
+            intensityE.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void F_on_TextChanged(object sender, EventArgs e)
@@ -858,6 +879,9 @@ namespace IlluminationControllerUI
         private void F_trackbar_Scroll(object sender, EventArgs e)
         {
             F_intensity_value = Convert.ToInt32(F_trackbar.Value);
+            int calc_intensity = F_intensity_value * 10;
+
+            intensityF.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void G_on_TextChanged(object sender, EventArgs e)
@@ -960,6 +984,9 @@ namespace IlluminationControllerUI
         private void G_trackbar_Scroll(object sender, EventArgs e)
         {
             G_intensity_value = Convert.ToInt32(G_trackbar.Value);
+            int calc_intensity = G_intensity_value * 10;
+
+            intensityG.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void H_on_TextChanged(object sender, EventArgs e)
@@ -1063,6 +1090,9 @@ namespace IlluminationControllerUI
         private void H_trackbar_Scroll(object sender, EventArgs e)
         {
             H_intensity_value = Convert.ToInt32(H_trackbar.Value);
+            int calc_intensity = H_intensity_value * 10;
+
+            intensityH.Text = Convert.ToString(calc_intensity) + "%";
         }
 
         private void I_on_TextChanged(object sender, EventArgs e)
@@ -1165,6 +1195,59 @@ namespace IlluminationControllerUI
         private void I_trackbar_Scroll(object sender, EventArgs e)
         {
             I_intensity_value = Convert.ToInt32(I_trackbar.Value);
+            int calc_intensity = I_intensity_value * 10;
+
+            intensityI.Text = Convert.ToString(calc_intensity) + "%";
+        }
+
+        private void IntensityA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void intensityB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void intensityC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void intensityD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntensityE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntensityF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InetnsityG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntensityH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntensityI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
