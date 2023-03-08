@@ -13,10 +13,16 @@ namespace IlluminationControllerUI
     public partial class Form1 : Form
     {
         // Trackbar Values
-        int trackbarMax = 100;
-        int trackbarMin = 0;
-        int trackbarDefault = 50;
-        
+        int A_currentLevel = 10;
+        int B_currentLevel = 0;
+        int C_currentLevel = 0;
+        int D_currentLevel = 0;
+        int E_currentLevel = 0;
+        int F_currentLevel = 0;
+        int G_currentLevel = 0;
+        int H_currentLevel = 0;
+        int I_currentLevel = 0;
+
 
         // Input Value Global Variables
         int A_on_interval;
@@ -284,11 +290,10 @@ namespace IlluminationControllerUI
         // Check colour values and ascertain whether they are valid
         private bool rgb_valid(int value)
         {
-            string strVal = Convert.ToString(value);
 
             if (0 <= value && value <= 255)
             {
-                Console.WriteLine(value);
+                //Console.WriteLine(value);
                 return true;
             }
             else
@@ -351,9 +356,276 @@ namespace IlluminationControllerUI
         private void A_intensity_Scroll(object sender, EventArgs e)
         {
             A_intensity_value = Convert.ToInt32(A_trackbar.Value);
-            int calc_intensity = A_intensity_value * 10;
+            if (A_intensity_value != 10)
+            {
+                intensityA.Text = "L" + A_intensity_value;
+                A_red.ReadOnly = true;
+                A_blue.ReadOnly = true;
+                A_green.ReadOnly = true;
 
-            intensityA.Text = Convert.ToString(calc_intensity) + "%";
+                double current_red_value = 0;
+                double current_green_value = 0;
+                double current_blue_value = 0;
+                double updated_red;
+                double updated_green;
+                double updated_blue;
+
+                int A_prevValue;
+
+                try
+                {
+                    current_red_value = Convert.ToDouble(A_red.Text);
+                    //Console.WriteLine(current_red_value);
+                    current_green_value = Convert.ToDouble(A_green.Text);
+                    //Console.WriteLine(current_green_value);
+                    current_blue_value = Convert.ToDouble(A_blue.Text);
+                    //Console.WriteLine(current_blue_value);
+                }
+                catch
+                {
+                    Console.WriteLine("error");
+                    return;
+                }
+
+
+                // Calculate RGB Intensity
+                if (A_intensity_value < A_currentLevel)
+                {
+                    A_prevValue = A_currentLevel;
+                    Console.WriteLine(A_currentLevel);
+                    updated_red = current_red_value - ((A_currentLevel - A_intensity_value) * 25);
+                    updated_green = current_green_value - ((A_currentLevel - A_intensity_value) * 25);
+                    updated_blue = current_blue_value - ((A_currentLevel - A_intensity_value) * 25);
+
+                    bool red_valid_rgb = rgb_valid(Convert.ToInt32(updated_red));
+                    //Console.WriteLine(rgb_red);
+                    bool green_valid_rgb = rgb_valid(Convert.ToInt32(updated_green));
+                    bool blue_valid_rgb = rgb_valid(Convert.ToInt32(updated_blue));
+
+                    if (red_valid_rgb && green_valid_rgb && blue_valid_rgb)
+                    {
+                        A_currentLevel = A_intensity_value;
+                    }
+                    else
+                    {
+                        A_trackbar.Value = A_prevValue;
+                        intensityA.Text = "L" + A_prevValue;
+                        MessageBox.Show("at least 1 colour value is too low/high if the brightness is further increased/decreased");
+                        return;
+                    }
+
+                }
+                else if (A_intensity_value > A_currentLevel)
+                {
+                    A_prevValue = A_currentLevel;
+                    Console.WriteLine(A_intensity_value);
+                    Console.WriteLine(A_currentLevel);
+                    updated_red = current_red_value + ((A_intensity_value - A_currentLevel) * 25);
+                    updated_green = current_green_value + ((A_intensity_value - A_currentLevel) * 25);
+                    updated_blue = current_blue_value + ((A_intensity_value - A_currentLevel) * 25);
+                    A_currentLevel = A_intensity_value;
+
+                    bool red_valid_rgb = rgb_valid(Convert.ToInt32(updated_red));
+                    //Console.WriteLine(rgb_red);
+                    bool green_valid_rgb = rgb_valid(Convert.ToInt32(updated_green));
+                    bool blue_valid_rgb = rgb_valid(Convert.ToInt32(updated_blue));
+
+                    if (red_valid_rgb && green_valid_rgb && blue_valid_rgb)
+                    {
+                        A_currentLevel = A_intensity_value;
+                    }
+                    else
+                    {
+                        A_trackbar.Value = A_prevValue;
+                        intensityA.Text = "L" + A_prevValue;
+                        MessageBox.Show("at least 1 colour value is too low/high if  the brightness is further increased/decreased");
+                        return;
+                    }
+                }
+                else
+                {
+                    A_prevValue = A_currentLevel;
+                    updated_red = current_red_value;
+                    updated_green = current_green_value;
+                    updated_blue = current_blue_value;
+
+                    bool red_valid_rgb = rgb_valid(Convert.ToInt32(updated_red));
+                    //Console.WriteLine(rgb_red);
+                    bool green_valid_rgb = rgb_valid(Convert.ToInt32(updated_green));
+                    bool blue_valid_rgb = rgb_valid(Convert.ToInt32(updated_blue));
+
+                    if (red_valid_rgb && green_valid_rgb && blue_valid_rgb)
+                    {
+                        A_currentLevel = A_intensity_value;
+                    }
+                    else
+                    {
+                        A_trackbar.Value = A_prevValue;
+                        intensityA.Text = "L" + A_prevValue;
+                        MessageBox.Show("at least 1 colour value is too low/high if  the brightness is further increased/decreased");
+                        return;
+                    }
+                }
+
+
+                updated_red = Math.Round(updated_red, 0);
+                updated_green = Math.Round(updated_green, 0);
+                updated_blue = Math.Round(updated_blue, 0);
+
+                int rgb_red = Convert.ToInt32(updated_red);
+                int rgb_green = Convert.ToInt32(updated_green);
+                int rgb_blue = Convert.ToInt32(updated_blue);
+
+                A_red.Text = updated_red.ToString();
+                A_green.Text = updated_green.ToString();
+                A_blue.Text = updated_blue.ToString();
+
+                A_status.BackColor = Color.FromArgb(rgb_red, rgb_green, rgb_blue);
+            }
+            else
+            {
+                A_red.ReadOnly = false;
+                A_blue.ReadOnly = false;
+                A_green.ReadOnly = false;
+
+                intensityA.Text = "L" + A_intensity_value;
+
+                double current_red_value = 0;
+                double current_green_value = 0;
+                double current_blue_value = 0;
+                double updated_red;
+                double updated_green;
+                double updated_blue;
+
+                int A_prevValue;
+
+                try
+                {
+                    current_red_value = Convert.ToDouble(A_red.Text);
+                    //Console.WriteLine(current_red_value);
+                    current_green_value = Convert.ToDouble(A_green.Text);
+                    //Console.WriteLine(current_green_value);
+                    current_blue_value = Convert.ToDouble(A_blue.Text);
+                    //Console.WriteLine(current_blue_value);
+                }
+                catch
+                {
+                    Console.WriteLine("error");
+                    return;
+                }
+
+
+                // Calculate RGB Intensity
+                if (A_intensity_value < A_currentLevel)
+                {
+                    A_prevValue = A_currentLevel;
+                    Console.WriteLine(A_currentLevel);
+                    updated_red = current_red_value - ((A_currentLevel - A_intensity_value) * 25);
+                    updated_green = current_green_value - ((A_currentLevel - A_intensity_value) * 25);
+                    updated_blue = current_blue_value - ((A_currentLevel - A_intensity_value) * 25);
+
+                    bool red_valid_rgb = rgb_valid(Convert.ToInt32(updated_red));
+                    //Console.WriteLine(rgb_red);
+                    bool green_valid_rgb = rgb_valid(Convert.ToInt32(updated_green));
+                    bool blue_valid_rgb = rgb_valid(Convert.ToInt32(updated_blue));
+
+                    if (red_valid_rgb && green_valid_rgb && blue_valid_rgb)
+                    {
+                        A_currentLevel = A_intensity_value;
+                    }
+                    else
+                    {
+                        A_trackbar.Value = A_prevValue;
+                        intensityA.Text = "L" + A_prevValue;
+                        MessageBox.Show("at least 1 colour value is too low/high if the brightness is further increased/decreased");
+                        return;
+                    }
+
+                }
+                else if (A_intensity_value > A_currentLevel)
+                {
+                    A_prevValue = A_currentLevel;
+                    Console.WriteLine(A_intensity_value);
+                    Console.WriteLine(A_currentLevel);
+                    updated_red = current_red_value + ((A_intensity_value - A_currentLevel) * 25);
+                    updated_green = current_green_value + ((A_intensity_value - A_currentLevel) * 25);
+                    updated_blue = current_blue_value + ((A_intensity_value - A_currentLevel) * 25);
+                    A_currentLevel = A_intensity_value;
+
+                    bool red_valid_rgb = rgb_valid(Convert.ToInt32(updated_red));
+                    //Console.WriteLine(rgb_red);
+                    bool green_valid_rgb = rgb_valid(Convert.ToInt32(updated_green));
+                    bool blue_valid_rgb = rgb_valid(Convert.ToInt32(updated_blue));
+
+                    if (red_valid_rgb && green_valid_rgb && blue_valid_rgb)
+                    {
+                        A_currentLevel = A_intensity_value;
+                    }
+                    else
+                    {
+                        A_trackbar.Value = A_prevValue;
+                        intensityA.Text = "L" + A_prevValue;
+                        MessageBox.Show("at least 1 colour value is too low/high if  the brightness is further increased/decreased");
+                        return;
+                    }
+                }
+                else
+                {
+                    A_prevValue = A_currentLevel;
+                    updated_red = current_red_value;
+                    updated_green = current_green_value;
+                    updated_blue = current_blue_value;
+
+                    bool red_valid_rgb = rgb_valid(Convert.ToInt32(updated_red));
+                    //Console.WriteLine(rgb_red);
+                    bool green_valid_rgb = rgb_valid(Convert.ToInt32(updated_green));
+                    bool blue_valid_rgb = rgb_valid(Convert.ToInt32(updated_blue));
+
+                    if (red_valid_rgb && green_valid_rgb && blue_valid_rgb)
+                    {
+                        A_currentLevel = A_intensity_value;
+                    }
+                    else
+                    {
+                        A_trackbar.Value = A_prevValue;
+                        intensityA.Text = "L" + A_prevValue;
+                        MessageBox.Show("at least 1 colour value is too low/high if  the brightness is further increased/decreased");
+                        return;
+                    }
+                }
+
+
+                updated_red = Math.Round(updated_red, 0);
+                updated_green = Math.Round(updated_green, 0);
+                updated_blue = Math.Round(updated_blue, 0);
+
+                int rgb_red = Convert.ToInt32(updated_red);
+                int rgb_green = Convert.ToInt32(updated_green);
+                int rgb_blue = Convert.ToInt32(updated_blue);
+
+                A_red.Text = updated_red.ToString();
+                A_green.Text = updated_green.ToString();
+                A_blue.Text = updated_blue.ToString();
+
+                A_status.BackColor = Color.FromArgb(rgb_red, rgb_green, rgb_blue);
+            }
+            
+        }
+
+        private int rgb_value_checker(int value)
+        {
+            if (value > 255)
+            {
+                return value = 255;
+            }
+            else if (value < 0)
+            {
+                return value = 0;
+            }
+            else
+            {
+                return value;
+            }
         }
 
         private void B_on_TextChanged(object sender, EventArgs e)

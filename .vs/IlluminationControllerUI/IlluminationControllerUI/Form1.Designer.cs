@@ -582,6 +582,7 @@
             this.I_blue.Name = "I_blue";
             this.I_blue.Size = new System.Drawing.Size(40, 20);
             this.I_blue.TabIndex = 8;
+            this.I_blue.Text = "0";
             this.I_blue.TextChanged += new System.EventHandler(this.I_blue_TextChanged);
             // 
             // button33
@@ -634,6 +635,7 @@
             this.I_red.Name = "I_red";
             this.I_red.Size = new System.Drawing.Size(40, 20);
             this.I_red.TabIndex = 6;
+            this.I_red.Text = "0";
             this.I_red.TextChanged += new System.EventHandler(this.I_red_TextChanged);
             // 
             // button34
@@ -671,6 +673,7 @@
             this.I_green.Name = "I_green";
             this.I_green.Size = new System.Drawing.Size(40, 20);
             this.I_green.TabIndex = 8;
+            this.I_green.Text = "0";
             this.I_green.TextChanged += new System.EventHandler(this.I_green_TextChanged);
             // 
             // button36
@@ -769,6 +772,7 @@
             this.H_blue.Name = "H_blue";
             this.H_blue.Size = new System.Drawing.Size(40, 20);
             this.H_blue.TabIndex = 8;
+            this.H_blue.Text = "0";
             this.H_blue.TextChanged += new System.EventHandler(this.H_blue_TextChanged);
             // 
             // button29
@@ -821,6 +825,7 @@
             this.H_red.Name = "H_red";
             this.H_red.Size = new System.Drawing.Size(40, 20);
             this.H_red.TabIndex = 6;
+            this.H_red.Text = "0";
             this.H_red.TextChanged += new System.EventHandler(this.H_red_TextChanged);
             // 
             // button30
@@ -858,6 +863,7 @@
             this.H_green.Name = "H_green";
             this.H_green.Size = new System.Drawing.Size(40, 20);
             this.H_green.TabIndex = 8;
+            this.H_green.Text = "0";
             this.H_green.TextChanged += new System.EventHandler(this.H_green_TextChanged);
             // 
             // button32
@@ -956,6 +962,7 @@
             this.G_blue.Name = "G_blue";
             this.G_blue.Size = new System.Drawing.Size(40, 20);
             this.G_blue.TabIndex = 8;
+            this.G_blue.Text = "0";
             this.G_blue.TextChanged += new System.EventHandler(this.G_blue_TextChanged);
             // 
             // button25
@@ -1008,6 +1015,7 @@
             this.G_red.Name = "G_red";
             this.G_red.Size = new System.Drawing.Size(40, 20);
             this.G_red.TabIndex = 6;
+            this.G_red.Text = "0";
             this.G_red.TextChanged += new System.EventHandler(this.G_red_TextChanged);
             // 
             // button26
@@ -1045,6 +1053,7 @@
             this.G_green.Name = "G_green";
             this.G_green.Size = new System.Drawing.Size(40, 20);
             this.G_green.TabIndex = 8;
+            this.G_green.Text = "0";
             this.G_green.TextChanged += new System.EventHandler(this.G_green_TextChanged);
             // 
             // button28
@@ -1172,6 +1181,7 @@
             this.F_blue.Name = "F_blue";
             this.F_blue.Size = new System.Drawing.Size(40, 20);
             this.F_blue.TabIndex = 8;
+            this.F_blue.Text = "0";
             this.F_blue.TextChanged += new System.EventHandler(this.F_blue_TextChanged);
             // 
             // button21
@@ -1224,6 +1234,7 @@
             this.F_red.Name = "F_red";
             this.F_red.Size = new System.Drawing.Size(40, 20);
             this.F_red.TabIndex = 6;
+            this.F_red.Text = "0";
             this.F_red.TextChanged += new System.EventHandler(this.F_red_TextChanged);
             // 
             // button22
@@ -1261,6 +1272,7 @@
             this.F_green.Name = "F_green";
             this.F_green.Size = new System.Drawing.Size(40, 20);
             this.F_green.TabIndex = 8;
+            this.F_green.Text = "0";
             this.F_green.TextChanged += new System.EventHandler(this.F_green_TextChanged);
             // 
             // button24
@@ -1359,6 +1371,7 @@
             this.E_blue.Name = "E_blue";
             this.E_blue.Size = new System.Drawing.Size(40, 20);
             this.E_blue.TabIndex = 8;
+            this.E_blue.Text = "0";
             this.E_blue.TextChanged += new System.EventHandler(this.E_blue_TextChanged);
             // 
             // button17
@@ -1411,6 +1424,7 @@
             this.E_red.Name = "E_red";
             this.E_red.Size = new System.Drawing.Size(40, 20);
             this.E_red.TabIndex = 6;
+            this.E_red.Text = "0";
             this.E_red.TextChanged += new System.EventHandler(this.E_red_TextChanged);
             // 
             // button18
@@ -1448,6 +1462,7 @@
             this.E_green.Name = "E_green";
             this.E_green.Size = new System.Drawing.Size(40, 20);
             this.E_green.TabIndex = 8;
+            this.E_green.Text = "0";
             this.E_green.TextChanged += new System.EventHandler(this.E_green_TextChanged);
             // 
             // button20
@@ -1547,6 +1562,7 @@
             this.D_blue.Name = "D_blue";
             this.D_blue.Size = new System.Drawing.Size(40, 20);
             this.D_blue.TabIndex = 8;
+            this.D_blue.Text = "0";
             this.D_blue.TextChanged += new System.EventHandler(this.D_blue_TextChanged);
             // 
             // button13
@@ -1599,6 +1615,7 @@
             this.D_red.Name = "D_red";
             this.D_red.Size = new System.Drawing.Size(40, 20);
             this.D_red.TabIndex = 6;
+            this.D_red.Text = "0";
             this.D_red.TextChanged += new System.EventHandler(this.D_red_TextChanged);
             // 
             // button14
@@ -1636,6 +1653,7 @@
             this.D_green.Name = "D_green";
             this.D_green.Size = new System.Drawing.Size(40, 20);
             this.D_green.TabIndex = 8;
+            this.D_green.Text = "0";
             this.D_green.TextChanged += new System.EventHandler(this.D_green_TextChanged);
             // 
             // button16
@@ -1763,6 +1781,7 @@
             this.B_blue.Name = "B_blue";
             this.B_blue.Size = new System.Drawing.Size(40, 20);
             this.B_blue.TabIndex = 8;
+            this.B_blue.Text = "0";
             this.B_blue.TextChanged += new System.EventHandler(this.B_blue_TextChanged);
             // 
             // button9
@@ -1815,6 +1834,7 @@
             this.B_red.Name = "B_red";
             this.B_red.Size = new System.Drawing.Size(40, 20);
             this.B_red.TabIndex = 6;
+            this.B_red.Text = "0";
             this.B_red.TextChanged += new System.EventHandler(this.B_red_TextChanged);
             // 
             // button10
@@ -1852,6 +1872,7 @@
             this.B_green.Name = "B_green";
             this.B_green.Size = new System.Drawing.Size(40, 20);
             this.B_green.TabIndex = 8;
+            this.B_green.Text = "0";
             this.B_green.TextChanged += new System.EventHandler(this.B_green_TextChanged);
             // 
             // button12
@@ -1951,6 +1972,7 @@
             this.C_blue.Name = "C_blue";
             this.C_blue.Size = new System.Drawing.Size(40, 20);
             this.C_blue.TabIndex = 8;
+            this.C_blue.Text = "0";
             this.C_blue.TextChanged += new System.EventHandler(this.C_blue_TextChanged);
             // 
             // button5
@@ -2003,6 +2025,7 @@
             this.C_red.Name = "C_red";
             this.C_red.Size = new System.Drawing.Size(40, 20);
             this.C_red.TabIndex = 6;
+            this.C_red.Text = "0";
             this.C_red.TextChanged += new System.EventHandler(this.C_red_TextChanged);
             // 
             // button6
@@ -2041,6 +2064,7 @@
             this.C_green.Name = "C_green";
             this.C_green.Size = new System.Drawing.Size(40, 20);
             this.C_green.TabIndex = 8;
+            this.C_green.Text = "0";
             this.C_green.TextChanged += new System.EventHandler(this.C_green_TextChanged);
             // 
             // button8
@@ -2092,10 +2116,11 @@
             // A_trackbar
             // 
             this.A_trackbar.Location = new System.Drawing.Point(14, 166);
+            this.A_trackbar.Maximum = 20;
             this.A_trackbar.Name = "A_trackbar";
             this.A_trackbar.Size = new System.Drawing.Size(202, 45);
             this.A_trackbar.TabIndex = 16;
-            this.A_trackbar.Value = 5;
+            this.A_trackbar.Value = 10;
             this.A_trackbar.Scroll += new System.EventHandler(this.A_intensity_Scroll);
             // 
             // label10
@@ -2143,6 +2168,7 @@
             this.A_blue.Name = "A_blue";
             this.A_blue.Size = new System.Drawing.Size(40, 20);
             this.A_blue.TabIndex = 8;
+            this.A_blue.Text = "26";
             this.A_blue.TextChanged += new System.EventHandler(this.A_blue_TextChanged);
             // 
             // button4
@@ -2196,6 +2222,7 @@
             this.A_red.Name = "A_red";
             this.A_red.Size = new System.Drawing.Size(40, 20);
             this.A_red.TabIndex = 6;
+            this.A_red.Text = "26";
             this.A_red.TextChanged += new System.EventHandler(this.A_red_TextChanged);
             // 
             // button2
@@ -2237,6 +2264,7 @@
             this.A_green.Name = "A_green";
             this.A_green.Size = new System.Drawing.Size(40, 20);
             this.A_green.TabIndex = 8;
+            this.A_green.Text = "26";
             this.A_green.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button3
