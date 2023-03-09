@@ -229,6 +229,7 @@
             this.ControlPanel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.MapTitle = new System.Windows.Forms.Label();
+            this.A_lightButton = new System.Windows.Forms.Button();
             filedate1 = new System.Windows.Forms.Label();
             filedate2 = new System.Windows.Forms.Label();
             filedate3 = new System.Windows.Forms.Label();
@@ -442,6 +443,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.A_lightButton);
             this.panel2.Controls.Add(this.I_title);
             this.panel2.Controls.Add(this.H_title);
             this.panel2.Controls.Add(this.G_title);
@@ -2308,6 +2310,16 @@
             this.MapTitle.TabIndex = 4;
             this.MapTitle.Text = "Control Map";
             // 
+            // A_lightButton
+            // 
+            this.A_lightButton.Location = new System.Drawing.Point(217, 38);
+            this.A_lightButton.Name = "A_lightButton";
+            this.A_lightButton.Size = new System.Drawing.Size(44, 25);
+            this.A_lightButton.TabIndex = 29;
+            this.A_lightButton.Text = "start";
+            this.A_lightButton.UseVisualStyleBackColor = true;
+            this.A_lightButton.Click += new System.EventHandler(this.A_lightButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2548,6 +2560,7 @@
         private System.Windows.Forms.Label intensityB;
         private System.Windows.Forms.Label intensityC;
         private System.Windows.Forms.Label intensityA;
+        private System.Windows.Forms.Button A_lightButton;
     }
 }
 

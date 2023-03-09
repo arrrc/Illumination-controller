@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace IlluminationControllerUI
 {
@@ -273,7 +274,7 @@ namespace IlluminationControllerUI
             }
             catch
             {
-                Console.WriteLine("invalid interval vals");
+                MessageBox.Show("invalid interval vals");
                 return;
 
             }
@@ -281,11 +282,23 @@ namespace IlluminationControllerUI
             // Ascertain whether values are valid for their purpose
             if (intervals_valid(A_on_interval))
             {
-                Console.WriteLine("Interval Values are valid");
+                MessageBox.Show("Interval Values are valid");
             }
+            
+
 
 
         }
+
+        private void light_loop(int red, int green, int blue, int on_interval, int off_interval)
+        {
+            while (true)
+            {
+                A_status.BackColor = Color.FromArgb(red, green, blue);
+                Thread.Sleep(on_interval/1000);
+                A_status.BackColor = Color.Transparent;
+                Thread.Sleep(off_interval/1000);
+            }        }
 
         // Check colour values and ascertain whether they are valid
         private bool rgb_valid(int value)
@@ -303,10 +316,10 @@ namespace IlluminationControllerUI
         }
 
         // Check interval values are valid and ndo not exceed max time
-        private bool intervals_valid(double value)
+        private bool intervals_valid(int value)
         {
 
-            double max_time = 9999;
+            int max_time = 9999;
             if ((value > 0 || value < max_time))
             {
                 return true;
@@ -330,6 +343,7 @@ namespace IlluminationControllerUI
             {
                 Console.WriteLine("Interval Values are valid");
             }
+
         }
 
         private void A_blue_TextChanged(object sender, EventArgs e)
@@ -1520,6 +1534,17 @@ namespace IlluminationControllerUI
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void A_lightButton_Click(object sender, EventArgs e)
+        {
+            int red_val = Convert.ToInt32(A_red.Text);
+            int green_val = Convert.ToInt32(A_green.Text);
+            int blue_val = Convert.ToInt32(A_blue.Text);
+
+            if rgb_checker()
+
+            Thread On_interval = new Thread(light_loop());
         }
     }
 }
