@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 namespace IlluminationControllerUI
 {
@@ -88,10 +89,28 @@ namespace IlluminationControllerUI
         int I_green_value;
         int I_blue_value;
         int I_intensity_value;
-        
+
+        bool startStop = false;
+        string mainPath = @"C:\Users\WZS20\Documents\GitHub\Illumination-controller\.vs\IlluminationControllerUI\IlluminationControllerUI\configFiles\";
+
+
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void writeDatafile(string path, string filename, string text)
+        {
+
+            if (!File.Exists(path + filename))
+            {
+                using (StreamWriter sw = File.CreateText(path + filename))
+                {
+                    sw.WriteLine(text);
+                    sw.Close();
+                }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -139,19 +158,31 @@ namespace IlluminationControllerUI
             try
             {
                 A_green_value = Convert.ToInt32(A_green.Text);
-
+                errorMsg.Text = "";
+                A_lightButton.Enabled = true;
             }
             catch
             {
-                Console.WriteLine("RGB vals invalid");
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
+
                 return;
             }
-            
-            if (rgb_valid(A_green_value))
+
+            if (check_all_rgb(A_red_value, A_green_value, A_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
                 Color newColour = Color.FromArgb(A_red_value, A_green_value, A_blue_value);
                 A_status.BackColor = newColour;
+            }
+            else
+            {
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
+
+                return;
             }
 
         }
@@ -218,7 +249,7 @@ namespace IlluminationControllerUI
 
         private void button38_Click(object sender, EventArgs e)
         {
-
+            writeDatafile(mainPath, "configTest.txt", "Hi");
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
@@ -251,17 +282,28 @@ namespace IlluminationControllerUI
             try
             {
                 A_red_value = Convert.ToInt32(A_red.Text);
+                errorMsg.Text = "";
+                A_lightButton.Enabled = true;
             }
             catch
             {
-                Console.WriteLine("RGB vals invalid");
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
+
                 return;
             }
-            if (rgb_valid(A_red_value))
+            if (check_all_rgb(A_red_value, A_green_value, A_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
                 Color newColour = Color.FromArgb(A_red_value, A_green_value, A_blue_value);
                 A_status.BackColor = newColour;
+            }
+            else
+            {
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
             }
         }
 
@@ -271,34 +313,63 @@ namespace IlluminationControllerUI
             try
             {
                 A_on_interval = Convert.ToInt32(A_on.Text);
+                errorMsg.Text = "";
+                A_lightButton.Enabled = true;
             }
             catch
             {
-                MessageBox.Show("invalid interval vals");
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
+
                 return;
 
             }
-
-            // Ascertain whether values are valid for their purpose
-            if (intervals_valid(A_on_interval))
-            {
-                MessageBox.Show("Interval Values are valid");
-            }
-            
-
-
-
         }
 
-        private void light_loop(int red, int green, int blue, int on_interval, int off_interval)
+        //private void light_loop(int red, int green, int blue, int on_interval, int off_interval)
+        //{
+        //    while (true)
+        //    {
+        //        A_status.BackColor = Color.FromArgb(red, green, blue);
+        //        Thread.Sleep(on_interval/1000);
+        //        A_status.BackColor = Color.Transparent;
+        //        Thread.Sleep(off_interval/1000);
+        //    }        
+        //}
+
+        private void light_loop()
         {
-            while (true)
+            try
             {
-                A_status.BackColor = Color.FromArgb(red, green, blue);
-                Thread.Sleep(on_interval/1000);
-                A_status.BackColor = Color.Transparent;
-                Thread.Sleep(off_interval/1000);
-            }        }
+                while (true)
+                {
+                    if(startStop == false)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        int red = Convert.ToInt32(A_red.Text);
+                        int green = Convert.ToInt32(A_green.Text);
+                        int blue = Convert.ToInt32(A_blue.Text);
+                        int on_interval = Convert.ToInt32(A_on.Text);
+                        int off_interval = Convert.ToInt32(A_off.Text);
+
+                        A_status.BackColor = Color.FromArgb(red, green, blue);
+
+                        Thread.Sleep(on_interval);
+                        A_status.BackColor = Color.Transparent;
+                        Thread.Sleep(off_interval);
+                    }
+                    
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
 
         // Check colour values and ascertain whether they are valid
         private bool rgb_valid(int value)
@@ -315,12 +386,24 @@ namespace IlluminationControllerUI
             }
         }
 
+        private bool check_all_rgb(int red, int green, int blue)
+        {
+
+            if (0 <= red && red <= 255 && 0 <= green && green <= 255 && 0 <= blue && blue <= 255)
+            {
+                //Console.WriteLine(value);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         // Check interval values are valid and ndo not exceed max time
         private bool intervals_valid(int value)
         {
-
-            int max_time = 9999;
-            if ((value > 0 || value < max_time))
+            if ((value > 0))
             {
                 return true;
             }
@@ -332,16 +415,17 @@ namespace IlluminationControllerUI
             try
             {
                 A_off_interval = Convert.ToInt32(A_off.Text);
+                errorMsg.Text = "";
+                A_lightButton.Enabled = true;
             }
             catch
             {
-                Console.WriteLine("interval val invalid");
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
+
                 return;
 
-            }
-            if (intervals_valid(A_off_interval))
-            {
-                Console.WriteLine("Interval Values are valid");
             }
 
         }
@@ -351,24 +435,38 @@ namespace IlluminationControllerUI
             try
             {
                 A_blue_value = Convert.ToInt32(A_blue.Text);
+                errorMsg.Text = "";
+                A_lightButton.Enabled = true;
             }
             catch
             {
-                Console.WriteLine("RGB vals invalid");
-                return;
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
 
+                return;
             }
-            if (rgb_valid(A_blue_value))
+
+            if (check_all_rgb(A_red_value, A_green_value, A_blue_value))
             {
                 Console.WriteLine("RGB values are valid");
                 Color newColour = Color.FromArgb(A_red_value, A_green_value, A_blue_value);
                 A_status.BackColor = newColour;
+            }
+            else
+            {
+                errorMsg.Text = "Invalid input for some values";
+                errorMsg.Visible = true;
+                A_lightButton.Enabled = false;
+
+                return;
             }
 
         }
 
         private void A_intensity_Scroll(object sender, EventArgs e)
         {
+            A_lightButton.Enabled = true;
             A_intensity_value = Convert.ToInt32(A_trackbar.Value);
             if (A_intensity_value != 10)
             {
@@ -623,7 +721,7 @@ namespace IlluminationControllerUI
 
                 A_status.BackColor = Color.FromArgb(rgb_red, rgb_green, rgb_blue);
             }
-            
+
         }
 
         private int rgb_value_checker(int value)
@@ -1292,7 +1390,7 @@ namespace IlluminationControllerUI
             if (intervals_valid(H_on_interval))
             {
                 Console.WriteLine("Interval Values are valid");
-                
+
             }
         }
 
@@ -1542,9 +1640,65 @@ namespace IlluminationControllerUI
             int green_val = Convert.ToInt32(A_green.Text);
             int blue_val = Convert.ToInt32(A_blue.Text);
 
-            if rgb_checker()
+            int on_interval = Convert.ToInt32(A_on.Text);
+            int off_interval = Convert.ToInt32(A_off.Text);
 
-            Thread On_interval = new Thread(light_loop());
+
+            try
+            {
+                intervals_valid(on_interval);
+                intervals_valid(off_interval);
+            }
+            catch
+            {
+                A_on.Text = "";
+                A_off.Text = "";
+                return;
+            }
+
+            Thread test = new Thread(light_loop);
+
+            if (rgb_valid(red_val) && rgb_valid(green_val) && rgb_valid(blue_val) && startStop == false)
+            {
+                //Thread On_interval = new Thread(light_loop(red_val, green_val, blue_val, on_interval, off_interval));
+                startStop = true;
+                Console.WriteLine("start");
+                test.Start();
+
+                A_on.Enabled = false;
+                A_off.Enabled = false;
+                A_red.Enabled = false;
+                A_blue.Enabled = false;
+                A_green.Enabled = false;
+                A_trackbar.Enabled = false;
+            }
+            else if (startStop == true)
+            {
+                startStop = false;
+                Console.WriteLine("ausdihadhsi");
+                test.Abort();
+                Color newColour = Color.FromArgb(A_red_value, A_green_value, A_blue_value);
+                A_status.BackColor = newColour;
+
+                A_on.Enabled = true;
+                A_off.Enabled = true;
+                A_red.Enabled = true;
+                A_blue.Enabled = true;
+                A_green.Enabled = true;
+                A_trackbar.Enabled = true;
+            }
+
+
+        }
+
+        private void fileOpen_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

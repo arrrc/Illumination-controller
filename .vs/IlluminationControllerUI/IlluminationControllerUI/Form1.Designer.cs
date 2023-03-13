@@ -46,6 +46,7 @@
             this.fileOpen = new System.Windows.Forms.Button();
             this.CurrentFilename = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.A_lightButton = new System.Windows.Forms.Button();
             this.I_title = new System.Windows.Forms.Label();
             this.H_title = new System.Windows.Forms.Label();
             this.G_title = new System.Windows.Forms.Label();
@@ -208,6 +209,7 @@
             this.C_green = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.errorMsg = new System.Windows.Forms.Label();
             this.intensityA = new System.Windows.Forms.Label();
             this.A_trackbar = new System.Windows.Forms.TrackBar();
             this.label10 = new System.Windows.Forms.Label();
@@ -229,7 +231,6 @@
             this.ControlPanel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.MapTitle = new System.Windows.Forms.Label();
-            this.A_lightButton = new System.Windows.Forms.Button();
             filedate1 = new System.Windows.Forms.Label();
             filedate2 = new System.Windows.Forms.Label();
             filedate3 = new System.Windows.Forms.Label();
@@ -408,6 +409,7 @@
             this.settingsButton.TabIndex = 3;
             this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // fileSave
             // 
@@ -429,6 +431,7 @@
             this.fileOpen.TabIndex = 1;
             this.fileOpen.Text = "Open";
             this.fileOpen.UseVisualStyleBackColor = true;
+            this.fileOpen.Click += new System.EventHandler(this.fileOpen_Click);
             // 
             // CurrentFilename
             // 
@@ -468,6 +471,17 @@
             this.panel2.Size = new System.Drawing.Size(810, 795);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // A_lightButton
+            // 
+            this.A_lightButton.Enabled = false;
+            this.A_lightButton.Location = new System.Drawing.Point(180, 32);
+            this.A_lightButton.Name = "A_lightButton";
+            this.A_lightButton.Size = new System.Drawing.Size(81, 25);
+            this.A_lightButton.TabIndex = 29;
+            this.A_lightButton.Text = "start/stop";
+            this.A_lightButton.UseVisualStyleBackColor = true;
+            this.A_lightButton.Click += new System.EventHandler(this.A_lightButton_Click);
             // 
             // I_title
             // 
@@ -2081,6 +2095,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.errorMsg);
             this.panel4.Controls.Add(this.intensityA);
             this.panel4.Controls.Add(this.A_trackbar);
             this.panel4.Controls.Add(this.label10);
@@ -2104,6 +2119,17 @@
             this.panel4.Size = new System.Drawing.Size(247, 219);
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // errorMsg
+            // 
+            this.errorMsg.AutoSize = true;
+            this.errorMsg.ForeColor = System.Drawing.Color.Red;
+            this.errorMsg.Location = new System.Drawing.Point(2, 198);
+            this.errorMsg.Name = "errorMsg";
+            this.errorMsg.Size = new System.Drawing.Size(35, 13);
+            this.errorMsg.TabIndex = 30;
+            this.errorMsg.Text = "label1";
+            this.errorMsg.Visible = false;
             // 
             // intensityA
             // 
@@ -2309,16 +2335,6 @@
             this.MapTitle.Size = new System.Drawing.Size(85, 20);
             this.MapTitle.TabIndex = 4;
             this.MapTitle.Text = "Control Map";
-            // 
-            // A_lightButton
-            // 
-            this.A_lightButton.Location = new System.Drawing.Point(217, 38);
-            this.A_lightButton.Name = "A_lightButton";
-            this.A_lightButton.Size = new System.Drawing.Size(44, 25);
-            this.A_lightButton.TabIndex = 29;
-            this.A_lightButton.Text = "start";
-            this.A_lightButton.UseVisualStyleBackColor = true;
-            this.A_lightButton.Click += new System.EventHandler(this.A_lightButton_Click);
             // 
             // Form1
             // 
@@ -2561,6 +2577,7 @@
         private System.Windows.Forms.Label intensityC;
         private System.Windows.Forms.Label intensityA;
         private System.Windows.Forms.Button A_lightButton;
+        private System.Windows.Forms.Label errorMsg;
     }
 }
 
