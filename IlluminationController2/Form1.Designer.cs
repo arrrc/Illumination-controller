@@ -1195,6 +1195,7 @@
             // 
             // c3_delay
             // 
+            this.c3_delay.Enabled = false;
             this.c3_delay.Location = new System.Drawing.Point(274, 120);
             this.c3_delay.Name = "c3_delay";
             this.c3_delay.Size = new System.Drawing.Size(69, 20);
@@ -1204,6 +1205,7 @@
             // 
             // c3_pulse
             // 
+            this.c3_pulse.Enabled = false;
             this.c3_pulse.Location = new System.Drawing.Point(274, 75);
             this.c3_pulse.Name = "c3_pulse";
             this.c3_pulse.Size = new System.Drawing.Size(69, 20);
@@ -1213,6 +1215,7 @@
             // 
             // c3_strobe
             // 
+            this.c3_strobe.Enabled = false;
             this.c3_strobe.FormattingEnabled = true;
             this.c3_strobe.Items.AddRange(new object[] {
             "1",
@@ -1270,6 +1273,7 @@
             // 
             // c3_edge
             // 
+            this.c3_edge.Enabled = false;
             this.c3_edge.FormattingEnabled = true;
             this.c3_edge.Items.AddRange(new object[] {
             "Rising",
@@ -1290,6 +1294,7 @@
             this.c3_mode.Name = "c3_mode";
             this.c3_mode.Size = new System.Drawing.Size(69, 21);
             this.c3_mode.TabIndex = 6;
+            this.c3_mode.Text = "Static";
             this.c3_mode.SelectedIndexChanged += new System.EventHandler(this.c3_mode_SelectedIndexChanged);
             // 
             // label33
@@ -1392,6 +1397,7 @@
             // 
             // c1_delay
             // 
+            this.c1_delay.Enabled = false;
             this.c1_delay.Location = new System.Drawing.Point(274, 120);
             this.c1_delay.Name = "c1_delay";
             this.c1_delay.Size = new System.Drawing.Size(69, 20);
@@ -1401,6 +1407,7 @@
             // 
             // c1_pulse
             // 
+            this.c1_pulse.Enabled = false;
             this.c1_pulse.Location = new System.Drawing.Point(274, 75);
             this.c1_pulse.Name = "c1_pulse";
             this.c1_pulse.Size = new System.Drawing.Size(69, 20);
@@ -1410,6 +1417,7 @@
             // 
             // c1_strobe
             // 
+            this.c1_strobe.Enabled = false;
             this.c1_strobe.FormattingEnabled = true;
             this.c1_strobe.Items.AddRange(new object[] {
             "1",
@@ -1467,6 +1475,7 @@
             // 
             // c1_edge
             // 
+            this.c1_edge.Enabled = false;
             this.c1_edge.FormattingEnabled = true;
             this.c1_edge.Items.AddRange(new object[] {
             "Rising",
@@ -1487,6 +1496,7 @@
             this.c1_mode.Name = "c1_mode";
             this.c1_mode.Size = new System.Drawing.Size(69, 21);
             this.c1_mode.TabIndex = 6;
+            this.c1_mode.Text = "Static";
             this.c1_mode.SelectedIndexChanged += new System.EventHandler(this.c1_mode_SelectedIndexChanged);
             // 
             // label8
@@ -1589,6 +1599,7 @@
             // 
             // c2_delay
             // 
+            this.c2_delay.Enabled = false;
             this.c2_delay.Location = new System.Drawing.Point(274, 120);
             this.c2_delay.Name = "c2_delay";
             this.c2_delay.Size = new System.Drawing.Size(69, 20);
@@ -1598,6 +1609,7 @@
             // 
             // c2_pulse
             // 
+            this.c2_pulse.Enabled = false;
             this.c2_pulse.Location = new System.Drawing.Point(274, 75);
             this.c2_pulse.Name = "c2_pulse";
             this.c2_pulse.Size = new System.Drawing.Size(69, 20);
@@ -1607,6 +1619,7 @@
             // 
             // c2_strobe
             // 
+            this.c2_strobe.Enabled = false;
             this.c2_strobe.FormattingEnabled = true;
             this.c2_strobe.Items.AddRange(new object[] {
             "1",
@@ -1664,6 +1677,7 @@
             // 
             // c2_edge
             // 
+            this.c2_edge.Enabled = false;
             this.c2_edge.FormattingEnabled = true;
             this.c2_edge.Items.AddRange(new object[] {
             "Rising",
@@ -1684,6 +1698,7 @@
             this.c2_mode.Name = "c2_mode";
             this.c2_mode.Size = new System.Drawing.Size(69, 21);
             this.c2_mode.TabIndex = 6;
+            this.c2_mode.Text = "Static";
             this.c2_mode.SelectedIndexChanged += new System.EventHandler(this.c2_mode_SelectedIndexChanged);
             // 
             // label25

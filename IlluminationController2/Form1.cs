@@ -139,42 +139,6 @@ namespace IlluminationController2
             return false;
         }
 
-        private void c1_light_loop()
-        {
-            while (c1_testStop == 1)
-            {
-                c1_status.BackColor = Color.FromArgb(c1_rgb_value, 0, 0);
-                Thread.Sleep(c1_pulse_value);
-                c1_status.BackColor = Color.Transparent;
-                Thread.Sleep(c1_delay_value);
-            }
-            c1_status.BackColor = Color.FromArgb(c1_rgb_value, 0, 0);
-        }
-
-        private void c2_light_loop()
-        {
-            while (c2_testStop == 1)
-            {
-                c2_status.BackColor = Color.FromArgb(0, c2_rgb_value, 0);
-                Thread.Sleep(c2_pulse_value);
-                c2_status.BackColor = Color.Transparent;
-                Thread.Sleep(c2_delay_value);
-            }
-            c2_status.BackColor = Color.FromArgb(0, c2_rgb_value, 0);
-        }
-
-        private void c3_light_loop()
-        {
-            while (c3_testStop == 1)
-            {
-                c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
-                Thread.Sleep(c3_pulse_value);
-                c3_status.BackColor = Color.Transparent;
-                Thread.Sleep(c3_delay_value);
-            }
-            c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
-        }
-
         private string displayValues(string channel, string intensity, string edge, string mode, string strobe, string pulse, string delay)
         {
             if (intensity == "") { intensity = "None"; }
@@ -188,7 +152,6 @@ namespace IlluminationController2
                 $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} ";
 
             return consoleDisplay;
-
         }
 
         private void checkConfigs()
@@ -230,6 +193,43 @@ namespace IlluminationController2
             // read the file and input the setting values to their respective positions
         }
 
+        // Individual Channel Functions
+        private void c1_light_loop()
+        {
+            while (c1_testStop == 1)
+            {
+                c1_status.BackColor = Color.FromArgb(c1_rgb_value, 0, 0);
+                Thread.Sleep(c1_pulse_value);
+                c1_status.BackColor = Color.Transparent;
+                Thread.Sleep(c1_delay_value);
+            }
+            c1_status.BackColor = Color.FromArgb(c1_rgb_value, 0, 0);
+        }
+
+        private void c2_light_loop()
+        {
+            while (c2_testStop == 1)
+            {
+                c2_status.BackColor = Color.FromArgb(0, c2_rgb_value, 0);
+                Thread.Sleep(c2_pulse_value);
+                c2_status.BackColor = Color.Transparent;
+                Thread.Sleep(c2_delay_value);
+            }
+            c2_status.BackColor = Color.FromArgb(0, c2_rgb_value, 0);
+        }
+
+        private void c3_light_loop()
+        {
+            while (c3_testStop == 1)
+            {
+                c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
+                Thread.Sleep(c3_pulse_value);
+                c3_status.BackColor = Color.Transparent;
+                Thread.Sleep(c3_delay_value);
+            }
+            c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
+        }
+
         // Channel 1
         private void c1_title_Click(object sender, EventArgs e)
         {
@@ -241,7 +241,7 @@ namespace IlluminationController2
             if (checkIntensity(c1_intensity.Text))
             {
                 int rgb_value = getRGB(c1_intensity.Text);
-                c1_test.Enabled = true;
+                //c1_test.Enabled = true;
                 c1_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
                 c1_error.ForeColor = Color.White;
                 c1_error.Text = "Error: ";
@@ -495,7 +495,7 @@ namespace IlluminationController2
             if (checkIntensity(c3_intensity.Text))
             {
                 int rgb_value = getRGB(c3_intensity.Text);
-                c3_test.Enabled = true;
+                //c3_test.Enabled = true;
                 c3_status.BackColor = Color.FromArgb(0, 0, rgb_value);
                 c3_error.ForeColor = Color.White;
                 c3_error.Text = "Error: ";
@@ -624,7 +624,7 @@ namespace IlluminationController2
             if (checkIntensity(c2_intensity.Text))
             {
                 int rgb_value = getRGB(c2_intensity.Text);
-                c2_test.Enabled = true;
+                //c2_test.Enabled = true;
                 c2_status.BackColor = Color.FromArgb(0, rgb_value, 0);
                 c2_error.ForeColor = Color.White;
                 c2_error.Text = "Error: ";
