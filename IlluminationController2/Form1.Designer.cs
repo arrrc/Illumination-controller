@@ -90,7 +90,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
+            this.consoleDisplay = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.mainTab = new System.Windows.Forms.TabControl();
@@ -1070,7 +1070,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.consoleDisplay);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(493, 645);
@@ -1078,14 +1078,14 @@
             this.panel3.Size = new System.Drawing.Size(632, 183);
             this.panel3.TabIndex = 2;
             // 
-            // label20
+            // consoleDisplay
             // 
-            this.label20.BackColor = System.Drawing.SystemColors.Window;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(8, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(614, 146);
-            this.label20.TabIndex = 3;
+            this.consoleDisplay.BackColor = System.Drawing.SystemColors.Window;
+            this.consoleDisplay.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consoleDisplay.Location = new System.Drawing.Point(8, 25);
+            this.consoleDisplay.Name = "consoleDisplay";
+            this.consoleDisplay.Size = new System.Drawing.Size(614, 146);
+            this.consoleDisplay.TabIndex = 3;
             // 
             // label4
             // 
@@ -4345,7 +4345,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button updateConfig;
         private System.Windows.Forms.Button uploadConfig;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label consoleDisplay;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.ComboBox c3_setting;
         private System.Windows.Forms.ComboBox c2_setting;

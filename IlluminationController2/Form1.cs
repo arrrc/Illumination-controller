@@ -175,6 +175,22 @@ namespace IlluminationController2
             c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
         }
 
+        private string displayValues(string channel, string intensity, string edge, string mode, string strobe, string pulse, string delay)
+        {
+            if (intensity == "") { intensity = "None"; }
+            if (edge == "") { edge = "None"; }
+            if (mode == "") { mode = "None"; }
+            if (strobe == "") { strobe = "None"; }
+            if (pulse == "") { pulse = "None"; }
+            if (delay == "") { delay = "None"; }
+
+            string consoleDisplay = $"\nSent to Board [{channel} Settings]:\n" +
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} ";
+
+            return consoleDisplay;
+
+        }
+
         private void checkConfigs()
         {
             bool configFound = false;
@@ -758,7 +774,16 @@ namespace IlluminationController2
 
         private void uploadConfig_Click(object sender, EventArgs e)
         {
+            // Grab Values
+            string c1_addText = displayValues("CH1", c1_intensity.Text, c1_edge.Text, c1_mode.Text, c1_strobe.Text, c1_pulse.Text, c1_delay.Text);
+            string c2_addText = displayValues("CH2", c2_intensity.Text, c2_edge.Text, c2_mode.Text, c2_strobe.Text, c2_pulse.Text, c2_delay.Text);
+            string c3_addText = displayValues("CH3", c3_intensity.Text, c3_edge.Text, c3_mode.Text, c3_strobe.Text, c3_pulse.Text, c3_delay.Text);
 
+            // Display Data on Console
+            consoleDisplay.Text += "\nGroup 1 Settings, [Red:CH1, Green:CH2, Blue:CH3]:";
+            consoleDisplay.Text += c1_addText;
+            consoleDisplay.Text += c2_addText;
+            consoleDisplay.Text += c3_addText;
         }
 
         private void button7_Click(object sender, EventArgs e)
