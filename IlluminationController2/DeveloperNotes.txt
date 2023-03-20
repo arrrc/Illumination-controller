@@ -1,0 +1,5 @@
+Tasks
+
+Set up error checking before sending data values over in UI side
+Prepare config file controls and file manipulation
+

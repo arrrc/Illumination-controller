@@ -37,7 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.openConn = new System.Windows.Forms.Button();
             this.closeConn = new System.Windows.Forms.Button();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.g5_panel = new System.Windows.Forms.Panel();
             this.label85 = new System.Windows.Forms.Label();
             this.c15_setting = new System.Windows.Forms.ComboBox();
             this.c14_setting = new System.Windows.Forms.ComboBox();
@@ -46,7 +46,7 @@
             this.label93 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
             this.g5_setting = new System.Windows.Forms.ComboBox();
-            this.panel23 = new System.Windows.Forms.Panel();
+            this.g4_panel = new System.Windows.Forms.Panel();
             this.label69 = new System.Windows.Forms.Label();
             this.c12_setting = new System.Windows.Forms.ComboBox();
             this.c11_setting = new System.Windows.Forms.ComboBox();
@@ -55,7 +55,7 @@
             this.label77 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.g4_setting = new System.Windows.Forms.ComboBox();
-            this.panel22 = new System.Windows.Forms.Panel();
+            this.g3_panel = new System.Windows.Forms.Panel();
             this.label53 = new System.Windows.Forms.Label();
             this.c9_setting = new System.Windows.Forms.ComboBox();
             this.c8_setting = new System.Windows.Forms.ComboBox();
@@ -64,7 +64,7 @@
             this.label61 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.g3_setting = new System.Windows.Forms.ComboBox();
-            this.panel21 = new System.Windows.Forms.Panel();
+            this.g2_panel = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.c6_setting = new System.Windows.Forms.ComboBox();
             this.c5_setting = new System.Windows.Forms.ComboBox();
@@ -73,7 +73,7 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.g2_setting = new System.Windows.Forms.ComboBox();
-            this.panel20 = new System.Windows.Forms.Panel();
+            this.g1_panel = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
             this.c3_setting = new System.Windows.Forms.ComboBox();
             this.c2_setting = new System.Windows.Forms.ComboBox();
@@ -359,11 +359,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel20.SuspendLayout();
+            this.g5_panel.SuspendLayout();
+            this.g4_panel.SuspendLayout();
+            this.g3_panel.SuspendLayout();
+            this.g2_panel.SuspendLayout();
+            this.g1_panel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.mainTab.SuspendLayout();
@@ -456,11 +456,11 @@
             // 
             this.panel2.Controls.Add(this.openConn);
             this.panel2.Controls.Add(this.closeConn);
-            this.panel2.Controls.Add(this.panel24);
-            this.panel2.Controls.Add(this.panel23);
-            this.panel2.Controls.Add(this.panel22);
-            this.panel2.Controls.Add(this.panel21);
-            this.panel2.Controls.Add(this.panel20);
+            this.panel2.Controls.Add(this.g5_panel);
+            this.panel2.Controls.Add(this.g4_panel);
+            this.panel2.Controls.Add(this.g3_panel);
+            this.panel2.Controls.Add(this.g2_panel);
+            this.panel2.Controls.Add(this.g1_panel);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.boardSelect);
             this.panel2.Controls.Add(this.label13);
@@ -495,20 +495,21 @@
             this.closeConn.UseVisualStyleBackColor = true;
             this.closeConn.Click += new System.EventHandler(this.closeConn_Click);
             // 
-            // panel24
+            // g5_panel
             // 
-            this.panel24.Controls.Add(this.label85);
-            this.panel24.Controls.Add(this.c15_setting);
-            this.panel24.Controls.Add(this.c14_setting);
-            this.panel24.Controls.Add(this.c13_setting);
-            this.panel24.Controls.Add(this.label92);
-            this.panel24.Controls.Add(this.label93);
-            this.panel24.Controls.Add(this.label100);
-            this.panel24.Controls.Add(this.g5_setting);
-            this.panel24.Location = new System.Drawing.Point(4, 633);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(302, 98);
-            this.panel24.TabIndex = 27;
+            this.g5_panel.Controls.Add(this.label85);
+            this.g5_panel.Controls.Add(this.c15_setting);
+            this.g5_panel.Controls.Add(this.c14_setting);
+            this.g5_panel.Controls.Add(this.c13_setting);
+            this.g5_panel.Controls.Add(this.label92);
+            this.g5_panel.Controls.Add(this.label93);
+            this.g5_panel.Controls.Add(this.label100);
+            this.g5_panel.Controls.Add(this.g5_setting);
+            this.g5_panel.Location = new System.Drawing.Point(4, 633);
+            this.g5_panel.Name = "g5_panel";
+            this.g5_panel.Size = new System.Drawing.Size(302, 98);
+            this.g5_panel.TabIndex = 27;
+            this.g5_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g5_panel_Paint);
             // 
             // label85
             // 
@@ -522,6 +523,7 @@
             // 
             // c15_setting
             // 
+            this.c15_setting.Enabled = false;
             this.c15_setting.FormattingEnabled = true;
             this.c15_setting.Items.AddRange(new object[] {
             "Single",
@@ -530,9 +532,11 @@
             this.c15_setting.Name = "c15_setting";
             this.c15_setting.Size = new System.Drawing.Size(77, 21);
             this.c15_setting.TabIndex = 26;
+            this.c15_setting.Text = "Blue";
             // 
             // c14_setting
             // 
+            this.c14_setting.Enabled = false;
             this.c14_setting.FormattingEnabled = true;
             this.c14_setting.Items.AddRange(new object[] {
             "Single",
@@ -541,9 +545,11 @@
             this.c14_setting.Name = "c14_setting";
             this.c14_setting.Size = new System.Drawing.Size(77, 21);
             this.c14_setting.TabIndex = 25;
+            this.c14_setting.Text = "Green";
             // 
             // c13_setting
             // 
+            this.c13_setting.Enabled = false;
             this.c13_setting.FormattingEnabled = true;
             this.c13_setting.Items.AddRange(new object[] {
             "Single",
@@ -552,6 +558,7 @@
             this.c13_setting.Name = "c13_setting";
             this.c13_setting.Size = new System.Drawing.Size(77, 21);
             this.c13_setting.TabIndex = 24;
+            this.c13_setting.Text = "Red";
             // 
             // label92
             // 
@@ -593,21 +600,23 @@
             this.g5_setting.Name = "g5_setting";
             this.g5_setting.Size = new System.Drawing.Size(77, 21);
             this.g5_setting.TabIndex = 21;
+            this.g5_setting.Text = "Triple";
             // 
-            // panel23
+            // g4_panel
             // 
-            this.panel23.Controls.Add(this.label69);
-            this.panel23.Controls.Add(this.c12_setting);
-            this.panel23.Controls.Add(this.c11_setting);
-            this.panel23.Controls.Add(this.c10_setting);
-            this.panel23.Controls.Add(this.label76);
-            this.panel23.Controls.Add(this.label77);
-            this.panel23.Controls.Add(this.label84);
-            this.panel23.Controls.Add(this.g4_setting);
-            this.panel23.Location = new System.Drawing.Point(4, 513);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(302, 98);
-            this.panel23.TabIndex = 27;
+            this.g4_panel.Controls.Add(this.label69);
+            this.g4_panel.Controls.Add(this.c12_setting);
+            this.g4_panel.Controls.Add(this.c11_setting);
+            this.g4_panel.Controls.Add(this.c10_setting);
+            this.g4_panel.Controls.Add(this.label76);
+            this.g4_panel.Controls.Add(this.label77);
+            this.g4_panel.Controls.Add(this.label84);
+            this.g4_panel.Controls.Add(this.g4_setting);
+            this.g4_panel.Location = new System.Drawing.Point(4, 513);
+            this.g4_panel.Name = "g4_panel";
+            this.g4_panel.Size = new System.Drawing.Size(302, 98);
+            this.g4_panel.TabIndex = 27;
+            this.g4_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g4_panel_Paint);
             // 
             // label69
             // 
@@ -621,6 +630,7 @@
             // 
             // c12_setting
             // 
+            this.c12_setting.Enabled = false;
             this.c12_setting.FormattingEnabled = true;
             this.c12_setting.Items.AddRange(new object[] {
             "Single",
@@ -629,9 +639,11 @@
             this.c12_setting.Name = "c12_setting";
             this.c12_setting.Size = new System.Drawing.Size(77, 21);
             this.c12_setting.TabIndex = 26;
+            this.c12_setting.Text = "Blue";
             // 
             // c11_setting
             // 
+            this.c11_setting.Enabled = false;
             this.c11_setting.FormattingEnabled = true;
             this.c11_setting.Items.AddRange(new object[] {
             "Single",
@@ -640,9 +652,11 @@
             this.c11_setting.Name = "c11_setting";
             this.c11_setting.Size = new System.Drawing.Size(77, 21);
             this.c11_setting.TabIndex = 25;
+            this.c11_setting.Text = "Green";
             // 
             // c10_setting
             // 
+            this.c10_setting.Enabled = false;
             this.c10_setting.FormattingEnabled = true;
             this.c10_setting.Items.AddRange(new object[] {
             "Single",
@@ -651,6 +665,7 @@
             this.c10_setting.Name = "c10_setting";
             this.c10_setting.Size = new System.Drawing.Size(77, 21);
             this.c10_setting.TabIndex = 24;
+            this.c10_setting.Text = "Red";
             // 
             // label76
             // 
@@ -692,21 +707,23 @@
             this.g4_setting.Name = "g4_setting";
             this.g4_setting.Size = new System.Drawing.Size(77, 21);
             this.g4_setting.TabIndex = 21;
+            this.g4_setting.Text = "Triple";
             // 
-            // panel22
+            // g3_panel
             // 
-            this.panel22.Controls.Add(this.label53);
-            this.panel22.Controls.Add(this.c9_setting);
-            this.panel22.Controls.Add(this.c8_setting);
-            this.panel22.Controls.Add(this.c7_setting);
-            this.panel22.Controls.Add(this.label60);
-            this.panel22.Controls.Add(this.label61);
-            this.panel22.Controls.Add(this.label68);
-            this.panel22.Controls.Add(this.g3_setting);
-            this.panel22.Location = new System.Drawing.Point(4, 393);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(302, 98);
-            this.panel22.TabIndex = 27;
+            this.g3_panel.Controls.Add(this.label53);
+            this.g3_panel.Controls.Add(this.c9_setting);
+            this.g3_panel.Controls.Add(this.c8_setting);
+            this.g3_panel.Controls.Add(this.c7_setting);
+            this.g3_panel.Controls.Add(this.label60);
+            this.g3_panel.Controls.Add(this.label61);
+            this.g3_panel.Controls.Add(this.label68);
+            this.g3_panel.Controls.Add(this.g3_setting);
+            this.g3_panel.Location = new System.Drawing.Point(4, 393);
+            this.g3_panel.Name = "g3_panel";
+            this.g3_panel.Size = new System.Drawing.Size(302, 98);
+            this.g3_panel.TabIndex = 27;
+            this.g3_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g3_panel_Paint);
             // 
             // label53
             // 
@@ -720,6 +737,7 @@
             // 
             // c9_setting
             // 
+            this.c9_setting.Enabled = false;
             this.c9_setting.FormattingEnabled = true;
             this.c9_setting.Items.AddRange(new object[] {
             "Single",
@@ -728,9 +746,11 @@
             this.c9_setting.Name = "c9_setting";
             this.c9_setting.Size = new System.Drawing.Size(77, 21);
             this.c9_setting.TabIndex = 26;
+            this.c9_setting.Text = "Blue";
             // 
             // c8_setting
             // 
+            this.c8_setting.Enabled = false;
             this.c8_setting.FormattingEnabled = true;
             this.c8_setting.Items.AddRange(new object[] {
             "Single",
@@ -739,9 +759,11 @@
             this.c8_setting.Name = "c8_setting";
             this.c8_setting.Size = new System.Drawing.Size(77, 21);
             this.c8_setting.TabIndex = 25;
+            this.c8_setting.Text = "Green";
             // 
             // c7_setting
             // 
+            this.c7_setting.Enabled = false;
             this.c7_setting.FormattingEnabled = true;
             this.c7_setting.Items.AddRange(new object[] {
             "Single",
@@ -750,6 +772,7 @@
             this.c7_setting.Name = "c7_setting";
             this.c7_setting.Size = new System.Drawing.Size(77, 21);
             this.c7_setting.TabIndex = 24;
+            this.c7_setting.Text = "Red";
             // 
             // label60
             // 
@@ -791,21 +814,23 @@
             this.g3_setting.Name = "g3_setting";
             this.g3_setting.Size = new System.Drawing.Size(77, 21);
             this.g3_setting.TabIndex = 21;
+            this.g3_setting.Text = "Triple";
             // 
-            // panel21
+            // g2_panel
             // 
-            this.panel21.Controls.Add(this.label37);
-            this.panel21.Controls.Add(this.c6_setting);
-            this.panel21.Controls.Add(this.c5_setting);
-            this.panel21.Controls.Add(this.c4_setting);
-            this.panel21.Controls.Add(this.label44);
-            this.panel21.Controls.Add(this.label45);
-            this.panel21.Controls.Add(this.label52);
-            this.panel21.Controls.Add(this.g2_setting);
-            this.panel21.Location = new System.Drawing.Point(4, 273);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(302, 98);
-            this.panel21.TabIndex = 27;
+            this.g2_panel.Controls.Add(this.label37);
+            this.g2_panel.Controls.Add(this.c6_setting);
+            this.g2_panel.Controls.Add(this.c5_setting);
+            this.g2_panel.Controls.Add(this.c4_setting);
+            this.g2_panel.Controls.Add(this.label44);
+            this.g2_panel.Controls.Add(this.label45);
+            this.g2_panel.Controls.Add(this.label52);
+            this.g2_panel.Controls.Add(this.g2_setting);
+            this.g2_panel.Location = new System.Drawing.Point(4, 273);
+            this.g2_panel.Name = "g2_panel";
+            this.g2_panel.Size = new System.Drawing.Size(302, 98);
+            this.g2_panel.TabIndex = 27;
+            this.g2_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g2_panel_Paint);
             // 
             // label37
             // 
@@ -819,6 +844,7 @@
             // 
             // c6_setting
             // 
+            this.c6_setting.Enabled = false;
             this.c6_setting.FormattingEnabled = true;
             this.c6_setting.Items.AddRange(new object[] {
             "Single",
@@ -827,9 +853,11 @@
             this.c6_setting.Name = "c6_setting";
             this.c6_setting.Size = new System.Drawing.Size(77, 21);
             this.c6_setting.TabIndex = 26;
+            this.c6_setting.Text = "Blue";
             // 
             // c5_setting
             // 
+            this.c5_setting.Enabled = false;
             this.c5_setting.FormattingEnabled = true;
             this.c5_setting.Items.AddRange(new object[] {
             "Single",
@@ -838,9 +866,11 @@
             this.c5_setting.Name = "c5_setting";
             this.c5_setting.Size = new System.Drawing.Size(77, 21);
             this.c5_setting.TabIndex = 25;
+            this.c5_setting.Text = "Green";
             // 
             // c4_setting
             // 
+            this.c4_setting.Enabled = false;
             this.c4_setting.FormattingEnabled = true;
             this.c4_setting.Items.AddRange(new object[] {
             "Single",
@@ -849,6 +879,7 @@
             this.c4_setting.Name = "c4_setting";
             this.c4_setting.Size = new System.Drawing.Size(77, 21);
             this.c4_setting.TabIndex = 24;
+            this.c4_setting.Text = "Red";
             // 
             // label44
             // 
@@ -890,21 +921,23 @@
             this.g2_setting.Name = "g2_setting";
             this.g2_setting.Size = new System.Drawing.Size(77, 21);
             this.g2_setting.TabIndex = 21;
+            this.g2_setting.Text = "Triple";
             // 
-            // panel20
+            // g1_panel
             // 
-            this.panel20.Controls.Add(this.label36);
-            this.panel20.Controls.Add(this.c3_setting);
-            this.panel20.Controls.Add(this.c2_setting);
-            this.panel20.Controls.Add(this.c1_setting);
-            this.panel20.Controls.Add(this.label29);
-            this.panel20.Controls.Add(this.label28);
-            this.panel20.Controls.Add(this.label21);
-            this.panel20.Controls.Add(this.g1_setting);
-            this.panel20.Location = new System.Drawing.Point(4, 153);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(302, 98);
-            this.panel20.TabIndex = 22;
+            this.g1_panel.Controls.Add(this.label36);
+            this.g1_panel.Controls.Add(this.c3_setting);
+            this.g1_panel.Controls.Add(this.c2_setting);
+            this.g1_panel.Controls.Add(this.c1_setting);
+            this.g1_panel.Controls.Add(this.label29);
+            this.g1_panel.Controls.Add(this.label28);
+            this.g1_panel.Controls.Add(this.label21);
+            this.g1_panel.Controls.Add(this.g1_setting);
+            this.g1_panel.Location = new System.Drawing.Point(4, 153);
+            this.g1_panel.Name = "g1_panel";
+            this.g1_panel.Size = new System.Drawing.Size(302, 98);
+            this.g1_panel.TabIndex = 22;
+            this.g1_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g1_panel_Paint);
             // 
             // label36
             // 
@@ -1195,6 +1228,10 @@
             // 
             // c3_delay
             // 
+            this.c3_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c3_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c3_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c3_delay.Enabled = false;
             this.c3_delay.Location = new System.Drawing.Point(274, 120);
             this.c3_delay.Name = "c3_delay";
@@ -1205,6 +1242,10 @@
             // 
             // c3_pulse
             // 
+            this.c3_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c3_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c3_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c3_pulse.Enabled = false;
             this.c3_pulse.Location = new System.Drawing.Point(274, 75);
             this.c3_pulse.Name = "c3_pulse";
@@ -1218,6 +1259,7 @@
             this.c3_strobe.Enabled = false;
             this.c3_strobe.FormattingEnabled = true;
             this.c3_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -1230,6 +1272,7 @@
             this.c3_strobe.Name = "c3_strobe";
             this.c3_strobe.Size = new System.Drawing.Size(69, 21);
             this.c3_strobe.TabIndex = 12;
+            this.c3_strobe.Text = "None";
             this.c3_strobe.SelectedIndexChanged += new System.EventHandler(this.c3_strobe_SelectedIndexChanged);
             // 
             // label30
@@ -1264,6 +1307,10 @@
             // 
             // c3_intensity
             // 
+            this.c3_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c3_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c3_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c3_intensity.Location = new System.Drawing.Point(75, 29);
             this.c3_intensity.Name = "c3_intensity";
             this.c3_intensity.Size = new System.Drawing.Size(69, 20);
@@ -1276,12 +1323,14 @@
             this.c3_edge.Enabled = false;
             this.c3_edge.FormattingEnabled = true;
             this.c3_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c3_edge.Location = new System.Drawing.Point(75, 72);
             this.c3_edge.Name = "c3_edge";
             this.c3_edge.Size = new System.Drawing.Size(69, 21);
             this.c3_edge.TabIndex = 7;
+            this.c3_edge.Text = "None";
             this.c3_edge.SelectedIndexChanged += new System.EventHandler(this.c3_edge_SelectedIndexChanged);
             // 
             // c3_mode
@@ -1397,6 +1446,10 @@
             // 
             // c1_delay
             // 
+            this.c1_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c1_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c1_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c1_delay.Enabled = false;
             this.c1_delay.Location = new System.Drawing.Point(274, 120);
             this.c1_delay.Name = "c1_delay";
@@ -1407,6 +1460,10 @@
             // 
             // c1_pulse
             // 
+            this.c1_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c1_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c1_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c1_pulse.Enabled = false;
             this.c1_pulse.Location = new System.Drawing.Point(274, 75);
             this.c1_pulse.Name = "c1_pulse";
@@ -1420,6 +1477,7 @@
             this.c1_strobe.Enabled = false;
             this.c1_strobe.FormattingEnabled = true;
             this.c1_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -1432,6 +1490,7 @@
             this.c1_strobe.Name = "c1_strobe";
             this.c1_strobe.Size = new System.Drawing.Size(69, 21);
             this.c1_strobe.TabIndex = 12;
+            this.c1_strobe.Text = "None";
             this.c1_strobe.SelectedIndexChanged += new System.EventHandler(this.c1_strobe_SelectedIndexChanged);
             // 
             // label11
@@ -1466,6 +1525,10 @@
             // 
             // c1_intensity
             // 
+            this.c1_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c1_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c1_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c1_intensity.Location = new System.Drawing.Point(75, 29);
             this.c1_intensity.Name = "c1_intensity";
             this.c1_intensity.Size = new System.Drawing.Size(69, 20);
@@ -1478,12 +1541,14 @@
             this.c1_edge.Enabled = false;
             this.c1_edge.FormattingEnabled = true;
             this.c1_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c1_edge.Location = new System.Drawing.Point(75, 72);
             this.c1_edge.Name = "c1_edge";
             this.c1_edge.Size = new System.Drawing.Size(69, 21);
             this.c1_edge.TabIndex = 7;
+            this.c1_edge.Text = "None";
             this.c1_edge.SelectedIndexChanged += new System.EventHandler(this.c1_edge_SelectedIndexChanged);
             // 
             // c1_mode
@@ -1599,6 +1664,10 @@
             // 
             // c2_delay
             // 
+            this.c2_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c2_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c2_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c2_delay.Enabled = false;
             this.c2_delay.Location = new System.Drawing.Point(274, 120);
             this.c2_delay.Name = "c2_delay";
@@ -1609,6 +1678,10 @@
             // 
             // c2_pulse
             // 
+            this.c2_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c2_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c2_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c2_pulse.Enabled = false;
             this.c2_pulse.Location = new System.Drawing.Point(274, 75);
             this.c2_pulse.Name = "c2_pulse";
@@ -1622,6 +1695,7 @@
             this.c2_strobe.Enabled = false;
             this.c2_strobe.FormattingEnabled = true;
             this.c2_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -1634,6 +1708,7 @@
             this.c2_strobe.Name = "c2_strobe";
             this.c2_strobe.Size = new System.Drawing.Size(69, 21);
             this.c2_strobe.TabIndex = 12;
+            this.c2_strobe.Text = "None";
             this.c2_strobe.SelectedIndexChanged += new System.EventHandler(this.c2_strobe_SelectedIndexChanged);
             // 
             // label22
@@ -1668,6 +1743,10 @@
             // 
             // c2_intensity
             // 
+            this.c2_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c2_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c2_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c2_intensity.Location = new System.Drawing.Point(75, 29);
             this.c2_intensity.Name = "c2_intensity";
             this.c2_intensity.Size = new System.Drawing.Size(69, 20);
@@ -1680,12 +1759,14 @@
             this.c2_edge.Enabled = false;
             this.c2_edge.FormattingEnabled = true;
             this.c2_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c2_edge.Location = new System.Drawing.Point(75, 72);
             this.c2_edge.Name = "c2_edge";
             this.c2_edge.Size = new System.Drawing.Size(69, 21);
             this.c2_edge.TabIndex = 7;
+            this.c2_edge.Text = "None";
             this.c2_edge.SelectedIndexChanged += new System.EventHandler(this.c2_edge_SelectedIndexChanged);
             // 
             // c2_mode
@@ -1780,12 +1861,13 @@
             // 
             // c6_status
             // 
+            this.c6_status.BackColor = System.Drawing.Color.Blue;
             this.c6_status.Enabled = false;
             this.c6_status.Location = new System.Drawing.Point(464, 29);
             this.c6_status.Name = "c6_status";
             this.c6_status.Size = new System.Drawing.Size(108, 83);
             this.c6_status.TabIndex = 16;
-            this.c6_status.UseVisualStyleBackColor = true;
+            this.c6_status.UseVisualStyleBackColor = false;
             // 
             // c6_error
             // 
@@ -1799,6 +1881,7 @@
             // 
             // c6_test
             // 
+            this.c6_test.Enabled = false;
             this.c6_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c6_test.Location = new System.Drawing.Point(464, 112);
             this.c6_test.Name = "c6_test";
@@ -1809,22 +1892,34 @@
             // 
             // c6_delay
             // 
+            this.c6_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c6_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c6_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c6_delay.Enabled = false;
             this.c6_delay.Location = new System.Drawing.Point(274, 120);
             this.c6_delay.Name = "c6_delay";
-            this.c6_delay.Size = new System.Drawing.Size(114, 20);
+            this.c6_delay.Size = new System.Drawing.Size(69, 20);
             this.c6_delay.TabIndex = 14;
             // 
             // c6_pulse
             // 
+            this.c6_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c6_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c6_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c6_pulse.Enabled = false;
             this.c6_pulse.Location = new System.Drawing.Point(274, 75);
             this.c6_pulse.Name = "c6_pulse";
-            this.c6_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c6_pulse.Size = new System.Drawing.Size(69, 20);
             this.c6_pulse.TabIndex = 13;
             // 
             // c6_strobe
             // 
+            this.c6_strobe.Enabled = false;
             this.c6_strobe.FormattingEnabled = true;
             this.c6_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -1837,6 +1932,7 @@
             this.c6_strobe.Name = "c6_strobe";
             this.c6_strobe.Size = new System.Drawing.Size(69, 21);
             this.c6_strobe.TabIndex = 12;
+            this.c6_strobe.Text = "None";
             // 
             // label14
             // 
@@ -1870,21 +1966,28 @@
             // 
             // c6_intensity
             // 
+            this.c6_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c6_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c6_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c6_intensity.Location = new System.Drawing.Point(75, 29);
             this.c6_intensity.Name = "c6_intensity";
-            this.c6_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c6_intensity.Size = new System.Drawing.Size(69, 20);
             this.c6_intensity.TabIndex = 8;
             // 
             // c6_edge
             // 
+            this.c6_edge.Enabled = false;
             this.c6_edge.FormattingEnabled = true;
             this.c6_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c6_edge.Location = new System.Drawing.Point(75, 72);
             this.c6_edge.Name = "c6_edge";
             this.c6_edge.Size = new System.Drawing.Size(69, 21);
             this.c6_edge.TabIndex = 7;
+            this.c6_edge.Text = "None";
             // 
             // c6_mode
             // 
@@ -1896,6 +1999,7 @@
             this.c6_mode.Name = "c6_mode";
             this.c6_mode.Size = new System.Drawing.Size(69, 21);
             this.c6_mode.TabIndex = 6;
+            this.c6_mode.Text = "Static";
             // 
             // label17
             // 
@@ -1962,12 +2066,13 @@
             // 
             // c4_status
             // 
+            this.c4_status.BackColor = System.Drawing.Color.Red;
             this.c4_status.Enabled = false;
             this.c4_status.Location = new System.Drawing.Point(464, 29);
             this.c4_status.Name = "c4_status";
             this.c4_status.Size = new System.Drawing.Size(108, 83);
             this.c4_status.TabIndex = 16;
-            this.c4_status.UseVisualStyleBackColor = true;
+            this.c4_status.UseVisualStyleBackColor = false;
             // 
             // c4_error
             // 
@@ -1981,6 +2086,7 @@
             // 
             // c4_test
             // 
+            this.c4_test.Enabled = false;
             this.c4_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c4_test.Location = new System.Drawing.Point(464, 112);
             this.c4_test.Name = "c4_test";
@@ -1991,22 +2097,34 @@
             // 
             // c4_delay
             // 
+            this.c4_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c4_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c4_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c4_delay.Enabled = false;
             this.c4_delay.Location = new System.Drawing.Point(274, 120);
             this.c4_delay.Name = "c4_delay";
-            this.c4_delay.Size = new System.Drawing.Size(114, 20);
+            this.c4_delay.Size = new System.Drawing.Size(69, 20);
             this.c4_delay.TabIndex = 14;
             // 
             // c4_pulse
             // 
+            this.c4_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c4_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c4_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c4_pulse.Enabled = false;
             this.c4_pulse.Location = new System.Drawing.Point(274, 75);
             this.c4_pulse.Name = "c4_pulse";
-            this.c4_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c4_pulse.Size = new System.Drawing.Size(69, 20);
             this.c4_pulse.TabIndex = 13;
             // 
             // c4_strobe
             // 
+            this.c4_strobe.Enabled = false;
             this.c4_strobe.FormattingEnabled = true;
             this.c4_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -2019,6 +2137,7 @@
             this.c4_strobe.Name = "c4_strobe";
             this.c4_strobe.Size = new System.Drawing.Size(69, 21);
             this.c4_strobe.TabIndex = 12;
+            this.c4_strobe.Text = "None";
             // 
             // label38
             // 
@@ -2052,21 +2171,28 @@
             // 
             // c4_intensity
             // 
+            this.c4_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c4_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c4_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c4_intensity.Location = new System.Drawing.Point(75, 29);
             this.c4_intensity.Name = "c4_intensity";
-            this.c4_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c4_intensity.Size = new System.Drawing.Size(69, 20);
             this.c4_intensity.TabIndex = 8;
             // 
             // c4_edge
             // 
+            this.c4_edge.Enabled = false;
             this.c4_edge.FormattingEnabled = true;
             this.c4_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c4_edge.Location = new System.Drawing.Point(75, 72);
             this.c4_edge.Name = "c4_edge";
             this.c4_edge.Size = new System.Drawing.Size(69, 21);
             this.c4_edge.TabIndex = 7;
+            this.c4_edge.Text = "None";
             // 
             // c4_mode
             // 
@@ -2078,6 +2204,7 @@
             this.c4_mode.Name = "c4_mode";
             this.c4_mode.Size = new System.Drawing.Size(69, 21);
             this.c4_mode.TabIndex = 6;
+            this.c4_mode.Text = "Static";
             // 
             // label41
             // 
@@ -2144,12 +2271,13 @@
             // 
             // c5_status
             // 
+            this.c5_status.BackColor = System.Drawing.Color.Lime;
             this.c5_status.Enabled = false;
             this.c5_status.Location = new System.Drawing.Point(464, 29);
             this.c5_status.Name = "c5_status";
             this.c5_status.Size = new System.Drawing.Size(108, 83);
             this.c5_status.TabIndex = 16;
-            this.c5_status.UseVisualStyleBackColor = true;
+            this.c5_status.UseVisualStyleBackColor = false;
             // 
             // c5_error
             // 
@@ -2163,6 +2291,7 @@
             // 
             // c5_test
             // 
+            this.c5_test.Enabled = false;
             this.c5_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c5_test.Location = new System.Drawing.Point(464, 112);
             this.c5_test.Name = "c5_test";
@@ -2173,22 +2302,34 @@
             // 
             // c5_delay
             // 
+            this.c5_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c5_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c5_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c5_delay.Enabled = false;
             this.c5_delay.Location = new System.Drawing.Point(274, 120);
             this.c5_delay.Name = "c5_delay";
-            this.c5_delay.Size = new System.Drawing.Size(114, 20);
+            this.c5_delay.Size = new System.Drawing.Size(69, 20);
             this.c5_delay.TabIndex = 14;
             // 
             // c5_pulse
             // 
+            this.c5_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c5_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c5_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c5_pulse.Enabled = false;
             this.c5_pulse.Location = new System.Drawing.Point(274, 75);
             this.c5_pulse.Name = "c5_pulse";
-            this.c5_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c5_pulse.Size = new System.Drawing.Size(69, 20);
             this.c5_pulse.TabIndex = 13;
             // 
             // c5_strobe
             // 
+            this.c5_strobe.Enabled = false;
             this.c5_strobe.FormattingEnabled = true;
             this.c5_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -2201,6 +2342,7 @@
             this.c5_strobe.Name = "c5_strobe";
             this.c5_strobe.Size = new System.Drawing.Size(69, 21);
             this.c5_strobe.TabIndex = 12;
+            this.c5_strobe.Text = "None";
             // 
             // label46
             // 
@@ -2234,21 +2376,28 @@
             // 
             // c5_intensity
             // 
+            this.c5_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c5_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c5_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c5_intensity.Location = new System.Drawing.Point(75, 29);
             this.c5_intensity.Name = "c5_intensity";
-            this.c5_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c5_intensity.Size = new System.Drawing.Size(69, 20);
             this.c5_intensity.TabIndex = 8;
             // 
             // c5_edge
             // 
+            this.c5_edge.Enabled = false;
             this.c5_edge.FormattingEnabled = true;
             this.c5_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c5_edge.Location = new System.Drawing.Point(75, 72);
             this.c5_edge.Name = "c5_edge";
             this.c5_edge.Size = new System.Drawing.Size(69, 21);
             this.c5_edge.TabIndex = 7;
+            this.c5_edge.Text = "None";
             // 
             // c5_mode
             // 
@@ -2260,6 +2409,7 @@
             this.c5_mode.Name = "c5_mode";
             this.c5_mode.Size = new System.Drawing.Size(69, 21);
             this.c5_mode.TabIndex = 6;
+            this.c5_mode.Text = "Static";
             // 
             // label49
             // 
@@ -2339,12 +2489,13 @@
             // 
             // c9_status
             // 
+            this.c9_status.BackColor = System.Drawing.Color.Blue;
             this.c9_status.Enabled = false;
             this.c9_status.Location = new System.Drawing.Point(464, 29);
             this.c9_status.Name = "c9_status";
             this.c9_status.Size = new System.Drawing.Size(108, 83);
             this.c9_status.TabIndex = 16;
-            this.c9_status.UseVisualStyleBackColor = true;
+            this.c9_status.UseVisualStyleBackColor = false;
             // 
             // c9_error
             // 
@@ -2358,6 +2509,7 @@
             // 
             // c9_test
             // 
+            this.c9_test.Enabled = false;
             this.c9_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c9_test.Location = new System.Drawing.Point(464, 112);
             this.c9_test.Name = "c9_test";
@@ -2368,22 +2520,34 @@
             // 
             // c9_delay
             // 
+            this.c9_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c9_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c9_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c9_delay.Enabled = false;
             this.c9_delay.Location = new System.Drawing.Point(274, 120);
             this.c9_delay.Name = "c9_delay";
-            this.c9_delay.Size = new System.Drawing.Size(114, 20);
+            this.c9_delay.Size = new System.Drawing.Size(69, 20);
             this.c9_delay.TabIndex = 14;
             // 
             // c9_pulse
             // 
+            this.c9_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c9_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c9_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c9_pulse.Enabled = false;
             this.c9_pulse.Location = new System.Drawing.Point(274, 75);
             this.c9_pulse.Name = "c9_pulse";
-            this.c9_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c9_pulse.Size = new System.Drawing.Size(69, 20);
             this.c9_pulse.TabIndex = 13;
             // 
             // c9_strobe
             // 
+            this.c9_strobe.Enabled = false;
             this.c9_strobe.FormattingEnabled = true;
             this.c9_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -2396,6 +2560,7 @@
             this.c9_strobe.Name = "c9_strobe";
             this.c9_strobe.Size = new System.Drawing.Size(69, 21);
             this.c9_strobe.TabIndex = 12;
+            this.c9_strobe.Text = "None";
             // 
             // label54
             // 
@@ -2429,21 +2594,28 @@
             // 
             // c9_intensity
             // 
+            this.c9_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c9_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c9_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c9_intensity.Location = new System.Drawing.Point(75, 29);
             this.c9_intensity.Name = "c9_intensity";
-            this.c9_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c9_intensity.Size = new System.Drawing.Size(69, 20);
             this.c9_intensity.TabIndex = 8;
             // 
             // c9_edge
             // 
+            this.c9_edge.Enabled = false;
             this.c9_edge.FormattingEnabled = true;
             this.c9_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c9_edge.Location = new System.Drawing.Point(75, 72);
             this.c9_edge.Name = "c9_edge";
             this.c9_edge.Size = new System.Drawing.Size(69, 21);
             this.c9_edge.TabIndex = 7;
+            this.c9_edge.Text = "None";
             // 
             // c9_mode
             // 
@@ -2455,6 +2627,7 @@
             this.c9_mode.Name = "c9_mode";
             this.c9_mode.Size = new System.Drawing.Size(69, 21);
             this.c9_mode.TabIndex = 6;
+            this.c9_mode.Text = "Static";
             // 
             // label57
             // 
@@ -2521,12 +2694,13 @@
             // 
             // c7_status
             // 
+            this.c7_status.BackColor = System.Drawing.Color.Red;
             this.c7_status.Enabled = false;
             this.c7_status.Location = new System.Drawing.Point(464, 29);
             this.c7_status.Name = "c7_status";
             this.c7_status.Size = new System.Drawing.Size(108, 83);
             this.c7_status.TabIndex = 16;
-            this.c7_status.UseVisualStyleBackColor = true;
+            this.c7_status.UseVisualStyleBackColor = false;
             // 
             // c7_error
             // 
@@ -2540,6 +2714,7 @@
             // 
             // c7_test
             // 
+            this.c7_test.Enabled = false;
             this.c7_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c7_test.Location = new System.Drawing.Point(464, 112);
             this.c7_test.Name = "c7_test";
@@ -2550,22 +2725,34 @@
             // 
             // c7_delay
             // 
+            this.c7_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c7_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c7_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c7_delay.Enabled = false;
             this.c7_delay.Location = new System.Drawing.Point(274, 120);
             this.c7_delay.Name = "c7_delay";
-            this.c7_delay.Size = new System.Drawing.Size(114, 20);
+            this.c7_delay.Size = new System.Drawing.Size(69, 20);
             this.c7_delay.TabIndex = 14;
             // 
             // c7_pulse
             // 
+            this.c7_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c7_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c7_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c7_pulse.Enabled = false;
             this.c7_pulse.Location = new System.Drawing.Point(274, 75);
             this.c7_pulse.Name = "c7_pulse";
-            this.c7_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c7_pulse.Size = new System.Drawing.Size(69, 20);
             this.c7_pulse.TabIndex = 13;
             // 
             // c7_strobe
             // 
+            this.c7_strobe.Enabled = false;
             this.c7_strobe.FormattingEnabled = true;
             this.c7_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -2578,6 +2765,7 @@
             this.c7_strobe.Name = "c7_strobe";
             this.c7_strobe.Size = new System.Drawing.Size(69, 21);
             this.c7_strobe.TabIndex = 12;
+            this.c7_strobe.Text = "None";
             // 
             // label62
             // 
@@ -2611,21 +2799,28 @@
             // 
             // c7_intensity
             // 
+            this.c7_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c7_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c7_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c7_intensity.Location = new System.Drawing.Point(75, 29);
             this.c7_intensity.Name = "c7_intensity";
-            this.c7_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c7_intensity.Size = new System.Drawing.Size(69, 20);
             this.c7_intensity.TabIndex = 8;
             // 
             // c7_edge
             // 
+            this.c7_edge.Enabled = false;
             this.c7_edge.FormattingEnabled = true;
             this.c7_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c7_edge.Location = new System.Drawing.Point(75, 72);
             this.c7_edge.Name = "c7_edge";
             this.c7_edge.Size = new System.Drawing.Size(69, 21);
             this.c7_edge.TabIndex = 7;
+            this.c7_edge.Text = "None";
             // 
             // c7_mode
             // 
@@ -2637,6 +2832,7 @@
             this.c7_mode.Name = "c7_mode";
             this.c7_mode.Size = new System.Drawing.Size(69, 21);
             this.c7_mode.TabIndex = 6;
+            this.c7_mode.Text = "Static";
             // 
             // label65
             // 
@@ -2703,12 +2899,13 @@
             // 
             // c8_status
             // 
+            this.c8_status.BackColor = System.Drawing.Color.Lime;
             this.c8_status.Enabled = false;
             this.c8_status.Location = new System.Drawing.Point(464, 29);
             this.c8_status.Name = "c8_status";
             this.c8_status.Size = new System.Drawing.Size(108, 83);
             this.c8_status.TabIndex = 16;
-            this.c8_status.UseVisualStyleBackColor = true;
+            this.c8_status.UseVisualStyleBackColor = false;
             // 
             // c8_error
             // 
@@ -2722,6 +2919,7 @@
             // 
             // c8_test
             // 
+            this.c8_test.Enabled = false;
             this.c8_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c8_test.Location = new System.Drawing.Point(464, 112);
             this.c8_test.Name = "c8_test";
@@ -2732,22 +2930,34 @@
             // 
             // c8_delay
             // 
+            this.c8_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c8_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c8_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c8_delay.Enabled = false;
             this.c8_delay.Location = new System.Drawing.Point(274, 120);
             this.c8_delay.Name = "c8_delay";
-            this.c8_delay.Size = new System.Drawing.Size(114, 20);
+            this.c8_delay.Size = new System.Drawing.Size(69, 20);
             this.c8_delay.TabIndex = 14;
             // 
             // c8_pulse
             // 
+            this.c8_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c8_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c8_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c8_pulse.Enabled = false;
             this.c8_pulse.Location = new System.Drawing.Point(274, 75);
             this.c8_pulse.Name = "c8_pulse";
-            this.c8_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c8_pulse.Size = new System.Drawing.Size(69, 20);
             this.c8_pulse.TabIndex = 13;
             // 
             // c8_strobe
             // 
+            this.c8_strobe.Enabled = false;
             this.c8_strobe.FormattingEnabled = true;
             this.c8_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -2760,6 +2970,7 @@
             this.c8_strobe.Name = "c8_strobe";
             this.c8_strobe.Size = new System.Drawing.Size(69, 21);
             this.c8_strobe.TabIndex = 12;
+            this.c8_strobe.Text = "None";
             // 
             // label70
             // 
@@ -2793,21 +3004,28 @@
             // 
             // c8_intensity
             // 
+            this.c8_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c8_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c8_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c8_intensity.Location = new System.Drawing.Point(75, 29);
             this.c8_intensity.Name = "c8_intensity";
-            this.c8_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c8_intensity.Size = new System.Drawing.Size(69, 20);
             this.c8_intensity.TabIndex = 8;
             // 
             // c8_edge
             // 
+            this.c8_edge.Enabled = false;
             this.c8_edge.FormattingEnabled = true;
             this.c8_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c8_edge.Location = new System.Drawing.Point(75, 72);
             this.c8_edge.Name = "c8_edge";
             this.c8_edge.Size = new System.Drawing.Size(69, 21);
             this.c8_edge.TabIndex = 7;
+            this.c8_edge.Text = "None";
             // 
             // c8_mode
             // 
@@ -2819,6 +3037,7 @@
             this.c8_mode.Name = "c8_mode";
             this.c8_mode.Size = new System.Drawing.Size(69, 21);
             this.c8_mode.TabIndex = 6;
+            this.c8_mode.Text = "Static";
             // 
             // label73
             // 
@@ -2898,12 +3117,13 @@
             // 
             // c12_status
             // 
+            this.c12_status.BackColor = System.Drawing.Color.Blue;
             this.c12_status.Enabled = false;
             this.c12_status.Location = new System.Drawing.Point(464, 29);
             this.c12_status.Name = "c12_status";
             this.c12_status.Size = new System.Drawing.Size(108, 83);
             this.c12_status.TabIndex = 16;
-            this.c12_status.UseVisualStyleBackColor = true;
+            this.c12_status.UseVisualStyleBackColor = false;
             // 
             // c12_error
             // 
@@ -2917,6 +3137,7 @@
             // 
             // c12_test
             // 
+            this.c12_test.Enabled = false;
             this.c12_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c12_test.Location = new System.Drawing.Point(464, 112);
             this.c12_test.Name = "c12_test";
@@ -2927,22 +3148,34 @@
             // 
             // c12_delay
             // 
+            this.c12_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c12_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c12_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c12_delay.Enabled = false;
             this.c12_delay.Location = new System.Drawing.Point(274, 120);
             this.c12_delay.Name = "c12_delay";
-            this.c12_delay.Size = new System.Drawing.Size(114, 20);
+            this.c12_delay.Size = new System.Drawing.Size(69, 20);
             this.c12_delay.TabIndex = 14;
             // 
             // c12_pulse
             // 
+            this.c12_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c12_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c12_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c12_pulse.Enabled = false;
             this.c12_pulse.Location = new System.Drawing.Point(274, 75);
             this.c12_pulse.Name = "c12_pulse";
-            this.c12_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c12_pulse.Size = new System.Drawing.Size(69, 20);
             this.c12_pulse.TabIndex = 13;
             // 
             // c12_strobe
             // 
+            this.c12_strobe.Enabled = false;
             this.c12_strobe.FormattingEnabled = true;
             this.c12_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -2955,6 +3188,7 @@
             this.c12_strobe.Name = "c12_strobe";
             this.c12_strobe.Size = new System.Drawing.Size(69, 21);
             this.c12_strobe.TabIndex = 12;
+            this.c12_strobe.Text = "None";
             // 
             // label78
             // 
@@ -2988,21 +3222,28 @@
             // 
             // c12_intensity
             // 
+            this.c12_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c12_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c12_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c12_intensity.Location = new System.Drawing.Point(75, 29);
             this.c12_intensity.Name = "c12_intensity";
-            this.c12_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c12_intensity.Size = new System.Drawing.Size(69, 20);
             this.c12_intensity.TabIndex = 8;
             // 
             // c12_edge
             // 
+            this.c12_edge.Enabled = false;
             this.c12_edge.FormattingEnabled = true;
             this.c12_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c12_edge.Location = new System.Drawing.Point(75, 72);
             this.c12_edge.Name = "c12_edge";
             this.c12_edge.Size = new System.Drawing.Size(69, 21);
             this.c12_edge.TabIndex = 7;
+            this.c12_edge.Text = "None";
             // 
             // c12_mode
             // 
@@ -3014,6 +3255,7 @@
             this.c12_mode.Name = "c12_mode";
             this.c12_mode.Size = new System.Drawing.Size(69, 21);
             this.c12_mode.TabIndex = 6;
+            this.c12_mode.Text = "Static";
             // 
             // label81
             // 
@@ -3080,12 +3322,13 @@
             // 
             // c10_status
             // 
+            this.c10_status.BackColor = System.Drawing.Color.Red;
             this.c10_status.Enabled = false;
             this.c10_status.Location = new System.Drawing.Point(464, 29);
             this.c10_status.Name = "c10_status";
             this.c10_status.Size = new System.Drawing.Size(108, 83);
             this.c10_status.TabIndex = 16;
-            this.c10_status.UseVisualStyleBackColor = true;
+            this.c10_status.UseVisualStyleBackColor = false;
             // 
             // c10_error
             // 
@@ -3099,6 +3342,7 @@
             // 
             // c10_test
             // 
+            this.c10_test.Enabled = false;
             this.c10_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c10_test.Location = new System.Drawing.Point(464, 112);
             this.c10_test.Name = "c10_test";
@@ -3109,22 +3353,34 @@
             // 
             // c10_delay
             // 
+            this.c10_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c10_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c10_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c10_delay.Enabled = false;
             this.c10_delay.Location = new System.Drawing.Point(274, 120);
             this.c10_delay.Name = "c10_delay";
-            this.c10_delay.Size = new System.Drawing.Size(114, 20);
+            this.c10_delay.Size = new System.Drawing.Size(69, 20);
             this.c10_delay.TabIndex = 14;
             // 
             // c10_pulse
             // 
+            this.c10_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c10_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c10_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c10_pulse.Enabled = false;
             this.c10_pulse.Location = new System.Drawing.Point(274, 75);
             this.c10_pulse.Name = "c10_pulse";
-            this.c10_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c10_pulse.Size = new System.Drawing.Size(69, 20);
             this.c10_pulse.TabIndex = 13;
             // 
             // c10_strobe
             // 
+            this.c10_strobe.Enabled = false;
             this.c10_strobe.FormattingEnabled = true;
             this.c10_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -3137,6 +3393,7 @@
             this.c10_strobe.Name = "c10_strobe";
             this.c10_strobe.Size = new System.Drawing.Size(69, 21);
             this.c10_strobe.TabIndex = 12;
+            this.c10_strobe.Text = "None";
             // 
             // label86
             // 
@@ -3170,21 +3427,28 @@
             // 
             // c10_intensity
             // 
+            this.c10_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c10_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c10_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c10_intensity.Location = new System.Drawing.Point(75, 29);
             this.c10_intensity.Name = "c10_intensity";
-            this.c10_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c10_intensity.Size = new System.Drawing.Size(69, 20);
             this.c10_intensity.TabIndex = 8;
             // 
             // c10_edge
             // 
+            this.c10_edge.Enabled = false;
             this.c10_edge.FormattingEnabled = true;
             this.c10_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c10_edge.Location = new System.Drawing.Point(75, 72);
             this.c10_edge.Name = "c10_edge";
             this.c10_edge.Size = new System.Drawing.Size(69, 21);
             this.c10_edge.TabIndex = 7;
+            this.c10_edge.Text = "None";
             // 
             // c10_mode
             // 
@@ -3196,6 +3460,7 @@
             this.c10_mode.Name = "c10_mode";
             this.c10_mode.Size = new System.Drawing.Size(69, 21);
             this.c10_mode.TabIndex = 6;
+            this.c10_mode.Text = "Static";
             // 
             // label89
             // 
@@ -3262,12 +3527,13 @@
             // 
             // c11_status
             // 
+            this.c11_status.BackColor = System.Drawing.Color.Lime;
             this.c11_status.Enabled = false;
             this.c11_status.Location = new System.Drawing.Point(464, 29);
             this.c11_status.Name = "c11_status";
             this.c11_status.Size = new System.Drawing.Size(108, 83);
             this.c11_status.TabIndex = 16;
-            this.c11_status.UseVisualStyleBackColor = true;
+            this.c11_status.UseVisualStyleBackColor = false;
             // 
             // c11_error
             // 
@@ -3281,6 +3547,7 @@
             // 
             // c11_test
             // 
+            this.c11_test.Enabled = false;
             this.c11_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c11_test.Location = new System.Drawing.Point(464, 112);
             this.c11_test.Name = "c11_test";
@@ -3291,22 +3558,34 @@
             // 
             // c11_delay
             // 
+            this.c11_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c11_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c11_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c11_delay.Enabled = false;
             this.c11_delay.Location = new System.Drawing.Point(274, 120);
             this.c11_delay.Name = "c11_delay";
-            this.c11_delay.Size = new System.Drawing.Size(114, 20);
+            this.c11_delay.Size = new System.Drawing.Size(69, 20);
             this.c11_delay.TabIndex = 14;
             // 
             // c11_pulse
             // 
+            this.c11_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c11_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c11_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c11_pulse.Enabled = false;
             this.c11_pulse.Location = new System.Drawing.Point(274, 75);
             this.c11_pulse.Name = "c11_pulse";
-            this.c11_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c11_pulse.Size = new System.Drawing.Size(69, 20);
             this.c11_pulse.TabIndex = 13;
             // 
             // c11_strobe
             // 
+            this.c11_strobe.Enabled = false;
             this.c11_strobe.FormattingEnabled = true;
             this.c11_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -3319,6 +3598,7 @@
             this.c11_strobe.Name = "c11_strobe";
             this.c11_strobe.Size = new System.Drawing.Size(69, 21);
             this.c11_strobe.TabIndex = 12;
+            this.c11_strobe.Text = "None";
             // 
             // label94
             // 
@@ -3352,21 +3632,28 @@
             // 
             // c11_intensity
             // 
+            this.c11_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c11_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c11_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c11_intensity.Location = new System.Drawing.Point(75, 29);
             this.c11_intensity.Name = "c11_intensity";
-            this.c11_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c11_intensity.Size = new System.Drawing.Size(69, 20);
             this.c11_intensity.TabIndex = 8;
             // 
             // c11_edge
             // 
+            this.c11_edge.Enabled = false;
             this.c11_edge.FormattingEnabled = true;
             this.c11_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c11_edge.Location = new System.Drawing.Point(75, 72);
             this.c11_edge.Name = "c11_edge";
             this.c11_edge.Size = new System.Drawing.Size(69, 21);
             this.c11_edge.TabIndex = 7;
+            this.c11_edge.Text = "None";
             // 
             // c11_mode
             // 
@@ -3378,6 +3665,7 @@
             this.c11_mode.Name = "c11_mode";
             this.c11_mode.Size = new System.Drawing.Size(69, 21);
             this.c11_mode.TabIndex = 6;
+            this.c11_mode.Text = "Static";
             // 
             // label97
             // 
@@ -3457,12 +3745,13 @@
             // 
             // c15_status
             // 
+            this.c15_status.BackColor = System.Drawing.Color.Blue;
             this.c15_status.Enabled = false;
             this.c15_status.Location = new System.Drawing.Point(464, 29);
             this.c15_status.Name = "c15_status";
             this.c15_status.Size = new System.Drawing.Size(108, 83);
             this.c15_status.TabIndex = 16;
-            this.c15_status.UseVisualStyleBackColor = true;
+            this.c15_status.UseVisualStyleBackColor = false;
             // 
             // c15_error
             // 
@@ -3476,6 +3765,7 @@
             // 
             // c15_test
             // 
+            this.c15_test.Enabled = false;
             this.c15_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c15_test.Location = new System.Drawing.Point(464, 112);
             this.c15_test.Name = "c15_test";
@@ -3486,22 +3776,34 @@
             // 
             // c15_delay
             // 
+            this.c15_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c15_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c15_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c15_delay.Enabled = false;
             this.c15_delay.Location = new System.Drawing.Point(274, 120);
             this.c15_delay.Name = "c15_delay";
-            this.c15_delay.Size = new System.Drawing.Size(114, 20);
+            this.c15_delay.Size = new System.Drawing.Size(69, 20);
             this.c15_delay.TabIndex = 14;
             // 
             // c15_pulse
             // 
+            this.c15_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c15_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c15_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c15_pulse.Enabled = false;
             this.c15_pulse.Location = new System.Drawing.Point(274, 75);
             this.c15_pulse.Name = "c15_pulse";
-            this.c15_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c15_pulse.Size = new System.Drawing.Size(69, 20);
             this.c15_pulse.TabIndex = 13;
             // 
             // c15_strobe
             // 
+            this.c15_strobe.Enabled = false;
             this.c15_strobe.FormattingEnabled = true;
             this.c15_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -3514,6 +3816,7 @@
             this.c15_strobe.Name = "c15_strobe";
             this.c15_strobe.Size = new System.Drawing.Size(69, 21);
             this.c15_strobe.TabIndex = 12;
+            this.c15_strobe.Text = "None";
             // 
             // label102
             // 
@@ -3547,21 +3850,28 @@
             // 
             // c15_intensity
             // 
+            this.c15_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c15_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c15_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c15_intensity.Location = new System.Drawing.Point(75, 29);
             this.c15_intensity.Name = "c15_intensity";
-            this.c15_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c15_intensity.Size = new System.Drawing.Size(69, 20);
             this.c15_intensity.TabIndex = 8;
             // 
             // c15_edge
             // 
+            this.c15_edge.Enabled = false;
             this.c15_edge.FormattingEnabled = true;
             this.c15_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c15_edge.Location = new System.Drawing.Point(75, 72);
             this.c15_edge.Name = "c15_edge";
             this.c15_edge.Size = new System.Drawing.Size(69, 21);
             this.c15_edge.TabIndex = 7;
+            this.c15_edge.Text = "None";
             // 
             // c15_mode
             // 
@@ -3573,6 +3883,7 @@
             this.c15_mode.Name = "c15_mode";
             this.c15_mode.Size = new System.Drawing.Size(69, 21);
             this.c15_mode.TabIndex = 6;
+            this.c15_mode.Text = "Static";
             // 
             // label105
             // 
@@ -3639,12 +3950,13 @@
             // 
             // c13_status
             // 
+            this.c13_status.BackColor = System.Drawing.Color.Red;
             this.c13_status.Enabled = false;
             this.c13_status.Location = new System.Drawing.Point(464, 29);
             this.c13_status.Name = "c13_status";
             this.c13_status.Size = new System.Drawing.Size(108, 83);
             this.c13_status.TabIndex = 16;
-            this.c13_status.UseVisualStyleBackColor = true;
+            this.c13_status.UseVisualStyleBackColor = false;
             // 
             // c13_error
             // 
@@ -3658,6 +3970,7 @@
             // 
             // c13_test
             // 
+            this.c13_test.Enabled = false;
             this.c13_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c13_test.Location = new System.Drawing.Point(464, 112);
             this.c13_test.Name = "c13_test";
@@ -3668,22 +3981,34 @@
             // 
             // c13_delay
             // 
+            this.c13_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c13_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c13_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c13_delay.Enabled = false;
             this.c13_delay.Location = new System.Drawing.Point(274, 120);
             this.c13_delay.Name = "c13_delay";
-            this.c13_delay.Size = new System.Drawing.Size(114, 20);
+            this.c13_delay.Size = new System.Drawing.Size(69, 20);
             this.c13_delay.TabIndex = 14;
             // 
             // c13_pulse
             // 
+            this.c13_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c13_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c13_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c13_pulse.Enabled = false;
             this.c13_pulse.Location = new System.Drawing.Point(274, 75);
             this.c13_pulse.Name = "c13_pulse";
-            this.c13_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c13_pulse.Size = new System.Drawing.Size(69, 20);
             this.c13_pulse.TabIndex = 13;
             // 
             // c13_strobe
             // 
+            this.c13_strobe.Enabled = false;
             this.c13_strobe.FormattingEnabled = true;
             this.c13_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -3696,6 +4021,7 @@
             this.c13_strobe.Name = "c13_strobe";
             this.c13_strobe.Size = new System.Drawing.Size(69, 21);
             this.c13_strobe.TabIndex = 12;
+            this.c13_strobe.Text = "None";
             // 
             // label110
             // 
@@ -3729,21 +4055,28 @@
             // 
             // c13_intensity
             // 
+            this.c13_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c13_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c13_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c13_intensity.Location = new System.Drawing.Point(75, 29);
             this.c13_intensity.Name = "c13_intensity";
-            this.c13_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c13_intensity.Size = new System.Drawing.Size(69, 20);
             this.c13_intensity.TabIndex = 8;
             // 
             // c13_edge
             // 
+            this.c13_edge.Enabled = false;
             this.c13_edge.FormattingEnabled = true;
             this.c13_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c13_edge.Location = new System.Drawing.Point(75, 72);
             this.c13_edge.Name = "c13_edge";
             this.c13_edge.Size = new System.Drawing.Size(69, 21);
             this.c13_edge.TabIndex = 7;
+            this.c13_edge.Text = "None";
             // 
             // c13_mode
             // 
@@ -3755,6 +4088,7 @@
             this.c13_mode.Name = "c13_mode";
             this.c13_mode.Size = new System.Drawing.Size(69, 21);
             this.c13_mode.TabIndex = 6;
+            this.c13_mode.Text = "Static";
             // 
             // label113
             // 
@@ -3821,12 +4155,13 @@
             // 
             // c14_status
             // 
+            this.c14_status.BackColor = System.Drawing.Color.Lime;
             this.c14_status.Enabled = false;
             this.c14_status.Location = new System.Drawing.Point(464, 29);
             this.c14_status.Name = "c14_status";
             this.c14_status.Size = new System.Drawing.Size(108, 83);
             this.c14_status.TabIndex = 16;
-            this.c14_status.UseVisualStyleBackColor = true;
+            this.c14_status.UseVisualStyleBackColor = false;
             // 
             // c14_error
             // 
@@ -3840,6 +4175,7 @@
             // 
             // c14_test
             // 
+            this.c14_test.Enabled = false;
             this.c14_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c14_test.Location = new System.Drawing.Point(464, 112);
             this.c14_test.Name = "c14_test";
@@ -3850,22 +4186,34 @@
             // 
             // c14_delay
             // 
+            this.c14_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c14_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c14_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c14_delay.Enabled = false;
             this.c14_delay.Location = new System.Drawing.Point(274, 120);
             this.c14_delay.Name = "c14_delay";
-            this.c14_delay.Size = new System.Drawing.Size(114, 20);
+            this.c14_delay.Size = new System.Drawing.Size(69, 20);
             this.c14_delay.TabIndex = 14;
             // 
             // c14_pulse
             // 
+            this.c14_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c14_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c14_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c14_pulse.Enabled = false;
             this.c14_pulse.Location = new System.Drawing.Point(274, 75);
             this.c14_pulse.Name = "c14_pulse";
-            this.c14_pulse.Size = new System.Drawing.Size(114, 20);
+            this.c14_pulse.Size = new System.Drawing.Size(69, 20);
             this.c14_pulse.TabIndex = 13;
             // 
             // c14_strobe
             // 
+            this.c14_strobe.Enabled = false;
             this.c14_strobe.FormattingEnabled = true;
             this.c14_strobe.Items.AddRange(new object[] {
+            "None",
             "1",
             "2",
             "3",
@@ -3878,6 +4226,7 @@
             this.c14_strobe.Name = "c14_strobe";
             this.c14_strobe.Size = new System.Drawing.Size(69, 21);
             this.c14_strobe.TabIndex = 12;
+            this.c14_strobe.Text = "None";
             // 
             // label118
             // 
@@ -3911,21 +4260,28 @@
             // 
             // c14_intensity
             // 
+            this.c14_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c14_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c14_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.c14_intensity.Location = new System.Drawing.Point(75, 29);
             this.c14_intensity.Name = "c14_intensity";
-            this.c14_intensity.Size = new System.Drawing.Size(105, 20);
+            this.c14_intensity.Size = new System.Drawing.Size(69, 20);
             this.c14_intensity.TabIndex = 8;
             // 
             // c14_edge
             // 
+            this.c14_edge.Enabled = false;
             this.c14_edge.FormattingEnabled = true;
             this.c14_edge.Items.AddRange(new object[] {
+            "None",
             "Rising",
             "Falling"});
             this.c14_edge.Location = new System.Drawing.Point(75, 72);
             this.c14_edge.Name = "c14_edge";
             this.c14_edge.Size = new System.Drawing.Size(69, 21);
             this.c14_edge.TabIndex = 7;
+            this.c14_edge.Text = "None";
             // 
             // c14_mode
             // 
@@ -3937,6 +4293,7 @@
             this.c14_mode.Name = "c14_mode";
             this.c14_mode.Size = new System.Drawing.Size(69, 21);
             this.c14_mode.TabIndex = 6;
+            this.c14_mode.Text = "Static";
             // 
             // label121
             // 
@@ -4023,16 +4380,16 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
+            this.g5_panel.ResumeLayout(false);
+            this.g5_panel.PerformLayout();
+            this.g4_panel.ResumeLayout(false);
+            this.g4_panel.PerformLayout();
+            this.g3_panel.ResumeLayout(false);
+            this.g3_panel.PerformLayout();
+            this.g2_panel.ResumeLayout(false);
+            this.g2_panel.PerformLayout();
+            this.g1_panel.ResumeLayout(false);
+            this.g1_panel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -4361,7 +4718,7 @@
         private System.Windows.Forms.Button updateConfig;
         private System.Windows.Forms.Button uploadConfig;
         private System.Windows.Forms.Label consoleDisplay;
-        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel g1_panel;
         private System.Windows.Forms.ComboBox c3_setting;
         private System.Windows.Forms.ComboBox c2_setting;
         private System.Windows.Forms.ComboBox c1_setting;
@@ -4370,7 +4727,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox g1_setting;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel g2_panel;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox c6_setting;
         private System.Windows.Forms.ComboBox c5_setting;
@@ -4379,7 +4736,7 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ComboBox g2_setting;
-        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel g5_panel;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.ComboBox c15_setting;
         private System.Windows.Forms.ComboBox c14_setting;
@@ -4388,7 +4745,7 @@
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.ComboBox g5_setting;
-        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel g4_panel;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.ComboBox c12_setting;
         private System.Windows.Forms.ComboBox c11_setting;
@@ -4397,7 +4754,7 @@
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.ComboBox g4_setting;
-        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel g3_panel;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.ComboBox c9_setting;
         private System.Windows.Forms.ComboBox c8_setting;

@@ -37,6 +37,66 @@ namespace IlluminationController2
         int c3_delay_value;
         int c3_testStop;
 
+        int c4_rgb_value;
+        int c4_pulse_value;
+        int c4_delay_value;
+        int c4_testStop;
+
+        int c5_rgb_value;
+        int c5_pulse_value;
+        int c5_delay_value;
+        int c5_testStop;
+
+        int c6_rgb_value;
+        int c6_pulse_value;
+        int c6_delay_value;
+        int c6_testStop;
+
+        int c7_rgb_value;
+        int c7_pulse_value;
+        int c7_delay_value;
+        int c7_testStop;
+
+        int c8_rgb_value;
+        int c8_pulse_value;
+        int c8_delay_value;
+        int c8_testStop;
+
+        int c9_rgb_value;
+        int c9_pulse_value;
+        int c9_delay_value;
+        int c9_testStop;
+
+        int c10_rgb_value;
+        int c10_pulse_value;
+        int c10_delay_value;
+        int c10_testStop;
+
+        int c11_rgb_value;
+        int c11_pulse_value;
+        int c11_delay_value;
+        int c11_testStop;
+
+        int c12_rgb_value;
+        int c12_pulse_value;
+        int c12_delay_value;
+        int c12_testStop;
+
+        int c13_rgb_value;
+        int c13_pulse_value;
+        int c13_delay_value;
+        int c13_testStop;
+
+        int c14_rgb_value;
+        int c14_pulse_value;
+        int c14_delay_value;
+        int c14_testStop;
+
+        int c15_rgb_value;
+        int c15_pulse_value;
+        int c15_delay_value;
+        int c15_testStop;
+
         static SerialPort portConn;
         bool comPortConnected;
         // Global Functions
@@ -230,6 +290,150 @@ namespace IlluminationController2
             c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
         }
 
+        private void c4_light_loop()
+        {
+            while (c4_testStop == 1)
+            {
+                c4_status.BackColor = Color.FromArgb(c4_rgb_value, 0, 0);
+                Thread.Sleep(c4_pulse_value);
+                c4_status.BackColor = Color.Transparent;
+                Thread.Sleep(c4_delay_value);
+            }
+            c4_status.BackColor = Color.FromArgb(c4_rgb_value, 0, 0);
+        }
+
+        private void c5_light_loop()
+        {
+            while (c5_testStop == 1)
+            {
+                c5_status.BackColor = Color.FromArgb(0, c5_rgb_value, 0);
+                Thread.Sleep(c5_pulse_value);
+                c5_status.BackColor = Color.Transparent;
+                Thread.Sleep(c5_delay_value);
+            }
+            c5_status.BackColor = Color.FromArgb(0, c5_rgb_value, 0);
+        }
+
+        private void c6_light_loop()
+        {
+            while (c6_testStop == 1)
+            {
+                c6_status.BackColor = Color.FromArgb(0, 0, c6_rgb_value);
+                Thread.Sleep(c6_pulse_value);
+                c6_status.BackColor = Color.Transparent;
+                Thread.Sleep(c6_delay_value);
+            }
+            c6_status.BackColor = Color.FromArgb(0, 0, c6_rgb_value);
+        }
+
+        private void c7_light_loop()
+        {
+            while (c7_testStop == 1)
+            {
+                c7_status.BackColor = Color.FromArgb(c7_rgb_value, 0, 0);
+                Thread.Sleep(c7_pulse_value);
+                c7_status.BackColor = Color.Transparent;
+                Thread.Sleep(c7_delay_value);
+            }
+            c7_status.BackColor = Color.FromArgb(c7_rgb_value, 0, 0);
+        }
+
+        private void c8_light_loop()
+        {
+            while (c8_testStop == 1)
+            {
+                c8_status.BackColor = Color.FromArgb(0, c8_rgb_value, 0);
+                Thread.Sleep(c8_pulse_value);
+                c8_status.BackColor = Color.Transparent;
+                Thread.Sleep(c8_delay_value);
+            }
+            c8_status.BackColor = Color.FromArgb(0, c8_rgb_value, 0);
+        }
+
+        private void c9_light_loop()
+        {
+            while (c9_testStop == 1)
+            {
+                c9_status.BackColor = Color.FromArgb(0, 0, c9_rgb_value);
+                Thread.Sleep(c9_pulse_value);
+                c9_status.BackColor = Color.Transparent;
+                Thread.Sleep(c9_delay_value);
+            }
+            c9_status.BackColor = Color.FromArgb(0, 0, c9_rgb_value);
+        }
+
+        private void c10_light_loop()
+        {
+            while (c10_testStop == 1)
+            {
+                c10_status.BackColor = Color.FromArgb(c10_rgb_value, 0, 0);
+                Thread.Sleep(c10_pulse_value);
+                c10_status.BackColor = Color.Transparent;
+                Thread.Sleep(c10_delay_value);
+            }
+            c10_status.BackColor = Color.FromArgb(c10_rgb_value, 0, 0);
+        }
+
+        private void c11_light_loop()
+        {
+            while (c11_testStop == 1)
+            {
+                c11_status.BackColor = Color.FromArgb(0, c11_rgb_value, 0);
+                Thread.Sleep(c11_pulse_value);
+                c11_status.BackColor = Color.Transparent;
+                Thread.Sleep(c11_delay_value);
+            }
+            c11_status.BackColor = Color.FromArgb(0, c11_rgb_value, 0);
+        }
+
+        private void c12_light_loop()
+        {
+            while (c12_testStop == 1)
+            {
+                c12_status.BackColor = Color.FromArgb(0, 0, c12_rgb_value);
+                Thread.Sleep(c12_pulse_value);
+                c12_status.BackColor = Color.Transparent;
+                Thread.Sleep(c12_delay_value);
+            }
+            c12_status.BackColor = Color.FromArgb(0, 0, c12_rgb_value);
+        }
+
+        private void c13_light_loop()
+        {
+            while (c13_testStop == 1)
+            {
+                c13_status.BackColor = Color.FromArgb(c13_rgb_value, 0, 0);
+                Thread.Sleep(c13_pulse_value);
+                c13_status.BackColor = Color.Transparent;
+                Thread.Sleep(c13_delay_value);
+            }
+            c13_status.BackColor = Color.FromArgb(c13_rgb_value, 0, 0);
+        }
+
+        private void c14_light_loop()
+        {
+            while (c14_testStop == 1)
+            {
+                c14_status.BackColor = Color.FromArgb(0, c14_rgb_value, 0);
+                Thread.Sleep(c14_pulse_value);
+                c14_status.BackColor = Color.Transparent;
+                Thread.Sleep(c14_delay_value);
+            }
+            c14_status.BackColor = Color.FromArgb(0, c14_rgb_value, 0);
+        }
+
+        private void c15_light_loop()
+        {
+            while (c15_testStop == 1)
+            {
+                c15_status.BackColor = Color.FromArgb(0, 0, c15_rgb_value);
+                Thread.Sleep(c15_pulse_value);
+                c15_status.BackColor = Color.Transparent;
+                Thread.Sleep(c15_delay_value);
+            }
+            c15_status.BackColor = Color.FromArgb(0, 0, c15_rgb_value);
+        }
+
         // Channel 1
         private void c1_title_Click(object sender, EventArgs e)
         {
@@ -241,7 +445,6 @@ namespace IlluminationController2
             if (checkIntensity(c1_intensity.Text))
             {
                 int rgb_value = getRGB(c1_intensity.Text);
-                //c1_test.Enabled = true;
                 c1_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
                 c1_error.ForeColor = Color.White;
                 c1_error.Text = "Error: ";
@@ -250,7 +453,6 @@ namespace IlluminationController2
             }
             else
             {
-                //Console.WriteLine("Invalid Value");
                 c1_test.Enabled = false;
                 c1_status.BackColor = Color.Transparent;
                 c1_error.ForeColor = Color.Red;
@@ -265,6 +467,8 @@ namespace IlluminationController2
 
         private void c1_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
+            c1_testStop = 0;
+            c1_test.Text = "Test";
             if (c1_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
@@ -292,6 +496,8 @@ namespace IlluminationController2
         private void c1_pulse_TextChanged(object sender, EventArgs e)
         {
             // Pulse
+            c1_testStop = 0;
+            c1_test.Text = "Test";
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text))
             {
                 int pulse_value = Convert.ToInt32(c1_pulse.Text);
@@ -304,6 +510,7 @@ namespace IlluminationController2
 
                 c1_pulse_value = pulse_value;
                 c1_delay_value = delay_value;
+                
             }
             else
             {
@@ -317,6 +524,8 @@ namespace IlluminationController2
         private void c1_delay_TextChanged(object sender, EventArgs e)
         {
             // Delay
+            c1_testStop = 0;
+            c1_test.Text = "Test";
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text))
             {
                 int pulse_value = Convert.ToInt32(c1_pulse.Text);
@@ -336,6 +545,7 @@ namespace IlluminationController2
                 c1_error.ForeColor = Color.Red;
                 c1_error.Text = "Error: Invalid/Missing value inputted for pulse/delay. Please use integers from 0 to 65,536.";
                 c1_test.Enabled = false;
+                
             }
         }
 
@@ -384,6 +594,8 @@ namespace IlluminationController2
 
         private void c2_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
+            c2_testStop = 0;
+            c2_test.Text = "Test";
             if (c2_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
@@ -410,6 +622,8 @@ namespace IlluminationController2
         private void c2_pulse_TextChanged(object sender, EventArgs e)
         {
             // Pulse
+            c2_testStop = 0;
+            c2_test.Text = "Test";
             if (checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text))
             {
                 int pulse_value = Convert.ToInt32(c2_pulse.Text);
@@ -435,6 +649,8 @@ namespace IlluminationController2
         private void c2_delay_TextChanged(object sender, EventArgs e)
         {
             // Delay
+            c2_testStop = 0;
+            c2_test.Text = "Test";
             if (checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text))
             {
                 int pulse_value = Convert.ToInt32(c2_pulse.Text);
@@ -495,7 +711,6 @@ namespace IlluminationController2
             if (checkIntensity(c3_intensity.Text))
             {
                 int rgb_value = getRGB(c3_intensity.Text);
-                //c3_test.Enabled = true;
                 c3_status.BackColor = Color.FromArgb(0, 0, rgb_value);
                 c3_error.ForeColor = Color.White;
                 c3_error.Text = "Error: ";
@@ -519,6 +734,8 @@ namespace IlluminationController2
 
         private void c3_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
+            c3_testStop = 0;
+            c3_test.Text = "Test";
             if (c3_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
@@ -545,6 +762,8 @@ namespace IlluminationController2
         private void c3_pulse_TextChanged(object sender, EventArgs e)
         {
             // Pulse
+            c3_testStop = 0;
+            c3_test.Text = "Test";
             if (checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text))
             {
                 int pulse_value = Convert.ToInt32(c3_pulse.Text);
@@ -570,6 +789,8 @@ namespace IlluminationController2
         private void c3_delay_TextChanged(object sender, EventArgs e)
         {
             // Delay
+            c3_testStop = 0;
+            c3_test.Text = "Test";
             if (checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text))
             {
                 int pulse_value = Convert.ToInt32(c3_pulse.Text);
@@ -624,7 +845,6 @@ namespace IlluminationController2
             if (checkIntensity(c2_intensity.Text))
             {
                 int rgb_value = getRGB(c2_intensity.Text);
-                //c2_test.Enabled = true;
                 c2_status.BackColor = Color.FromArgb(0, rgb_value, 0);
                 c2_error.ForeColor = Color.White;
                 c2_error.Text = "Error: ";
@@ -643,6 +863,12 @@ namespace IlluminationController2
 
         private void g1_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
+            c1_testStop = 0;
+            c1_test.Text = "Test";
+            c2_testStop = 0;
+            c2_test.Text = "Test";
+            c3_testStop = 0;
+            c3_test.Text = "Test";
             if (g1_setting.SelectedIndex == 0)
             {
                 c1_setting.Enabled = true;
@@ -668,20 +894,38 @@ namespace IlluminationController2
 
         private void c1_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
+            c1_testStop = 0;
+            c1_test.Text = "Test";
             if (c1_setting.SelectedIndex == 0) { c1_panel.Enabled = true; }
-            else { c1_panel.Enabled = false; }
+            else if (c1_setting.SelectedIndex == 1) 
+            { 
+                c1_panel.Enabled = false;
+                
+            }
         }
 
         private void c2_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
+            c2_testStop = 0;
+            c2_test.Text = "Test";
             if (c2_setting.SelectedIndex == 0) { c2_panel.Enabled = true; }
-            else { c2_panel.Enabled = false; }
+            else if (c2_setting.SelectedIndex == 1)
+            {
+                c2_panel.Enabled = false;
+                
+            }
         }
 
         private void c3_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
+            c3_testStop = 0;
+            c3_test.Text = "Test";
             if (c3_setting.SelectedIndex == 0) { c3_panel.Enabled = true; }
-            else { c3_panel.Enabled = false; }
+            else if (c3_setting.SelectedIndex == 1)
+            {
+                c3_panel.Enabled = false;
+                
+            }
         }
 
 
@@ -789,6 +1033,32 @@ namespace IlluminationController2
         private void button7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // Panel to Tab Mapping
+        private void g1_panel_Paint(object sender, PaintEventArgs e)
+        {
+            mainTab.SelectedIndex = 0;
+        }
+
+        private void g2_panel_Paint(object sender, PaintEventArgs e)
+        {
+            mainTab.SelectedIndex = 1;
+        }
+
+        private void g3_panel_Paint(object sender, PaintEventArgs e)
+        {
+            mainTab.SelectedIndex = 2;
+        }
+
+        private void g4_panel_Paint(object sender, PaintEventArgs e)
+        {
+            mainTab.SelectedIndex = 3;
+        }
+
+        private void g5_panel_Paint(object sender, PaintEventArgs e)
+        {
+            mainTab.SelectedIndex = 4;
         }
     }
 }
