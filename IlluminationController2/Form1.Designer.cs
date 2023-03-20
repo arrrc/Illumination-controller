@@ -533,6 +533,7 @@
             this.c15_setting.Size = new System.Drawing.Size(77, 21);
             this.c15_setting.TabIndex = 26;
             this.c15_setting.Text = "Blue";
+            this.c15_setting.SelectedIndexChanged += new System.EventHandler(this.c15_setting_SelectedIndexChanged);
             // 
             // c14_setting
             // 
@@ -546,6 +547,7 @@
             this.c14_setting.Size = new System.Drawing.Size(77, 21);
             this.c14_setting.TabIndex = 25;
             this.c14_setting.Text = "Green";
+            this.c14_setting.SelectedIndexChanged += new System.EventHandler(this.c14_setting_SelectedIndexChanged);
             // 
             // c13_setting
             // 
@@ -559,6 +561,7 @@
             this.c13_setting.Size = new System.Drawing.Size(77, 21);
             this.c13_setting.TabIndex = 24;
             this.c13_setting.Text = "Red";
+            this.c13_setting.SelectedIndexChanged += new System.EventHandler(this.c13_setting_SelectedIndexChanged);
             // 
             // label92
             // 
@@ -601,6 +604,7 @@
             this.g5_setting.Size = new System.Drawing.Size(77, 21);
             this.g5_setting.TabIndex = 21;
             this.g5_setting.Text = "Triple";
+            this.g5_setting.SelectedIndexChanged += new System.EventHandler(this.g5_setting_SelectedIndexChanged);
             // 
             // g4_panel
             // 
@@ -640,6 +644,7 @@
             this.c12_setting.Size = new System.Drawing.Size(77, 21);
             this.c12_setting.TabIndex = 26;
             this.c12_setting.Text = "Blue";
+            this.c12_setting.SelectedIndexChanged += new System.EventHandler(this.c12_setting_SelectedIndexChanged);
             // 
             // c11_setting
             // 
@@ -653,6 +658,7 @@
             this.c11_setting.Size = new System.Drawing.Size(77, 21);
             this.c11_setting.TabIndex = 25;
             this.c11_setting.Text = "Green";
+            this.c11_setting.SelectedIndexChanged += new System.EventHandler(this.c11_setting_SelectedIndexChanged);
             // 
             // c10_setting
             // 
@@ -666,6 +672,7 @@
             this.c10_setting.Size = new System.Drawing.Size(77, 21);
             this.c10_setting.TabIndex = 24;
             this.c10_setting.Text = "Red";
+            this.c10_setting.SelectedIndexChanged += new System.EventHandler(this.c10_setting_SelectedIndexChanged);
             // 
             // label76
             // 
@@ -708,6 +715,7 @@
             this.g4_setting.Size = new System.Drawing.Size(77, 21);
             this.g4_setting.TabIndex = 21;
             this.g4_setting.Text = "Triple";
+            this.g4_setting.SelectedIndexChanged += new System.EventHandler(this.g4_setting_SelectedIndexChanged);
             // 
             // g3_panel
             // 
@@ -747,6 +755,7 @@
             this.c9_setting.Size = new System.Drawing.Size(77, 21);
             this.c9_setting.TabIndex = 26;
             this.c9_setting.Text = "Blue";
+            this.c9_setting.SelectedIndexChanged += new System.EventHandler(this.c9_setting_SelectedIndexChanged);
             // 
             // c8_setting
             // 
@@ -760,6 +769,7 @@
             this.c8_setting.Size = new System.Drawing.Size(77, 21);
             this.c8_setting.TabIndex = 25;
             this.c8_setting.Text = "Green";
+            this.c8_setting.SelectedIndexChanged += new System.EventHandler(this.c8_setting_SelectedIndexChanged);
             // 
             // c7_setting
             // 
@@ -773,6 +783,7 @@
             this.c7_setting.Size = new System.Drawing.Size(77, 21);
             this.c7_setting.TabIndex = 24;
             this.c7_setting.Text = "Red";
+            this.c7_setting.SelectedIndexChanged += new System.EventHandler(this.c7_setting_SelectedIndexChanged);
             // 
             // label60
             // 
@@ -815,6 +826,7 @@
             this.g3_setting.Size = new System.Drawing.Size(77, 21);
             this.g3_setting.TabIndex = 21;
             this.g3_setting.Text = "Triple";
+            this.g3_setting.SelectedIndexChanged += new System.EventHandler(this.g3_setting_SelectedIndexChanged);
             // 
             // g2_panel
             // 
@@ -854,6 +866,7 @@
             this.c6_setting.Size = new System.Drawing.Size(77, 21);
             this.c6_setting.TabIndex = 26;
             this.c6_setting.Text = "Blue";
+            this.c6_setting.SelectedIndexChanged += new System.EventHandler(this.c6_setting_SelectedIndexChanged);
             // 
             // c5_setting
             // 
@@ -867,6 +880,7 @@
             this.c5_setting.Size = new System.Drawing.Size(77, 21);
             this.c5_setting.TabIndex = 25;
             this.c5_setting.Text = "Green";
+            this.c5_setting.SelectedIndexChanged += new System.EventHandler(this.c5_setting_SelectedIndexChanged);
             // 
             // c4_setting
             // 
@@ -880,6 +894,7 @@
             this.c4_setting.Size = new System.Drawing.Size(77, 21);
             this.c4_setting.TabIndex = 24;
             this.c4_setting.Text = "Red";
+            this.c4_setting.SelectedIndexChanged += new System.EventHandler(this.c4_setting_SelectedIndexChanged);
             // 
             // label44
             // 
@@ -922,6 +937,7 @@
             this.g2_setting.Size = new System.Drawing.Size(77, 21);
             this.g2_setting.TabIndex = 21;
             this.g2_setting.Text = "Triple";
+            this.g2_setting.SelectedIndexChanged += new System.EventHandler(this.g2_setting_SelectedIndexChanged);
             // 
             // g1_panel
             // 
@@ -1889,6 +1905,7 @@
             this.c6_test.TabIndex = 6;
             this.c6_test.Text = "Test";
             this.c6_test.UseVisualStyleBackColor = true;
+            this.c6_test.Click += new System.EventHandler(this.c6_test_Click);
             // 
             // c6_delay
             // 
@@ -1901,6 +1918,8 @@
             this.c6_delay.Name = "c6_delay";
             this.c6_delay.Size = new System.Drawing.Size(69, 20);
             this.c6_delay.TabIndex = 14;
+            this.c6_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c6_delay.TextChanged += new System.EventHandler(this.c6_delay_TextChanged);
             // 
             // c6_pulse
             // 
@@ -1913,6 +1932,8 @@
             this.c6_pulse.Name = "c6_pulse";
             this.c6_pulse.Size = new System.Drawing.Size(69, 20);
             this.c6_pulse.TabIndex = 13;
+            this.c6_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c6_pulse.TextChanged += new System.EventHandler(this.c6_pulse_TextChanged);
             // 
             // c6_strobe
             // 
@@ -1974,6 +1995,8 @@
             this.c6_intensity.Name = "c6_intensity";
             this.c6_intensity.Size = new System.Drawing.Size(69, 20);
             this.c6_intensity.TabIndex = 8;
+            this.c6_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c6_intensity.TextChanged += new System.EventHandler(this.c6_intensity_TextChanged);
             // 
             // c6_edge
             // 
@@ -2000,6 +2023,7 @@
             this.c6_mode.Size = new System.Drawing.Size(69, 21);
             this.c6_mode.TabIndex = 6;
             this.c6_mode.Text = "Static";
+            this.c6_mode.SelectedIndexChanged += new System.EventHandler(this.c6_mode_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -2094,6 +2118,7 @@
             this.c4_test.TabIndex = 6;
             this.c4_test.Text = "Test";
             this.c4_test.UseVisualStyleBackColor = true;
+            this.c4_test.Click += new System.EventHandler(this.c4_test_Click);
             // 
             // c4_delay
             // 
@@ -2106,6 +2131,8 @@
             this.c4_delay.Name = "c4_delay";
             this.c4_delay.Size = new System.Drawing.Size(69, 20);
             this.c4_delay.TabIndex = 14;
+            this.c4_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c4_delay.TextChanged += new System.EventHandler(this.c4_delay_TextChanged);
             // 
             // c4_pulse
             // 
@@ -2118,6 +2145,8 @@
             this.c4_pulse.Name = "c4_pulse";
             this.c4_pulse.Size = new System.Drawing.Size(69, 20);
             this.c4_pulse.TabIndex = 13;
+            this.c4_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c4_pulse.TextChanged += new System.EventHandler(this.c4_pulse_TextChanged);
             // 
             // c4_strobe
             // 
@@ -2179,6 +2208,8 @@
             this.c4_intensity.Name = "c4_intensity";
             this.c4_intensity.Size = new System.Drawing.Size(69, 20);
             this.c4_intensity.TabIndex = 8;
+            this.c4_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c4_intensity.TextChanged += new System.EventHandler(this.c4_intensity_TextChanged);
             // 
             // c4_edge
             // 
@@ -2205,6 +2236,7 @@
             this.c4_mode.Size = new System.Drawing.Size(69, 21);
             this.c4_mode.TabIndex = 6;
             this.c4_mode.Text = "Static";
+            this.c4_mode.SelectedIndexChanged += new System.EventHandler(this.c4_mode_SelectedIndexChanged);
             // 
             // label41
             // 
@@ -2299,6 +2331,7 @@
             this.c5_test.TabIndex = 6;
             this.c5_test.Text = "Test";
             this.c5_test.UseVisualStyleBackColor = true;
+            this.c5_test.Click += new System.EventHandler(this.c5_test_Click);
             // 
             // c5_delay
             // 
@@ -2311,6 +2344,8 @@
             this.c5_delay.Name = "c5_delay";
             this.c5_delay.Size = new System.Drawing.Size(69, 20);
             this.c5_delay.TabIndex = 14;
+            this.c5_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c5_delay.TextChanged += new System.EventHandler(this.c5_delay_TextChanged);
             // 
             // c5_pulse
             // 
@@ -2323,6 +2358,8 @@
             this.c5_pulse.Name = "c5_pulse";
             this.c5_pulse.Size = new System.Drawing.Size(69, 20);
             this.c5_pulse.TabIndex = 13;
+            this.c5_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c5_pulse.TextChanged += new System.EventHandler(this.c5_pulse_TextChanged);
             // 
             // c5_strobe
             // 
@@ -2384,6 +2421,8 @@
             this.c5_intensity.Name = "c5_intensity";
             this.c5_intensity.Size = new System.Drawing.Size(69, 20);
             this.c5_intensity.TabIndex = 8;
+            this.c5_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c5_intensity.TextChanged += new System.EventHandler(this.c5_intensity_TextChanged);
             // 
             // c5_edge
             // 
@@ -2410,6 +2449,7 @@
             this.c5_mode.Size = new System.Drawing.Size(69, 21);
             this.c5_mode.TabIndex = 6;
             this.c5_mode.Text = "Static";
+            this.c5_mode.SelectedIndexChanged += new System.EventHandler(this.c5_mode_SelectedIndexChanged);
             // 
             // label49
             // 
@@ -2517,6 +2557,7 @@
             this.c9_test.TabIndex = 6;
             this.c9_test.Text = "Test";
             this.c9_test.UseVisualStyleBackColor = true;
+            this.c9_test.Click += new System.EventHandler(this.c9_test_Click);
             // 
             // c9_delay
             // 
@@ -2529,6 +2570,8 @@
             this.c9_delay.Name = "c9_delay";
             this.c9_delay.Size = new System.Drawing.Size(69, 20);
             this.c9_delay.TabIndex = 14;
+            this.c9_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c9_delay.TextChanged += new System.EventHandler(this.c9_delay_TextChanged);
             // 
             // c9_pulse
             // 
@@ -2541,6 +2584,8 @@
             this.c9_pulse.Name = "c9_pulse";
             this.c9_pulse.Size = new System.Drawing.Size(69, 20);
             this.c9_pulse.TabIndex = 13;
+            this.c9_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c9_pulse.TextChanged += new System.EventHandler(this.c9_pulse_TextChanged);
             // 
             // c9_strobe
             // 
@@ -2602,6 +2647,8 @@
             this.c9_intensity.Name = "c9_intensity";
             this.c9_intensity.Size = new System.Drawing.Size(69, 20);
             this.c9_intensity.TabIndex = 8;
+            this.c9_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c9_intensity.TextChanged += new System.EventHandler(this.c9_intensity_TextChanged);
             // 
             // c9_edge
             // 
@@ -2628,6 +2675,7 @@
             this.c9_mode.Size = new System.Drawing.Size(69, 21);
             this.c9_mode.TabIndex = 6;
             this.c9_mode.Text = "Static";
+            this.c9_mode.SelectedIndexChanged += new System.EventHandler(this.c9_mode_SelectedIndexChanged);
             // 
             // label57
             // 
@@ -2722,6 +2770,7 @@
             this.c7_test.TabIndex = 6;
             this.c7_test.Text = "Test";
             this.c7_test.UseVisualStyleBackColor = true;
+            this.c7_test.Click += new System.EventHandler(this.c7_test_Click);
             // 
             // c7_delay
             // 
@@ -2734,6 +2783,8 @@
             this.c7_delay.Name = "c7_delay";
             this.c7_delay.Size = new System.Drawing.Size(69, 20);
             this.c7_delay.TabIndex = 14;
+            this.c7_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c7_delay.TextChanged += new System.EventHandler(this.c7_delay_TextChanged);
             // 
             // c7_pulse
             // 
@@ -2746,6 +2797,8 @@
             this.c7_pulse.Name = "c7_pulse";
             this.c7_pulse.Size = new System.Drawing.Size(69, 20);
             this.c7_pulse.TabIndex = 13;
+            this.c7_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c7_pulse.TextChanged += new System.EventHandler(this.c7_pulse_TextChanged);
             // 
             // c7_strobe
             // 
@@ -2807,6 +2860,8 @@
             this.c7_intensity.Name = "c7_intensity";
             this.c7_intensity.Size = new System.Drawing.Size(69, 20);
             this.c7_intensity.TabIndex = 8;
+            this.c7_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c7_intensity.TextChanged += new System.EventHandler(this.c7_intensity_TextChanged);
             // 
             // c7_edge
             // 
@@ -2833,6 +2888,7 @@
             this.c7_mode.Size = new System.Drawing.Size(69, 21);
             this.c7_mode.TabIndex = 6;
             this.c7_mode.Text = "Static";
+            this.c7_mode.SelectedIndexChanged += new System.EventHandler(this.c7_mode_SelectedIndexChanged);
             // 
             // label65
             // 
@@ -2927,6 +2983,7 @@
             this.c8_test.TabIndex = 6;
             this.c8_test.Text = "Test";
             this.c8_test.UseVisualStyleBackColor = true;
+            this.c8_test.Click += new System.EventHandler(this.c8_test_Click);
             // 
             // c8_delay
             // 
@@ -2939,6 +2996,8 @@
             this.c8_delay.Name = "c8_delay";
             this.c8_delay.Size = new System.Drawing.Size(69, 20);
             this.c8_delay.TabIndex = 14;
+            this.c8_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c8_delay.TextChanged += new System.EventHandler(this.c8_delay_TextChanged);
             // 
             // c8_pulse
             // 
@@ -2951,6 +3010,8 @@
             this.c8_pulse.Name = "c8_pulse";
             this.c8_pulse.Size = new System.Drawing.Size(69, 20);
             this.c8_pulse.TabIndex = 13;
+            this.c8_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c8_pulse.TextChanged += new System.EventHandler(this.c8_pulse_TextChanged);
             // 
             // c8_strobe
             // 
@@ -3012,6 +3073,8 @@
             this.c8_intensity.Name = "c8_intensity";
             this.c8_intensity.Size = new System.Drawing.Size(69, 20);
             this.c8_intensity.TabIndex = 8;
+            this.c8_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c8_intensity.TextChanged += new System.EventHandler(this.c8_intensity_TextChanged);
             // 
             // c8_edge
             // 
@@ -3038,6 +3101,7 @@
             this.c8_mode.Size = new System.Drawing.Size(69, 21);
             this.c8_mode.TabIndex = 6;
             this.c8_mode.Text = "Static";
+            this.c8_mode.SelectedIndexChanged += new System.EventHandler(this.c8_mode_SelectedIndexChanged);
             // 
             // label73
             // 
@@ -3145,6 +3209,7 @@
             this.c12_test.TabIndex = 6;
             this.c12_test.Text = "Test";
             this.c12_test.UseVisualStyleBackColor = true;
+            this.c12_test.Click += new System.EventHandler(this.c12_test_Click);
             // 
             // c12_delay
             // 
@@ -3157,6 +3222,8 @@
             this.c12_delay.Name = "c12_delay";
             this.c12_delay.Size = new System.Drawing.Size(69, 20);
             this.c12_delay.TabIndex = 14;
+            this.c12_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c12_delay.TextChanged += new System.EventHandler(this.c12_delay_TextChanged);
             // 
             // c12_pulse
             // 
@@ -3169,6 +3236,8 @@
             this.c12_pulse.Name = "c12_pulse";
             this.c12_pulse.Size = new System.Drawing.Size(69, 20);
             this.c12_pulse.TabIndex = 13;
+            this.c12_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c12_pulse.TextChanged += new System.EventHandler(this.c12_pulse_TextChanged);
             // 
             // c12_strobe
             // 
@@ -3230,6 +3299,8 @@
             this.c12_intensity.Name = "c12_intensity";
             this.c12_intensity.Size = new System.Drawing.Size(69, 20);
             this.c12_intensity.TabIndex = 8;
+            this.c12_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c12_intensity.TextChanged += new System.EventHandler(this.c12_intensity_TextChanged);
             // 
             // c12_edge
             // 
@@ -3256,6 +3327,7 @@
             this.c12_mode.Size = new System.Drawing.Size(69, 21);
             this.c12_mode.TabIndex = 6;
             this.c12_mode.Text = "Static";
+            this.c12_mode.SelectedIndexChanged += new System.EventHandler(this.c12_mode_SelectedIndexChanged);
             // 
             // label81
             // 
@@ -3350,6 +3422,7 @@
             this.c10_test.TabIndex = 6;
             this.c10_test.Text = "Test";
             this.c10_test.UseVisualStyleBackColor = true;
+            this.c10_test.Click += new System.EventHandler(this.c10_test_Click);
             // 
             // c10_delay
             // 
@@ -3362,6 +3435,8 @@
             this.c10_delay.Name = "c10_delay";
             this.c10_delay.Size = new System.Drawing.Size(69, 20);
             this.c10_delay.TabIndex = 14;
+            this.c10_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c10_delay.TextChanged += new System.EventHandler(this.c10_delay_TextChanged);
             // 
             // c10_pulse
             // 
@@ -3374,6 +3449,8 @@
             this.c10_pulse.Name = "c10_pulse";
             this.c10_pulse.Size = new System.Drawing.Size(69, 20);
             this.c10_pulse.TabIndex = 13;
+            this.c10_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c10_pulse.TextChanged += new System.EventHandler(this.c10_pulse_TextChanged);
             // 
             // c10_strobe
             // 
@@ -3435,6 +3512,8 @@
             this.c10_intensity.Name = "c10_intensity";
             this.c10_intensity.Size = new System.Drawing.Size(69, 20);
             this.c10_intensity.TabIndex = 8;
+            this.c10_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c10_intensity.TextChanged += new System.EventHandler(this.c10_intensity_TextChanged);
             // 
             // c10_edge
             // 
@@ -3461,6 +3540,7 @@
             this.c10_mode.Size = new System.Drawing.Size(69, 21);
             this.c10_mode.TabIndex = 6;
             this.c10_mode.Text = "Static";
+            this.c10_mode.SelectedIndexChanged += new System.EventHandler(this.c10_mode_SelectedIndexChanged);
             // 
             // label89
             // 
@@ -3555,6 +3635,7 @@
             this.c11_test.TabIndex = 6;
             this.c11_test.Text = "Test";
             this.c11_test.UseVisualStyleBackColor = true;
+            this.c11_test.Click += new System.EventHandler(this.c11_test_Click);
             // 
             // c11_delay
             // 
@@ -3567,6 +3648,8 @@
             this.c11_delay.Name = "c11_delay";
             this.c11_delay.Size = new System.Drawing.Size(69, 20);
             this.c11_delay.TabIndex = 14;
+            this.c11_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c11_delay.TextChanged += new System.EventHandler(this.c11_delay_TextChanged);
             // 
             // c11_pulse
             // 
@@ -3579,6 +3662,8 @@
             this.c11_pulse.Name = "c11_pulse";
             this.c11_pulse.Size = new System.Drawing.Size(69, 20);
             this.c11_pulse.TabIndex = 13;
+            this.c11_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c11_pulse.TextChanged += new System.EventHandler(this.c11_pulse_TextChanged);
             // 
             // c11_strobe
             // 
@@ -3640,6 +3725,8 @@
             this.c11_intensity.Name = "c11_intensity";
             this.c11_intensity.Size = new System.Drawing.Size(69, 20);
             this.c11_intensity.TabIndex = 8;
+            this.c11_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c11_intensity.TextChanged += new System.EventHandler(this.c11_intensity_TextChanged);
             // 
             // c11_edge
             // 
@@ -3666,6 +3753,7 @@
             this.c11_mode.Size = new System.Drawing.Size(69, 21);
             this.c11_mode.TabIndex = 6;
             this.c11_mode.Text = "Static";
+            this.c11_mode.SelectedIndexChanged += new System.EventHandler(this.c11_mode_SelectedIndexChanged);
             // 
             // label97
             // 
@@ -3773,6 +3861,7 @@
             this.c15_test.TabIndex = 6;
             this.c15_test.Text = "Test";
             this.c15_test.UseVisualStyleBackColor = true;
+            this.c15_test.Click += new System.EventHandler(this.c15_test_Click);
             // 
             // c15_delay
             // 
@@ -3785,6 +3874,8 @@
             this.c15_delay.Name = "c15_delay";
             this.c15_delay.Size = new System.Drawing.Size(69, 20);
             this.c15_delay.TabIndex = 14;
+            this.c15_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c15_delay.TextChanged += new System.EventHandler(this.c15_delay_TextChanged);
             // 
             // c15_pulse
             // 
@@ -3797,6 +3888,8 @@
             this.c15_pulse.Name = "c15_pulse";
             this.c15_pulse.Size = new System.Drawing.Size(69, 20);
             this.c15_pulse.TabIndex = 13;
+            this.c15_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c15_pulse.TextChanged += new System.EventHandler(this.c15_pulse_TextChanged);
             // 
             // c15_strobe
             // 
@@ -3858,6 +3951,8 @@
             this.c15_intensity.Name = "c15_intensity";
             this.c15_intensity.Size = new System.Drawing.Size(69, 20);
             this.c15_intensity.TabIndex = 8;
+            this.c15_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c15_intensity.TextChanged += new System.EventHandler(this.c15_intensity_TextChanged);
             // 
             // c15_edge
             // 
@@ -3884,6 +3979,7 @@
             this.c15_mode.Size = new System.Drawing.Size(69, 21);
             this.c15_mode.TabIndex = 6;
             this.c15_mode.Text = "Static";
+            this.c15_mode.SelectedIndexChanged += new System.EventHandler(this.c15_mode_SelectedIndexChanged);
             // 
             // label105
             // 
@@ -3978,6 +4074,7 @@
             this.c13_test.TabIndex = 6;
             this.c13_test.Text = "Test";
             this.c13_test.UseVisualStyleBackColor = true;
+            this.c13_test.Click += new System.EventHandler(this.c13_test_Click);
             // 
             // c13_delay
             // 
@@ -3990,6 +4087,8 @@
             this.c13_delay.Name = "c13_delay";
             this.c13_delay.Size = new System.Drawing.Size(69, 20);
             this.c13_delay.TabIndex = 14;
+            this.c13_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c13_delay.TextChanged += new System.EventHandler(this.c13_delay_TextChanged);
             // 
             // c13_pulse
             // 
@@ -4002,6 +4101,8 @@
             this.c13_pulse.Name = "c13_pulse";
             this.c13_pulse.Size = new System.Drawing.Size(69, 20);
             this.c13_pulse.TabIndex = 13;
+            this.c13_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c13_pulse.TextChanged += new System.EventHandler(this.c13_pulse_TextChanged);
             // 
             // c13_strobe
             // 
@@ -4063,6 +4164,8 @@
             this.c13_intensity.Name = "c13_intensity";
             this.c13_intensity.Size = new System.Drawing.Size(69, 20);
             this.c13_intensity.TabIndex = 8;
+            this.c13_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c13_intensity.TextChanged += new System.EventHandler(this.c13_intensity_TextChanged);
             // 
             // c13_edge
             // 
@@ -4089,6 +4192,7 @@
             this.c13_mode.Size = new System.Drawing.Size(69, 21);
             this.c13_mode.TabIndex = 6;
             this.c13_mode.Text = "Static";
+            this.c13_mode.SelectedIndexChanged += new System.EventHandler(this.c13_mode_SelectedIndexChanged);
             // 
             // label113
             // 
@@ -4183,6 +4287,7 @@
             this.c14_test.TabIndex = 6;
             this.c14_test.Text = "Test";
             this.c14_test.UseVisualStyleBackColor = true;
+            this.c14_test.Click += new System.EventHandler(this.c14_test_Click);
             // 
             // c14_delay
             // 
@@ -4195,6 +4300,8 @@
             this.c14_delay.Name = "c14_delay";
             this.c14_delay.Size = new System.Drawing.Size(69, 20);
             this.c14_delay.TabIndex = 14;
+            this.c14_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c14_delay.TextChanged += new System.EventHandler(this.c14_delay_TextChanged);
             // 
             // c14_pulse
             // 
@@ -4207,6 +4314,8 @@
             this.c14_pulse.Name = "c14_pulse";
             this.c14_pulse.Size = new System.Drawing.Size(69, 20);
             this.c14_pulse.TabIndex = 13;
+            this.c14_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c14_pulse.TextChanged += new System.EventHandler(this.c14_pulse_TextChanged);
             // 
             // c14_strobe
             // 
@@ -4268,6 +4377,8 @@
             this.c14_intensity.Name = "c14_intensity";
             this.c14_intensity.Size = new System.Drawing.Size(69, 20);
             this.c14_intensity.TabIndex = 8;
+            this.c14_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c14_intensity.TextChanged += new System.EventHandler(this.c14_intensity_TextChanged);
             // 
             // c14_edge
             // 
@@ -4294,6 +4405,7 @@
             this.c14_mode.Size = new System.Drawing.Size(69, 21);
             this.c14_mode.TabIndex = 6;
             this.c14_mode.Text = "Static";
+            this.c14_mode.SelectedIndexChanged += new System.EventHandler(this.c14_mode_SelectedIndexChanged);
             // 
             // label121
             // 
