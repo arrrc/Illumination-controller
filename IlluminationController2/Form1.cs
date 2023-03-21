@@ -99,6 +99,8 @@ namespace IlluminationController2
 
         static SerialPort portConn;
         bool comPortConnected;
+        string sendToHardware = "";
+
 
         // Global Functions
         public bool checkBit(string text, int type)
@@ -989,17 +991,17 @@ namespace IlluminationController2
             else
             {
                 portConn.Open();
-                try
-                {
-                    string messageReceived = portConn.ReadExisting();
-                    portConn.Write("abba");
-                    Console.WriteLine(messageReceived);
+                //try
+                //{
+                //    string messageReceived = portConn.ReadExisting();
+                //    portConn.Write("abba");
+                //    Console.WriteLine(messageReceived);
 
-                }
-                catch
-                {
-                    Console.WriteLine("device disconnected");
-                }
+                //}
+                //catch
+                //{
+                //    Console.WriteLine("device disconnected");
+                //}
                 closeConn.Enabled = true;
             }
             
@@ -1033,55 +1035,88 @@ namespace IlluminationController2
 
         private void uploadConfig_Click(object sender, EventArgs e)
         {
-            // Grab Values
-            string c1_addText = displayValues("CH1", c1_intensity.Text, c1_edge.Text, c1_mode.Text, c1_strobe.Text, c1_pulse.Text, c1_delay.Text);
-            string c2_addText = displayValues("CH2", c2_intensity.Text, c2_edge.Text, c2_mode.Text, c2_strobe.Text, c2_pulse.Text, c2_delay.Text);
-            string c3_addText = displayValues("CH3", c3_intensity.Text, c3_edge.Text, c3_mode.Text, c3_strobe.Text, c3_pulse.Text, c3_delay.Text);
-            string c4_addText = displayValues("CH4", c4_intensity.Text, c4_edge.Text, c4_mode.Text, c4_strobe.Text, c4_pulse.Text, c4_delay.Text);
-            string c5_addText = displayValues("CH5", c5_intensity.Text, c5_edge.Text, c5_mode.Text, c5_strobe.Text, c5_pulse.Text, c5_delay.Text);
-            string c6_addText = displayValues("CH6", c6_intensity.Text, c6_edge.Text, c6_mode.Text, c6_strobe.Text, c6_pulse.Text, c6_delay.Text);
-            string c7_addText = displayValues("CH7", c7_intensity.Text, c7_edge.Text, c7_mode.Text, c7_strobe.Text, c7_pulse.Text, c7_delay.Text);
-            string c8_addText = displayValues("CH8", c8_intensity.Text, c8_edge.Text, c8_mode.Text, c8_strobe.Text, c8_pulse.Text, c8_delay.Text);
-            string c9_addText = displayValues("CH9", c9_intensity.Text, c9_edge.Text, c9_mode.Text, c9_strobe.Text, c9_pulse.Text, c9_delay.Text);
-            string c10_addText = displayValues("CH10", c10_intensity.Text, c10_edge.Text, c10_mode.Text, c10_strobe.Text, c10_pulse.Text, c10_delay.Text);
-            string c11_addText = displayValues("CH11", c11_intensity.Text, c11_edge.Text, c11_mode.Text, c11_strobe.Text, c11_pulse.Text, c11_delay.Text);
-            string c12_addText = displayValues("CH12", c12_intensity.Text, c12_edge.Text, c12_mode.Text, c12_strobe.Text, c12_pulse.Text, c12_delay.Text);
-            string c13_addText = displayValues("CH13", c13_intensity.Text, c13_edge.Text, c13_mode.Text, c13_strobe.Text, c13_pulse.Text, c13_delay.Text);
-            string c14_addText = displayValues("CH14", c14_intensity.Text, c14_edge.Text, c14_mode.Text, c14_strobe.Text, c14_pulse.Text, c14_delay.Text);
-            string c15_addText = displayValues("CH15", c15_intensity.Text, c15_edge.Text, c15_mode.Text, c15_strobe.Text, c15_pulse.Text, c15_delay.Text);
-
-            string g1_addText = displaySettings(g1_setting.Text, "G1", "CH1", "CH2", "CH3");
-            string g2_addText = displaySettings(g2_setting.Text, "G2", "CH4", "CH5", "CH6");
-            string g3_addText = displaySettings(g3_setting.Text, "G3", "CH7", "CH8", "CH9");
-            string g4_addText = displaySettings(g4_setting.Text, "G4", "CH10", "CH11", "CH12");
-            string g5_addText = displaySettings(g5_setting.Text, "G5", "CH13", "CH14", "CH15");
+            
 
 
-            // Display Data on Console
-            consoleDisplay.Text += g1_addText;
-            consoleDisplay.Text += c1_addText;
-            consoleDisplay.Text += c2_addText;
-            consoleDisplay.Text += c3_addText;
+            try
+            {
+                // Grab Values
+                string c1_addText = displayValues("CH1", c1_intensity.Text, c1_edge.Text, c1_mode.Text, c1_strobe.Text, c1_pulse.Text, c1_delay.Text);
+                string c2_addText = displayValues("CH2", c2_intensity.Text, c2_edge.Text, c2_mode.Text, c2_strobe.Text, c2_pulse.Text, c2_delay.Text);
+                string c3_addText = displayValues("CH3", c3_intensity.Text, c3_edge.Text, c3_mode.Text, c3_strobe.Text, c3_pulse.Text, c3_delay.Text);
+                string c4_addText = displayValues("CH4", c4_intensity.Text, c4_edge.Text, c4_mode.Text, c4_strobe.Text, c4_pulse.Text, c4_delay.Text);
+                string c5_addText = displayValues("CH5", c5_intensity.Text, c5_edge.Text, c5_mode.Text, c5_strobe.Text, c5_pulse.Text, c5_delay.Text);
+                string c6_addText = displayValues("CH6", c6_intensity.Text, c6_edge.Text, c6_mode.Text, c6_strobe.Text, c6_pulse.Text, c6_delay.Text);
+                string c7_addText = displayValues("CH7", c7_intensity.Text, c7_edge.Text, c7_mode.Text, c7_strobe.Text, c7_pulse.Text, c7_delay.Text);
+                string c8_addText = displayValues("CH8", c8_intensity.Text, c8_edge.Text, c8_mode.Text, c8_strobe.Text, c8_pulse.Text, c8_delay.Text);
+                string c9_addText = displayValues("CH9", c9_intensity.Text, c9_edge.Text, c9_mode.Text, c9_strobe.Text, c9_pulse.Text, c9_delay.Text);
+                string c10_addText = displayValues("CH10", c10_intensity.Text, c10_edge.Text, c10_mode.Text, c10_strobe.Text, c10_pulse.Text, c10_delay.Text);
+                string c11_addText = displayValues("CH11", c11_intensity.Text, c11_edge.Text, c11_mode.Text, c11_strobe.Text, c11_pulse.Text, c11_delay.Text);
+                string c12_addText = displayValues("CH12", c12_intensity.Text, c12_edge.Text, c12_mode.Text, c12_strobe.Text, c12_pulse.Text, c12_delay.Text);
+                string c13_addText = displayValues("CH13", c13_intensity.Text, c13_edge.Text, c13_mode.Text, c13_strobe.Text, c13_pulse.Text, c13_delay.Text);
+                string c14_addText = displayValues("CH14", c14_intensity.Text, c14_edge.Text, c14_mode.Text, c14_strobe.Text, c14_pulse.Text, c14_delay.Text);
+                string c15_addText = displayValues("CH15", c15_intensity.Text, c15_edge.Text, c15_mode.Text, c15_strobe.Text, c15_pulse.Text, c15_delay.Text);
 
-            consoleDisplay.Text += g2_addText;
-            consoleDisplay.Text += c4_addText;
-            consoleDisplay.Text += c5_addText;
-            consoleDisplay.Text += c6_addText;
+                string g1_addText = displaySettings(g1_setting.Text, "G1", "CH1", "CH2", "CH3");
+                string g2_addText = displaySettings(g2_setting.Text, "G2", "CH4", "CH5", "CH6");
+                string g3_addText = displaySettings(g3_setting.Text, "G3", "CH7", "CH8", "CH9");
+                string g4_addText = displaySettings(g4_setting.Text, "G4", "CH10", "CH11", "CH12");
+                string g5_addText = displaySettings(g5_setting.Text, "G5", "CH13", "CH14", "CH15");
 
-            consoleDisplay.Text += g3_addText;
-            consoleDisplay.Text += c7_addText;
-            consoleDisplay.Text += c8_addText;
-            consoleDisplay.Text += c9_addText;
+                consoleDisplay.Items.Clear();
 
-            consoleDisplay.Text += g4_addText;
-            consoleDisplay.Text += c10_addText;
-            consoleDisplay.Text += c11_addText;
-            consoleDisplay.Text += c12_addText;
+                // Display Data on Console
+                consoleDisplay.Items.Add(g1_addText);
+                consoleDisplay.Items.Add(c1_addText);
+                consoleDisplay.Items.Add(c2_addText);
+                consoleDisplay.Items.Add(c3_addText);
 
-            consoleDisplay.Text += g5_addText;
-            consoleDisplay.Text += c13_addText;
-            consoleDisplay.Text += c14_addText;
-            consoleDisplay.Text += c15_addText;
+                consoleDisplay.Items.Add(g2_addText);
+                consoleDisplay.Items.Add(c4_addText);
+                consoleDisplay.Items.Add(c5_addText);
+                consoleDisplay.Items.Add(c6_addText);
+
+                consoleDisplay.Items.Add(g3_addText);
+                consoleDisplay.Items.Add(c7_addText);
+                consoleDisplay.Items.Add(c8_addText);
+                consoleDisplay.Items.Add(c9_addText);
+
+                consoleDisplay.Items.Add(g4_addText);
+                consoleDisplay.Items.Add(c10_addText);
+                consoleDisplay.Items.Add(c11_addText);
+                consoleDisplay.Items.Add(c12_addText);
+
+                consoleDisplay.Items.Add(g5_addText);
+                consoleDisplay.Items.Add(c13_addText);
+                consoleDisplay.Items.Add(c14_addText);
+                consoleDisplay.Items.Add(c15_addText);
+
+                for (int i = 0; i < consoleDisplay.Items.Count; i++)
+                {
+                    sendToHardware += consoleDisplay.Items[i].ToString();
+                }
+                Thread sendData = new Thread(sendDataToHardware);
+                sendData.Start();
+            }
+            catch
+            {
+                Console.WriteLine("Device disconnected");
+                consoleDisplay.Items.Add("Device is not connected");
+            }
+
+
+        }
+
+        void sendDataToHardware()
+        {
+            Console.WriteLine(sendToHardware);
+            portConn.Write(sendToHardware);
+            Thread.Sleep(5000);
+
+            string messageReceived = portConn.ReadExisting();
+            Console.WriteLine(messageReceived);
+
+
         }
 
         private void button7_Click(object sender, EventArgs e)

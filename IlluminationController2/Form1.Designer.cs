@@ -90,7 +90,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.consoleDisplay = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.mainTab = new System.Windows.Forms.TabControl();
@@ -357,6 +356,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.consoleDisplay = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.g5_panel.SuspendLayout();
@@ -1127,15 +1127,6 @@
             this.panel3.Size = new System.Drawing.Size(632, 183);
             this.panel3.TabIndex = 2;
             // 
-            // consoleDisplay
-            // 
-            this.consoleDisplay.BackColor = System.Drawing.SystemColors.Window;
-            this.consoleDisplay.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consoleDisplay.Location = new System.Drawing.Point(8, 25);
-            this.consoleDisplay.Name = "consoleDisplay";
-            this.consoleDisplay.Size = new System.Drawing.Size(614, 146);
-            this.consoleDisplay.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -1339,14 +1330,13 @@
             this.c3_edge.Enabled = false;
             this.c3_edge.FormattingEnabled = true;
             this.c3_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c3_edge.Location = new System.Drawing.Point(75, 72);
             this.c3_edge.Name = "c3_edge";
             this.c3_edge.Size = new System.Drawing.Size(69, 21);
             this.c3_edge.TabIndex = 7;
-            this.c3_edge.Text = "None";
+            this.c3_edge.Text = "Rising";
             this.c3_edge.SelectedIndexChanged += new System.EventHandler(this.c3_edge_SelectedIndexChanged);
             // 
             // c3_mode
@@ -1557,14 +1547,13 @@
             this.c1_edge.Enabled = false;
             this.c1_edge.FormattingEnabled = true;
             this.c1_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c1_edge.Location = new System.Drawing.Point(75, 72);
             this.c1_edge.Name = "c1_edge";
             this.c1_edge.Size = new System.Drawing.Size(69, 21);
             this.c1_edge.TabIndex = 7;
-            this.c1_edge.Text = "None";
+            this.c1_edge.Text = "Rising";
             this.c1_edge.SelectedIndexChanged += new System.EventHandler(this.c1_edge_SelectedIndexChanged);
             // 
             // c1_mode
@@ -1775,14 +1764,13 @@
             this.c2_edge.Enabled = false;
             this.c2_edge.FormattingEnabled = true;
             this.c2_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c2_edge.Location = new System.Drawing.Point(75, 72);
             this.c2_edge.Name = "c2_edge";
             this.c2_edge.Size = new System.Drawing.Size(69, 21);
             this.c2_edge.TabIndex = 7;
-            this.c2_edge.Text = "None";
+            this.c2_edge.Text = "Rising";
             this.c2_edge.SelectedIndexChanged += new System.EventHandler(this.c2_edge_SelectedIndexChanged);
             // 
             // c2_mode
@@ -2003,14 +1991,13 @@
             this.c6_edge.Enabled = false;
             this.c6_edge.FormattingEnabled = true;
             this.c6_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c6_edge.Location = new System.Drawing.Point(75, 72);
             this.c6_edge.Name = "c6_edge";
             this.c6_edge.Size = new System.Drawing.Size(69, 21);
             this.c6_edge.TabIndex = 7;
-            this.c6_edge.Text = "None";
+            this.c6_edge.Text = "Rising";
             // 
             // c6_mode
             // 
@@ -2216,14 +2203,13 @@
             this.c4_edge.Enabled = false;
             this.c4_edge.FormattingEnabled = true;
             this.c4_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c4_edge.Location = new System.Drawing.Point(75, 72);
             this.c4_edge.Name = "c4_edge";
             this.c4_edge.Size = new System.Drawing.Size(69, 21);
             this.c4_edge.TabIndex = 7;
-            this.c4_edge.Text = "None";
+            this.c4_edge.Text = "Rising";
             // 
             // c4_mode
             // 
@@ -2429,14 +2415,13 @@
             this.c5_edge.Enabled = false;
             this.c5_edge.FormattingEnabled = true;
             this.c5_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c5_edge.Location = new System.Drawing.Point(75, 72);
             this.c5_edge.Name = "c5_edge";
             this.c5_edge.Size = new System.Drawing.Size(69, 21);
             this.c5_edge.TabIndex = 7;
-            this.c5_edge.Text = "None";
+            this.c5_edge.Text = "Rising";
             // 
             // c5_mode
             // 
@@ -2655,14 +2640,13 @@
             this.c9_edge.Enabled = false;
             this.c9_edge.FormattingEnabled = true;
             this.c9_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c9_edge.Location = new System.Drawing.Point(75, 72);
             this.c9_edge.Name = "c9_edge";
             this.c9_edge.Size = new System.Drawing.Size(69, 21);
             this.c9_edge.TabIndex = 7;
-            this.c9_edge.Text = "None";
+            this.c9_edge.Text = "Rising";
             // 
             // c9_mode
             // 
@@ -2868,14 +2852,13 @@
             this.c7_edge.Enabled = false;
             this.c7_edge.FormattingEnabled = true;
             this.c7_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c7_edge.Location = new System.Drawing.Point(75, 72);
             this.c7_edge.Name = "c7_edge";
             this.c7_edge.Size = new System.Drawing.Size(69, 21);
             this.c7_edge.TabIndex = 7;
-            this.c7_edge.Text = "None";
+            this.c7_edge.Text = "Rising";
             // 
             // c7_mode
             // 
@@ -3081,14 +3064,13 @@
             this.c8_edge.Enabled = false;
             this.c8_edge.FormattingEnabled = true;
             this.c8_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c8_edge.Location = new System.Drawing.Point(75, 72);
             this.c8_edge.Name = "c8_edge";
             this.c8_edge.Size = new System.Drawing.Size(69, 21);
             this.c8_edge.TabIndex = 7;
-            this.c8_edge.Text = "None";
+            this.c8_edge.Text = "Rising";
             // 
             // c8_mode
             // 
@@ -3307,14 +3289,13 @@
             this.c12_edge.Enabled = false;
             this.c12_edge.FormattingEnabled = true;
             this.c12_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c12_edge.Location = new System.Drawing.Point(75, 72);
             this.c12_edge.Name = "c12_edge";
             this.c12_edge.Size = new System.Drawing.Size(69, 21);
             this.c12_edge.TabIndex = 7;
-            this.c12_edge.Text = "None";
+            this.c12_edge.Text = "Rising";
             // 
             // c12_mode
             // 
@@ -3520,14 +3501,13 @@
             this.c10_edge.Enabled = false;
             this.c10_edge.FormattingEnabled = true;
             this.c10_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c10_edge.Location = new System.Drawing.Point(75, 72);
             this.c10_edge.Name = "c10_edge";
             this.c10_edge.Size = new System.Drawing.Size(69, 21);
             this.c10_edge.TabIndex = 7;
-            this.c10_edge.Text = "None";
+            this.c10_edge.Text = "Rising";
             // 
             // c10_mode
             // 
@@ -3733,14 +3713,13 @@
             this.c11_edge.Enabled = false;
             this.c11_edge.FormattingEnabled = true;
             this.c11_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c11_edge.Location = new System.Drawing.Point(75, 72);
             this.c11_edge.Name = "c11_edge";
             this.c11_edge.Size = new System.Drawing.Size(69, 21);
             this.c11_edge.TabIndex = 7;
-            this.c11_edge.Text = "None";
+            this.c11_edge.Text = "Rising";
             // 
             // c11_mode
             // 
@@ -3959,14 +3938,13 @@
             this.c15_edge.Enabled = false;
             this.c15_edge.FormattingEnabled = true;
             this.c15_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c15_edge.Location = new System.Drawing.Point(75, 72);
             this.c15_edge.Name = "c15_edge";
             this.c15_edge.Size = new System.Drawing.Size(69, 21);
             this.c15_edge.TabIndex = 7;
-            this.c15_edge.Text = "None";
+            this.c15_edge.Text = "Rising";
             // 
             // c15_mode
             // 
@@ -4172,14 +4150,13 @@
             this.c13_edge.Enabled = false;
             this.c13_edge.FormattingEnabled = true;
             this.c13_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c13_edge.Location = new System.Drawing.Point(75, 72);
             this.c13_edge.Name = "c13_edge";
             this.c13_edge.Size = new System.Drawing.Size(69, 21);
             this.c13_edge.TabIndex = 7;
-            this.c13_edge.Text = "None";
+            this.c13_edge.Text = "Rising";
             // 
             // c13_mode
             // 
@@ -4385,14 +4362,13 @@
             this.c14_edge.Enabled = false;
             this.c14_edge.FormattingEnabled = true;
             this.c14_edge.Items.AddRange(new object[] {
-            "None",
             "Rising",
             "Falling"});
             this.c14_edge.Location = new System.Drawing.Point(75, 72);
             this.c14_edge.Name = "c14_edge";
             this.c14_edge.Size = new System.Drawing.Size(69, 21);
             this.c14_edge.TabIndex = 7;
-            this.c14_edge.Text = "None";
+            this.c14_edge.Text = "Rising";
             // 
             // c14_mode
             // 
@@ -4475,6 +4451,14 @@
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "LED Settings";
+            // 
+            // consoleDisplay
+            // 
+            this.consoleDisplay.FormattingEnabled = true;
+            this.consoleDisplay.Location = new System.Drawing.Point(3, 21);
+            this.consoleDisplay.Name = "consoleDisplay";
+            this.consoleDisplay.Size = new System.Drawing.Size(626, 160);
+            this.consoleDisplay.TabIndex = 4;
             // 
             // Form1
             // 
@@ -4829,7 +4813,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button updateConfig;
         private System.Windows.Forms.Button uploadConfig;
-        private System.Windows.Forms.Label consoleDisplay;
         private System.Windows.Forms.Panel g1_panel;
         private System.Windows.Forms.ComboBox c3_setting;
         private System.Windows.Forms.ComboBox c2_setting;
@@ -4877,6 +4860,7 @@
         private System.Windows.Forms.ComboBox g3_setting;
         private System.Windows.Forms.Button openConn;
         private System.Windows.Forms.Button closeConn;
+        private System.Windows.Forms.ListBox consoleDisplay;
     }
 }
 
