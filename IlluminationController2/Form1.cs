@@ -100,8 +100,8 @@ namespace IlluminationController2
         static SerialPort portConn;
         bool comPortConnected;
         string sendToHardware = "";
-
-
+        string dataReceived = "";
+        bool didDataReceiveThreadExit = false;
         // Global Functions
         public bool checkBit(string text, int type)
         {
@@ -212,7 +212,7 @@ namespace IlluminationController2
             if (delay == "") { delay = "None"; }
 
             string consoleDisplay = $"\n[{channel} Settings]: " +
-                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} ";
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
 
             return consoleDisplay;
         }
@@ -221,11 +221,11 @@ namespace IlluminationController2
         {
             if (setting == "Triple")
             {
-                return $"\n{group} Settings, [Red:{first}, Green:{second}, Blue:{third}]";
+                return $"\n{group} Settings, [Red:{first}, Green:{second}, Blue:{third}] .";
             }
             else if (setting == "Singles")
             {
-                return $"\n{group} Settings, [Single:{first}, {second}, {third}]";
+                return $"\n{group} Settings, [Single:{first}, {second}, {third}] .";
             }
             else
             {
@@ -990,7 +990,10 @@ namespace IlluminationController2
             }
             else
             {
+                portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
                 portConn.Open();
+
                 //try
                 //{
                 //    string messageReceived = portConn.ReadExisting();
@@ -1007,9 +1010,40 @@ namespace IlluminationController2
             
         }
 
+        delegate void SetTextCallback(string text);
+
+        void updateConsole(string consoleData)
+        {
+            if (consoleDisplay.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(updateConsole);
+                this.Invoke(d, new object[] { consoleData });
+            }
+            else
+            {
+                string[] splitData = consoleData.Split('.');
+                Console.WriteLine(consoleData);
+
+                foreach(string s in splitData)
+                {
+                    consoleDisplay.Items.Add(s);
+                }
+            }
+        }
+
+        void receiveDataHandler(object sender, SerialDataReceivedEventArgs e)
+        {
+            Thread.Sleep(3000);
+            dataReceived = portConn.ReadExisting();
+            Console.WriteLine(dataReceived);
+            didDataReceiveThreadExit = true;
+            updateConsole(dataReceived);
+        }
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void comPort_Click(object sender, EventArgs e)
@@ -1065,35 +1099,64 @@ namespace IlluminationController2
 
                 consoleDisplay.Items.Clear();
 
+                //make a list to contain all data, used to send to hardware as the console is supposed to only be populated with the replies from the hardware
+                List<string> config = new List<string>();
+                config.Add(g1_addText);
+                config.Add(c1_addText);
+                config.Add(c2_addText);
+                config.Add(c3_addText);
+
+                config.Add(g2_addText);
+                config.Add(c4_addText);
+                config.Add(c5_addText);
+                config.Add(c6_addText);
+
+                config.Add(g3_addText);
+                config.Add(c7_addText);
+                config.Add(c8_addText);
+                config.Add(c9_addText);
+
+                config.Add(g4_addText);
+                config.Add(c10_addText);
+                config.Add(c11_addText);
+                config.Add(c12_addText);
+
+                config.Add(g5_addText);
+                config.Add(c13_addText);
+                config.Add(c14_addText);
+                config.Add(c15_addText);
+
+
                 // Display Data on Console
-                consoleDisplay.Items.Add(g1_addText);
-                consoleDisplay.Items.Add(c1_addText);
-                consoleDisplay.Items.Add(c2_addText);
-                consoleDisplay.Items.Add(c3_addText);
+                //consoleDisplay.Items.Add(g1_addText);
+                //consoleDisplay.Items.Add(c1_addText);
+                //consoleDisplay.Items.Add(c2_addText);
+                //consoleDisplay.Items.Add(c3_addText);
 
-                consoleDisplay.Items.Add(g2_addText);
-                consoleDisplay.Items.Add(c4_addText);
-                consoleDisplay.Items.Add(c5_addText);
-                consoleDisplay.Items.Add(c6_addText);
+                //consoleDisplay.Items.Add(g2_addText);
+                //consoleDisplay.Items.Add(c4_addText);
+                //consoleDisplay.Items.Add(c5_addText);
+                //consoleDisplay.Items.Add(c6_addText);
 
-                consoleDisplay.Items.Add(g3_addText);
-                consoleDisplay.Items.Add(c7_addText);
-                consoleDisplay.Items.Add(c8_addText);
-                consoleDisplay.Items.Add(c9_addText);
+                //consoleDisplay.Items.Add(g3_addText);
+                //consoleDisplay.Items.Add(c7_addText);
+                //consoleDisplay.Items.Add(c8_addText);
+                //consoleDisplay.Items.Add(c9_addText);
 
-                consoleDisplay.Items.Add(g4_addText);
-                consoleDisplay.Items.Add(c10_addText);
-                consoleDisplay.Items.Add(c11_addText);
-                consoleDisplay.Items.Add(c12_addText);
+                //consoleDisplay.Items.Add(g4_addText);
+                //consoleDisplay.Items.Add(c10_addText);
+                //consoleDisplay.Items.Add(c11_addText);
+                //consoleDisplay.Items.Add(c12_addText);
 
-                consoleDisplay.Items.Add(g5_addText);
-                consoleDisplay.Items.Add(c13_addText);
-                consoleDisplay.Items.Add(c14_addText);
-                consoleDisplay.Items.Add(c15_addText);
+                //consoleDisplay.Items.Add(g5_addText);
+                //consoleDisplay.Items.Add(c13_addText);
+                //consoleDisplay.Items.Add(c14_addText);
+                //consoleDisplay.Items.Add(c15_addText);
 
-                for (int i = 0; i < consoleDisplay.Items.Count; i++)
+                Console.WriteLine(config.Count);
+                for (int i = 0; i < config.Count(); i++)
                 {
-                    sendToHardware += consoleDisplay.Items[i].ToString();
+                    sendToHardware += config[i].ToString();
                 }
                 Thread sendData = new Thread(sendDataToHardware);
                 sendData.Start();
@@ -1109,14 +1172,15 @@ namespace IlluminationController2
 
         void sendDataToHardware()
         {
-            Console.WriteLine(sendToHardware);
+            Console.WriteLine("test");
             portConn.Write(sendToHardware);
+            
             Thread.Sleep(5000);
 
             string messageReceived = portConn.ReadExisting();
             Console.WriteLine(messageReceived);
 
-
+            Thread.CurrentThread.Abort();
         }
 
         private void button7_Click(object sender, EventArgs e)

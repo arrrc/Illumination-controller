@@ -90,6 +90,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.consoleDisplay = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.mainTab = new System.Windows.Forms.TabControl();
@@ -356,7 +357,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.consoleDisplay = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.g5_panel.SuspendLayout();
@@ -1124,8 +1124,16 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(493, 645);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(632, 183);
+            this.panel3.Size = new System.Drawing.Size(1082, 183);
             this.panel3.TabIndex = 2;
+            // 
+            // consoleDisplay
+            // 
+            this.consoleDisplay.FormattingEnabled = true;
+            this.consoleDisplay.Location = new System.Drawing.Point(3, 21);
+            this.consoleDisplay.Name = "consoleDisplay";
+            this.consoleDisplay.Size = new System.Drawing.Size(626, 160);
+            this.consoleDisplay.TabIndex = 4;
             // 
             // label4
             // 
@@ -1146,7 +1154,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(493, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(632, 645);
+            this.panel4.Size = new System.Drawing.Size(1082, 645);
             this.panel4.TabIndex = 3;
             // 
             // mainTab
@@ -4451,14 +4459,6 @@
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "LED Settings";
-            // 
-            // consoleDisplay
-            // 
-            this.consoleDisplay.FormattingEnabled = true;
-            this.consoleDisplay.Location = new System.Drawing.Point(3, 21);
-            this.consoleDisplay.Name = "consoleDisplay";
-            this.consoleDisplay.Size = new System.Drawing.Size(626, 160);
-            this.consoleDisplay.TabIndex = 4;
             // 
             // Form1
             // 
