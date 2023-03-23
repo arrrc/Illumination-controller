@@ -434,6 +434,7 @@
             // 
             // uploadConfig
             // 
+            this.uploadConfig.Enabled = false;
             this.uploadConfig.Location = new System.Drawing.Point(7, 121);
             this.uploadConfig.Name = "uploadConfig";
             this.uploadConfig.Size = new System.Drawing.Size(144, 29);

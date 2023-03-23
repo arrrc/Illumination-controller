@@ -102,6 +102,8 @@ namespace IlluminationController2
         string sendToHardware = "";
         string dataReceived = "";
         bool didDataReceiveThreadExit = false;
+        List<string> splitData = new List<string>();
+
         // Global Functions
         public bool checkBit(string text, int type)
         {
@@ -966,6 +968,14 @@ namespace IlluminationController2
             portConn.PortName = comPort.Text;
             portConn.BaudRate = 9600;
             Console.WriteLine(portConn.PortName);
+            if(comPort.Text == "")
+            {
+                uploadConfig.Enabled = false;
+            }
+            else
+            {
+                uploadConfig.Enabled = true;
+            }
         }
 
         private void closeConn_Click(object sender, EventArgs e)
@@ -1033,11 +1043,15 @@ namespace IlluminationController2
             }
             else
             {
-                string[] splitData = consoleData.Split('.');
-                Console.WriteLine(consoleData);
+                splitData.Clear();
+                
+
+                splitData = consoleData.Split('.').ToList();
+                //Console.WriteLine(consoleData);
 
                 foreach(string s in splitData)
                 {
+                    //Console.WriteLine(s);
                     consoleDisplay.Items.Add(s);
                 }
             }
@@ -1110,6 +1124,9 @@ namespace IlluminationController2
 
                 //make a list to contain all data, used to send to hardware as the console is supposed to only be populated with the replies from the hardware
                 List<string> config = new List<string>();
+                config.Clear();
+                sendToHardware = "";
+
                 config.Add(g1_addText);
                 config.Add(c1_addText);
                 config.Add(c2_addText);
@@ -1167,6 +1184,9 @@ namespace IlluminationController2
                 {
                     sendToHardware += config[i].ToString();
                 }
+                sendToHardware += "\\r\\n";
+                Console.WriteLine(sendToHardware);
+
                 Thread sendData = new Thread(sendDataToHardware);
                 sendData.Start();
             }
@@ -1182,12 +1202,17 @@ namespace IlluminationController2
         void sendDataToHardware()
         {
             Console.WriteLine("test");
-            portConn.Write(sendToHardware);
-            
-            Thread.Sleep(5000);
 
-            string messageReceived = portConn.ReadExisting();
-            Console.WriteLine(messageReceived);
+            try
+            {
+                portConn.Write(sendToHardware);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please select a COM Port");
+            }
+            
 
             Thread.CurrentThread.Abort();
         }
