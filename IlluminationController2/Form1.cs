@@ -953,6 +953,14 @@ namespace IlluminationController2
             portConn.PortName = comPort.Text;
             portConn.BaudRate = 9600;
             Console.WriteLine(portConn.PortName);
+            if(comPort.Text == "")
+            {
+                uploadConfig.Enabled = false;
+            }
+            else
+            {
+                uploadConfig.Enabled = true;
+            }
         }
 
         private void closeConn_Click(object sender, EventArgs e)
@@ -1173,7 +1181,16 @@ namespace IlluminationController2
         void sendDataToHardware()
         {
             Console.WriteLine("test");
-            portConn.Write(sendToHardware);
+
+            try
+            {
+                portConn.Write(sendToHardware);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please select a COM Port");
+            }
             
             Thread.Sleep(5000);
 

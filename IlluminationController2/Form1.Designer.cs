@@ -434,6 +434,7 @@
             // 
             // uploadConfig
             // 
+            this.uploadConfig.Enabled = false;
             this.uploadConfig.Location = new System.Drawing.Point(7, 121);
             this.uploadConfig.Name = "uploadConfig";
             this.uploadConfig.Size = new System.Drawing.Size(144, 29);
@@ -1124,7 +1125,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(493, 645);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1082, 183);
+            this.panel3.Size = new System.Drawing.Size(632, 183);
             this.panel3.TabIndex = 2;
             // 
             // consoleDisplay
@@ -1154,7 +1155,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(493, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1082, 645);
+            this.panel4.Size = new System.Drawing.Size(632, 645);
             this.panel4.TabIndex = 3;
             // 
             // mainTab
