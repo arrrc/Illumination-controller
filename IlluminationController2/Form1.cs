@@ -233,44 +233,57 @@ namespace IlluminationController2
             }
         }
 
-
-        private void checkConfigs()
+        private void writeFile(string filename)
         {
-            bool configFound = false;
-                
-            // Get Current Directory
-            string currentDir = Directory.GetCurrentDirectory();
-            Console.WriteLine(currentDir);
+            string path = @"C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug";
+            var combinedPath = Path.Combine(path, filename);
 
-            string[] fileList = Directory.GetFiles(currentDir);
-            Console.WriteLine(fileList);
-
-            // Check whether configFiles folder exist
-            // If not, create one
-
-            // Go into configFiles folder
-            // check for a file in the folder
-            // If not create one
+            if (File.Exists(combinedPath))
+            {
+                Console.WriteLine("File does exists");
+                using (StreamWriter sw = File.CreateText(combinedPath))
+                {
+                    sw.WriteLine("Hi");
+                    sw.WriteLine("Dab");
+                }
+            }
+            else
+            {
+                Console.WriteLine("File not found");
+            }
         }
 
-        // For Update Config
-        private void writeFile()
+        private void readFile(string filename)
         {
-            //write data from the settings into the file
-            return;
+            string path = @"C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug";
+            var combinedPath = Path.Combine(path, filename);
+
+            if (File.Exists(combinedPath))
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null) { Console.WriteLine(line); }
+                }
+            }
+            else { Console.WriteLine("File not found"); }
         }
 
         // For Switch Config
         private void generateFileList()
         {
+            string path = @"C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug";
+            string[] fileList = Directory.GetFiles(path);
+
+            foreach(string file in fileList)
+            {
+                Console.WriteLine(file);
+            }
+
+
             // generate a list of configuration files for user to switch to
             // Files that no longer exist should not be seen as an option to the user
-        }
-
-        // For Switch Config
-        private void readFile()
-        {
-            // read the file and input the setting values to their respective positions
+            // Values that are stored within the file are displayed on the LED & Channel Settings
         }
 
         // Individual Channel Functions
@@ -979,7 +992,6 @@ namespace IlluminationController2
                 try
                 {
                     string messageReceived = portConn.ReadExisting();
-                    portConn.Write("abba");
                     Console.WriteLine(messageReceived);
 
                 }
@@ -1064,14 +1076,11 @@ namespace IlluminationController2
 
         private void updateConfig_Click(object sender, EventArgs e)
         {
-            checkConfigs();
+            generateFileList();
         }
 
         private void uploadConfig_Click(object sender, EventArgs e)
         {
-            
-
-
             try
             {
                 // Grab Values
