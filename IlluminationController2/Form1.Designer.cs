@@ -434,7 +434,6 @@
             // 
             // uploadConfig
             // 
-            this.uploadConfig.Enabled = false;
             this.uploadConfig.Location = new System.Drawing.Point(7, 121);
             this.uploadConfig.Name = "uploadConfig";
             this.uploadConfig.Size = new System.Drawing.Size(144, 29);
@@ -474,9 +473,11 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(314, 828);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // openConn
             // 
+            this.openConn.Enabled = false;
             this.openConn.Location = new System.Drawing.Point(3, 84);
             this.openConn.Name = "openConn";
             this.openConn.Size = new System.Drawing.Size(145, 29);
@@ -487,7 +488,6 @@
             // 
             // closeConn
             // 
-            this.closeConn.Enabled = false;
             this.closeConn.Location = new System.Drawing.Point(158, 84);
             this.closeConn.Name = "closeConn";
             this.closeConn.Size = new System.Drawing.Size(144, 29);
@@ -1090,6 +1090,7 @@
             // 
             // comPort
             // 
+            this.comPort.Enabled = false;
             this.comPort.FormattingEnabled = true;
             this.comPort.Location = new System.Drawing.Point(5, 52);
             this.comPort.Name = "comPort";

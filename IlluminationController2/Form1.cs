@@ -102,6 +102,8 @@ namespace IlluminationController2
         string sendToHardware = "";
         string dataReceived = "";
         bool didDataReceiveThreadExit = false;
+        int numTimesDataSent = 0;
+
         List<string> splitData = new List<string>();
 
         // Global Functions
@@ -964,9 +966,7 @@ namespace IlluminationController2
         // COM Port Settings
         private void comPort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            portConn = new SerialPort();
-            portConn.PortName = comPort.Text;
-            portConn.BaudRate = 9600;
+            
             Console.WriteLine(portConn.PortName);
             if(comPort.Text == "")
             {
@@ -984,6 +984,8 @@ namespace IlluminationController2
             {
                 portConn.Close();
                 closeConn.Enabled = false;
+                openConn.Enabled = true;
+                uploadConfig.Enabled = false;
             }
             else
             {
@@ -997,24 +999,24 @@ namespace IlluminationController2
             {
                 MessageBox.Show("Please select a COM port");
             }
-            else if (portConn.IsOpen)
-            {
-                try
-                {
-                    string messageReceived = portConn.ReadExisting();
-                    Console.WriteLine(messageReceived);
-
-                }
-                catch
-                {
-                    Console.WriteLine("device disconnected");
-                }
-            }
+            //else if (portConn.IsOpen)
+            //{
+            //    try
+            //    {
+            //        portConn.Write("INIT COMMS");
+            //    }
+            //    catch
+            //    {
+            //        Console.WriteLine("device disconnected");
+            //    }
+            //}
             else
             {
-                portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
-
                 portConn.Open();
+
+
+                //portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
 
                 //try
                 //{
@@ -1028,6 +1030,8 @@ namespace IlluminationController2
                 //    Console.WriteLine("device disconnected");
                 //}
                 closeConn.Enabled = true;
+                openConn.Enabled = false;
+                uploadConfig.Enabled = true;
             }
             
         }
@@ -1070,6 +1074,35 @@ namespace IlluminationController2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            portConn = new SerialPort();
+            portConn.BaudRate = 9600;
+            foreach (string portName in SerialPort.GetPortNames())
+            {
+                Console.WriteLine(portName);
+                portConn.PortName = portName;
+                portConn.Open();
+
+                portConn.Write("INIT COMMS");
+                Console.WriteLine("sent data");
+                Thread.Sleep(50);
+                string reply = portConn.ReadExisting();
+
+                Console.WriteLine(reply);
+                if (reply == "INIT COMMS")
+                {
+                    Console.WriteLine("port is open");
+                    comPort.Text = portName;
+                    portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
+                    break;
+                }
+                else
+                {
+                    portConn.Close();
+                    continue;
+                }
+
+            }
         }
 
         private void comPort_Click(object sender, EventArgs e)
@@ -2887,6 +2920,11 @@ namespace IlluminationController2
             }
             c15_testStop++;
             if (c15_testStop == 2) { c15_testStop = 0; }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
