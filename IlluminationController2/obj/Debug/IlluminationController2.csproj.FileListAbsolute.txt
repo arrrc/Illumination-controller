@@ -31,3 +31,4 @@ C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.csproj.CoreCompileInputs.cache
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.exe
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.pdb
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.openFile.resources

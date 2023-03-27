@@ -39,51 +39,36 @@
             this.closeConn = new System.Windows.Forms.Button();
             this.g5_panel = new System.Windows.Forms.Panel();
             this.label85 = new System.Windows.Forms.Label();
-            this.c15_setting = new System.Windows.Forms.ComboBox();
-            this.c14_setting = new System.Windows.Forms.ComboBox();
-            this.c13_setting = new System.Windows.Forms.ComboBox();
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
             this.g5_setting = new System.Windows.Forms.ComboBox();
             this.g4_panel = new System.Windows.Forms.Panel();
             this.label69 = new System.Windows.Forms.Label();
-            this.c12_setting = new System.Windows.Forms.ComboBox();
-            this.c11_setting = new System.Windows.Forms.ComboBox();
-            this.c10_setting = new System.Windows.Forms.ComboBox();
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.g4_setting = new System.Windows.Forms.ComboBox();
             this.g3_panel = new System.Windows.Forms.Panel();
             this.label53 = new System.Windows.Forms.Label();
-            this.c9_setting = new System.Windows.Forms.ComboBox();
-            this.c8_setting = new System.Windows.Forms.ComboBox();
-            this.c7_setting = new System.Windows.Forms.ComboBox();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.g3_setting = new System.Windows.Forms.ComboBox();
             this.g2_panel = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
-            this.c6_setting = new System.Windows.Forms.ComboBox();
-            this.c5_setting = new System.Windows.Forms.ComboBox();
-            this.c4_setting = new System.Windows.Forms.ComboBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.g2_setting = new System.Windows.Forms.ComboBox();
             this.g1_panel = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
-            this.c3_setting = new System.Windows.Forms.ComboBox();
-            this.c2_setting = new System.Windows.Forms.ComboBox();
-            this.c1_setting = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.g1_setting = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.boardSelect = new System.Windows.Forms.ComboBox();
+            this.lightSelect = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comPort = new System.Windows.Forms.ComboBox();
@@ -357,6 +342,27 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label126 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.c16_delay = new System.Windows.Forms.TextBox();
+            this.c16_pulse = new System.Windows.Forms.TextBox();
+            this.c16_strobe = new System.Windows.Forms.ComboBox();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
+            this.c16_intensity = new System.Windows.Forms.TextBox();
+            this.c16_edge = new System.Windows.Forms.ComboBox();
+            this.c16_mode = new System.Windows.Forms.ComboBox();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.label133 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.g5_panel.SuspendLayout();
@@ -387,6 +393,9 @@
             this.c15_panel.SuspendLayout();
             this.c13_panel.SuspendLayout();
             this.c14_panel.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -434,6 +443,7 @@
             // 
             // uploadConfig
             // 
+            this.uploadConfig.Enabled = false;
             this.uploadConfig.Location = new System.Drawing.Point(7, 121);
             this.uploadConfig.Name = "uploadConfig";
             this.uploadConfig.Size = new System.Drawing.Size(144, 29);
@@ -454,6 +464,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.openConn);
             this.panel2.Controls.Add(this.closeConn);
             this.panel2.Controls.Add(this.g5_panel);
@@ -462,7 +473,7 @@
             this.panel2.Controls.Add(this.g2_panel);
             this.panel2.Controls.Add(this.g1_panel);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.boardSelect);
+            this.panel2.Controls.Add(this.lightSelect);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.comPort);
@@ -471,7 +482,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(179, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(314, 828);
+            this.panel2.Size = new System.Drawing.Size(197, 828);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -480,7 +491,7 @@
             this.openConn.Enabled = false;
             this.openConn.Location = new System.Drawing.Point(3, 84);
             this.openConn.Name = "openConn";
-            this.openConn.Size = new System.Drawing.Size(145, 29);
+            this.openConn.Size = new System.Drawing.Size(188, 29);
             this.openConn.TabIndex = 29;
             this.openConn.Text = "Open port connection";
             this.openConn.UseVisualStyleBackColor = true;
@@ -488,9 +499,9 @@
             // 
             // closeConn
             // 
-            this.closeConn.Location = new System.Drawing.Point(158, 84);
+            this.closeConn.Location = new System.Drawing.Point(3, 123);
             this.closeConn.Name = "closeConn";
-            this.closeConn.Size = new System.Drawing.Size(144, 29);
+            this.closeConn.Size = new System.Drawing.Size(188, 29);
             this.closeConn.TabIndex = 28;
             this.closeConn.Text = "Close port connection";
             this.closeConn.UseVisualStyleBackColor = true;
@@ -499,16 +510,13 @@
             // g5_panel
             // 
             this.g5_panel.Controls.Add(this.label85);
-            this.g5_panel.Controls.Add(this.c15_setting);
-            this.g5_panel.Controls.Add(this.c14_setting);
-            this.g5_panel.Controls.Add(this.c13_setting);
             this.g5_panel.Controls.Add(this.label92);
             this.g5_panel.Controls.Add(this.label93);
             this.g5_panel.Controls.Add(this.label100);
             this.g5_panel.Controls.Add(this.g5_setting);
-            this.g5_panel.Location = new System.Drawing.Point(4, 633);
+            this.g5_panel.Location = new System.Drawing.Point(4, 596);
             this.g5_panel.Name = "g5_panel";
-            this.g5_panel.Size = new System.Drawing.Size(302, 98);
+            this.g5_panel.Size = new System.Drawing.Size(177, 98);
             this.g5_panel.TabIndex = 27;
             this.g5_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g5_panel_Paint);
             // 
@@ -521,48 +529,6 @@
             this.label85.Size = new System.Drawing.Size(56, 17);
             this.label85.TabIndex = 23;
             this.label85.Text = "Group 5";
-            // 
-            // c15_setting
-            // 
-            this.c15_setting.Enabled = false;
-            this.c15_setting.FormattingEnabled = true;
-            this.c15_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c15_setting.Location = new System.Drawing.Point(180, 71);
-            this.c15_setting.Name = "c15_setting";
-            this.c15_setting.Size = new System.Drawing.Size(77, 21);
-            this.c15_setting.TabIndex = 26;
-            this.c15_setting.Text = "Blue";
-            this.c15_setting.SelectedIndexChanged += new System.EventHandler(this.c15_setting_SelectedIndexChanged);
-            // 
-            // c14_setting
-            // 
-            this.c14_setting.Enabled = false;
-            this.c14_setting.FormattingEnabled = true;
-            this.c14_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c14_setting.Location = new System.Drawing.Point(180, 36);
-            this.c14_setting.Name = "c14_setting";
-            this.c14_setting.Size = new System.Drawing.Size(77, 21);
-            this.c14_setting.TabIndex = 25;
-            this.c14_setting.Text = "Green";
-            this.c14_setting.SelectedIndexChanged += new System.EventHandler(this.c14_setting_SelectedIndexChanged);
-            // 
-            // c13_setting
-            // 
-            this.c13_setting.Enabled = false;
-            this.c13_setting.FormattingEnabled = true;
-            this.c13_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c13_setting.Location = new System.Drawing.Point(180, 3);
-            this.c13_setting.Name = "c13_setting";
-            this.c13_setting.Size = new System.Drawing.Size(77, 21);
-            this.c13_setting.TabIndex = 24;
-            this.c13_setting.Text = "Red";
-            this.c13_setting.SelectedIndexChanged += new System.EventHandler(this.c13_setting_SelectedIndexChanged);
             // 
             // label92
             // 
@@ -604,22 +570,19 @@
             this.g5_setting.Name = "g5_setting";
             this.g5_setting.Size = new System.Drawing.Size(77, 21);
             this.g5_setting.TabIndex = 21;
-            this.g5_setting.Text = "Triple";
+            this.g5_setting.Text = "Grouped";
             this.g5_setting.SelectedIndexChanged += new System.EventHandler(this.g5_setting_SelectedIndexChanged);
             // 
             // g4_panel
             // 
             this.g4_panel.Controls.Add(this.label69);
-            this.g4_panel.Controls.Add(this.c12_setting);
-            this.g4_panel.Controls.Add(this.c11_setting);
-            this.g4_panel.Controls.Add(this.c10_setting);
             this.g4_panel.Controls.Add(this.label76);
             this.g4_panel.Controls.Add(this.label77);
             this.g4_panel.Controls.Add(this.label84);
             this.g4_panel.Controls.Add(this.g4_setting);
-            this.g4_panel.Location = new System.Drawing.Point(4, 513);
+            this.g4_panel.Location = new System.Drawing.Point(4, 491);
             this.g4_panel.Name = "g4_panel";
-            this.g4_panel.Size = new System.Drawing.Size(302, 98);
+            this.g4_panel.Size = new System.Drawing.Size(177, 98);
             this.g4_panel.TabIndex = 27;
             this.g4_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g4_panel_Paint);
             // 
@@ -632,48 +595,6 @@
             this.label69.Size = new System.Drawing.Size(56, 17);
             this.label69.TabIndex = 23;
             this.label69.Text = "Group 4";
-            // 
-            // c12_setting
-            // 
-            this.c12_setting.Enabled = false;
-            this.c12_setting.FormattingEnabled = true;
-            this.c12_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c12_setting.Location = new System.Drawing.Point(180, 71);
-            this.c12_setting.Name = "c12_setting";
-            this.c12_setting.Size = new System.Drawing.Size(77, 21);
-            this.c12_setting.TabIndex = 26;
-            this.c12_setting.Text = "Blue";
-            this.c12_setting.SelectedIndexChanged += new System.EventHandler(this.c12_setting_SelectedIndexChanged);
-            // 
-            // c11_setting
-            // 
-            this.c11_setting.Enabled = false;
-            this.c11_setting.FormattingEnabled = true;
-            this.c11_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c11_setting.Location = new System.Drawing.Point(180, 36);
-            this.c11_setting.Name = "c11_setting";
-            this.c11_setting.Size = new System.Drawing.Size(77, 21);
-            this.c11_setting.TabIndex = 25;
-            this.c11_setting.Text = "Green";
-            this.c11_setting.SelectedIndexChanged += new System.EventHandler(this.c11_setting_SelectedIndexChanged);
-            // 
-            // c10_setting
-            // 
-            this.c10_setting.Enabled = false;
-            this.c10_setting.FormattingEnabled = true;
-            this.c10_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c10_setting.Location = new System.Drawing.Point(180, 3);
-            this.c10_setting.Name = "c10_setting";
-            this.c10_setting.Size = new System.Drawing.Size(77, 21);
-            this.c10_setting.TabIndex = 24;
-            this.c10_setting.Text = "Red";
-            this.c10_setting.SelectedIndexChanged += new System.EventHandler(this.c10_setting_SelectedIndexChanged);
             // 
             // label76
             // 
@@ -715,22 +636,19 @@
             this.g4_setting.Name = "g4_setting";
             this.g4_setting.Size = new System.Drawing.Size(77, 21);
             this.g4_setting.TabIndex = 21;
-            this.g4_setting.Text = "Triple";
+            this.g4_setting.Text = "Grouped";
             this.g4_setting.SelectedIndexChanged += new System.EventHandler(this.g4_setting_SelectedIndexChanged);
             // 
             // g3_panel
             // 
             this.g3_panel.Controls.Add(this.label53);
-            this.g3_panel.Controls.Add(this.c9_setting);
-            this.g3_panel.Controls.Add(this.c8_setting);
-            this.g3_panel.Controls.Add(this.c7_setting);
             this.g3_panel.Controls.Add(this.label60);
             this.g3_panel.Controls.Add(this.label61);
             this.g3_panel.Controls.Add(this.label68);
             this.g3_panel.Controls.Add(this.g3_setting);
-            this.g3_panel.Location = new System.Drawing.Point(4, 393);
+            this.g3_panel.Location = new System.Drawing.Point(4, 388);
             this.g3_panel.Name = "g3_panel";
-            this.g3_panel.Size = new System.Drawing.Size(302, 98);
+            this.g3_panel.Size = new System.Drawing.Size(177, 98);
             this.g3_panel.TabIndex = 27;
             this.g3_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g3_panel_Paint);
             // 
@@ -743,48 +661,6 @@
             this.label53.Size = new System.Drawing.Size(56, 17);
             this.label53.TabIndex = 23;
             this.label53.Text = "Group 3";
-            // 
-            // c9_setting
-            // 
-            this.c9_setting.Enabled = false;
-            this.c9_setting.FormattingEnabled = true;
-            this.c9_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c9_setting.Location = new System.Drawing.Point(180, 71);
-            this.c9_setting.Name = "c9_setting";
-            this.c9_setting.Size = new System.Drawing.Size(77, 21);
-            this.c9_setting.TabIndex = 26;
-            this.c9_setting.Text = "Blue";
-            this.c9_setting.SelectedIndexChanged += new System.EventHandler(this.c9_setting_SelectedIndexChanged);
-            // 
-            // c8_setting
-            // 
-            this.c8_setting.Enabled = false;
-            this.c8_setting.FormattingEnabled = true;
-            this.c8_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c8_setting.Location = new System.Drawing.Point(180, 36);
-            this.c8_setting.Name = "c8_setting";
-            this.c8_setting.Size = new System.Drawing.Size(77, 21);
-            this.c8_setting.TabIndex = 25;
-            this.c8_setting.Text = "Green";
-            this.c8_setting.SelectedIndexChanged += new System.EventHandler(this.c8_setting_SelectedIndexChanged);
-            // 
-            // c7_setting
-            // 
-            this.c7_setting.Enabled = false;
-            this.c7_setting.FormattingEnabled = true;
-            this.c7_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c7_setting.Location = new System.Drawing.Point(180, 3);
-            this.c7_setting.Name = "c7_setting";
-            this.c7_setting.Size = new System.Drawing.Size(77, 21);
-            this.c7_setting.TabIndex = 24;
-            this.c7_setting.Text = "Red";
-            this.c7_setting.SelectedIndexChanged += new System.EventHandler(this.c7_setting_SelectedIndexChanged);
             // 
             // label60
             // 
@@ -826,22 +702,19 @@
             this.g3_setting.Name = "g3_setting";
             this.g3_setting.Size = new System.Drawing.Size(77, 21);
             this.g3_setting.TabIndex = 21;
-            this.g3_setting.Text = "Triple";
+            this.g3_setting.Text = "Grouped";
             this.g3_setting.SelectedIndexChanged += new System.EventHandler(this.g3_setting_SelectedIndexChanged);
             // 
             // g2_panel
             // 
             this.g2_panel.Controls.Add(this.label37);
-            this.g2_panel.Controls.Add(this.c6_setting);
-            this.g2_panel.Controls.Add(this.c5_setting);
-            this.g2_panel.Controls.Add(this.c4_setting);
             this.g2_panel.Controls.Add(this.label44);
             this.g2_panel.Controls.Add(this.label45);
             this.g2_panel.Controls.Add(this.label52);
             this.g2_panel.Controls.Add(this.g2_setting);
-            this.g2_panel.Location = new System.Drawing.Point(4, 273);
+            this.g2_panel.Location = new System.Drawing.Point(4, 285);
             this.g2_panel.Name = "g2_panel";
-            this.g2_panel.Size = new System.Drawing.Size(302, 98);
+            this.g2_panel.Size = new System.Drawing.Size(177, 98);
             this.g2_panel.TabIndex = 27;
             this.g2_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g2_panel_Paint);
             // 
@@ -854,48 +727,6 @@
             this.label37.Size = new System.Drawing.Size(56, 17);
             this.label37.TabIndex = 23;
             this.label37.Text = "Group 2";
-            // 
-            // c6_setting
-            // 
-            this.c6_setting.Enabled = false;
-            this.c6_setting.FormattingEnabled = true;
-            this.c6_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c6_setting.Location = new System.Drawing.Point(180, 71);
-            this.c6_setting.Name = "c6_setting";
-            this.c6_setting.Size = new System.Drawing.Size(77, 21);
-            this.c6_setting.TabIndex = 26;
-            this.c6_setting.Text = "Blue";
-            this.c6_setting.SelectedIndexChanged += new System.EventHandler(this.c6_setting_SelectedIndexChanged);
-            // 
-            // c5_setting
-            // 
-            this.c5_setting.Enabled = false;
-            this.c5_setting.FormattingEnabled = true;
-            this.c5_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c5_setting.Location = new System.Drawing.Point(180, 36);
-            this.c5_setting.Name = "c5_setting";
-            this.c5_setting.Size = new System.Drawing.Size(77, 21);
-            this.c5_setting.TabIndex = 25;
-            this.c5_setting.Text = "Green";
-            this.c5_setting.SelectedIndexChanged += new System.EventHandler(this.c5_setting_SelectedIndexChanged);
-            // 
-            // c4_setting
-            // 
-            this.c4_setting.Enabled = false;
-            this.c4_setting.FormattingEnabled = true;
-            this.c4_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c4_setting.Location = new System.Drawing.Point(180, 3);
-            this.c4_setting.Name = "c4_setting";
-            this.c4_setting.Size = new System.Drawing.Size(77, 21);
-            this.c4_setting.TabIndex = 24;
-            this.c4_setting.Text = "Red";
-            this.c4_setting.SelectedIndexChanged += new System.EventHandler(this.c4_setting_SelectedIndexChanged);
             // 
             // label44
             // 
@@ -937,22 +768,19 @@
             this.g2_setting.Name = "g2_setting";
             this.g2_setting.Size = new System.Drawing.Size(77, 21);
             this.g2_setting.TabIndex = 21;
-            this.g2_setting.Text = "Triple";
+            this.g2_setting.Text = "Grouped";
             this.g2_setting.SelectedIndexChanged += new System.EventHandler(this.g2_setting_SelectedIndexChanged);
             // 
             // g1_panel
             // 
             this.g1_panel.Controls.Add(this.label36);
-            this.g1_panel.Controls.Add(this.c3_setting);
-            this.g1_panel.Controls.Add(this.c2_setting);
-            this.g1_panel.Controls.Add(this.c1_setting);
             this.g1_panel.Controls.Add(this.label29);
             this.g1_panel.Controls.Add(this.label28);
             this.g1_panel.Controls.Add(this.label21);
             this.g1_panel.Controls.Add(this.g1_setting);
-            this.g1_panel.Location = new System.Drawing.Point(4, 153);
+            this.g1_panel.Location = new System.Drawing.Point(4, 183);
             this.g1_panel.Name = "g1_panel";
-            this.g1_panel.Size = new System.Drawing.Size(302, 98);
+            this.g1_panel.Size = new System.Drawing.Size(177, 98);
             this.g1_panel.TabIndex = 22;
             this.g1_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.g1_panel_Paint);
             // 
@@ -965,48 +793,6 @@
             this.label36.Size = new System.Drawing.Size(56, 17);
             this.label36.TabIndex = 23;
             this.label36.Text = "Group 1";
-            // 
-            // c3_setting
-            // 
-            this.c3_setting.Enabled = false;
-            this.c3_setting.FormattingEnabled = true;
-            this.c3_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c3_setting.Location = new System.Drawing.Point(180, 71);
-            this.c3_setting.Name = "c3_setting";
-            this.c3_setting.Size = new System.Drawing.Size(77, 21);
-            this.c3_setting.TabIndex = 26;
-            this.c3_setting.Text = "Blue";
-            this.c3_setting.SelectedIndexChanged += new System.EventHandler(this.c3_setting_SelectedIndexChanged);
-            // 
-            // c2_setting
-            // 
-            this.c2_setting.Enabled = false;
-            this.c2_setting.FormattingEnabled = true;
-            this.c2_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c2_setting.Location = new System.Drawing.Point(180, 36);
-            this.c2_setting.Name = "c2_setting";
-            this.c2_setting.Size = new System.Drawing.Size(77, 21);
-            this.c2_setting.TabIndex = 25;
-            this.c2_setting.Text = "Green";
-            this.c2_setting.SelectedIndexChanged += new System.EventHandler(this.c2_setting_SelectedIndexChanged);
-            // 
-            // c1_setting
-            // 
-            this.c1_setting.Enabled = false;
-            this.c1_setting.FormattingEnabled = true;
-            this.c1_setting.Items.AddRange(new object[] {
-            "Single",
-            "None"});
-            this.c1_setting.Location = new System.Drawing.Point(180, 3);
-            this.c1_setting.Name = "c1_setting";
-            this.c1_setting.Size = new System.Drawing.Size(77, 21);
-            this.c1_setting.TabIndex = 24;
-            this.c1_setting.Text = "Red";
-            this.c1_setting.SelectedIndexChanged += new System.EventHandler(this.c1_setting_SelectedIndexChanged);
             // 
             // label29
             // 
@@ -1042,37 +828,48 @@
             // 
             this.g1_setting.FormattingEnabled = true;
             this.g1_setting.Items.AddRange(new object[] {
-            "Singles",
-            "Triple"});
+            "Ungrouped",
+            "Grouped"});
             this.g1_setting.Location = new System.Drawing.Point(3, 24);
             this.g1_setting.Name = "g1_setting";
             this.g1_setting.Size = new System.Drawing.Size(77, 21);
             this.g1_setting.TabIndex = 21;
-            this.g1_setting.Text = "Triple";
+            this.g1_setting.Text = "Grouped";
             this.g1_setting.SelectedIndexChanged += new System.EventHandler(this.g1_setting_SelectedIndexChanged);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(158, 787);
+            this.button5.Location = new System.Drawing.Point(3, 788);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(144, 29);
+            this.button5.Size = new System.Drawing.Size(188, 29);
             this.button5.TabIndex = 3;
             this.button5.Text = "Check Status";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // boardSelect
+            // lightSelect
             // 
-            this.boardSelect.FormattingEnabled = true;
-            this.boardSelect.Location = new System.Drawing.Point(104, 52);
-            this.boardSelect.Name = "boardSelect";
-            this.boardSelect.Size = new System.Drawing.Size(77, 21);
-            this.boardSelect.TabIndex = 20;
+            this.lightSelect.FormattingEnabled = true;
+            this.lightSelect.Items.AddRange(new object[] {
+            "Board 1",
+            "Board 2",
+            "Board 3",
+            "Board 4",
+            "Board 5",
+            "Board 6",
+            "Board 7",
+            "Board 8",
+            "Board 9"});
+            this.lightSelect.Location = new System.Drawing.Point(104, 52);
+            this.lightSelect.Name = "lightSelect";
+            this.lightSelect.Size = new System.Drawing.Size(77, 21);
+            this.lightSelect.TabIndex = 20;
+            this.lightSelect.SelectedIndexChanged += new System.EventHandler(this.lightSelect_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1, 130);
+            this.label13.Location = new System.Drawing.Point(1, 160);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 15);
             this.label13.TabIndex = 19;
@@ -1124,10 +921,11 @@
             this.panel3.Controls.Add(this.consoleDisplay);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(493, 645);
+            this.panel3.Location = new System.Drawing.Point(376, 645);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(632, 183);
+            this.panel3.Size = new System.Drawing.Size(622, 183);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // consoleDisplay
             // 
@@ -1154,9 +952,9 @@
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(493, 0);
+            this.panel4.Location = new System.Drawing.Point(376, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(632, 645);
+            this.panel4.Size = new System.Drawing.Size(622, 645);
             this.panel4.TabIndex = 3;
             // 
             // mainTab
@@ -1166,6 +964,7 @@
             this.mainTab.Controls.Add(this.tabPage3);
             this.mainTab.Controls.Add(this.tabPage4);
             this.mainTab.Controls.Add(this.tabPage5);
+            this.mainTab.Controls.Add(this.tabPage6);
             this.mainTab.Location = new System.Drawing.Point(7, 38);
             this.mainTab.Name = "mainTab";
             this.mainTab.SelectedIndex = 0;
@@ -1397,9 +1196,9 @@
             this.c3_title.AutoSize = true;
             this.c3_title.Location = new System.Drawing.Point(3, 3);
             this.c3_title.Name = "c3_title";
-            this.c3_title.Size = new System.Drawing.Size(55, 13);
+            this.c3_title.Size = new System.Drawing.Size(82, 13);
             this.c3_title.TabIndex = 0;
-            this.c3_title.Text = "Channel 3";
+            this.c3_title.Text = "Channel 3(Blue)";
             this.c3_title.Click += new System.EventHandler(this.c3_title_Click);
             // 
             // c1_panel
@@ -1614,9 +1413,9 @@
             this.c1_title.AutoSize = true;
             this.c1_title.Location = new System.Drawing.Point(3, 3);
             this.c1_title.Name = "c1_title";
-            this.c1_title.Size = new System.Drawing.Size(55, 13);
+            this.c1_title.Size = new System.Drawing.Size(81, 13);
             this.c1_title.TabIndex = 0;
-            this.c1_title.Text = "Channel 1";
+            this.c1_title.Text = "Channel 1(Red)";
             this.c1_title.Click += new System.EventHandler(this.c1_title_Click);
             // 
             // c2_panel
@@ -1831,9 +1630,9 @@
             this.c2_title.AutoSize = true;
             this.c2_title.Location = new System.Drawing.Point(3, 3);
             this.c2_title.Name = "c2_title";
-            this.c2_title.Size = new System.Drawing.Size(55, 13);
+            this.c2_title.Size = new System.Drawing.Size(90, 13);
             this.c2_title.TabIndex = 0;
-            this.c2_title.Text = "Channel 2";
+            this.c2_title.Text = "Channel 2(Green)";
             this.c2_title.Click += new System.EventHandler(this.c2_title_Click);
             // 
             // tabPage2
@@ -2057,9 +1856,9 @@
             this.c6_title.AutoSize = true;
             this.c6_title.Location = new System.Drawing.Point(3, 3);
             this.c6_title.Name = "c6_title";
-            this.c6_title.Size = new System.Drawing.Size(55, 13);
+            this.c6_title.Size = new System.Drawing.Size(82, 13);
             this.c6_title.TabIndex = 0;
-            this.c6_title.Text = "Channel 6";
+            this.c6_title.Text = "Channel 6(Blue)";
             // 
             // c4_panel
             // 
@@ -2269,9 +2068,9 @@
             this.c4_title.AutoSize = true;
             this.c4_title.Location = new System.Drawing.Point(3, 3);
             this.c4_title.Name = "c4_title";
-            this.c4_title.Size = new System.Drawing.Size(55, 13);
+            this.c4_title.Size = new System.Drawing.Size(81, 13);
             this.c4_title.TabIndex = 0;
-            this.c4_title.Text = "Channel 4";
+            this.c4_title.Text = "Channel 4(Red)";
             // 
             // c5_panel
             // 
@@ -2481,9 +2280,9 @@
             this.c5_title.AutoSize = true;
             this.c5_title.Location = new System.Drawing.Point(3, 3);
             this.c5_title.Name = "c5_title";
-            this.c5_title.Size = new System.Drawing.Size(55, 13);
+            this.c5_title.Size = new System.Drawing.Size(90, 13);
             this.c5_title.TabIndex = 0;
-            this.c5_title.Text = "Channel 5";
+            this.c5_title.Text = "Channel 5(Green)";
             // 
             // tabPage3
             // 
@@ -2706,9 +2505,9 @@
             this.c9_title.AutoSize = true;
             this.c9_title.Location = new System.Drawing.Point(3, 3);
             this.c9_title.Name = "c9_title";
-            this.c9_title.Size = new System.Drawing.Size(55, 13);
+            this.c9_title.Size = new System.Drawing.Size(82, 13);
             this.c9_title.TabIndex = 0;
-            this.c9_title.Text = "Channel 9";
+            this.c9_title.Text = "Channel 9(Blue)";
             // 
             // c7_panel
             // 
@@ -2918,9 +2717,9 @@
             this.c7_title.AutoSize = true;
             this.c7_title.Location = new System.Drawing.Point(3, 3);
             this.c7_title.Name = "c7_title";
-            this.c7_title.Size = new System.Drawing.Size(55, 13);
+            this.c7_title.Size = new System.Drawing.Size(81, 13);
             this.c7_title.TabIndex = 0;
-            this.c7_title.Text = "Channel 7";
+            this.c7_title.Text = "Channel 7(Red)";
             // 
             // c8_panel
             // 
@@ -3130,9 +2929,9 @@
             this.c8_title.AutoSize = true;
             this.c8_title.Location = new System.Drawing.Point(3, 3);
             this.c8_title.Name = "c8_title";
-            this.c8_title.Size = new System.Drawing.Size(55, 13);
+            this.c8_title.Size = new System.Drawing.Size(90, 13);
             this.c8_title.TabIndex = 0;
-            this.c8_title.Text = "Channel 8";
+            this.c8_title.Text = "Channel 8(Green)";
             // 
             // tabPage4
             // 
@@ -3355,9 +3154,9 @@
             this.c12_title.AutoSize = true;
             this.c12_title.Location = new System.Drawing.Point(3, 3);
             this.c12_title.Name = "c12_title";
-            this.c12_title.Size = new System.Drawing.Size(61, 13);
+            this.c12_title.Size = new System.Drawing.Size(88, 13);
             this.c12_title.TabIndex = 0;
-            this.c12_title.Text = "Channel 12";
+            this.c12_title.Text = "Channel 12(Blue)";
             // 
             // c10_panel
             // 
@@ -3567,9 +3366,9 @@
             this.c10_title.AutoSize = true;
             this.c10_title.Location = new System.Drawing.Point(3, 3);
             this.c10_title.Name = "c10_title";
-            this.c10_title.Size = new System.Drawing.Size(61, 13);
+            this.c10_title.Size = new System.Drawing.Size(87, 13);
             this.c10_title.TabIndex = 0;
-            this.c10_title.Text = "Channel 10";
+            this.c10_title.Text = "Channel 10(Red)";
             // 
             // c11_panel
             // 
@@ -3779,9 +3578,9 @@
             this.c11_title.AutoSize = true;
             this.c11_title.Location = new System.Drawing.Point(3, 3);
             this.c11_title.Name = "c11_title";
-            this.c11_title.Size = new System.Drawing.Size(61, 13);
+            this.c11_title.Size = new System.Drawing.Size(96, 13);
             this.c11_title.TabIndex = 0;
-            this.c11_title.Text = "Channel 11";
+            this.c11_title.Text = "Channel 11(Green)";
             // 
             // tabPage5
             // 
@@ -4004,9 +3803,9 @@
             this.c15_title.AutoSize = true;
             this.c15_title.Location = new System.Drawing.Point(3, 3);
             this.c15_title.Name = "c15_title";
-            this.c15_title.Size = new System.Drawing.Size(61, 13);
+            this.c15_title.Size = new System.Drawing.Size(88, 13);
             this.c15_title.TabIndex = 0;
-            this.c15_title.Text = "Channel 15";
+            this.c15_title.Text = "Channel 15(Blue)";
             // 
             // c13_panel
             // 
@@ -4216,9 +4015,9 @@
             this.c13_title.AutoSize = true;
             this.c13_title.Location = new System.Drawing.Point(3, 3);
             this.c13_title.Name = "c13_title";
-            this.c13_title.Size = new System.Drawing.Size(61, 13);
+            this.c13_title.Size = new System.Drawing.Size(87, 13);
             this.c13_title.TabIndex = 0;
-            this.c13_title.Text = "Channel 13";
+            this.c13_title.Text = "Channel 13(Red)";
             // 
             // c14_panel
             // 
@@ -4428,9 +4227,9 @@
             this.c14_title.AutoSize = true;
             this.c14_title.Location = new System.Drawing.Point(3, 3);
             this.c14_title.Name = "c14_title";
-            this.c14_title.Size = new System.Drawing.Size(61, 13);
+            this.c14_title.Size = new System.Drawing.Size(96, 13);
             this.c14_title.TabIndex = 0;
-            this.c14_title.Text = "Channel 14";
+            this.c14_title.Text = "Channel 14(Green)";
             // 
             // button2
             // 
@@ -4462,11 +4261,256 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "LED Settings";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.panel6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(611, 570);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "G6";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.label126);
+            this.panel6.Controls.Add(this.button8);
+            this.panel6.Controls.Add(this.c16_delay);
+            this.panel6.Controls.Add(this.c16_pulse);
+            this.panel6.Controls.Add(this.c16_strobe);
+            this.panel6.Controls.Add(this.label127);
+            this.panel6.Controls.Add(this.label128);
+            this.panel6.Controls.Add(this.label129);
+            this.panel6.Controls.Add(this.c16_intensity);
+            this.panel6.Controls.Add(this.c16_edge);
+            this.panel6.Controls.Add(this.c16_mode);
+            this.panel6.Controls.Add(this.label130);
+            this.panel6.Controls.Add(this.label131);
+            this.panel6.Controls.Add(this.label132);
+            this.panel6.Controls.Add(this.label133);
+            this.panel6.Location = new System.Drawing.Point(0, 6);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(607, 182);
+            this.panel6.TabIndex = 22;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.Enabled = false;
+            this.button6.Location = new System.Drawing.Point(464, 29);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(108, 83);
+            this.button6.TabIndex = 16;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.ForeColor = System.Drawing.Color.White;
+            this.label126.Location = new System.Drawing.Point(3, 157);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(32, 13);
+            this.label126.TabIndex = 15;
+            this.label126.Text = "Error:";
+            // 
+            // button8
+            // 
+            this.button8.Enabled = false;
+            this.button8.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(464, 112);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(108, 28);
+            this.button8.TabIndex = 6;
+            this.button8.Text = "Test";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // c16_delay
+            // 
+            this.c16_delay.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c16_delay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c16_delay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c16_delay.Enabled = false;
+            this.c16_delay.Location = new System.Drawing.Point(274, 120);
+            this.c16_delay.Name = "c16_delay";
+            this.c16_delay.Size = new System.Drawing.Size(69, 20);
+            this.c16_delay.TabIndex = 14;
+            this.c16_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // c16_pulse
+            // 
+            this.c16_pulse.AutoCompleteCustomSource.AddRange(new string[] {
+            "1000"});
+            this.c16_pulse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c16_pulse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c16_pulse.Enabled = false;
+            this.c16_pulse.Location = new System.Drawing.Point(274, 75);
+            this.c16_pulse.Name = "c16_pulse";
+            this.c16_pulse.Size = new System.Drawing.Size(69, 20);
+            this.c16_pulse.TabIndex = 13;
+            this.c16_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // c16_strobe
+            // 
+            this.c16_strobe.FormattingEnabled = true;
+            this.c16_strobe.Items.AddRange(new object[] {
+            "None",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.c16_strobe.Location = new System.Drawing.Point(274, 29);
+            this.c16_strobe.Name = "c16_strobe";
+            this.c16_strobe.Size = new System.Drawing.Size(69, 21);
+            this.c16_strobe.TabIndex = 12;
+            this.c16_strobe.Text = "None";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label127.Location = new System.Drawing.Point(215, 120);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(44, 18);
+            this.label127.TabIndex = 11;
+            this.label127.Text = "Delay";
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label128.Location = new System.Drawing.Point(215, 75);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(41, 18);
+            this.label128.TabIndex = 10;
+            this.label128.Text = "Pulse";
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label129.Location = new System.Drawing.Point(215, 29);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(48, 18);
+            this.label129.TabIndex = 9;
+            this.label129.Text = "Strobe";
+            // 
+            // c16_intensity
+            // 
+            this.c16_intensity.AutoCompleteCustomSource.AddRange(new string[] {
+            "4096"});
+            this.c16_intensity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.c16_intensity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.c16_intensity.Location = new System.Drawing.Point(75, 29);
+            this.c16_intensity.Name = "c16_intensity";
+            this.c16_intensity.Size = new System.Drawing.Size(69, 20);
+            this.c16_intensity.TabIndex = 8;
+            this.c16_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // c16_edge
+            // 
+            this.c16_edge.Enabled = false;
+            this.c16_edge.FormattingEnabled = true;
+            this.c16_edge.Items.AddRange(new object[] {
+            "Rising",
+            "Falling"});
+            this.c16_edge.Location = new System.Drawing.Point(75, 72);
+            this.c16_edge.Name = "c16_edge";
+            this.c16_edge.Size = new System.Drawing.Size(69, 21);
+            this.c16_edge.TabIndex = 7;
+            this.c16_edge.Text = "Rising";
+            // 
+            // c16_mode
+            // 
+            this.c16_mode.FormattingEnabled = true;
+            this.c16_mode.Items.AddRange(new object[] {
+            "Static",
+            "Strobe"});
+            this.c16_mode.Location = new System.Drawing.Point(75, 120);
+            this.c16_mode.Name = "c16_mode";
+            this.c16_mode.Size = new System.Drawing.Size(69, 21);
+            this.c16_mode.TabIndex = 6;
+            this.c16_mode.Text = "Static";
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label130.Location = new System.Drawing.Point(3, 120);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(44, 18);
+            this.label130.TabIndex = 3;
+            this.label130.Text = "Mode";
+            // 
+            // label131
+            // 
+            this.label131.AutoSize = true;
+            this.label131.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label131.Location = new System.Drawing.Point(3, 75);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(39, 18);
+            this.label131.TabIndex = 2;
+            this.label131.Text = "Edge";
+            // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label132.Location = new System.Drawing.Point(3, 29);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(61, 18);
+            this.label132.TabIndex = 1;
+            this.label132.Text = "Intensity";
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(3, 3);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(87, 13);
+            this.label133.TabIndex = 0;
+            this.label133.Text = "Channel 16(Red)";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label20);
+            this.panel5.Controls.Add(this.label109);
+            this.panel5.Location = new System.Drawing.Point(4, 700);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(177, 27);
+            this.panel5.TabIndex = 28;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(3, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 17);
+            this.label20.TabIndex = 23;
+            this.label20.Text = "Group 6";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.Location = new System.Drawing.Point(95, 3);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(76, 18);
+            this.label109.TabIndex = 17;
+            this.label109.Text = "Channel 16";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 828);
+            this.ClientSize = new System.Drawing.Size(998, 828);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -4528,6 +4572,11 @@
             this.c13_panel.PerformLayout();
             this.c14_panel.ResumeLayout(false);
             this.c14_panel.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4806,7 +4855,7 @@
         private System.Windows.Forms.Label label123;
         private System.Windows.Forms.Label c14_title;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox boardSelect;
+        private System.Windows.Forms.ComboBox lightSelect;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comPort;
@@ -4816,9 +4865,6 @@
         private System.Windows.Forms.Button updateConfig;
         private System.Windows.Forms.Button uploadConfig;
         private System.Windows.Forms.Panel g1_panel;
-        private System.Windows.Forms.ComboBox c3_setting;
-        private System.Windows.Forms.ComboBox c2_setting;
-        private System.Windows.Forms.ComboBox c1_setting;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label21;
@@ -4826,36 +4872,24 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel g2_panel;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ComboBox c6_setting;
-        private System.Windows.Forms.ComboBox c5_setting;
-        private System.Windows.Forms.ComboBox c4_setting;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ComboBox g2_setting;
         private System.Windows.Forms.Panel g5_panel;
         private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.ComboBox c15_setting;
-        private System.Windows.Forms.ComboBox c14_setting;
-        private System.Windows.Forms.ComboBox c13_setting;
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.ComboBox g5_setting;
         private System.Windows.Forms.Panel g4_panel;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.ComboBox c12_setting;
-        private System.Windows.Forms.ComboBox c11_setting;
-        private System.Windows.Forms.ComboBox c10_setting;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.ComboBox g4_setting;
         private System.Windows.Forms.Panel g3_panel;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.ComboBox c9_setting;
-        private System.Windows.Forms.ComboBox c8_setting;
-        private System.Windows.Forms.ComboBox c7_setting;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label68;
@@ -4863,6 +4897,27 @@
         private System.Windows.Forms.Button openConn;
         private System.Windows.Forms.Button closeConn;
         private System.Windows.Forms.ListBox consoleDisplay;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox c16_delay;
+        private System.Windows.Forms.TextBox c16_pulse;
+        private System.Windows.Forms.ComboBox c16_strobe;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.TextBox c16_intensity;
+        private System.Windows.Forms.ComboBox c16_edge;
+        private System.Windows.Forms.ComboBox c16_mode;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label109;
     }
 }
 

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace IlluminationController2
 {
-    public partial class openFile : Form
+    public partial class saveFile : Form
     {
-        public openFile()
+        public saveFile()
         {
             InitializeComponent();
-        }
-
-        private void openFile_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

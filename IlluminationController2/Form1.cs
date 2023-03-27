@@ -206,6 +206,8 @@ namespace IlluminationController2
             return false;
         }
 
+
+        //groupNo can be ungrouped or the respective group number each channel is assigned to
         private string displayValues(string channel, string intensity, string edge, string mode, string strobe, string pulse, string delay)
         {
             if (intensity == "") { intensity = "None"; }
@@ -223,13 +225,13 @@ namespace IlluminationController2
 
         private string displaySettings(string setting, string group, string first, string second, string third)
         {
-            if (setting == "Triple")
+            if (setting == "Grouped")
             {
-                return $"\n{group} Settings, [Red:{first}, Green:{second}, Blue:{third}] .";
+                return $"\n{group} Settings, [GROUPED Red:{first}, Green:{second}, Blue:{third}] .";
             }
-            else if (setting == "Singles")
+            else if (setting == "Ungrouped")
             {
-                return $"\n{group} Settings, [Single:{first}, {second}, {third}] .";
+                return $"\n{group} Settings, [UNGROUPED:Red:{first}, Green:{second}, Blue:{third}] .";
             }
             else
             {
@@ -908,24 +910,14 @@ namespace IlluminationController2
             c3_test.Text = "Test";
             if (g1_setting.SelectedIndex == 0)
             {
-                c1_setting.Enabled = true;
-                c1_setting.Text = "Single";
-                c2_setting.Enabled = true;
-                c2_setting.Text = "Single";
-                c3_setting.Enabled = true;
-                c3_setting.Text = "Single";
+                
 
                 // Abort threads
                 
             }
             else if (g1_setting.SelectedIndex == 1)
             {
-                c1_setting.Enabled = false;
-                c1_setting.Text = "Red";
-                c2_setting.Enabled = false;
-                c2_setting.Text = "Green";
-                c3_setting.Enabled = false;
-                c3_setting.Text = "Blue";
+                
             }
         }
 
@@ -933,33 +925,22 @@ namespace IlluminationController2
         {
             c1_testStop = 0;
             c1_test.Text = "Test";
-            if (c1_setting.SelectedIndex == 0) { c1_panel.Enabled = true; }
-            else if (c1_setting.SelectedIndex == 1) 
-            { 
-                c1_panel.Enabled = false;
-            }
+            
+            
         }
 
         private void c2_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c2_testStop = 0;
             c2_test.Text = "Test";
-            if (c2_setting.SelectedIndex == 0) { c2_panel.Enabled = true; }
-            else if (c2_setting.SelectedIndex == 1)
-            {
-                c2_panel.Enabled = false;
-            }
+            
         }
 
         private void c3_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c3_testStop = 0;
             c3_test.Text = "Test";
-            if (c3_setting.SelectedIndex == 0) { c3_panel.Enabled = true; }
-            else if (c3_setting.SelectedIndex == 1)
-            {
-                c3_panel.Enabled = false;
-            }
+            
         }
 
 
@@ -1085,7 +1066,10 @@ namespace IlluminationController2
                 portConn.Write("INIT COMMS");
                 Console.WriteLine("sent data");
                 Thread.Sleep(50);
+
                 string reply = portConn.ReadExisting();
+
+
 
                 Console.WriteLine(reply);
                 if (reply == "INIT COMMS")
@@ -1118,7 +1102,8 @@ namespace IlluminationController2
         // Main Controls 
         private void switchConfig_Click(object sender, EventArgs e)
         {
-
+            openFile fileSelect = new openFile();
+            fileSelect.ShowDialog();
         }
 
         private void updateConfig_Click(object sender, EventArgs e)
@@ -1146,12 +1131,14 @@ namespace IlluminationController2
                 string c13_addText = displayValues("CH13", c13_intensity.Text, c13_edge.Text, c13_mode.Text, c13_strobe.Text, c13_pulse.Text, c13_delay.Text);
                 string c14_addText = displayValues("CH14", c14_intensity.Text, c14_edge.Text, c14_mode.Text, c14_strobe.Text, c14_pulse.Text, c14_delay.Text);
                 string c15_addText = displayValues("CH15", c15_intensity.Text, c15_edge.Text, c15_mode.Text, c15_strobe.Text, c15_pulse.Text, c15_delay.Text);
+                string c16_addText = displayValues("CH16", c16_intensity.Text, c16_edge.Text, c16_mode.Text, c16_strobe.Text, c16_pulse.Text, c16_delay.Text);
 
-                string g1_addText = displaySettings(g1_setting.Text, "G1", "CH1", "CH2", "CH3");
-                string g2_addText = displaySettings(g2_setting.Text, "G2", "CH4", "CH5", "CH6");
-                string g3_addText = displaySettings(g3_setting.Text, "G3", "CH7", "CH8", "CH9");
-                string g4_addText = displaySettings(g4_setting.Text, "G4", "CH10", "CH11", "CH12");
-                string g5_addText = displaySettings(g5_setting.Text, "G5", "CH13", "CH14", "CH15");
+                string g1_addText = displaySettings(g1_setting.Text, "Group 1", "CH1", "CH2", "CH3");
+                string g2_addText = displaySettings(g2_setting.Text, "Group 2", "CH4", "CH5", "CH6");
+                string g3_addText = displaySettings(g3_setting.Text, "Group 3", "CH7", "CH8", "CH9");
+                string g4_addText = displaySettings(g4_setting.Text, "Group 4", "CH10", "CH11", "CH12");
+                string g5_addText = displaySettings(g5_setting.Text, "Group 5", "CH13", "CH14", "CH15");
+                string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16] .";
 
                 consoleDisplay.Items.Clear();
 
@@ -1159,6 +1146,8 @@ namespace IlluminationController2
                 List<string> config = new List<string>();
                 config.Clear();
                 sendToHardware = "";
+
+                config.Add("MAIN BOARD = " + lightSelect.Text + ".");
 
                 config.Add(g1_addText);
                 config.Add(c1_addText);
@@ -1185,6 +1174,8 @@ namespace IlluminationController2
                 config.Add(c14_addText);
                 config.Add(c15_addText);
 
+                config.Add(g6_addText);
+                config.Add(c16_addText);
 
                 // Display Data on Console
                 //consoleDisplay.Items.Add(g1_addText);
@@ -1217,7 +1208,7 @@ namespace IlluminationController2
                 {
                     sendToHardware += config[i].ToString();
                 }
-                sendToHardware += "\\r\\n";
+                sendToHardware += "\n\\r\\n";
                 Console.WriteLine(sendToHardware);
 
                 Thread sendData = new Thread(sendDataToHardware);
@@ -1258,27 +1249,27 @@ namespace IlluminationController2
         // Panel to Tab Mapping
         private void g1_panel_Paint(object sender, PaintEventArgs e)
         {
-            mainTab.SelectedIndex = 0;
+            
         }
 
         private void g2_panel_Paint(object sender, PaintEventArgs e)
         {
-            mainTab.SelectedIndex = 1;
+            
         }
 
         private void g3_panel_Paint(object sender, PaintEventArgs e)
         {
-            mainTab.SelectedIndex = 2;
+            
         }
 
         private void g4_panel_Paint(object sender, PaintEventArgs e)
         {
-            mainTab.SelectedIndex = 3;
+            
         }
 
         private void g5_panel_Paint(object sender, PaintEventArgs e)
         {
-            mainTab.SelectedIndex = 4;
+            
         }
 
         private void g2_setting_SelectedIndexChanged(object sender, EventArgs e)
@@ -1291,24 +1282,14 @@ namespace IlluminationController2
             c6_test.Text = "Test";
             if (g2_setting.SelectedIndex == 0)
             {
-                c4_setting.Enabled = true;
-                c4_setting.Text = "Single";
-                c5_setting.Enabled = true;
-                c5_setting.Text = "Single";
-                c6_setting.Enabled = true;
-                c6_setting.Text = "Single";
+                
 
                 // Abort threads
 
             }
             else if (g2_setting.SelectedIndex == 1)
             {
-                c4_setting.Enabled = false;
-                c4_setting.Text = "Red";
-                c5_setting.Enabled = false;
-                c5_setting.Text = "Green";
-                c6_setting.Enabled = false;
-                c6_setting.Text = "Blue";
+                
             }
         }
 
@@ -1316,33 +1297,21 @@ namespace IlluminationController2
         {
             c4_testStop = 0;
             c4_test.Text = "Test";
-            if (c4_setting.SelectedIndex == 0) { c4_panel.Enabled = true; }
-            else if (c4_setting.SelectedIndex == 1)
-            {
-                c4_panel.Enabled = false;
-            }
+            
         }
 
         private void c5_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c5_testStop = 0;
             c5_test.Text = "Test";
-            if (c5_setting.SelectedIndex == 0) { c5_panel.Enabled = true; }
-            else if (c5_setting.SelectedIndex == 1)
-            {
-                c5_panel.Enabled = false;
-            }
+            
         }
 
         private void c6_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c6_testStop = 0;
             c6_test.Text = "Test";
-            if (c6_setting.SelectedIndex == 0) { c6_panel.Enabled = true; }
-            else if (c6_setting.SelectedIndex == 1)
-            {
-                c6_panel.Enabled = false;
-            }
+            
         }
 
         private void g3_setting_SelectedIndexChanged(object sender, EventArgs e)
@@ -1355,24 +1324,14 @@ namespace IlluminationController2
             c9_test.Text = "Test";
             if (g3_setting.SelectedIndex == 0)
             {
-                c7_setting.Enabled = true;
-                c7_setting.Text = "Single";
-                c8_setting.Enabled = true;
-                c8_setting.Text = "Single";
-                c9_setting.Enabled = true;
-                c9_setting.Text = "Single";
+                
 
                 // Abort threads
 
             }
             else if (g3_setting.SelectedIndex == 1)
             {
-                c7_setting.Enabled = false;
-                c7_setting.Text = "Red";
-                c8_setting.Enabled = false;
-                c8_setting.Text = "Green";
-                c9_setting.Enabled = false;
-                c9_setting.Text = "Blue";
+                
             }
         }
 
@@ -1380,33 +1339,21 @@ namespace IlluminationController2
         {
             c7_testStop = 0;
             c7_test.Text = "Test";
-            if (c7_setting.SelectedIndex == 0) { c7_panel.Enabled = true; }
-            else if (c7_setting.SelectedIndex == 1)
-            {
-                c7_panel.Enabled = false;
-            }
+            
         }
 
         private void c8_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c8_testStop = 0;
             c8_test.Text = "Test";
-            if (c8_setting.SelectedIndex == 0) { c8_panel.Enabled = true; }
-            else if (c8_setting.SelectedIndex == 1)
-            {
-                c8_panel.Enabled = false;
-            }
+            
         }
 
         private void c9_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c9_testStop = 0;
             c9_test.Text = "Test";
-            if (c9_setting.SelectedIndex == 0) { c9_panel.Enabled = true; }
-            else if (c9_setting.SelectedIndex == 1)
-            {
-                c9_panel.Enabled = false;
-            }
+            
         }
 
         private void g4_setting_SelectedIndexChanged(object sender, EventArgs e)
@@ -1419,24 +1366,14 @@ namespace IlluminationController2
             c12_test.Text = "Test";
             if (g4_setting.SelectedIndex == 0)
             {
-                c10_setting.Enabled = true;
-                c10_setting.Text = "Single";
-                c11_setting.Enabled = true;
-                c11_setting.Text = "Single";
-                c12_setting.Enabled = true;
-                c12_setting.Text = "Single";
+                
 
                 // Abort threads
 
             }
             else if (g4_setting.SelectedIndex == 1)
             {
-                c10_setting.Enabled = false;
-                c10_setting.Text = "Red";
-                c11_setting.Enabled = false;
-                c11_setting.Text = "Green";
-                c12_setting.Enabled = false;
-                c12_setting.Text = "Blue";
+                
             }
         }
 
@@ -1444,33 +1381,21 @@ namespace IlluminationController2
         {
             c10_testStop = 0;
             c10_test.Text = "Test";
-            if (c10_setting.SelectedIndex == 0) { c10_panel.Enabled = true; }
-            else if (c10_setting.SelectedIndex == 1)
-            {
-                c10_panel.Enabled = false;
-            }
+            
         }
 
         private void c11_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c11_testStop = 0;
             c11_test.Text = "Test";
-            if (c11_setting.SelectedIndex == 0) { c11_panel.Enabled = true; }
-            else if (c11_setting.SelectedIndex == 1)
-            {
-                c11_panel.Enabled = false;
-            }
+            
         }
 
         private void c12_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c12_testStop = 0;
             c12_test.Text = "Test";
-            if (c12_setting.SelectedIndex == 0) { c12_panel.Enabled = true; }
-            else if (c12_setting.SelectedIndex == 1)
-            {
-                c12_panel.Enabled = false;
-            }
+            
         }
 
         private void g5_setting_SelectedIndexChanged(object sender, EventArgs e)
@@ -1483,24 +1408,13 @@ namespace IlluminationController2
             c15_test.Text = "Test";
             if (g5_setting.SelectedIndex == 0)
             {
-                c13_setting.Enabled = true;
-                c13_setting.Text = "Single";
-                c14_setting.Enabled = true;
-                c14_setting.Text = "Single";
-                c15_setting.Enabled = true;
-                c15_setting.Text = "Single";
-
+                
                 // Abort threads
 
             }
             else if (g5_setting.SelectedIndex == 1)
             {
-                c13_setting.Enabled = false;
-                c13_setting.Text = "Red";
-                c14_setting.Enabled = false;
-                c14_setting.Text = "Green";
-                c15_setting.Enabled = false;
-                c15_setting.Text = "Blue";
+                
             }
         }
 
@@ -1508,33 +1422,21 @@ namespace IlluminationController2
         {
             c13_testStop = 0;
             c13_test.Text = "Test";
-            if (c13_setting.SelectedIndex == 0) { c13_panel.Enabled = true; }
-            else if (c13_setting.SelectedIndex == 1)
-            {
-                c13_panel.Enabled = false;
-            }
+            
         }
 
         private void c14_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c14_testStop = 0;
             c14_test.Text = "Test";
-            if (c14_setting.SelectedIndex == 0) { c14_panel.Enabled = true; }
-            else if (c14_setting.SelectedIndex == 1)
-            {
-                c14_panel.Enabled = false;
-            }
+            
         }
 
         private void c15_setting_SelectedIndexChanged(object sender, EventArgs e)
         {
             c15_testStop = 0;
             c15_test.Text = "Test";
-            if (c15_setting.SelectedIndex == 0) { c15_panel.Enabled = true; }
-            else if (c15_setting.SelectedIndex == 1)
-            {
-                c15_panel.Enabled = false;
-            }
+            
         }
 
         private void c4_intensity_TextChanged(object sender, EventArgs e)
@@ -2923,6 +2825,28 @@ namespace IlluminationController2
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label133_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lightSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lightSelect.Text == "")
+            {
+                uploadConfig.Enabled = false;
+            }
+            else
+            {
+                uploadConfig.Enabled = true;
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
