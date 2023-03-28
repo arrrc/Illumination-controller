@@ -1,0 +1,24 @@
+MAIN BOARD = Board 6.
+Group 1 Settings, [GROUPED Red:CH1, Green:CH2, Blue:CH3] .
+[CH1 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH2 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH3 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+Group 2 Settings, [GROUPED Red:CH4, Green:CH5, Blue:CH6] .
+[CH4 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH5 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH6 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+Group 3 Settings, [GROUPED Red:CH7, Green:CH8, Blue:CH9] .
+[CH7 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH8 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH9 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+Group 4 Settings, [GROUPED Red:CH10, Green:CH11, Blue:CH12] .
+[CH10 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH11 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH12 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+Group 5 Settings, [GROUPED Red:CH13, Green:CH14, Blue:CH15] .
+[CH13 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH14 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+[CH15 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+Group 6 Settings, [UNGROUPED Red:CH16] .
+[CH16 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None .
+\r\n

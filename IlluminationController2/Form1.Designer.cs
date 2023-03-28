@@ -35,6 +35,9 @@
             this.uploadConfig = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
             this.openConn = new System.Windows.Forms.Button();
             this.closeConn = new System.Windows.Forms.Button();
             this.g5_panel = new System.Windows.Forms.Panel();
@@ -339,9 +342,6 @@
             this.label122 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
             this.c14_title = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -360,11 +360,12 @@
             this.label131 = new System.Windows.Forms.Label();
             this.label132 = new System.Windows.Forms.Label();
             this.label133 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.g5_panel.SuspendLayout();
             this.g4_panel.SuspendLayout();
             this.g3_panel.SuspendLayout();
@@ -395,7 +396,6 @@
             this.c14_panel.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -485,6 +485,35 @@
             this.panel2.Size = new System.Drawing.Size(197, 828);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label20);
+            this.panel5.Controls.Add(this.label109);
+            this.panel5.Location = new System.Drawing.Point(4, 700);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(177, 27);
+            this.panel5.TabIndex = 28;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(3, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 17);
+            this.label20.TabIndex = 23;
+            this.label20.Text = "Group 6";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.Location = new System.Drawing.Point(95, 3);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(76, 18);
+            this.label109.TabIndex = 17;
+            this.label109.Text = "Channel 16";
             // 
             // openConn
             // 
@@ -857,8 +886,7 @@
             "Board 5",
             "Board 6",
             "Board 7",
-            "Board 8",
-            "Board 9"});
+            "Board 8"});
             this.lightSelect.Location = new System.Drawing.Point(104, 52);
             this.lightSelect.Name = "lightSelect";
             this.lightSelect.Size = new System.Drawing.Size(77, 21);
@@ -4231,36 +4259,6 @@
             this.c14_title.TabIndex = 0;
             this.c14_title.Text = "Channel 14(Green)";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(215, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 29);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Reset All";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(99, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Clear Intensity";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "LED Settings";
-            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.panel6);
@@ -4477,34 +4475,35 @@
             this.label133.TabIndex = 0;
             this.label133.Text = "Channel 16(Red)";
             // 
-            // panel5
+            // button2
             // 
-            this.panel5.Controls.Add(this.label20);
-            this.panel5.Controls.Add(this.label109);
-            this.panel5.Location = new System.Drawing.Point(4, 700);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(177, 27);
-            this.panel5.TabIndex = 28;
+            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(215, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 29);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Reset All";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // label20
+            // button1
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(3, 3);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 17);
-            this.label20.TabIndex = 23;
-            this.label20.Text = "Group 6";
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(99, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Clear Intensity";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // label109
+            // label3
             // 
-            this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label109.Location = new System.Drawing.Point(95, 3);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(76, 18);
-            this.label109.TabIndex = 17;
-            this.label109.Text = "Channel 16";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "LED Settings";
             // 
             // Form1
             // 
@@ -4522,6 +4521,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.g5_panel.ResumeLayout(false);
             this.g5_panel.PerformLayout();
             this.g4_panel.ResumeLayout(false);
@@ -4575,8 +4576,6 @@
             this.tabPage6.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4592,8 +4591,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel c1_panel;
-        private System.Windows.Forms.ComboBox c1_edge;
-        private System.Windows.Forms.ComboBox c1_mode;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -4603,26 +4600,16 @@
         private System.Windows.Forms.Button c1_status;
         private System.Windows.Forms.Label c1_error;
         private System.Windows.Forms.Button c1_test;
-        private System.Windows.Forms.TextBox c1_delay;
-        private System.Windows.Forms.TextBox c1_pulse;
-        private System.Windows.Forms.ComboBox c1_strobe;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox c1_intensity;
         private System.Windows.Forms.Panel c3_panel;
         private System.Windows.Forms.Button c3_status;
         private System.Windows.Forms.Label c3_error;
         private System.Windows.Forms.Button c3_test;
-        private System.Windows.Forms.TextBox c3_delay;
-        private System.Windows.Forms.TextBox c3_pulse;
-        private System.Windows.Forms.ComboBox c3_strobe;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox c3_intensity;
-        private System.Windows.Forms.ComboBox c3_edge;
-        private System.Windows.Forms.ComboBox c3_mode;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
@@ -4631,20 +4618,13 @@
         private System.Windows.Forms.Button c2_status;
         private System.Windows.Forms.Label c2_error;
         private System.Windows.Forms.Button c2_test;
-        private System.Windows.Forms.TextBox c2_delay;
-        private System.Windows.Forms.TextBox c2_pulse;
-        private System.Windows.Forms.ComboBox c2_strobe;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox c2_intensity;
-        private System.Windows.Forms.ComboBox c2_edge;
-        private System.Windows.Forms.ComboBox c2_mode;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label c2_title;
-        private System.Windows.Forms.TabControl mainTab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -4654,15 +4634,9 @@
         private System.Windows.Forms.Button c6_status;
         private System.Windows.Forms.Label c6_error;
         private System.Windows.Forms.Button c6_test;
-        private System.Windows.Forms.TextBox c6_delay;
-        private System.Windows.Forms.TextBox c6_pulse;
-        private System.Windows.Forms.ComboBox c6_strobe;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox c6_intensity;
-        private System.Windows.Forms.ComboBox c6_edge;
-        private System.Windows.Forms.ComboBox c6_mode;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -4671,15 +4645,9 @@
         private System.Windows.Forms.Button c4_status;
         private System.Windows.Forms.Label c4_error;
         private System.Windows.Forms.Button c4_test;
-        private System.Windows.Forms.TextBox c4_delay;
-        private System.Windows.Forms.TextBox c4_pulse;
-        private System.Windows.Forms.ComboBox c4_strobe;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox c4_intensity;
-        private System.Windows.Forms.ComboBox c4_edge;
-        private System.Windows.Forms.ComboBox c4_mode;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
@@ -4688,15 +4656,9 @@
         private System.Windows.Forms.Button c5_status;
         private System.Windows.Forms.Label c5_error;
         private System.Windows.Forms.Button c5_test;
-        private System.Windows.Forms.TextBox c5_delay;
-        private System.Windows.Forms.TextBox c5_pulse;
-        private System.Windows.Forms.ComboBox c5_strobe;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox c5_intensity;
-        private System.Windows.Forms.ComboBox c5_edge;
-        private System.Windows.Forms.ComboBox c5_mode;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
@@ -4705,15 +4667,9 @@
         private System.Windows.Forms.Button c9_status;
         private System.Windows.Forms.Label c9_error;
         private System.Windows.Forms.Button c9_test;
-        private System.Windows.Forms.TextBox c9_delay;
-        private System.Windows.Forms.TextBox c9_pulse;
-        private System.Windows.Forms.ComboBox c9_strobe;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox c9_intensity;
-        private System.Windows.Forms.ComboBox c9_edge;
-        private System.Windows.Forms.ComboBox c9_mode;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label59;
@@ -4722,15 +4678,9 @@
         private System.Windows.Forms.Button c7_status;
         private System.Windows.Forms.Label c7_error;
         private System.Windows.Forms.Button c7_test;
-        private System.Windows.Forms.TextBox c7_delay;
-        private System.Windows.Forms.TextBox c7_pulse;
-        private System.Windows.Forms.ComboBox c7_strobe;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox c7_intensity;
-        private System.Windows.Forms.ComboBox c7_edge;
-        private System.Windows.Forms.ComboBox c7_mode;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label67;
@@ -4739,15 +4689,9 @@
         private System.Windows.Forms.Button c8_status;
         private System.Windows.Forms.Label c8_error;
         private System.Windows.Forms.Button c8_test;
-        private System.Windows.Forms.TextBox c8_delay;
-        private System.Windows.Forms.TextBox c8_pulse;
-        private System.Windows.Forms.ComboBox c8_strobe;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox c8_intensity;
-        private System.Windows.Forms.ComboBox c8_edge;
-        private System.Windows.Forms.ComboBox c8_mode;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
@@ -4756,15 +4700,9 @@
         private System.Windows.Forms.Button c12_status;
         private System.Windows.Forms.Label c12_error;
         private System.Windows.Forms.Button c12_test;
-        private System.Windows.Forms.TextBox c12_delay;
-        private System.Windows.Forms.TextBox c12_pulse;
-        private System.Windows.Forms.ComboBox c12_strobe;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.TextBox c12_intensity;
-        private System.Windows.Forms.ComboBox c12_edge;
-        private System.Windows.Forms.ComboBox c12_mode;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
@@ -4773,15 +4711,9 @@
         private System.Windows.Forms.Button c10_status;
         private System.Windows.Forms.Label c10_error;
         private System.Windows.Forms.Button c10_test;
-        private System.Windows.Forms.TextBox c10_delay;
-        private System.Windows.Forms.TextBox c10_pulse;
-        private System.Windows.Forms.ComboBox c10_strobe;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.TextBox c10_intensity;
-        private System.Windows.Forms.ComboBox c10_edge;
-        private System.Windows.Forms.ComboBox c10_mode;
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.Label label91;
@@ -4790,15 +4722,9 @@
         private System.Windows.Forms.Button c11_status;
         private System.Windows.Forms.Label c11_error;
         private System.Windows.Forms.Button c11_test;
-        private System.Windows.Forms.TextBox c11_delay;
-        private System.Windows.Forms.TextBox c11_pulse;
-        private System.Windows.Forms.ComboBox c11_strobe;
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.TextBox c11_intensity;
-        private System.Windows.Forms.ComboBox c11_edge;
-        private System.Windows.Forms.ComboBox c11_mode;
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Label label99;
@@ -4807,15 +4733,9 @@
         private System.Windows.Forms.Button c15_status;
         private System.Windows.Forms.Label c15_error;
         private System.Windows.Forms.Button c15_test;
-        private System.Windows.Forms.TextBox c15_delay;
-        private System.Windows.Forms.TextBox c15_pulse;
-        private System.Windows.Forms.ComboBox c15_strobe;
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.TextBox c15_intensity;
-        private System.Windows.Forms.ComboBox c15_edge;
-        private System.Windows.Forms.ComboBox c15_mode;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.Label label107;
@@ -4824,15 +4744,9 @@
         private System.Windows.Forms.Button c13_status;
         private System.Windows.Forms.Label c13_error;
         private System.Windows.Forms.Button c13_test;
-        private System.Windows.Forms.TextBox c13_delay;
-        private System.Windows.Forms.TextBox c13_pulse;
-        private System.Windows.Forms.ComboBox c13_strobe;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.TextBox c13_intensity;
-        private System.Windows.Forms.ComboBox c13_edge;
-        private System.Windows.Forms.ComboBox c13_mode;
         private System.Windows.Forms.Label label113;
         private System.Windows.Forms.Label label114;
         private System.Windows.Forms.Label label115;
@@ -4841,15 +4755,9 @@
         private System.Windows.Forms.Button c14_status;
         private System.Windows.Forms.Label c14_error;
         private System.Windows.Forms.Button c14_test;
-        private System.Windows.Forms.TextBox c14_delay;
-        private System.Windows.Forms.TextBox c14_pulse;
-        private System.Windows.Forms.ComboBox c14_strobe;
         private System.Windows.Forms.Label label118;
         private System.Windows.Forms.Label label119;
         private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.TextBox c14_intensity;
-        private System.Windows.Forms.ComboBox c14_edge;
-        private System.Windows.Forms.ComboBox c14_mode;
         private System.Windows.Forms.Label label121;
         private System.Windows.Forms.Label label122;
         private System.Windows.Forms.Label label123;
@@ -4868,32 +4776,27 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox g1_setting;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel g2_panel;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.ComboBox g2_setting;
         private System.Windows.Forms.Panel g5_panel;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Label label100;
-        private System.Windows.Forms.ComboBox g5_setting;
         private System.Windows.Forms.Panel g4_panel;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.ComboBox g4_setting;
         private System.Windows.Forms.Panel g3_panel;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.ComboBox g3_setting;
         private System.Windows.Forms.Button openConn;
         private System.Windows.Forms.Button closeConn;
         private System.Windows.Forms.ListBox consoleDisplay;
@@ -4902,15 +4805,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label126;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox c16_delay;
-        private System.Windows.Forms.TextBox c16_pulse;
-        private System.Windows.Forms.ComboBox c16_strobe;
         private System.Windows.Forms.Label label127;
         private System.Windows.Forms.Label label128;
         private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.TextBox c16_intensity;
-        private System.Windows.Forms.ComboBox c16_edge;
-        private System.Windows.Forms.ComboBox c16_mode;
         private System.Windows.Forms.Label label130;
         private System.Windows.Forms.Label label131;
         private System.Windows.Forms.Label label132;
@@ -4918,6 +4815,108 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label109;
+        public System.Windows.Forms.ComboBox c1_edge;
+        public System.Windows.Forms.ComboBox c1_mode;
+        public System.Windows.Forms.TextBox c1_delay;
+        public System.Windows.Forms.TextBox c1_pulse;
+        public System.Windows.Forms.ComboBox c1_strobe;
+        public System.Windows.Forms.TextBox c1_intensity;
+        public System.Windows.Forms.TextBox c3_delay;
+        public System.Windows.Forms.TextBox c3_pulse;
+        public System.Windows.Forms.ComboBox c3_strobe;
+        public System.Windows.Forms.TextBox c3_intensity;
+        public System.Windows.Forms.ComboBox c3_edge;
+        public System.Windows.Forms.ComboBox c3_mode;
+        public System.Windows.Forms.TextBox c2_delay;
+        public System.Windows.Forms.TextBox c2_pulse;
+        public System.Windows.Forms.ComboBox c2_strobe;
+        public System.Windows.Forms.TextBox c2_intensity;
+        public System.Windows.Forms.ComboBox c2_edge;
+        public System.Windows.Forms.ComboBox c2_mode;
+        public System.Windows.Forms.ComboBox g1_setting;
+        public System.Windows.Forms.ComboBox g2_setting;
+        public System.Windows.Forms.ComboBox g5_setting;
+        public System.Windows.Forms.ComboBox g4_setting;
+        public System.Windows.Forms.ComboBox g3_setting;
+        public System.Windows.Forms.TabControl mainTab;
+        public System.Windows.Forms.TextBox c6_delay;
+        public System.Windows.Forms.TextBox c6_pulse;
+        public System.Windows.Forms.ComboBox c6_strobe;
+        public System.Windows.Forms.TextBox c6_intensity;
+        public System.Windows.Forms.ComboBox c6_edge;
+        public System.Windows.Forms.ComboBox c6_mode;
+        public System.Windows.Forms.TextBox c4_delay;
+        public System.Windows.Forms.TextBox c4_pulse;
+        public System.Windows.Forms.ComboBox c4_strobe;
+        public System.Windows.Forms.TextBox c4_intensity;
+        public System.Windows.Forms.ComboBox c4_edge;
+        public System.Windows.Forms.ComboBox c4_mode;
+        public System.Windows.Forms.TextBox c5_delay;
+        public System.Windows.Forms.TextBox c5_pulse;
+        public System.Windows.Forms.ComboBox c5_strobe;
+        public System.Windows.Forms.TextBox c5_intensity;
+        public System.Windows.Forms.ComboBox c5_edge;
+        public System.Windows.Forms.ComboBox c5_mode;
+        public System.Windows.Forms.TextBox c9_delay;
+        public System.Windows.Forms.TextBox c9_pulse;
+        public System.Windows.Forms.ComboBox c9_strobe;
+        public System.Windows.Forms.TextBox c9_intensity;
+        public System.Windows.Forms.ComboBox c9_edge;
+        public System.Windows.Forms.ComboBox c9_mode;
+        public System.Windows.Forms.TextBox c7_delay;
+        public System.Windows.Forms.TextBox c7_pulse;
+        public System.Windows.Forms.ComboBox c7_strobe;
+        public System.Windows.Forms.TextBox c7_intensity;
+        public System.Windows.Forms.ComboBox c7_edge;
+        public System.Windows.Forms.ComboBox c7_mode;
+        public System.Windows.Forms.TextBox c8_delay;
+        public System.Windows.Forms.TextBox c8_pulse;
+        public System.Windows.Forms.ComboBox c8_strobe;
+        public System.Windows.Forms.TextBox c8_intensity;
+        public System.Windows.Forms.ComboBox c8_edge;
+        public System.Windows.Forms.ComboBox c8_mode;
+        public System.Windows.Forms.TextBox c12_delay;
+        public System.Windows.Forms.TextBox c12_pulse;
+        public System.Windows.Forms.ComboBox c12_strobe;
+        public System.Windows.Forms.TextBox c12_intensity;
+        public System.Windows.Forms.ComboBox c12_edge;
+        public System.Windows.Forms.ComboBox c12_mode;
+        public System.Windows.Forms.TextBox c10_delay;
+        public System.Windows.Forms.TextBox c10_pulse;
+        public System.Windows.Forms.ComboBox c10_strobe;
+        public System.Windows.Forms.TextBox c10_intensity;
+        public System.Windows.Forms.ComboBox c10_edge;
+        public System.Windows.Forms.ComboBox c10_mode;
+        public System.Windows.Forms.TextBox c11_delay;
+        public System.Windows.Forms.TextBox c11_pulse;
+        public System.Windows.Forms.ComboBox c11_strobe;
+        public System.Windows.Forms.TextBox c11_intensity;
+        public System.Windows.Forms.ComboBox c11_edge;
+        public System.Windows.Forms.ComboBox c11_mode;
+        public System.Windows.Forms.TextBox c15_delay;
+        public System.Windows.Forms.TextBox c15_pulse;
+        public System.Windows.Forms.ComboBox c15_strobe;
+        public System.Windows.Forms.TextBox c15_intensity;
+        public System.Windows.Forms.ComboBox c15_edge;
+        public System.Windows.Forms.ComboBox c15_mode;
+        public System.Windows.Forms.TextBox c13_delay;
+        public System.Windows.Forms.TextBox c13_pulse;
+        public System.Windows.Forms.ComboBox c13_strobe;
+        public System.Windows.Forms.TextBox c13_intensity;
+        public System.Windows.Forms.ComboBox c13_edge;
+        public System.Windows.Forms.ComboBox c13_mode;
+        public System.Windows.Forms.TextBox c14_delay;
+        public System.Windows.Forms.TextBox c14_pulse;
+        public System.Windows.Forms.ComboBox c14_strobe;
+        public System.Windows.Forms.TextBox c14_intensity;
+        public System.Windows.Forms.ComboBox c14_edge;
+        public System.Windows.Forms.ComboBox c14_mode;
+        public System.Windows.Forms.TextBox c16_delay;
+        public System.Windows.Forms.TextBox c16_pulse;
+        public System.Windows.Forms.ComboBox c16_strobe;
+        public System.Windows.Forms.TextBox c16_intensity;
+        public System.Windows.Forms.ComboBox c16_edge;
+        public System.Windows.Forms.ComboBox c16_mode;
     }
 }
 

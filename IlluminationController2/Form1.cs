@@ -99,10 +99,12 @@ namespace IlluminationController2
 
         static SerialPort portConn;
         bool comPortConnected;
-        string sendToHardware = "";
+        public string sendToHardware = "";
         string dataReceived = "";
         bool didDataReceiveThreadExit = false;
         int numTimesDataSent = 0;
+        List<string> config = new List<string>();
+
 
         List<string> splitData = new List<string>();
 
@@ -275,22 +277,22 @@ namespace IlluminationController2
             else { Console.WriteLine("File not found"); }
         }
 
-        // For Switch Config
-        private void generateFileList()
-        {
-            string path = @"C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug";
-            string[] fileList = Directory.GetFiles(path);
+        //// For Switch Config
+        //private void generateFileList()
+        //{
+        //    string path = @"C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug";
+        //    string[] fileList = Directory.GetFiles(path);
 
-            foreach(string file in fileList)
-            {
-                Console.WriteLine(file);
-            }
+        //    foreach(string file in fileList)
+        //    {
+        //        Console.WriteLine(file);
+        //    }
 
 
-            // generate a list of configuration files for user to switch to
-            // Files that no longer exist should not be seen as an option to the user
-            // Values that are stored within the file are displayed on the LED & Channel Settings
-        }
+        //    // generate a list of configuration files for user to switch to
+        //    // Files that no longer exist should not be seen as an option to the user
+        //    // Values that are stored within the file are displayed on the LED & Channel Settings
+        //}
 
         // Individual Channel Functions
         private void c1_light_loop()
@@ -1108,107 +1110,97 @@ namespace IlluminationController2
 
         private void updateConfig_Click(object sender, EventArgs e)
         {
-            generateFileList();
+            //generateFileList();
+            generateConfig();
+            saveFile saveForm = new saveFile();
+            saveForm.mainForm = this;
+            saveForm.ShowDialog();
+        }
+
+        public void generateConfig()
+        {
+            string c1_addText = displayValues("CH1", c1_intensity.Text, c1_edge.Text, c1_mode.Text, c1_strobe.Text, c1_pulse.Text, c1_delay.Text);
+            string c2_addText = displayValues("CH2", c2_intensity.Text, c2_edge.Text, c2_mode.Text, c2_strobe.Text, c2_pulse.Text, c2_delay.Text);
+            string c3_addText = displayValues("CH3", c3_intensity.Text, c3_edge.Text, c3_mode.Text, c3_strobe.Text, c3_pulse.Text, c3_delay.Text);
+            string c4_addText = displayValues("CH4", c4_intensity.Text, c4_edge.Text, c4_mode.Text, c4_strobe.Text, c4_pulse.Text, c4_delay.Text);
+            string c5_addText = displayValues("CH5", c5_intensity.Text, c5_edge.Text, c5_mode.Text, c5_strobe.Text, c5_pulse.Text, c5_delay.Text);
+            string c6_addText = displayValues("CH6", c6_intensity.Text, c6_edge.Text, c6_mode.Text, c6_strobe.Text, c6_pulse.Text, c6_delay.Text);
+            string c7_addText = displayValues("CH7", c7_intensity.Text, c7_edge.Text, c7_mode.Text, c7_strobe.Text, c7_pulse.Text, c7_delay.Text);
+            string c8_addText = displayValues("CH8", c8_intensity.Text, c8_edge.Text, c8_mode.Text, c8_strobe.Text, c8_pulse.Text, c8_delay.Text);
+            string c9_addText = displayValues("CH9", c9_intensity.Text, c9_edge.Text, c9_mode.Text, c9_strobe.Text, c9_pulse.Text, c9_delay.Text);
+            string c10_addText = displayValues("CH10", c10_intensity.Text, c10_edge.Text, c10_mode.Text, c10_strobe.Text, c10_pulse.Text, c10_delay.Text);
+            string c11_addText = displayValues("CH11", c11_intensity.Text, c11_edge.Text, c11_mode.Text, c11_strobe.Text, c11_pulse.Text, c11_delay.Text);
+            string c12_addText = displayValues("CH12", c12_intensity.Text, c12_edge.Text, c12_mode.Text, c12_strobe.Text, c12_pulse.Text, c12_delay.Text);
+            string c13_addText = displayValues("CH13", c13_intensity.Text, c13_edge.Text, c13_mode.Text, c13_strobe.Text, c13_pulse.Text, c13_delay.Text);
+            string c14_addText = displayValues("CH14", c14_intensity.Text, c14_edge.Text, c14_mode.Text, c14_strobe.Text, c14_pulse.Text, c14_delay.Text);
+            string c15_addText = displayValues("CH15", c15_intensity.Text, c15_edge.Text, c15_mode.Text, c15_strobe.Text, c15_pulse.Text, c15_delay.Text);
+            string c16_addText = displayValues("CH16", c16_intensity.Text, c16_edge.Text, c16_mode.Text, c16_strobe.Text, c16_pulse.Text, c16_delay.Text);
+
+            string g1_addText = displaySettings(g1_setting.Text, "Group 1", "CH1", "CH2", "CH3");
+            string g2_addText = displaySettings(g2_setting.Text, "Group 2", "CH4", "CH5", "CH6");
+            string g3_addText = displaySettings(g3_setting.Text, "Group 3", "CH7", "CH8", "CH9");
+            string g4_addText = displaySettings(g4_setting.Text, "Group 4", "CH10", "CH11", "CH12");
+            string g5_addText = displaySettings(g5_setting.Text, "Group 5", "CH13", "CH14", "CH15");
+            string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16] .";
+
+            //uses global list to add data and generate the string to send to the hardware
+            config.Clear();
+            sendToHardware = "";
+
+            config.Add("MAIN BOARD = " + lightSelect.Text + ".");
+
+            config.Add(g1_addText);
+            config.Add(c1_addText);
+            config.Add(c2_addText);
+            config.Add(c3_addText);
+
+            config.Add(g2_addText);
+            config.Add(c4_addText);
+            config.Add(c5_addText);
+            config.Add(c6_addText);
+
+            config.Add(g3_addText);
+            config.Add(c7_addText);
+            config.Add(c8_addText);
+            config.Add(c9_addText);
+
+            config.Add(g4_addText);
+            config.Add(c10_addText);
+            config.Add(c11_addText);
+            config.Add(c12_addText);
+
+            config.Add(g5_addText);
+            config.Add(c13_addText);
+            config.Add(c14_addText);
+            config.Add(c15_addText);
+
+            config.Add(g6_addText);
+            config.Add(c16_addText);
+
+            for (int i = 0; i < config.Count(); i++)
+            {
+                sendToHardware += config[i].ToString();
+            }
+            sendToHardware += "\n\\r\\n";
         }
 
         private void uploadConfig_Click(object sender, EventArgs e)
         {
             try
             {
-                // Grab Values
-                string c1_addText = displayValues("CH1", c1_intensity.Text, c1_edge.Text, c1_mode.Text, c1_strobe.Text, c1_pulse.Text, c1_delay.Text);
-                string c2_addText = displayValues("CH2", c2_intensity.Text, c2_edge.Text, c2_mode.Text, c2_strobe.Text, c2_pulse.Text, c2_delay.Text);
-                string c3_addText = displayValues("CH3", c3_intensity.Text, c3_edge.Text, c3_mode.Text, c3_strobe.Text, c3_pulse.Text, c3_delay.Text);
-                string c4_addText = displayValues("CH4", c4_intensity.Text, c4_edge.Text, c4_mode.Text, c4_strobe.Text, c4_pulse.Text, c4_delay.Text);
-                string c5_addText = displayValues("CH5", c5_intensity.Text, c5_edge.Text, c5_mode.Text, c5_strobe.Text, c5_pulse.Text, c5_delay.Text);
-                string c6_addText = displayValues("CH6", c6_intensity.Text, c6_edge.Text, c6_mode.Text, c6_strobe.Text, c6_pulse.Text, c6_delay.Text);
-                string c7_addText = displayValues("CH7", c7_intensity.Text, c7_edge.Text, c7_mode.Text, c7_strobe.Text, c7_pulse.Text, c7_delay.Text);
-                string c8_addText = displayValues("CH8", c8_intensity.Text, c8_edge.Text, c8_mode.Text, c8_strobe.Text, c8_pulse.Text, c8_delay.Text);
-                string c9_addText = displayValues("CH9", c9_intensity.Text, c9_edge.Text, c9_mode.Text, c9_strobe.Text, c9_pulse.Text, c9_delay.Text);
-                string c10_addText = displayValues("CH10", c10_intensity.Text, c10_edge.Text, c10_mode.Text, c10_strobe.Text, c10_pulse.Text, c10_delay.Text);
-                string c11_addText = displayValues("CH11", c11_intensity.Text, c11_edge.Text, c11_mode.Text, c11_strobe.Text, c11_pulse.Text, c11_delay.Text);
-                string c12_addText = displayValues("CH12", c12_intensity.Text, c12_edge.Text, c12_mode.Text, c12_strobe.Text, c12_pulse.Text, c12_delay.Text);
-                string c13_addText = displayValues("CH13", c13_intensity.Text, c13_edge.Text, c13_mode.Text, c13_strobe.Text, c13_pulse.Text, c13_delay.Text);
-                string c14_addText = displayValues("CH14", c14_intensity.Text, c14_edge.Text, c14_mode.Text, c14_strobe.Text, c14_pulse.Text, c14_delay.Text);
-                string c15_addText = displayValues("CH15", c15_intensity.Text, c15_edge.Text, c15_mode.Text, c15_strobe.Text, c15_pulse.Text, c15_delay.Text);
-                string c16_addText = displayValues("CH16", c16_intensity.Text, c16_edge.Text, c16_mode.Text, c16_strobe.Text, c16_pulse.Text, c16_delay.Text);
+                //Grab Values
+                generateConfig();
+                string board = sendToHardware.Substring(13, 7);
 
-                string g1_addText = displaySettings(g1_setting.Text, "Group 1", "CH1", "CH2", "CH3");
-                string g2_addText = displaySettings(g2_setting.Text, "Group 2", "CH4", "CH5", "CH6");
-                string g3_addText = displaySettings(g3_setting.Text, "Group 3", "CH7", "CH8", "CH9");
-                string g4_addText = displaySettings(g4_setting.Text, "Group 4", "CH10", "CH11", "CH12");
-                string g5_addText = displaySettings(g5_setting.Text, "Group 5", "CH13", "CH14", "CH15");
-                string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16] .";
+                string path = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs";
 
+                path += "\\" + board + ".txt";
+
+                File.WriteAllText(path, sendToHardware);
+
+                //clear console
                 consoleDisplay.Items.Clear();
-
-                //make a list to contain all data, used to send to hardware as the console is supposed to only be populated with the replies from the hardware
-                List<string> config = new List<string>();
-                config.Clear();
-                sendToHardware = "";
-
-                config.Add("MAIN BOARD = " + lightSelect.Text + ".");
-
-                config.Add(g1_addText);
-                config.Add(c1_addText);
-                config.Add(c2_addText);
-                config.Add(c3_addText);
-
-                config.Add(g2_addText);
-                config.Add(c4_addText);
-                config.Add(c5_addText);
-                config.Add(c6_addText);
-
-                config.Add(g3_addText);
-                config.Add(c7_addText);
-                config.Add(c8_addText);
-                config.Add(c9_addText);
-
-                config.Add(g4_addText);
-                config.Add(c10_addText);
-                config.Add(c11_addText);
-                config.Add(c12_addText);
-
-                config.Add(g5_addText);
-                config.Add(c13_addText);
-                config.Add(c14_addText);
-                config.Add(c15_addText);
-
-                config.Add(g6_addText);
-                config.Add(c16_addText);
-
-                // Display Data on Console
-                //consoleDisplay.Items.Add(g1_addText);
-                //consoleDisplay.Items.Add(c1_addText);
-                //consoleDisplay.Items.Add(c2_addText);
-                //consoleDisplay.Items.Add(c3_addText);
-
-                //consoleDisplay.Items.Add(g2_addText);
-                //consoleDisplay.Items.Add(c4_addText);
-                //consoleDisplay.Items.Add(c5_addText);
-                //consoleDisplay.Items.Add(c6_addText);
-
-                //consoleDisplay.Items.Add(g3_addText);
-                //consoleDisplay.Items.Add(c7_addText);
-                //consoleDisplay.Items.Add(c8_addText);
-                //consoleDisplay.Items.Add(c9_addText);
-
-                //consoleDisplay.Items.Add(g4_addText);
-                //consoleDisplay.Items.Add(c10_addText);
-                //consoleDisplay.Items.Add(c11_addText);
-                //consoleDisplay.Items.Add(c12_addText);
-
-                //consoleDisplay.Items.Add(g5_addText);
-                //consoleDisplay.Items.Add(c13_addText);
-                //consoleDisplay.Items.Add(c14_addText);
-                //consoleDisplay.Items.Add(c15_addText);
-
-                Console.WriteLine(config.Count);
-                for (int i = 0; i < config.Count(); i++)
-                {
-                    sendToHardware += config[i].ToString();
-                }
-                sendToHardware += "\n\\r\\n";
+                
                 Console.WriteLine(sendToHardware);
 
                 Thread sendData = new Thread(sendDataToHardware);
