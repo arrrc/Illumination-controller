@@ -28,6 +28,10 @@ namespace IlluminationController2
             {
                 MessageBox.Show("Please enter a file name");
             }
+            else if (textBox1.Text == "Board 1" || textBox1.Text == "Board 2" || textBox1.Text == "Board 3" || textBox1.Text == "Board 4" || textBox1.Text == "Board 5" || textBox1.Text == "Board 6" || textBox1.Text == "Board 7" || textBox1.Text == "Board 8")
+            {
+                MessageBox.Show("This file name is used to keep track of the latest configuration for each board, please use another file name");
+            }
             else
             {
                 mainForm.generateConfig();
@@ -46,6 +50,8 @@ namespace IlluminationController2
             foreach (string file in fileList)
             {
                 string pathWithFilename = path + "\\" + textBox1.Text + ".txt";
+
+                
 
                 if (pathWithFilename == file)
                 {

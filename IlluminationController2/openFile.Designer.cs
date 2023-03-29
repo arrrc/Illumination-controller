@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.fileSelect = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -43,13 +43,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Select file to load";
             // 
-            // comboBox1
+            // fileSelect
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 21);
-            this.comboBox1.TabIndex = 1;
+            this.fileSelect.FormattingEnabled = true;
+            this.fileSelect.Location = new System.Drawing.Point(19, 51);
+            this.fileSelect.Name = "fileSelect";
+            this.fileSelect.Size = new System.Drawing.Size(289, 21);
+            this.fileSelect.TabIndex = 1;
+            this.fileSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.fileSelect.Click += new System.EventHandler(this.fileSelect_Click);
             // 
             // button1
             // 
@@ -67,7 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 138);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.fileSelect);
             this.Controls.Add(this.label1);
             this.Name = "openFile";
             this.Text = "openFile";
@@ -80,7 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox fileSelect;
         private System.Windows.Forms.Button button1;
     }
 }

@@ -344,9 +344,9 @@
             this.c14_title = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.c16_status = new System.Windows.Forms.Button();
             this.label126 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.c16_test = new System.Windows.Forms.Button();
             this.c16_delay = new System.Windows.Forms.TextBox();
             this.c16_pulse = new System.Windows.Forms.TextBox();
             this.c16_strobe = new System.Windows.Forms.ComboBox();
@@ -4272,9 +4272,9 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.c16_status);
             this.panel6.Controls.Add(this.label126);
-            this.panel6.Controls.Add(this.button8);
+            this.panel6.Controls.Add(this.c16_test);
             this.panel6.Controls.Add(this.c16_delay);
             this.panel6.Controls.Add(this.c16_pulse);
             this.panel6.Controls.Add(this.c16_strobe);
@@ -4293,15 +4293,15 @@
             this.panel6.Size = new System.Drawing.Size(607, 182);
             this.panel6.TabIndex = 22;
             // 
-            // button6
+            // c16_status
             // 
-            this.button6.BackColor = System.Drawing.Color.Red;
-            this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(464, 29);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 83);
-            this.button6.TabIndex = 16;
-            this.button6.UseVisualStyleBackColor = false;
+            this.c16_status.BackColor = System.Drawing.Color.Red;
+            this.c16_status.Enabled = false;
+            this.c16_status.Location = new System.Drawing.Point(464, 29);
+            this.c16_status.Name = "c16_status";
+            this.c16_status.Size = new System.Drawing.Size(108, 83);
+            this.c16_status.TabIndex = 16;
+            this.c16_status.UseVisualStyleBackColor = false;
             // 
             // label126
             // 
@@ -4313,16 +4313,17 @@
             this.label126.TabIndex = 15;
             this.label126.Text = "Error:";
             // 
-            // button8
+            // c16_test
             // 
-            this.button8.Enabled = false;
-            this.button8.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(464, 112);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(108, 28);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "Test";
-            this.button8.UseVisualStyleBackColor = true;
+            this.c16_test.Enabled = false;
+            this.c16_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c16_test.Location = new System.Drawing.Point(464, 112);
+            this.c16_test.Name = "c16_test";
+            this.c16_test.Size = new System.Drawing.Size(108, 28);
+            this.c16_test.TabIndex = 6;
+            this.c16_test.Text = "Test";
+            this.c16_test.UseVisualStyleBackColor = true;
+            this.c16_test.Click += new System.EventHandler(this.button8_Click);
             // 
             // c16_delay
             // 
@@ -4802,9 +4803,9 @@
         private System.Windows.Forms.ListBox consoleDisplay;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button c16_status;
         private System.Windows.Forms.Label label126;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button c16_test;
         private System.Windows.Forms.Label label127;
         private System.Windows.Forms.Label label128;
         private System.Windows.Forms.Label label129;

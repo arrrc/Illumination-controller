@@ -97,6 +97,11 @@ namespace IlluminationController2
         int c15_delay_value;
         int c15_testStop;
 
+        int c16_rgb_value;
+        int c16_pulse_value;
+        int c16_delay_value;
+        int c16_testStop;
+
         static SerialPort portConn;
         bool comPortConnected;
         public string sendToHardware = "";
@@ -473,6 +478,18 @@ namespace IlluminationController2
                 Thread.Sleep(c15_delay_value);
             }
             c15_status.BackColor = Color.FromArgb(0, 0, c15_rgb_value);
+        }
+
+        private void c16_light_loop()
+        {
+            while (c16_testStop == 1)
+            {
+                c16_status.BackColor = Color.FromArgb(0, 0, c16_rgb_value);
+                Thread.Sleep(c16_pulse_value);
+                c16_status.BackColor = Color.Transparent;
+                Thread.Sleep(c16_delay_value);
+            }
+            c16_status.BackColor = Color.FromArgb(0, 0, c16_rgb_value);
         }
 
         // Channel 1
@@ -1105,6 +1122,7 @@ namespace IlluminationController2
         private void switchConfig_Click(object sender, EventArgs e)
         {
             openFile fileSelect = new openFile();
+            fileSelect.mainForm = this;
             fileSelect.ShowDialog();
         }
 
@@ -2835,12 +2853,237 @@ namespace IlluminationController2
             else
             {
                 uploadConfig.Enabled = true;
+                loadLatestBoardConfig();
             }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Thread c16_testing = new Thread(c16_light_loop);
+            if (c16_testStop == 0)
+            {
+                c16_testing.Start();
+                c16_test.Text = "Stop";
+            }
+            else
+            {
+                c16_testing.Abort();
+                c16_test.Text = "Test";
+            }
+            c16_testStop++;
+            if (c16_testStop == 2) { c16_testStop = 0; }
+        }
+
+        private void loadLatestBoardConfig()
+        {
+            string pathWithFilename = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs\" + lightSelect.Text + ".txt";
+            string loadedConfig = File.ReadAllText(pathWithFilename);
+
+
+            string[] splitString = loadedConfig.Split('.');
+
+
+            for (int i = 0; i < splitString.Length; i++)
+            {
+                if (splitString[i][1] != '[')
+                {
+                    continue;
+                }
+                else
+                {
+                    int intensityIndexPos = splitString[i].IndexOf("Intensity") + 11;
+                    int intensityNextCommaIndexPos = splitString[i].IndexOf(",", intensityIndexPos);
+                    int intensityLengthBetweenBothIndex = intensityNextCommaIndexPos - intensityIndexPos;
+
+                    int edgeIndexPos = splitString[i].IndexOf("Edge") + 6;
+                    int edgeNextCommaIndexPos = splitString[i].IndexOf(",", edgeIndexPos);
+                    int edgeLengthBetweenBothIndex = edgeNextCommaIndexPos - edgeIndexPos;
+
+                    int modeIndexPos = splitString[i].IndexOf("Mode") + 6;
+                    int modeNextCommaIndexPos = splitString[i].IndexOf(",", modeIndexPos);
+                    int modeLengthBetweenBothIndex = modeNextCommaIndexPos - modeIndexPos;
+
+                    int strobeIndexPos = splitString[i].IndexOf("Strobe:") + 8;
+                    int strobeNextCommaIndexPos = splitString[i].IndexOf(",", strobeIndexPos);
+                    int strobeLengthBetweenBothIndex = strobeNextCommaIndexPos - strobeIndexPos;
+
+                    int pulseIndexPos = splitString[i].IndexOf("Pulse") + 7;
+                    int pulseNextCommaIndexPos = splitString[i].IndexOf(",", pulseIndexPos);
+                    int pulseLengthBetweenBothIndex = pulseNextCommaIndexPos - pulseIndexPos;
+
+                    int delayIndexPos = splitString[i].IndexOf("Delay") + 7;
+                    //there is a space at the end of the line
+                    int delayEndOfLineIndex = splitString[i].IndexOf(" ", delayIndexPos);
+                    int delayLengthBetweenBothIndex = delayEndOfLineIndex - delayIndexPos;
+
+                    string intensity = splitString[i].Substring(intensityIndexPos, intensityLengthBetweenBothIndex);
+                    string edge = splitString[i].Substring(edgeIndexPos, edgeLengthBetweenBothIndex);
+                    string mode = splitString[i].Substring(modeIndexPos, modeLengthBetweenBothIndex);
+                    string strobe = splitString[i].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
+                    string pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
+                    string delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
+
+
+                    Console.WriteLine(intensity);
+                    Console.WriteLine(edge);
+                    Console.WriteLine(mode);
+                    Console.WriteLine(strobe);
+                    Console.WriteLine(pulse);
+                    Console.WriteLine(delay);
+
+                    switch (i)
+                    {
+                        case 2:
+                            c1_intensity.Text = intensity;
+                            c1_edge.Text = edge;
+                            c1_mode.Text = mode;
+                            c1_strobe.Text = strobe;
+                            c1_pulse.Text = pulse;
+                            c1_delay.Text = delay;
+                            break;
+                        case 3:
+                            c2_intensity.Text = intensity;
+                            c2_edge.Text = edge;
+                            c2_mode.Text = mode;
+                            c2_strobe.Text = strobe;
+                            c2_pulse.Text = pulse;
+                            c2_delay.Text = delay;
+
+                            break;
+                        case 4:
+                            c3_intensity.Text = intensity;
+                            c3_edge.Text = edge;
+                            c3_mode.Text = mode;
+                            c3_strobe.Text = strobe;
+                            c3_pulse.Text = pulse;
+                            c3_delay.Text = delay;
+                            break;
+
+                        case 6:
+                            c4_intensity.Text = intensity;
+                            c4_edge.Text = edge;
+                            c4_mode.Text = mode;
+                            c4_strobe.Text = strobe;
+                            c4_pulse.Text = pulse;
+                            c4_delay.Text = delay;
+                            break;
+
+                        case 7:
+                            c5_intensity.Text = intensity;
+                            c5_edge.Text = edge;
+                            c5_mode.Text = mode;
+                            c5_strobe.Text = strobe;
+                            c5_pulse.Text = pulse;
+                            c5_delay.Text = delay;
+                            break;
+
+                        case 8:
+                            c6_intensity.Text = intensity;
+                            c6_edge.Text = edge;
+                            c6_mode.Text = mode;
+                            c6_strobe.Text = strobe;
+                            c6_pulse.Text = pulse;
+                            c6_delay.Text = delay;
+                            break;
+
+                        case 10:
+                            c7_intensity.Text = intensity;
+                            c7_edge.Text = edge;
+                            c7_mode.Text = mode;
+                            c7_strobe.Text = strobe;
+                            c7_pulse.Text = pulse;
+                            c7_delay.Text = delay;
+                            break;
+
+                        case 11:
+                            c8_intensity.Text = intensity;
+                            c8_edge.Text = edge;
+                            c8_mode.Text = mode;
+                            c8_strobe.Text = strobe;
+                            c8_pulse.Text = pulse;
+                            c8_delay.Text = delay;
+                            break;
+
+                        case 12:
+                            c9_intensity.Text = intensity;
+                            c9_edge.Text = edge;
+                            c9_mode.Text = mode;
+                            c9_strobe.Text = strobe;
+                            c9_pulse.Text = pulse;
+                            c9_delay.Text = delay;
+                            break;
+
+                        case 14:
+                            c10_intensity.Text = intensity;
+                            c10_edge.Text = edge;
+                            c10_mode.Text = mode;
+                            c10_strobe.Text = strobe;
+                            c10_pulse.Text = pulse;
+                            c10_delay.Text = delay;
+                            break;
+
+                        case 15:
+                            c11_intensity.Text = intensity;
+                            c11_edge.Text = edge;
+                            c11_mode.Text = mode;
+                            c11_strobe.Text = strobe;
+                            c11_pulse.Text = pulse;
+                            c11_delay.Text = delay;
+                            break;
+
+                        case 16:
+                            c12_intensity.Text = intensity;
+                            c12_edge.Text = edge;
+                            c12_mode.Text = mode;
+                            c12_strobe.Text = strobe;
+                            c12_pulse.Text = pulse;
+                            c12_delay.Text = delay;
+                            break;
+
+                        case 18:
+                            c13_intensity.Text = intensity;
+                            c13_edge.Text = edge;
+                            c13_mode.Text = mode;
+                            c13_strobe.Text = strobe;
+                            c13_pulse.Text = pulse;
+                            c13_delay.Text = delay;
+                            break;
+
+                        case 19:
+                            c14_intensity.Text = intensity;
+                            c14_edge.Text = edge;
+                            c14_mode.Text = mode;
+                            c14_strobe.Text = strobe;
+                            c14_pulse.Text = pulse;
+                            c14_delay.Text = delay;
+                            break;
+
+                        case 20:
+                            c15_intensity.Text = intensity;
+                            c15_edge.Text = edge;
+                            c15_mode.Text = mode;
+                            c15_strobe.Text = strobe;
+                            c15_pulse.Text = pulse;
+                            c15_delay.Text = delay;
+                            break;
+
+                        case 22:
+                            c16_intensity.Text = intensity;
+                            c16_edge.Text = edge;
+                            c16_mode.Text = mode;
+                            c16_strobe.Text = strobe;
+                            c16_pulse.Text = pulse;
+                            c16_delay.Text = delay;
+                            break;
+                    }
+
+                }
+            }
         }
     }
 }
