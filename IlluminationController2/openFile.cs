@@ -29,6 +29,12 @@ namespace IlluminationController2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(fileSelect.Text == "")
+            {
+                MessageBox.Show("Pick a file");
+                return;
+            }
+
             string pathWithFilename = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs\" + fileSelect.Text;
             loadedConfig = File.ReadAllText(pathWithFilename);
 

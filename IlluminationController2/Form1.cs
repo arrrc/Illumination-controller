@@ -1082,6 +1082,48 @@ namespace IlluminationController2
                 portConn.PortName = portName;
                 portConn.Open();
 
+                portConn.Write("test");
+                Thread.Sleep(100);
+                string test = portConn.ReadExisting();
+                Console.WriteLine(test);
+
+                portConn.Write("INIT COMMS");
+                Console.WriteLine("sent data");
+
+
+                Thread.Sleep(1000);
+                string reply = portConn.ReadExisting();
+
+
+
+                if (reply == "INIT COMMS")
+                {
+                    Console.WriteLine("port is open");
+                    comPort.Text = portName;
+                    portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
+                    break;
+                }
+                else
+                {
+                    portConn.Close();
+                    continue;
+                }
+
+
+            }
+        }
+
+        void detectNewComPort(object sender, EventArgs e)
+        {
+            Console.WriteLine("abcd");
+
+            foreach (string portName in SerialPort.GetPortNames())
+            {
+                Console.WriteLine(portName);
+                portConn.PortName = portName;
+                portConn.Open();
+
                 portConn.Write("INIT COMMS");
                 Console.WriteLine("sent data");
                 Thread.Sleep(50);
@@ -1104,7 +1146,6 @@ namespace IlluminationController2
                     portConn.Close();
                     continue;
                 }
-
             }
         }
 
@@ -1232,6 +1273,8 @@ namespace IlluminationController2
 
 
         }
+
+        
 
         void sendDataToHardware()
         {
@@ -3084,6 +3127,44 @@ namespace IlluminationController2
 
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            foreach (string portName in SerialPort.GetPortNames())
+            {
+                Console.WriteLine(portName);
+                portConn.PortName = portName;
+                portConn.Open();
+
+                portConn.Write("INIT COMMS");
+                Console.WriteLine("sent data");
+                Thread.Sleep(50);
+
+                string reply = portConn.ReadExisting();
+
+
+
+                Console.WriteLine(reply);
+                if (reply == "INIT COMMS")
+                {
+                    Console.WriteLine("port is open");
+                    comPort.Text = portName;
+                    portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
+                    break;
+                }
+                else
+                {
+                    portConn.Close();
+                    continue;
+                }
+            }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
