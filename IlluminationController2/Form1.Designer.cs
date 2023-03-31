@@ -74,7 +74,6 @@
             this.lightSelect = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comPort = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -344,6 +343,7 @@
             this.c14_title = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.c16_error = new System.Windows.Forms.Label();
             this.c16_status = new System.Windows.Forms.Button();
             this.label126 = new System.Windows.Forms.Label();
             this.c16_test = new System.Windows.Forms.Button();
@@ -363,6 +363,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.portError = new System.Windows.Forms.Label();
+            this.comPort = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -464,6 +466,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comPort);
+            this.panel2.Controls.Add(this.portError);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.openConn);
             this.panel2.Controls.Add(this.closeConn);
@@ -476,7 +480,6 @@
             this.panel2.Controls.Add(this.lightSelect);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.comPort);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -490,7 +493,7 @@
             // 
             this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.label109);
-            this.panel5.Location = new System.Drawing.Point(4, 700);
+            this.panel5.Location = new System.Drawing.Point(4, 741);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(177, 27);
             this.panel5.TabIndex = 28;
@@ -543,7 +546,7 @@
             this.g5_panel.Controls.Add(this.label93);
             this.g5_panel.Controls.Add(this.label100);
             this.g5_panel.Controls.Add(this.g5_setting);
-            this.g5_panel.Location = new System.Drawing.Point(4, 596);
+            this.g5_panel.Location = new System.Drawing.Point(4, 637);
             this.g5_panel.Name = "g5_panel";
             this.g5_panel.Size = new System.Drawing.Size(177, 98);
             this.g5_panel.TabIndex = 27;
@@ -593,8 +596,8 @@
             // 
             this.g5_setting.FormattingEnabled = true;
             this.g5_setting.Items.AddRange(new object[] {
-            "Singles",
-            "Triple"});
+            "Ungrouped",
+            "Grouped"});
             this.g5_setting.Location = new System.Drawing.Point(3, 24);
             this.g5_setting.Name = "g5_setting";
             this.g5_setting.Size = new System.Drawing.Size(77, 21);
@@ -609,7 +612,7 @@
             this.g4_panel.Controls.Add(this.label77);
             this.g4_panel.Controls.Add(this.label84);
             this.g4_panel.Controls.Add(this.g4_setting);
-            this.g4_panel.Location = new System.Drawing.Point(4, 491);
+            this.g4_panel.Location = new System.Drawing.Point(4, 532);
             this.g4_panel.Name = "g4_panel";
             this.g4_panel.Size = new System.Drawing.Size(177, 98);
             this.g4_panel.TabIndex = 27;
@@ -659,8 +662,8 @@
             // 
             this.g4_setting.FormattingEnabled = true;
             this.g4_setting.Items.AddRange(new object[] {
-            "Singles",
-            "Triple"});
+            "Ungrouped",
+            "Grouped"});
             this.g4_setting.Location = new System.Drawing.Point(3, 24);
             this.g4_setting.Name = "g4_setting";
             this.g4_setting.Size = new System.Drawing.Size(77, 21);
@@ -675,7 +678,7 @@
             this.g3_panel.Controls.Add(this.label61);
             this.g3_panel.Controls.Add(this.label68);
             this.g3_panel.Controls.Add(this.g3_setting);
-            this.g3_panel.Location = new System.Drawing.Point(4, 388);
+            this.g3_panel.Location = new System.Drawing.Point(4, 429);
             this.g3_panel.Name = "g3_panel";
             this.g3_panel.Size = new System.Drawing.Size(177, 98);
             this.g3_panel.TabIndex = 27;
@@ -725,8 +728,8 @@
             // 
             this.g3_setting.FormattingEnabled = true;
             this.g3_setting.Items.AddRange(new object[] {
-            "Singles",
-            "Triple"});
+            "Ungrouped",
+            "Grouped"});
             this.g3_setting.Location = new System.Drawing.Point(3, 24);
             this.g3_setting.Name = "g3_setting";
             this.g3_setting.Size = new System.Drawing.Size(77, 21);
@@ -741,7 +744,7 @@
             this.g2_panel.Controls.Add(this.label45);
             this.g2_panel.Controls.Add(this.label52);
             this.g2_panel.Controls.Add(this.g2_setting);
-            this.g2_panel.Location = new System.Drawing.Point(4, 285);
+            this.g2_panel.Location = new System.Drawing.Point(4, 326);
             this.g2_panel.Name = "g2_panel";
             this.g2_panel.Size = new System.Drawing.Size(177, 98);
             this.g2_panel.TabIndex = 27;
@@ -791,8 +794,8 @@
             // 
             this.g2_setting.FormattingEnabled = true;
             this.g2_setting.Items.AddRange(new object[] {
-            "Singles",
-            "Triple"});
+            "Ungrouped",
+            "Grouped"});
             this.g2_setting.Location = new System.Drawing.Point(3, 24);
             this.g2_setting.Name = "g2_setting";
             this.g2_setting.Size = new System.Drawing.Size(77, 21);
@@ -807,7 +810,7 @@
             this.g1_panel.Controls.Add(this.label28);
             this.g1_panel.Controls.Add(this.label21);
             this.g1_panel.Controls.Add(this.g1_setting);
-            this.g1_panel.Location = new System.Drawing.Point(4, 183);
+            this.g1_panel.Location = new System.Drawing.Point(4, 224);
             this.g1_panel.Name = "g1_panel";
             this.g1_panel.Size = new System.Drawing.Size(177, 98);
             this.g1_panel.TabIndex = 22;
@@ -898,7 +901,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1, 160);
+            this.label13.Location = new System.Drawing.Point(1, 201);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 15);
             this.label13.TabIndex = 19;
@@ -913,17 +916,6 @@
             this.label12.Size = new System.Drawing.Size(90, 15);
             this.label12.TabIndex = 18;
             this.label12.Text = "Board Selection";
-            // 
-            // comPort
-            // 
-            this.comPort.Enabled = false;
-            this.comPort.FormattingEnabled = true;
-            this.comPort.Location = new System.Drawing.Point(5, 52);
-            this.comPort.Name = "comPort";
-            this.comPort.Size = new System.Drawing.Size(77, 21);
-            this.comPort.TabIndex = 17;
-            this.comPort.SelectedIndexChanged += new System.EventHandler(this.comPort_SelectedIndexChanged);
-            this.comPort.Click += new System.EventHandler(this.comPort_Click);
             // 
             // label5
             // 
@@ -3996,6 +3988,7 @@
             this.c13_edge.Size = new System.Drawing.Size(69, 21);
             this.c13_edge.TabIndex = 7;
             this.c13_edge.Text = "Rising";
+            this.c13_edge.SelectedIndexChanged += new System.EventHandler(this.c13_edge_SelectedIndexChanged);
             // 
             // c13_mode
             // 
@@ -4274,6 +4267,7 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.c16_error);
             this.panel6.Controls.Add(this.c16_status);
             this.panel6.Controls.Add(this.label126);
             this.panel6.Controls.Add(this.c16_test);
@@ -4294,6 +4288,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(607, 182);
             this.panel6.TabIndex = 22;
+            // 
+            // c16_error
+            // 
+            this.c16_error.AutoSize = true;
+            this.c16_error.ForeColor = System.Drawing.Color.White;
+            this.c16_error.Location = new System.Drawing.Point(6, 157);
+            this.c16_error.Name = "c16_error";
+            this.c16_error.Size = new System.Drawing.Size(427, 13);
+            this.c16_error.TabIndex = 17;
+            this.c16_error.Text = "Error: Invalid/Missing value inputted for pulse/delay. Please use integers from 0" +
+    " to 65,536";
             // 
             // c16_status
             // 
@@ -4339,6 +4344,7 @@
             this.c16_delay.Size = new System.Drawing.Size(69, 20);
             this.c16_delay.TabIndex = 14;
             this.c16_delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c16_delay.TextChanged += new System.EventHandler(this.c16_delay_TextChanged);
             // 
             // c16_pulse
             // 
@@ -4352,6 +4358,7 @@
             this.c16_pulse.Size = new System.Drawing.Size(69, 20);
             this.c16_pulse.TabIndex = 13;
             this.c16_pulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c16_pulse.TextChanged += new System.EventHandler(this.c16_pulse_TextChanged);
             // 
             // c16_strobe
             // 
@@ -4371,6 +4378,7 @@
             this.c16_strobe.Size = new System.Drawing.Size(69, 21);
             this.c16_strobe.TabIndex = 12;
             this.c16_strobe.Text = "None";
+            this.c16_strobe.SelectedIndexChanged += new System.EventHandler(this.c16_strobe_SelectedIndexChanged);
             // 
             // label127
             // 
@@ -4413,6 +4421,7 @@
             this.c16_intensity.Size = new System.Drawing.Size(69, 20);
             this.c16_intensity.TabIndex = 8;
             this.c16_intensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.c16_intensity.TextChanged += new System.EventHandler(this.c16_intensity_TextChanged);
             // 
             // c16_edge
             // 
@@ -4426,6 +4435,7 @@
             this.c16_edge.Size = new System.Drawing.Size(69, 21);
             this.c16_edge.TabIndex = 7;
             this.c16_edge.Text = "Rising";
+            this.c16_edge.SelectedIndexChanged += new System.EventHandler(this.c16_edge_SelectedIndexChanged);
             // 
             // c16_mode
             // 
@@ -4438,6 +4448,7 @@
             this.c16_mode.Size = new System.Drawing.Size(69, 21);
             this.c16_mode.TabIndex = 6;
             this.c16_mode.Text = "Static";
+            this.c16_mode.SelectedIndexChanged += new System.EventHandler(this.c16_mode_SelectedIndexChanged);
             // 
             // label130
             // 
@@ -4507,6 +4518,22 @@
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "LED Settings";
+            // 
+            // portError
+            // 
+            this.portError.AutoSize = true;
+            this.portError.Location = new System.Drawing.Point(4, 155);
+            this.portError.Name = "portError";
+            this.portError.Size = new System.Drawing.Size(0, 13);
+            this.portError.TabIndex = 30;
+            // 
+            // comPort
+            // 
+            this.comPort.Enabled = false;
+            this.comPort.Location = new System.Drawing.Point(4, 52);
+            this.comPort.Name = "comPort";
+            this.comPort.Size = new System.Drawing.Size(80, 20);
+            this.comPort.TabIndex = 31;
             // 
             // Form1
             // 
@@ -4769,7 +4796,6 @@
         private System.Windows.Forms.ComboBox lightSelect;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comPort;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button switchConfig;
         private System.Windows.Forms.Button button5;
@@ -4920,6 +4946,9 @@
         public System.Windows.Forms.TextBox c16_intensity;
         public System.Windows.Forms.ComboBox c16_edge;
         public System.Windows.Forms.ComboBox c16_mode;
+        private System.Windows.Forms.Label c16_error;
+        private System.Windows.Forms.Label portError;
+        private System.Windows.Forms.TextBox comPort;
     }
 }
 

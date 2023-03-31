@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO.Ports;
 using System.IO;
+using System.Windows.Forms.VisualStyles;
+using System.Management;
 //using System.Text.Json;
 //using System.Text.Json.Serialization;
 
@@ -103,13 +105,12 @@ namespace IlluminationController2
         int c16_testStop;
 
         static SerialPort portConn;
-        bool comPortConnected;
         public string sendToHardware = "";
         string dataReceived = "";
         bool didDataReceiveThreadExit = false;
         int numTimesDataSent = 0;
         List<string> config = new List<string>();
-
+        int noTimesRemoveEventFired = 0;
 
         List<string> splitData = new List<string>();
 
@@ -1029,9 +1030,18 @@ namespace IlluminationController2
                 //{
                 //    Console.WriteLine("device disconnected");
                 //}
-                closeConn.Enabled = true;
-                openConn.Enabled = false;
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text == "")
+                {
+                    closeConn.Enabled = true;
+                    openConn.Enabled = false;
+                }
+                else
+                {
+                    closeConn.Enabled = true;
+                    openConn.Enabled = false;
+                    uploadConfig.Enabled = true;
+                }
+                
             }
             
         }
@@ -1063,11 +1073,18 @@ namespace IlluminationController2
 
         void receiveDataHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            Thread.Sleep(3000);
-            dataReceived = portConn.ReadExisting();
-            Console.WriteLine(dataReceived);
-            didDataReceiveThreadExit = true;
-            updateConsole(dataReceived);
+            try
+            {
+                Thread.Sleep(3000);
+                dataReceived = portConn.ReadExisting();
+                Console.WriteLine(dataReceived);
+                didDataReceiveThreadExit = true;
+                updateConsole(dataReceived);
+            }
+            catch
+            {
+
+            }
         }
 
 
@@ -1076,41 +1093,139 @@ namespace IlluminationController2
         {
             portConn = new SerialPort();
             portConn.BaudRate = 9600;
+
+            while (comPort.Text == "")
+            {
+                foreach (string portName in SerialPort.GetPortNames())
+                {
+                    Console.WriteLine(portName);
+                    portConn.PortName = portName;
+                    portConn.Open();
+                    portConn.Write("test");
+                    portConn.Write("test");
+                    Thread.Sleep(1000);
+                    string test = portConn.ReadExisting();
+                    Console.WriteLine(test);
+
+                    portConn.Write("INIT COMMS");
+                    Console.WriteLine("sent data");
+
+
+                    Thread.Sleep(1000);
+                    string reply = portConn.ReadExisting();
+
+
+                    if (reply == "INIT COMMS")
+                    {
+                        Console.WriteLine("port is open");
+                        comPort.Text = portName;
+                        portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
+                        break;
+                    }
+                    else
+                    {
+                        portConn.Close();
+                        continue;
+                    }
+                }
+            }
+            // Declare a ManagementEventWatcher object and set up the event handler
+            ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+            deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+
+            // Set up the query for USB device removal
+            WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
+
+
+            // Start listening for the USB device removal event
+            deviceRemoveWatcher.Query = removalQuery;
+
+            deviceRemoveWatcher.Start();
+        }
+
+
+        // Define the event handler method
+        private void DeviceRemovedEvent(object sender, EventArrivedEventArgs e)
+        {
+            bool checkUSB = checkIfUsbAlive();
+            if (checkUSB == false)
+            {
+                changePortErrMsg("false");
+            }
+            
+            return;
+        }
+
+        void changePortErrMsg(string data)
+        {
+            if (portError.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(changePortErrMsg);
+                this.Invoke(d, new object[] { data });
+            }
+            else
+            {
+                if (data == "false")
+                {
+                    portError.ForeColor = Color.Red;
+                    portError.Text = "USB has been unplugged, click retry connection to connect to the board";
+                    comPort.Text = "";
+                    closeConn.Enabled = false;
+                }
+                else
+                {
+                    portError.Text = "";
+                    closeConn.Enabled = true;
+                }
+            }
+        }
+
+        bool checkIfUsbAlive()
+        {
             foreach (string portName in SerialPort.GetPortNames())
             {
+                portConn.Close();
+
                 Console.WriteLine(portName);
                 portConn.PortName = portName;
-                portConn.Open();
-
-                portConn.Write("test");
-                Thread.Sleep(100);
-                string test = portConn.ReadExisting();
-                Console.WriteLine(test);
-
+                try
+                {
+                    portConn.Open();
+                }
+                catch
+                {
+                    continue;
+                }
                 portConn.Write("INIT COMMS");
                 Console.WriteLine("sent data");
+                Thread.Sleep(50);
 
-
-                Thread.Sleep(1000);
                 string reply = portConn.ReadExisting();
 
 
 
+                Console.WriteLine(reply);
                 if (reply == "INIT COMMS")
                 {
-                    Console.WriteLine("port is open");
-                    comPort.Text = portName;
-                    portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
-
-                    break;
+                    updateComPortTextbox(portName);
+                    return true;
                 }
-                else
-                {
-                    portConn.Close();
-                    continue;
-                }
+            }
+            return false;
+        }
 
-
+        void updateComPortTextbox(string port)
+        {
+            if (comPort.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(updateComPortTextbox);
+                this.Invoke(d, new object[] { port });
+            }
+            else
+            {
+                comPort.Text = port;
+                portError.Text = "";
             }
         }
 
@@ -1147,16 +1262,6 @@ namespace IlluminationController2
                     continue;
                 }
             }
-        }
-
-        private void comPort_Click(object sender, EventArgs e)
-        {
-            comPort.Items.Clear();
-            foreach (string portName in SerialPort.GetPortNames())
-            {
-                comPort.Items.Add(portName);
-            }
-            
         }
 
         // Main Controls 
@@ -2924,6 +3029,14 @@ namespace IlluminationController2
 
         private void loadLatestBoardConfig()
         {
+            bool grouped = false;
+            string intensity = "";
+            string edge = "";
+            string mode = "";
+            string strobe = "";
+            string pulse = "";
+            string delay = "";
+
             string pathWithFilename = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs\" + lightSelect.Text + ".txt";
             string loadedConfig = File.ReadAllText(pathWithFilename);
 
@@ -2933,11 +3046,22 @@ namespace IlluminationController2
 
             for (int i = 0; i < splitString.Length; i++)
             {
-                if (splitString[i][1] != '[')
+                if (splitString[i][1] == 'G')
                 {
-                    continue;
+                    string groupedOrUngroup = splitString[i].Substring(20, 7);
+                    Console.WriteLine(groupedOrUngroup);
+                    if (groupedOrUngroup == "GROUPED")
+                    {
+                        grouped = true;
+                    }
+                    else if (groupedOrUngroup == "UNGROUP")
+                    {
+
+                        grouped = false;
+                    }
                 }
-                else
+
+                else if (splitString[i][1] == '[')
                 {
                     int intensityIndexPos = splitString[i].IndexOf("Intensity") + 11;
                     int intensityNextCommaIndexPos = splitString[i].IndexOf(",", intensityIndexPos);
@@ -2964,12 +3088,12 @@ namespace IlluminationController2
                     int delayEndOfLineIndex = splitString[i].IndexOf(" ", delayIndexPos);
                     int delayLengthBetweenBothIndex = delayEndOfLineIndex - delayIndexPos;
 
-                    string intensity = splitString[i].Substring(intensityIndexPos, intensityLengthBetweenBothIndex);
-                    string edge = splitString[i].Substring(edgeIndexPos, edgeLengthBetweenBothIndex);
-                    string mode = splitString[i].Substring(modeIndexPos, modeLengthBetweenBothIndex);
-                    string strobe = splitString[i].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
-                    string pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
-                    string delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
+                    intensity = splitString[i].Substring(intensityIndexPos, intensityLengthBetweenBothIndex);
+                    edge = splitString[i].Substring(edgeIndexPos, edgeLengthBetweenBothIndex);
+                    mode = splitString[i].Substring(modeIndexPos, modeLengthBetweenBothIndex);
+                    strobe = splitString[i].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
+                    pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
+                    delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
 
 
                     Console.WriteLine(intensity);
@@ -2978,191 +3102,743 @@ namespace IlluminationController2
                     Console.WriteLine(strobe);
                     Console.WriteLine(pulse);
                     Console.WriteLine(delay);
-
-                    switch (i)
-                    {
-                        case 2:
-                            c1_intensity.Text = intensity;
-                            c1_edge.Text = edge;
-                            c1_mode.Text = mode;
-                            c1_strobe.Text = strobe;
-                            c1_pulse.Text = pulse;
-                            c1_delay.Text = delay;
-                            break;
-                        case 3:
-                            c2_intensity.Text = intensity;
-                            c2_edge.Text = edge;
-                            c2_mode.Text = mode;
-                            c2_strobe.Text = strobe;
-                            c2_pulse.Text = pulse;
-                            c2_delay.Text = delay;
-
-                            break;
-                        case 4:
-                            c3_intensity.Text = intensity;
-                            c3_edge.Text = edge;
-                            c3_mode.Text = mode;
-                            c3_strobe.Text = strobe;
-                            c3_pulse.Text = pulse;
-                            c3_delay.Text = delay;
-                            break;
-
-                        case 6:
-                            c4_intensity.Text = intensity;
-                            c4_edge.Text = edge;
-                            c4_mode.Text = mode;
-                            c4_strobe.Text = strobe;
-                            c4_pulse.Text = pulse;
-                            c4_delay.Text = delay;
-                            break;
-
-                        case 7:
-                            c5_intensity.Text = intensity;
-                            c5_edge.Text = edge;
-                            c5_mode.Text = mode;
-                            c5_strobe.Text = strobe;
-                            c5_pulse.Text = pulse;
-                            c5_delay.Text = delay;
-                            break;
-
-                        case 8:
-                            c6_intensity.Text = intensity;
-                            c6_edge.Text = edge;
-                            c6_mode.Text = mode;
-                            c6_strobe.Text = strobe;
-                            c6_pulse.Text = pulse;
-                            c6_delay.Text = delay;
-                            break;
-
-                        case 10:
-                            c7_intensity.Text = intensity;
-                            c7_edge.Text = edge;
-                            c7_mode.Text = mode;
-                            c7_strobe.Text = strobe;
-                            c7_pulse.Text = pulse;
-                            c7_delay.Text = delay;
-                            break;
-
-                        case 11:
-                            c8_intensity.Text = intensity;
-                            c8_edge.Text = edge;
-                            c8_mode.Text = mode;
-                            c8_strobe.Text = strobe;
-                            c8_pulse.Text = pulse;
-                            c8_delay.Text = delay;
-                            break;
-
-                        case 12:
-                            c9_intensity.Text = intensity;
-                            c9_edge.Text = edge;
-                            c9_mode.Text = mode;
-                            c9_strobe.Text = strobe;
-                            c9_pulse.Text = pulse;
-                            c9_delay.Text = delay;
-                            break;
-
-                        case 14:
-                            c10_intensity.Text = intensity;
-                            c10_edge.Text = edge;
-                            c10_mode.Text = mode;
-                            c10_strobe.Text = strobe;
-                            c10_pulse.Text = pulse;
-                            c10_delay.Text = delay;
-                            break;
-
-                        case 15:
-                            c11_intensity.Text = intensity;
-                            c11_edge.Text = edge;
-                            c11_mode.Text = mode;
-                            c11_strobe.Text = strobe;
-                            c11_pulse.Text = pulse;
-                            c11_delay.Text = delay;
-                            break;
-
-                        case 16:
-                            c12_intensity.Text = intensity;
-                            c12_edge.Text = edge;
-                            c12_mode.Text = mode;
-                            c12_strobe.Text = strobe;
-                            c12_pulse.Text = pulse;
-                            c12_delay.Text = delay;
-                            break;
-
-                        case 18:
-                            c13_intensity.Text = intensity;
-                            c13_edge.Text = edge;
-                            c13_mode.Text = mode;
-                            c13_strobe.Text = strobe;
-                            c13_pulse.Text = pulse;
-                            c13_delay.Text = delay;
-                            break;
-
-                        case 19:
-                            c14_intensity.Text = intensity;
-                            c14_edge.Text = edge;
-                            c14_mode.Text = mode;
-                            c14_strobe.Text = strobe;
-                            c14_pulse.Text = pulse;
-                            c14_delay.Text = delay;
-                            break;
-
-                        case 20:
-                            c15_intensity.Text = intensity;
-                            c15_edge.Text = edge;
-                            c15_mode.Text = mode;
-                            c15_strobe.Text = strobe;
-                            c15_pulse.Text = pulse;
-                            c15_delay.Text = delay;
-                            break;
-
-                        case 22:
-                            c16_intensity.Text = intensity;
-                            c16_edge.Text = edge;
-                            c16_mode.Text = mode;
-                            c16_strobe.Text = strobe;
-                            c16_pulse.Text = pulse;
-                            c16_delay.Text = delay;
-                            break;
-                    }
-
                 }
+                switch (i)
+                {
+                    //group cases
+                    case 1:
+                        Console.WriteLine("THIS PART IS RUNNING HADBGFSHIAHFSHAJGFUJG");
+
+                        if (grouped == true)
+                        {
+                            g1_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            Console.WriteLine("THIS PART IS RUNNING LOL");
+                            g1_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 5:
+                        if (grouped == true)
+                        {
+                            g2_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            g2_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 9:
+                        if (grouped == true)
+                        {
+                            g3_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            g3_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 13:
+                        if (grouped == true)
+                        {
+                            g4_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            g4_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 17:
+                        if (grouped == true)
+                        {
+                            g5_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            g5_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    //light config cases
+                    case 2:
+                        if (intensity == "None")
+                        {
+                            c1_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c1_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c1_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c1_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c1_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c1_delay.Text = delay;
+                        }
+
+                        c1_edge.Text = edge;
+                        c1_mode.Text = mode;
+                        c1_strobe.Text = strobe;
+
+                        break;
+                    case 3:
+                        if (intensity == "None")
+                        {
+                            c2_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c2_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c2_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c2_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c2_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c2_delay.Text = delay;
+                        }
+
+                        c2_edge.Text = edge;
+                        c2_mode.Text = mode;
+                        c2_strobe.Text = strobe;
+
+                        break;
+                    case 4:
+                        if (intensity == "None")
+                        {
+                            c3_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c3_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c3_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c3_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c3_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c3_delay.Text = delay;
+                        }
+
+                        c3_edge.Text = edge;
+                        c3_mode.Text = mode;
+                        c3_strobe.Text = strobe;
+
+                        break;
+
+                    case 6:
+                        if (intensity == "None")
+                        {
+                            c4_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c4_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c4_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c4_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c4_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c4_delay.Text = delay;
+                        }
+
+                        c4_edge.Text = edge;
+                        c4_mode.Text = mode;
+                        c4_strobe.Text = strobe;
+
+                        break;
+
+                    case 7:
+                        if (intensity == "None")
+                        {
+                            c5_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c5_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c5_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c5_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c5_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c5_delay.Text = delay;
+                        }
+
+                        c5_edge.Text = edge;
+                        c5_mode.Text = mode;
+                        c5_strobe.Text = strobe;
+
+                        break;
+
+                    case 8:
+                        if (intensity == "None")
+                        {
+                            c6_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c6_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c6_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c6_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c6_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c6_delay.Text = delay;
+                        }
+
+                        c6_edge.Text = edge;
+                        c6_mode.Text = mode;
+                        c6_strobe.Text = strobe;
+
+                        break;
+
+                    case 10:
+                        if (intensity == "None")
+                        {
+                            c7_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c7_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c7_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c7_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c7_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c7_delay.Text = delay;
+                        }
+
+                        c7_edge.Text = edge;
+                        c7_mode.Text = mode;
+                        c7_strobe.Text = strobe;
+
+                        break;
+
+                    case 11:
+                        if (intensity == "None")
+                        {
+                            c8_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c8_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c8_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c8_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c8_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c8_delay.Text = delay;
+                        }
+
+                        c8_edge.Text = edge;
+                        c8_mode.Text = mode;
+                        c8_strobe.Text = strobe;
+
+                        break;
+
+                    case 12:
+                        if (intensity == "None")
+                        {
+                            c9_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c9_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c9_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c9_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c9_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c9_delay.Text = delay;
+                        }
+
+                        c9_edge.Text = edge;
+                        c9_mode.Text = mode;
+                        c9_strobe.Text = strobe;
+
+                        break;
+
+                    case 14:
+                        if (intensity == "None")
+                        {
+                            c10_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c10_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c10_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c10_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c10_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c10_delay.Text = delay;
+                        }
+
+                        c10_edge.Text = edge;
+                        c10_mode.Text = mode;
+                        c10_strobe.Text = strobe;
+
+                        break;
+
+                    case 15:
+                        if (intensity == "None")
+                        {
+                            c11_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c11_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c11_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c11_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c11_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c11_delay.Text = delay;
+                        }
+
+                        c11_edge.Text = edge;
+                        c11_mode.Text = mode;
+                        c11_strobe.Text = strobe;
+
+                        break;
+
+                    case 16:
+                        if (intensity == "None")
+                        {
+                            c12_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c12_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c12_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c12_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c12_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c12_delay.Text = delay;
+                        }
+
+                        c12_edge.Text = edge;
+                        c12_mode.Text = mode;
+                        c12_strobe.Text = strobe;
+
+                        break;
+
+                    case 18:
+                        if (intensity == "None")
+                        {
+                            c13_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c13_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c13_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c13_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c13_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c13_delay.Text = delay;
+                        }
+
+                        c13_edge.Text = edge;
+                        c13_mode.Text = mode;
+                        c13_strobe.Text = strobe;
+
+                        break;
+
+                    case 19:
+                        if (intensity == "None")
+                        {
+                            c14_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c14_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c14_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c14_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c14_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c14_delay.Text = delay;
+                        }
+
+                        c14_edge.Text = edge;
+                        c14_mode.Text = mode;
+                        c14_strobe.Text = strobe;
+
+                        break;
+
+                    case 20:
+                        if (intensity == "None")
+                        {
+                            c15_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c15_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c15_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c15_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c15_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c15_delay.Text = delay;
+                        }
+
+                        c15_edge.Text = edge;
+                        c15_mode.Text = mode;
+                        c15_strobe.Text = strobe;
+
+                        break;
+
+                    case 22:
+                        if (intensity == "None")
+                        {
+                            c16_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            c16_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            c16_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            c16_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            c16_delay.Text = "0";
+                        }
+                        else
+                        {
+                            c16_delay.Text = delay;
+                        }
+
+                        c16_edge.Text = edge;
+                        c16_mode.Text = mode;
+                        c16_strobe.Text = strobe;
+
+                        break;
+                }
+
+
             }
         }
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
-            foreach (string portName in SerialPort.GetPortNames())
+            button5.Enabled = false;
+            Thread retryConn = new Thread(restartConn);
+            retryConn.Start();
+        }
+
+         void restartConn()
+        {
+            bool status = false;
+            while (status == false)
             {
-                Console.WriteLine(portName);
-                portConn.PortName = portName;
-                portConn.Open();
+                status = checkIfUsbAlive();
+            }
 
-                portConn.Write("INIT COMMS");
-                Console.WriteLine("sent data");
-                Thread.Sleep(50);
+            reEnableRetryButton("filler");
+        }
 
-                string reply = portConn.ReadExisting();
-
-
-
-                Console.WriteLine(reply);
-                if (reply == "INIT COMMS")
-                {
-                    Console.WriteLine("port is open");
-                    comPort.Text = portName;
-                    portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
-
-                    break;
-                }
-                else
-                {
-                    portConn.Close();
-                    continue;
-                }
+        void reEnableRetryButton(string filler)
+        {
+            if (button5.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(reEnableRetryButton);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                button5.Enabled = true;
             }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void c16_intensity_TextChanged(object sender, EventArgs e)
+        {
+            if (checkIntensity(c16_intensity.Text))
+            {
+                int rgb_value = getRGB(c16_intensity.Text);
+                c16_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
+                c16_error.ForeColor = Color.White;
+                c16_error.Text = "Error: ";
+
+                c16_rgb_value = rgb_value;
+            }
+            else
+            {
+                c16_test.Enabled = false;
+                c16_status.BackColor = Color.Transparent;
+                c16_error.ForeColor = Color.Red;
+                c16_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
+            }
+        }
+
+        private void c16_edge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void c16_mode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void c16_strobe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void c16_pulse_TextChanged(object sender, EventArgs e)
+        {
+            c16_testStop = 0;
+            c16_test.Text = "Test";
+            if (checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
+            {
+                int pulse_value = Convert.ToInt32(c16_pulse.Text);
+                int delay_value = Convert.ToInt32(c16_delay.Text);
+
+                c16_test.Enabled = true;
+                c16_error.ForeColor = Color.White;
+                c16_error.Text = "Error: ";
+                c16_test.Enabled = true;
+
+                c16_pulse_value = pulse_value;
+                c16_delay_value = delay_value;
+
+            }
+            else
+            {
+                c16_test.Enabled = false;
+                c16_error.ForeColor = Color.Red;
+                c16_error.Text = "Error: Invalid/Missing value inputted for pulse/delay. Please use integers from 0 to 65,536.";
+                c16_test.Enabled = false;
+            }
+        }
+
+        private void c16_delay_TextChanged(object sender, EventArgs e)
+        {
+            c16_testStop = 0;
+            c16_test.Text = "Test";
+            if (checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
+            {
+                int pulse_value = Convert.ToInt32(c16_pulse.Text);
+                int delay_value = Convert.ToInt32(c16_delay.Text);
+
+                c16_test.Enabled = true;
+                c16_error.ForeColor = Color.White;
+                c16_error.Text = "Error: ";
+                c16_test.Enabled = true;
+
+                c16_pulse_value = pulse_value;
+                c16_delay_value = delay_value;
+
+            }
+            else
+            {
+                c16_test.Enabled = false;
+                c16_error.ForeColor = Color.Red;
+                c16_error.Text = "Error: Invalid/Missing value inputted for pulse/delay. Please use integers from 0 to 65,536.";
+                c16_test.Enabled = false;
+            }
+        }
+
+        private void c13_edge_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

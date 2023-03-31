@@ -16,6 +16,8 @@ namespace IlluminationController2
         string loadedConfig = "";
         string path = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs";
         public Form1 mainForm;
+        bool grouped;
+
 
         public openFile()
         {
@@ -29,7 +31,15 @@ namespace IlluminationController2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(fileSelect.Text == "")
+            string intensity = "";
+            string edge = "";
+            string mode = "";
+            string strobe = "";
+            string pulse = "";
+            string delay = "";
+
+
+            if (fileSelect.Text == "")
             {
                 MessageBox.Show("Pick a file");
                 return;
@@ -38,16 +48,28 @@ namespace IlluminationController2
             string pathWithFilename = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs\" + fileSelect.Text;
             loadedConfig = File.ReadAllText(pathWithFilename);
 
+            //there is a space at the beginning of the array
             string[] splitString = loadedConfig.Split('.');
 
 
             for (int i = 0; i < splitString.Length; i++)
             {
-                if (splitString[i][1] != '[')
+                if (splitString[i][1] == 'G')
                 {
-                    continue;
+                    string groupedOrUngroup = splitString[i].Substring(20, 7);
+                    Console.WriteLine(groupedOrUngroup);
+                    if (groupedOrUngroup == "GROUPED")
+                    {
+                        grouped = true;
+                    }
+                    else if (groupedOrUngroup == "UNGROUP")
+                    {
+
+                        grouped = false;
+                    }
                 }
-                else
+
+                else if (splitString[i][1] == '[')
                 {
                     int intensityIndexPos = splitString[i].IndexOf("Intensity") + 11;
                     int intensityNextCommaIndexPos = splitString[i].IndexOf(",", intensityIndexPos);
@@ -74,12 +96,12 @@ namespace IlluminationController2
                     int delayEndOfLineIndex = splitString[i].IndexOf(" ", delayIndexPos);
                     int delayLengthBetweenBothIndex = delayEndOfLineIndex - delayIndexPos;
 
-                    string intensity = splitString[i].Substring(intensityIndexPos, intensityLengthBetweenBothIndex);
-                    string edge = splitString[i].Substring(edgeIndexPos, edgeLengthBetweenBothIndex);
-                    string mode = splitString[i].Substring(modeIndexPos, modeLengthBetweenBothIndex);
-                    string strobe = splitString[i].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
-                    string pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
-                    string delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
+                    intensity = splitString[i].Substring(intensityIndexPos, intensityLengthBetweenBothIndex);
+                    edge = splitString[i].Substring(edgeIndexPos, edgeLengthBetweenBothIndex);
+                    mode = splitString[i].Substring(modeIndexPos, modeLengthBetweenBothIndex);
+                    strobe = splitString[i].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
+                    pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
+                    delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
 
 
                     Console.WriteLine(intensity);
@@ -88,154 +110,613 @@ namespace IlluminationController2
                     Console.WriteLine(strobe);
                     Console.WriteLine(pulse);
                     Console.WriteLine(delay);
-
-                    switch (i)
-                    {
-                        case 2:
-                            mainForm.c1_intensity.Text = intensity;
-                            mainForm.c1_edge.Text = edge;
-                            mainForm.c1_mode.Text = mode;
-                            mainForm.c1_strobe.Text = strobe;
-                            mainForm.c1_pulse.Text = pulse;
-                            mainForm.c1_delay.Text = delay;
-                            break;
-                        case 3:
-                            mainForm.c2_intensity.Text = intensity;
-                            mainForm.c2_edge.Text = edge;
-                            mainForm.c2_mode.Text = mode;
-                            mainForm.c2_strobe.Text = strobe;
-                            mainForm.c2_pulse.Text = pulse;
-                            mainForm.c2_delay.Text = delay;
-
-                            break;
-                        case 4:
-                            mainForm.c3_intensity.Text = intensity;
-                            mainForm.c3_edge.Text = edge;
-                            mainForm.c3_mode.Text = mode;
-                            mainForm.c3_strobe.Text = strobe;
-                            mainForm.c3_pulse.Text = pulse;
-                            mainForm.c3_delay.Text = delay;
-                            break;
-
-                        case 6:
-                            mainForm.c4_intensity.Text = intensity;
-                            mainForm.c4_edge.Text = edge;
-                            mainForm.c4_mode.Text = mode;
-                            mainForm.c4_strobe.Text = strobe;
-                            mainForm.c4_pulse.Text = pulse;
-                            mainForm.c4_delay.Text = delay;
-                            break;
-
-                        case 7:
-                            mainForm.c5_intensity.Text = intensity;
-                            mainForm.c5_edge.Text = edge;
-                            mainForm.c5_mode.Text = mode;
-                            mainForm.c5_strobe.Text = strobe;
-                            mainForm.c5_pulse.Text = pulse;
-                            mainForm.c5_delay.Text = delay;
-                            break;
-
-                        case 8:
-                            mainForm.c6_intensity.Text = intensity;
-                            mainForm.c6_edge.Text = edge;
-                            mainForm.c6_mode.Text = mode;
-                            mainForm.c6_strobe.Text = strobe;
-                            mainForm.c6_pulse.Text = pulse;
-                            mainForm.c6_delay.Text = delay;
-                            break;
-
-                        case 10:
-                            mainForm.c7_intensity.Text = intensity;
-                            mainForm.c7_edge.Text = edge;
-                            mainForm.c7_mode.Text = mode;
-                            mainForm.c7_strobe.Text = strobe;
-                            mainForm.c7_pulse.Text = pulse;
-                            mainForm.c7_delay.Text = delay;
-                            break;
-
-                        case 11:
-                            mainForm.c8_intensity.Text = intensity;
-                            mainForm.c8_edge.Text = edge;
-                            mainForm.c8_mode.Text = mode;
-                            mainForm.c8_strobe.Text = strobe;
-                            mainForm.c8_pulse.Text = pulse;
-                            mainForm.c8_delay.Text = delay;
-                            break;
-
-                        case 12:
-                            mainForm.c9_intensity.Text = intensity;
-                            mainForm.c9_edge.Text = edge;
-                            mainForm.c9_mode.Text = mode;
-                            mainForm.c9_strobe.Text = strobe;
-                            mainForm.c9_pulse.Text = pulse;
-                            mainForm.c9_delay.Text = delay;
-                            break;
-
-                        case 14:
-                            mainForm.c10_intensity.Text = intensity;
-                            mainForm.c10_edge.Text = edge;
-                            mainForm.c10_mode.Text = mode;
-                            mainForm.c10_strobe.Text = strobe;
-                            mainForm.c10_pulse.Text = pulse;
-                            mainForm.c10_delay.Text = delay;
-                            break;
-
-                        case 15:
-                            mainForm.c11_intensity.Text = intensity;
-                            mainForm.c11_edge.Text = edge;
-                            mainForm.c11_mode.Text = mode;
-                            mainForm.c11_strobe.Text = strobe;
-                            mainForm.c11_pulse.Text = pulse;
-                            mainForm.c11_delay.Text = delay;
-                            break;
-
-                        case 16:
-                            mainForm.c12_intensity.Text = intensity;
-                            mainForm.c12_edge.Text = edge;
-                            mainForm.c12_mode.Text = mode;
-                            mainForm.c12_strobe.Text = strobe;
-                            mainForm.c12_pulse.Text = pulse;
-                            mainForm.c12_delay.Text = delay;
-                            break;
-
-                        case 18:
-                            mainForm.c13_intensity.Text = intensity;
-                            mainForm.c13_edge.Text = edge;
-                            mainForm.c13_mode.Text = mode;
-                            mainForm.c13_strobe.Text = strobe;
-                            mainForm.c13_pulse.Text = pulse;
-                            mainForm.c13_delay.Text = delay;
-                            break;
-
-                        case 19:
-                            mainForm.c14_intensity.Text = intensity;
-                            mainForm.c14_edge.Text = edge;
-                            mainForm.c14_mode.Text = mode;
-                            mainForm.c14_strobe.Text = strobe;
-                            mainForm.c14_pulse.Text = pulse;
-                            mainForm.c14_delay.Text = delay;
-                            break;
-
-                        case 20:
-                            mainForm.c15_intensity.Text = intensity;
-                            mainForm.c15_edge.Text = edge;
-                            mainForm.c15_mode.Text = mode;
-                            mainForm.c15_strobe.Text = strobe;
-                            mainForm.c15_pulse.Text = pulse;
-                            mainForm.c15_delay.Text = delay;
-                            break;
-
-                        case 22:
-                            mainForm.c16_intensity.Text = intensity;
-                            mainForm.c16_edge.Text = edge;
-                            mainForm.c16_mode.Text = mode;
-                            mainForm.c16_strobe.Text = strobe;
-                            mainForm.c16_pulse.Text = pulse;
-                            mainForm.c16_delay.Text = delay;
-                            break;
-                    }
-
                 }
+                switch (i)
+                {
+                    //group cases
+                    case 1:
+                        Console.WriteLine("THIS PART IS RUNNING HADBGFSHIAHFSHAJGFUJG");
+
+                        if (grouped == true)
+                        {
+                            mainForm.g1_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            Console.WriteLine("THIS PART IS RUNNING LOL");
+                            mainForm.g1_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 5:
+                        if (grouped == true)
+                        {
+                            mainForm.g2_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            mainForm.g2_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 9:
+                        if (grouped == true)
+                        {
+                            mainForm.g3_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            mainForm.g3_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 13:
+                        if (grouped == true)
+                        {
+                            mainForm.g4_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            mainForm.g4_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    case 17:
+                        if (grouped == true)
+                        {
+                            mainForm.g5_setting.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            mainForm.g5_setting.SelectedIndex = 0;
+                        }
+                        break;
+
+                    //light config cases
+                    case 2:
+                        if(intensity == "None")
+                        {
+                            mainForm.c1_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c1_intensity.Text = intensity;
+                        }
+                            
+                        if (pulse == "None")
+                        {
+                            mainForm.c1_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c1_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c1_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c1_delay.Text = delay;
+                        }
+
+                        mainForm.c1_edge.Text = edge;
+                        mainForm.c1_mode.Text = mode;
+                        mainForm.c1_strobe.Text = strobe;
+
+                        break;
+                    case 3:
+                        if (intensity == "None")
+                        {
+                            mainForm.c2_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c2_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c2_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c2_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c2_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c2_delay.Text = delay;
+                        }
+
+                        mainForm.c2_edge.Text = edge;
+                        mainForm.c2_mode.Text = mode;
+                        mainForm.c2_strobe.Text = strobe;
+
+                        break;
+                    case 4:
+                        if (intensity == "None")
+                        {
+                            mainForm.c3_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c3_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c3_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c3_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c3_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c3_delay.Text = delay;
+                        }
+
+                        mainForm.c3_edge.Text = edge;
+                        mainForm.c3_mode.Text = mode;
+                        mainForm.c3_strobe.Text = strobe;
+
+                        break;
+
+                    case 6:
+                        if (intensity == "None")
+                        {
+                            mainForm.c4_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c4_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c4_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c4_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c4_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c4_delay.Text = delay;
+                        }
+
+                        mainForm.c4_edge.Text = edge;
+                        mainForm.c4_mode.Text = mode;
+                        mainForm.c4_strobe.Text = strobe;
+
+                        break;
+
+                    case 7:
+                        if (intensity == "None")
+                        {
+                            mainForm.c5_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c5_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c5_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c5_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c5_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c5_delay.Text = delay;
+                        }
+
+                        mainForm.c5_edge.Text = edge;
+                        mainForm.c5_mode.Text = mode;
+                        mainForm.c5_strobe.Text = strobe;
+
+                        break;
+
+                    case 8:
+                        if (intensity == "None")
+                        {
+                            mainForm.c6_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c6_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c6_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c6_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c6_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c6_delay.Text = delay;
+                        }
+
+                        mainForm.c6_edge.Text = edge;
+                        mainForm.c6_mode.Text = mode;
+                        mainForm.c6_strobe.Text = strobe;
+
+                        break;
+
+                    case 10:
+                        if (intensity == "None")
+                        {
+                            mainForm.c7_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c7_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c7_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c7_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c7_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c7_delay.Text = delay;
+                        }
+
+                        mainForm.c7_edge.Text = edge;
+                        mainForm.c7_mode.Text = mode;
+                        mainForm.c7_strobe.Text = strobe;
+
+                        break;
+
+                    case 11:
+                        if (intensity == "None")
+                        {
+                            mainForm.c8_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c8_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c8_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c8_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c8_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c8_delay.Text = delay;
+                        }
+
+                        mainForm.c8_edge.Text = edge;
+                        mainForm.c8_mode.Text = mode;
+                        mainForm.c8_strobe.Text = strobe;
+
+                        break;
+
+                    case 12:
+                        if (intensity == "None")
+                        {
+                            mainForm.c9_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c9_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c9_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c9_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c9_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c9_delay.Text = delay;
+                        }
+
+                        mainForm.c9_edge.Text = edge;
+                        mainForm.c9_mode.Text = mode;
+                        mainForm.c9_strobe.Text = strobe;
+
+                        break;
+
+                    case 14:
+                        if (intensity == "None")
+                        {
+                            mainForm.c10_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c10_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c10_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c10_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c10_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c10_delay.Text = delay;
+                        }
+
+                        mainForm.c10_edge.Text = edge;
+                        mainForm.c10_mode.Text = mode;
+                        mainForm.c10_strobe.Text = strobe;
+
+                        break;
+
+                    case 15:
+                        if (intensity == "None")
+                        {
+                            mainForm.c11_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c11_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c11_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c11_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c11_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c11_delay.Text = delay;
+                        }
+
+                        mainForm.c11_edge.Text = edge;
+                        mainForm.c11_mode.Text = mode;
+                        mainForm.c11_strobe.Text = strobe;
+
+                        break;
+
+                    case 16:
+                        if (intensity == "None")
+                        {
+                            mainForm.c12_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c12_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c12_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c12_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c12_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c12_delay.Text = delay;
+                        }
+
+                        mainForm.c12_edge.Text = edge;
+                        mainForm.c12_mode.Text = mode;
+                        mainForm.c12_strobe.Text = strobe;
+
+                        break;
+
+                    case 18:
+                        if (intensity == "None")
+                        {
+                            mainForm.c13_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c13_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c13_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c13_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c13_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c13_delay.Text = delay;
+                        }
+
+                        mainForm.c13_edge.Text = edge;
+                        mainForm.c13_mode.Text = mode;
+                        mainForm.c13_strobe.Text = strobe;
+
+                        break;
+
+                    case 19:
+                        if (intensity == "None")
+                        {
+                            mainForm.c14_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c14_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c14_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c14_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c14_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c14_delay.Text = delay;
+                        }
+
+                        mainForm.c14_edge.Text = edge;
+                        mainForm.c14_mode.Text = mode;
+                        mainForm.c14_strobe.Text = strobe;
+
+                        break;
+
+                    case 20:
+                        if (intensity == "None")
+                        {
+                            mainForm.c15_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c15_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c15_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c15_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c15_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c15_delay.Text = delay;
+                        }
+
+                        mainForm.c15_edge.Text = edge;
+                        mainForm.c15_mode.Text = mode;
+                        mainForm.c15_strobe.Text = strobe;
+
+                        break;
+
+                    case 22:
+                        if (intensity == "None")
+                        {
+                            mainForm.c16_intensity.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c16_intensity.Text = intensity;
+                        }
+
+                        if (pulse == "None")
+                        {
+                            mainForm.c16_pulse.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c16_pulse.Text = pulse;
+                        }
+
+                        if (delay == "None")
+                        {
+                            mainForm.c16_delay.Text = "0";
+                        }
+                        else
+                        {
+                            mainForm.c16_delay.Text = delay;
+                        }
+
+                        mainForm.c16_edge.Text = edge;
+                        mainForm.c16_mode.Text = mode;
+                        mainForm.c16_strobe.Text = strobe;
+
+                        break;
+                }
+
+                
             }
 
             MessageBox.Show("Config has been loaded");

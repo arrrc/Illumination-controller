@@ -33,3 +33,6 @@ C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.pdb
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.openFile.resources
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.saveFile.resources
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug\System.IO.Ports.dll
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug\System.IO.Ports.xml
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.csproj.CopyComplete
