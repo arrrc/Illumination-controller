@@ -52,7 +52,7 @@
             // 
             // submitFile
             // 
-            this.submitFile.Location = new System.Drawing.Point(131, 92);
+            this.submitFile.Location = new System.Drawing.Point(133, 119);
             this.submitFile.Name = "submitFile";
             this.submitFile.Size = new System.Drawing.Size(75, 23);
             this.submitFile.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 450);
+            this.ClientSize = new System.Drawing.Size(347, 154);
             this.Controls.Add(this.submitFile);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);

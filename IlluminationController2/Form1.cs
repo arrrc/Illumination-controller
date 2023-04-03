@@ -3776,7 +3776,24 @@ namespace IlluminationController2
 
         private void c16_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            c16_testStop = 0;
+            c16_test.Text = "Test";
+            if (c16_mode.SelectedIndex == 1)
+            {
+                // Strobe is selected
+                c16_strobe.Enabled = true;
+                c16_edge.Enabled = true;
+                c16_pulse.Enabled = true;
+                c16_delay.Enabled = true;
+            }
+            else
+            {
+                //Static is selected
+                c16_strobe.Enabled = false;
+                c16_edge.Enabled = false;
+                c16_pulse.Enabled = false;
+                c16_delay.Enabled = false;
+            }
         }
 
         private void c16_strobe_SelectedIndexChanged(object sender, EventArgs e)
