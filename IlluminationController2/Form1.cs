@@ -521,7 +521,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -591,7 +594,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -628,7 +634,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -734,7 +743,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -770,7 +782,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -835,7 +850,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -903,7 +921,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -939,7 +960,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -998,7 +1022,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -1708,7 +1735,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -1767,7 +1797,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -1804,7 +1837,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -1853,7 +1889,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -1912,7 +1951,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -1948,7 +1990,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -1997,7 +2042,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2056,7 +2104,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2093,7 +2144,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2140,7 +2194,10 @@ namespace IlluminationController2
             }
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2199,7 +2256,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2235,7 +2295,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2284,7 +2347,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2343,7 +2409,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2379,7 +2448,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2428,7 +2500,10 @@ namespace IlluminationController2
 
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2487,7 +2562,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2524,7 +2602,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2571,7 +2652,10 @@ namespace IlluminationController2
             }
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2630,7 +2714,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2667,7 +2754,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2715,7 +2805,10 @@ namespace IlluminationController2
             }
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2774,7 +2867,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2811,7 +2907,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2859,7 +2958,10 @@ namespace IlluminationController2
             }
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2918,7 +3020,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -2955,7 +3060,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3002,7 +3110,10 @@ namespace IlluminationController2
             }
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3061,7 +3172,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3098,7 +3212,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3146,7 +3263,10 @@ namespace IlluminationController2
             }
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3205,7 +3325,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3242,7 +3365,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3290,7 +3416,10 @@ namespace IlluminationController2
             }
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3349,7 +3478,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -3386,7 +3518,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -4202,7 +4337,10 @@ namespace IlluminationController2
             
             if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -4270,7 +4408,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -4306,7 +4447,10 @@ namespace IlluminationController2
 
             if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
             {
-                uploadConfig.Enabled = true;
+                if (lightSelect.Text != "")
+                {
+                    uploadConfig.Enabled = true;
+                }
             }
             else
             {
@@ -4321,6 +4465,27 @@ namespace IlluminationController2
 
         private void c13_strobe_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            c1_intensity.Text = "0";
+            c2_intensity.Text = "0";
+            c3_intensity.Text = "0";
+            c4_intensity.Text = "0";
+            c5_intensity.Text = "0";
+            c6_intensity.Text = "0";
+            c7_intensity.Text = "0";
+            c8_intensity.Text = "0";
+            c9_intensity.Text = "0";
+            c10_intensity.Text = "0";
+            c11_intensity.Text = "0";
+            c12_intensity.Text = "0";
+            c13_intensity.Text = "0";
+            c14_intensity.Text = "0";
+            c15_intensity.Text = "0";
+            c16_intensity.Text = "0";
 
         }
     }

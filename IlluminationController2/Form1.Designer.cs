@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.switchConfig = new System.Windows.Forms.Button();
             this.updateConfig = new System.Windows.Forms.Button();
             this.uploadConfig = new System.Windows.Forms.Button();
@@ -402,7 +401,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.switchConfig);
             this.panel1.Controls.Add(this.updateConfig);
             this.panel1.Controls.Add(this.uploadConfig);
@@ -412,16 +410,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 828);
             this.panel1.TabIndex = 0;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(7, 787);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(144, 29);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Settings";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // switchConfig
             // 
@@ -4525,6 +4513,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Clear Intensity";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -4797,7 +4786,6 @@
         private System.Windows.Forms.ComboBox lightSelect;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button switchConfig;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button updateConfig;
