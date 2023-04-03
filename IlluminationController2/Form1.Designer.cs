@@ -1234,9 +1234,9 @@
             this.c3_title.AutoSize = true;
             this.c3_title.Location = new System.Drawing.Point(3, 3);
             this.c3_title.Name = "c3_title";
-            this.c3_title.Size = new System.Drawing.Size(82, 13);
+            this.c3_title.Size = new System.Drawing.Size(85, 13);
             this.c3_title.TabIndex = 0;
-            this.c3_title.Text = "Channel 3(Blue)";
+            this.c3_title.Text = "Channel 3 [Blue]";
             this.c3_title.Click += new System.EventHandler(this.c3_title_Click);
             // 
             // c1_panel
@@ -1451,9 +1451,9 @@
             this.c1_title.AutoSize = true;
             this.c1_title.Location = new System.Drawing.Point(3, 3);
             this.c1_title.Name = "c1_title";
-            this.c1_title.Size = new System.Drawing.Size(81, 13);
+            this.c1_title.Size = new System.Drawing.Size(84, 13);
             this.c1_title.TabIndex = 0;
-            this.c1_title.Text = "Channel 1(Red)";
+            this.c1_title.Text = "Channel 1 [Red]";
             this.c1_title.Click += new System.EventHandler(this.c1_title_Click);
             // 
             // c2_panel
@@ -1668,9 +1668,9 @@
             this.c2_title.AutoSize = true;
             this.c2_title.Location = new System.Drawing.Point(3, 3);
             this.c2_title.Name = "c2_title";
-            this.c2_title.Size = new System.Drawing.Size(90, 13);
+            this.c2_title.Size = new System.Drawing.Size(93, 13);
             this.c2_title.TabIndex = 0;
-            this.c2_title.Text = "Channel 2(Green)";
+            this.c2_title.Text = "Channel 2 [Green]";
             this.c2_title.Click += new System.EventHandler(this.c2_title_Click);
             // 
             // tabPage2
