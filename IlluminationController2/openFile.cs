@@ -14,7 +14,7 @@ namespace IlluminationController2
     public partial class openFile : Form
     {
         string loadedConfig = "";
-        string path = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs";
+        string path = @"..\..\savedConfigs";
         public Form1 mainForm;
         bool grouped;
 
@@ -45,7 +45,7 @@ namespace IlluminationController2
                 return;
             }
 
-            string pathWithFilename = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs\" + fileSelect.Text;
+            string pathWithFilename = @"..\..\savedConfigs\" + fileSelect.Text;
             loadedConfig = File.ReadAllText(pathWithFilename);
 
             //there is a space at the beginning of the array
@@ -736,7 +736,8 @@ namespace IlluminationController2
 
             foreach (string file in fileList)
             {
-                string fileName = file.Substring(93);
+                Console.WriteLine(file);
+                string fileName = file.Substring(19);
                 if (fileName == "Board 1.txt" || fileName == "Board 2.txt" || fileName == "Board 3.txt" || fileName == "Board 4.txt" || fileName == "Board 5.txt" || fileName == "Board 6.txt" || fileName == "Board 7.txt" || fileName == "Board 8.txt")
                 {
                     continue;

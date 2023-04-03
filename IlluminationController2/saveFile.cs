@@ -44,7 +44,7 @@ namespace IlluminationController2
 
         private void checkFileListAndSave()
         {
-            string path = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs";
+            string path = @"..\..\savedConfigs";
             string[] fileList = Directory.GetFiles(path);
 
             foreach (string file in fileList)

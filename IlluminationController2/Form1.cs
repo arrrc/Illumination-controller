@@ -1356,7 +1356,7 @@ namespace IlluminationController2
                 generateConfig();
                 string board = sendToHardware.Substring(13, 7);
 
-                string path = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs";
+                string path = @"..\..\savedConfigs";
 
                 path += "\\" + board + ".txt";
 
@@ -3037,8 +3037,9 @@ namespace IlluminationController2
             string pulse = "";
             string delay = "";
 
-            string pathWithFilename = @"C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\savedConfigs\" + lightSelect.Text + ".txt";
-            string loadedConfig = File.ReadAllText(pathWithFilename);
+            string pathWithFileName = @"..\..\savedConfigs\" + lightSelect.Text + ".txt";
+
+            string loadedConfig = File.ReadAllText(pathWithFileName);
 
 
             string[] splitString = loadedConfig.Split('.');
@@ -3856,6 +3857,11 @@ namespace IlluminationController2
         }
 
         private void c13_edge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void c13_strobe_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

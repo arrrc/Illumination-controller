@@ -35,6 +35,8 @@
             this.uploadConfig = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comPort = new System.Windows.Forms.TextBox();
+            this.portError = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
@@ -363,8 +365,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.portError = new System.Windows.Forms.Label();
-            this.comPort = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -488,6 +488,22 @@
             this.panel2.Size = new System.Drawing.Size(197, 828);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // comPort
+            // 
+            this.comPort.Enabled = false;
+            this.comPort.Location = new System.Drawing.Point(4, 52);
+            this.comPort.Name = "comPort";
+            this.comPort.Size = new System.Drawing.Size(80, 20);
+            this.comPort.TabIndex = 31;
+            // 
+            // portError
+            // 
+            this.portError.AutoSize = true;
+            this.portError.Location = new System.Drawing.Point(4, 155);
+            this.portError.Name = "portError";
+            this.portError.Size = new System.Drawing.Size(0, 13);
+            this.portError.TabIndex = 30;
             // 
             // panel5
             // 
@@ -3932,6 +3948,7 @@
             this.c13_strobe.Size = new System.Drawing.Size(69, 21);
             this.c13_strobe.TabIndex = 12;
             this.c13_strobe.Text = "None";
+            this.c13_strobe.SelectedIndexChanged += new System.EventHandler(this.c13_strobe_SelectedIndexChanged);
             // 
             // label110
             // 
@@ -4518,22 +4535,6 @@
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "LED Settings";
-            // 
-            // portError
-            // 
-            this.portError.AutoSize = true;
-            this.portError.Location = new System.Drawing.Point(4, 155);
-            this.portError.Name = "portError";
-            this.portError.Size = new System.Drawing.Size(0, 13);
-            this.portError.TabIndex = 30;
-            // 
-            // comPort
-            // 
-            this.comPort.Enabled = false;
-            this.comPort.Location = new System.Drawing.Point(4, 52);
-            this.comPort.Name = "comPort";
-            this.comPort.Size = new System.Drawing.Size(80, 20);
-            this.comPort.TabIndex = 31;
             // 
             // Form1
             // 
