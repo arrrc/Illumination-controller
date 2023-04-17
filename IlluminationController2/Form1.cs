@@ -1493,6 +1493,7 @@ namespace IlluminationController2
                 
                 Console.WriteLine(sendToHardware);
 
+                uploadConfig.Enabled = false;
                 Thread sendData = new Thread(sendDataToHardware);
                 sendData.Start();
             }
@@ -1515,6 +1516,8 @@ namespace IlluminationController2
             {
                 portConn.Write(sendToHardware);
 
+                enableUploadBtn("filler");
+                   
             }
             catch (Exception ex)
             {
@@ -1523,6 +1526,19 @@ namespace IlluminationController2
             
 
             Thread.CurrentThread.Abort();
+        }
+
+        void enableUploadBtn(string filler)
+        {
+            if (uploadConfig.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(enableUploadBtn);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                uploadConfig.Enabled = true;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
