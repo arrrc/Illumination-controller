@@ -242,7 +242,6 @@ namespace Controller_Design_2
 
         private void MainApp_Load(object sender, EventArgs e)
         {
-            //ControlExtension.Draggable(MainApp, true);
             portConn = new SerialPort();
             portConn.BaudRate = 9600;
             int counter = 0;
@@ -281,10 +280,17 @@ namespace Controller_Design_2
                         portConn.Close();
                         continue;
                     }
-
                 }
-                counter ++;
+                counter++;
             }
+
+            if (counter == 5)
+            {
+                portError.Visible = true;
+                portError.Text = "USB not plugged in, plug it in\nand hit retry connection";
+                portError.ForeColor = System.Drawing.Color.Red;
+            }
+
             // Declare a ManagementEventWatcher object and set up the event handler
             ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
             deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
@@ -634,7 +640,17 @@ namespace Controller_Design_2
 
         private void closePort_Click(object sender, EventArgs e)
         {
-
+            if (portConn.IsOpen)
+            {
+                portConn.Close();
+                closePort.Enabled = false;
+                openPort.Enabled = true;
+                uploadFile.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Port is already closed");
+            }
         }
 
         private void retryConn_Click(object sender, EventArgs e)
@@ -671,6 +687,37 @@ namespace Controller_Design_2
         private void portError_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+    
+
+        private void c1_light_loop()
+        {
+            
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void c2_light_loop()
+        {
+            
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void c3_light_loop()
+        {
+            
         }
     }
 }

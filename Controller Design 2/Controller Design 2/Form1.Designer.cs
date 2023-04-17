@@ -88,6 +88,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.retryConn = new Guna.UI2.WinForms.Guna2Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.portError = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.COMport = new Guna.UI2.WinForms.Guna2TextBox();
             this.selectBoard = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -104,7 +105,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.portError = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -213,6 +213,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(52, 26);
             this.guna2Button3.TabIndex = 51;
             this.guna2Button3.Text = "Test";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2CircleButton3
             // 
@@ -264,6 +265,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(52, 26);
             this.guna2Button2.TabIndex = 48;
             this.guna2Button2.Text = "Test";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2CircleButton1
             // 
@@ -298,6 +300,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(52, 26);
             this.guna2Button1.TabIndex = 46;
             this.guna2Button1.Text = "Test";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // clearStrobe
             // 
@@ -1063,6 +1066,16 @@
             this.panel7.Size = new System.Drawing.Size(215, 263);
             this.panel7.TabIndex = 1;
             // 
+            // portError
+            // 
+            this.portError.BackColor = System.Drawing.Color.Transparent;
+            this.portError.Location = new System.Drawing.Point(23, 214);
+            this.portError.Name = "portError";
+            this.portError.Size = new System.Drawing.Size(92, 15);
+            this.portError.TabIndex = 10;
+            this.portError.Text = "guna2HtmlLabel20";
+            this.portError.Click += new System.EventHandler(this.portError_Click);
+            // 
             // COMport
             // 
             this.COMport.BorderColor = System.Drawing.Color.Black;
@@ -1291,16 +1304,6 @@
             this.CloseButton.TabIndex = 0;
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
-            // portError
-            // 
-            this.portError.BackColor = System.Drawing.Color.Transparent;
-            this.portError.Location = new System.Drawing.Point(23, 214);
-            this.portError.Name = "portError";
-            this.portError.Size = new System.Drawing.Size(92, 15);
-            this.portError.TabIndex = 10;
-            this.portError.Text = "guna2HtmlLabel20";
-            this.portError.Click += new System.EventHandler(this.portError_Click);
             // 
             // MainApp
             // 
