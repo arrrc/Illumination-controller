@@ -12,6 +12,7 @@ using System.IO.Ports;
 using System.IO;
 using System.Windows.Forms.VisualStyles;
 using System.Management;
+using System.Diagnostics;
 //using System.Text.Json;
 //using System.Text.Json.Serialization;
 
@@ -1206,8 +1207,9 @@ namespace IlluminationController2
         {
             portConn = new SerialPort();
             portConn.BaudRate = 9600;
+            int counter = 0;
 
-            while (comPort.Text == "")
+            while (comPort.Text == "" && counter < 5)
             {
                 foreach (string portName in SerialPort.GetPortNames())
                 {
@@ -1242,7 +1244,16 @@ namespace IlluminationController2
                         continue;
                     }
                 }
+                counter++;
             }
+
+            if(counter == 5)
+            {
+                label101.Visible = true;
+                label101.Text = "USB not plugged in, plug it in\nand hit retry connection";
+                label101.ForeColor = System.Drawing.Color.Red;
+            }
+
             // Declare a ManagementEventWatcher object and set up the event handler
             ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
             deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
@@ -1282,7 +1293,7 @@ namespace IlluminationController2
                 if (data == "false")
                 {
                     portError.ForeColor = Color.Red;
-                    portError.Text = "USB has been unplugged, click retry connection to connect to the board";
+                    portError.Text = "USB has been unplugged, click\nretry connection to connect to the board";
                     comPort.Text = "";
                     closeConn.Enabled = false;
                 }
@@ -3564,7 +3575,6 @@ namespace IlluminationController2
             }
             else
             {
-                uploadConfig.Enabled = true;
                 loadLatestBoardConfig();
             }
         }
@@ -3660,6 +3670,10 @@ namespace IlluminationController2
                     pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
                     delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
 
+                    if (mode == "None")
+                    {
+                        mode = "Static";
+                    }
 
                     Console.WriteLine(intensity);
                     Console.WriteLine(edge);
@@ -4286,7 +4300,7 @@ namespace IlluminationController2
         }
 
          void restartConn()
-        {
+         {
             bool status = false;
             while (status == false)
             {
@@ -4294,7 +4308,7 @@ namespace IlluminationController2
             }
 
             reEnableRetryButton("filler");
-        }
+         }
 
         void reEnableRetryButton(string filler)
         {
@@ -4306,6 +4320,7 @@ namespace IlluminationController2
             else
             {
                 button5.Enabled = true;
+                label101.Visible = false;
             }
         }
 

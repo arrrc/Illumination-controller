@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.IO.Ports;
+using System.IO;
+using System.Windows.Forms.VisualStyles;
+using System.Management;
 
 namespace Controller_Design_2
 {
@@ -100,6 +105,17 @@ namespace Controller_Design_2
         bool c131415_isCurrent = false;
         bool c160000_isCurrent = false;
 
+        static SerialPort portConn;
+        public string sendToHardware = "";
+        string dataReceived = "";
+        bool didDataReceiveThreadExit = false;
+        int numTimesDataSent = 0;
+        List<string> config = new List<string>();
+        int noTimesRemoveEventFired = 0;
+
+        List<string> splitData = new List<string>();
+
+        delegate void SetTextCallback(string text);
 
         // Global Functions
         public bool checkIntensity(string intensity)
@@ -227,6 +243,182 @@ namespace Controller_Design_2
         private void MainApp_Load(object sender, EventArgs e)
         {
             //ControlExtension.Draggable(MainApp, true);
+            portConn = new SerialPort();
+            portConn.BaudRate = 9600;
+            int counter = 0;
+
+            while (COMport.Text == "" && counter < 5)
+            {
+                foreach (string portName in SerialPort.GetPortNames())
+                {
+                    Console.WriteLine(portName);
+                    portConn.PortName = portName;
+                    portConn.Open();
+                    portConn.Write("test");
+                    portConn.Write("test");
+                    Thread.Sleep(1000);
+                    string test = portConn.ReadExisting();
+                    Console.WriteLine(test);
+
+                    portConn.Write("INIT COMMS");
+                    Console.WriteLine("sent data");
+
+
+                    Thread.Sleep(1000);
+                    string reply = portConn.ReadExisting();
+
+
+                    if (reply == "INIT COMMS")
+                    {
+                        Console.WriteLine("port is open");
+                        COMport.Text = portName;
+                        portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
+                        break;
+                    }
+                    else
+                    {
+                        portConn.Close();
+                        continue;
+                    }
+
+                }
+                counter ++;
+            }
+            // Declare a ManagementEventWatcher object and set up the event handler
+            ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+            deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+
+            // Set up the query for USB device removal
+            WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
+
+
+            // Start listening for the USB device removal event
+            deviceRemoveWatcher.Query = removalQuery;
+
+            deviceRemoveWatcher.Start();
+        }
+
+        private void DeviceRemovedEvent(object sender, EventArrivedEventArgs e)
+        {
+            bool checkUSB = checkIfUsbAlive();
+            if (checkUSB == false)
+            {
+                changePortErrMsg("false");
+            }
+
+            return;
+        }
+
+        void changePortErrMsg(string data)
+        {
+            if (portError.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(changePortErrMsg);
+                this.Invoke(d, new object[] { data });
+            }
+            else
+            {
+                if (data == "false")
+                {
+                    portError.ForeColor = Color.Red;
+                    portError.Text = "USB has been unplugged, click retry connection to connect to the board";
+                    COMport.Text = "";
+                    closePort.Enabled = false;
+                }
+                else
+                {
+                    portError.Text = "";
+                    closePort.Enabled = true;
+                }
+            }
+        }
+
+        bool checkIfUsbAlive()
+        {
+            foreach (string portName in SerialPort.GetPortNames())
+            {
+                portConn.Close();
+
+                Console.WriteLine(portName);
+                portConn.PortName = portName;
+                try
+                {
+                    portConn.Open();
+                }
+                catch
+                {
+                    continue;
+                }
+                portConn.Write("INIT COMMS");
+                Console.WriteLine("sent data");
+                Thread.Sleep(50);
+
+                string reply = portConn.ReadExisting();
+
+
+
+                Console.WriteLine(reply);
+                if (reply == "INIT COMMS")
+                {
+                    updateComPortTextbox(portName);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        void updateComPortTextbox(string port)
+        {
+            if (COMport.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(updateComPortTextbox);
+                this.Invoke(d, new object[] { port });
+            }
+            else
+            {
+                COMport.Text = port;
+                portError.Text = "";
+            }
+        }
+
+        void receiveDataHandler(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                Thread.Sleep(3000);
+                dataReceived = portConn.ReadExisting();
+                Console.WriteLine(dataReceived);
+                didDataReceiveThreadExit = true;
+                updateConsole(dataReceived);
+            }
+            catch
+            {
+
+            }
+        }
+
+        void updateConsole(string consoleData)
+        {
+            if (consoleDisplay.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(updateConsole);
+                this.Invoke(d, new object[] { consoleData });
+            }
+            else
+            {
+                splitData.Clear();
+
+
+                splitData = consoleData.Split('.').ToList();
+                //Console.WriteLine(consoleData);
+
+                foreach (string s in splitData)
+                {
+                    //Console.WriteLine(s);
+                    consoleDisplay.Items.Add(s);
+                }
+            }
         }
 
         private void MainApp_MouseDown(object sender, MouseEventArgs e)
@@ -253,15 +445,13 @@ namespace Controller_Design_2
         {
             if (chooseGrp.SelectedIndex == 0)
             {
-                led1_colour.FillColor = Color.Red;
-                led2_colour.FillColor = Color.Lime;
-                led3_colour.FillColor = Color.Blue;
+                guna2HtmlLabel24.Visible = false;
+                strobeChannel.Visible = false;
             }
             else
             {
-                led1_colour.FillColor = Color.White;
-                led2_colour.FillColor = Color.White;
-                led3_colour.FillColor = Color.White;
+                guna2HtmlLabel24.Visible = true;
+                strobeChannel.Visible = true;
             }
         }
 
@@ -407,6 +597,80 @@ namespace Controller_Design_2
                 led1_channel.Text = "Channel 16";
                 
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void openPort_Click(object sender, EventArgs e)
+        {
+            if (COMport.Text == "")
+            {
+                MessageBox.Show("No device plugged in");
+            }
+           
+            else
+            {
+                portConn.Open();
+
+
+                
+                if (selectBoard.Text == "")
+                {
+                    closePort.Enabled = true;
+                    openPort.Enabled = false;
+                }
+                else
+                {
+                    closePort.Enabled = true;
+                    openPort.Enabled = false;
+                    uploadFile.Enabled = true;
+                }
+
+            }
+        }
+
+        private void closePort_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void retryConn_Click(object sender, EventArgs e)
+        {
+            retryConn.Enabled = false;
+            Thread retryConnThread = new Thread(restartConn);
+            retryConnThread.Start();
+        }
+
+        void restartConn()
+        {
+            bool status = false;
+            while (status == false)
+            {
+                status = checkIfUsbAlive();
+            }
+
+            reEnableRetryButton("filler");
+        }
+
+        void reEnableRetryButton(string filler)
+        {
+            if (retryConn.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(reEnableRetryButton);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                retryConn.Enabled = true;
+            }
+        }
+
+        private void portError_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
