@@ -13,3 +13,5 @@ C:\Users\WZS20\Desktop\Other Designs\Controller Design 2\Controller Design 2\obj
 C:\Users\WZS20\Desktop\Other Designs\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.pdb
 C:\Users\WZS20\Desktop\Other Designs\Controller Design 2\Controller Design 2\bin\Debug\Control.Draggable.dll
 C:\Users\WZS20\Desktop\Other Designs\Controller Design 2\Controller Design 2\bin\Debug\DragAssembly.dll
+C:\Users\WZS20\Desktop\Other Designs\Controller Design 2\Controller Design 2\obj\Debug\Controller_Design_2.OpenFile.resources
+C:\Users\WZS20\Desktop\Other Designs\Controller Design 2\Controller Design 2\obj\Debug\Controller_Design_2.SaveFile.resources

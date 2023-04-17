@@ -117,44 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="uploadFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAG1JREFUSEtj
-        GFkgKiqqHIShXOqCmJiYhujo6P8gDGJDhakDkA2nuiXYDIdhii3BZzgMk20JMYbDMMU+AQF0Q6HC1AOj
-        FhAEoxYQBDS3AJiZDiNZcBAqPAqoCJDClyoYaiwCYFNECYYaO+QBAwMAVHXs/G06YCQAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="updateFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAitJREFUSEvN
-        lc1LVFEYxsckFyWaBS2iLHRROz9CWrkIov9gmq87w7hwQhE/wvaji3ZCC4sipT+gbVCrFgmCqxBd5AdF
-        iiIVhgWCoOXvvT7XrteZcWaaRQ88nPN+Pe+595x7bui/QSaTOR2PxxvC4XCtXP+OZDJ5K5FIPHEcZxZ+
-        Zb4Jf8CPNHthcaWWBgQuw9cSvh+NRq8o5CKVSjXi76PJAnnviF9T6GRQ0AFXKe7JZrOn5M4Ji5PbC9fh
-        Xbnzg1W1kPiFsV2uosATtFG3Rl2nXMfBJp4haZ6V35arJJg49Z/Yl7NmM+92Ax4QHiZpQmZZQHQcjqDV
-        yrgkdyjE0au27pFIpFmuomErZmFd1NfZYWC0VzVhC1aKu/qbBKZllgQ1eE79BuNTuMx8m5N2QSnu+7Mj
-        NyazLFDfgM4DNZiU+wAERy0os/Kg4yOa9MusPBDPwMcyKw/dOe9lloR0On2OxTUF6X0PHqposBiLxW7I
-        LgoIjVH3Jw932dcBpbon6SHOo7tfAHw75wOCubildLegBsccq7ojV0GQdzUg5uckXLW50g/AU9hlt2J7
-        IldeFGjwkphdFT/NVvpf0MQurXWShgpd174Gv5mnGT9QOyX/Z8WONzDoTnlLwbI1YryukKHKfjC+BsZX
-        PPVF/JeYz/j8uRt4QLidpGdwCe5A+2V+8630UAjb/m5v/D6jpE6G99OXaYeiHoG9oGCA35VeHhAYhL98
-        gkfEHce5tw/Q5Vl24lAHYgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="switchFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAUBJREFUSEvt
-        lqtOA0EYhVdD8LwBAnAQRAUKUwWCy96SzYo1hAfgYSqQ8CwVFSAJFoEAEi6hN74/OZttm5lmCCSY/ZIj
-        duac/7TbZmejRdI0PUV36ANNPRqhQRzH+4qFQehCA4bISvoePaNpkiSfWZYdKr6csizXCL2jlzzPt7Ts
-        hMFdK5CGXJ9pyw/GXQWuteSFW7Mpb60vdKRtNxg6Mve05IXbsiHvrEZLvwmG3xbUv8mBbPNgCC4oimId
-        31j+RT1WVbUiawMbwQWG+fnEx1LO9SV6shn8SfZka7CAbaKgAhcUXWlGR0sNf1FgWc1oC9xYVjPaAjeW
-        1Yy2wI1lNeN/CoIPHB88qm9sBg+7HS01/OTIdEFuG72iN/KrWp6HzdlD/wHdB8q8lrHsuca5wVC/tkwU
-        CJEdPrfcohONEVH0DbA/b1rkTi6yAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="CloseButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAApZJREFUWEft
@@ -172,7 +135,4 @@
         5MwfAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 17</value>
-  </metadata>
 </root>
