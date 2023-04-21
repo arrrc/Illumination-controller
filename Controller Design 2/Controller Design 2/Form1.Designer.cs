@@ -88,6 +88,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.retryConn = new Guna.UI2.WinForms.Guna2Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.portError = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.COMport = new Guna.UI2.WinForms.Guna2TextBox();
             this.selectBoard = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -1052,6 +1053,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.portError);
             this.panel7.Controls.Add(this.COMport);
             this.panel7.Controls.Add(this.selectBoard);
             this.panel7.Controls.Add(this.guna2HtmlLabel7);
@@ -1065,12 +1067,21 @@
             this.panel7.Size = new System.Drawing.Size(215, 263);
             this.panel7.TabIndex = 1;
             // 
+            // portError
+            // 
+            this.portError.BackColor = System.Drawing.Color.Transparent;
+            this.portError.Location = new System.Drawing.Point(28, 223);
+            this.portError.Name = "portError";
+            this.portError.Size = new System.Drawing.Size(92, 15);
+            this.portError.TabIndex = 11;
+            this.portError.Text = "guna2HtmlLabel20";
+            // 
             // COMport
             // 
             this.COMport.BorderColor = System.Drawing.Color.Black;
             this.COMport.BorderRadius = 10;
             this.COMport.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.COMport.DefaultText = "Port 5";
+            this.COMport.DefaultText = "";
             this.COMport.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.COMport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.COMport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -1230,6 +1241,7 @@
             this.updateFile.TabIndex = 2;
             this.updateFile.Text = "Update File";
             this.updateFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.updateFile.Click += new System.EventHandler(this.updateFile_Click);
             // 
             // switchFile
             // 
@@ -1398,6 +1410,7 @@
         private Guna.UI2.WinForms.Guna2Button led2_test;
         private Guna.UI2.WinForms.Guna2CircleButton led1_light;
         private Guna.UI2.WinForms.Guna2Button led1_test;
+        private Guna.UI2.WinForms.Guna2HtmlLabel portError;
     }
 }
 

@@ -72,7 +72,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.g1_setting = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.lightSelect = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -466,7 +465,6 @@
             this.panel2.Controls.Add(this.g3_panel);
             this.panel2.Controls.Add(this.g2_panel);
             this.panel2.Controls.Add(this.g1_panel);
-            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.lightSelect);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
@@ -884,16 +882,6 @@
             this.g1_setting.TabIndex = 21;
             this.g1_setting.Text = "Grouped";
             this.g1_setting.SelectedIndexChanged += new System.EventHandler(this.g1_setting_SelectedIndexChanged);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(3, 788);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(188, 29);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Retry connection";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // lightSelect
             // 
@@ -4799,7 +4787,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button switchConfig;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button updateConfig;
         private System.Windows.Forms.Button uploadConfig;
         private System.Windows.Forms.Panel g1_panel;

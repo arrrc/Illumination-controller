@@ -55,6 +55,7 @@
             this.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CloseButton.TabIndex = 4;
             this.CloseButton.TabStop = false;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // guna2TextBox1
             // 
@@ -109,6 +110,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SaveFile";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.SaveFile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

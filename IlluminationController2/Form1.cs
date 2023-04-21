@@ -1256,23 +1256,41 @@ namespace IlluminationController2
 
             // Declare a ManagementEventWatcher object and set up the event handler
             ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+            ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
+
+            deviceInsertionWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
             deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
 
             // Set up the query for USB device removal
             WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
-
+            WqlEventQuery insertionQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
 
             // Start listening for the USB device removal event
             deviceRemoveWatcher.Query = removalQuery;
+            deviceInsertionWatcher.Query = insertionQuery;
 
+            deviceInsertionWatcher.Start();
             deviceRemoveWatcher.Start();
         }
 
+        private void DeviceInsertedEvent(object sender, EventArrivedEventArgs e)
+        {
+            Console.WriteLine("EVENT FIRING");
+            bool checkUSB = checkIfUsbAlive();
+            if (checkUSB == true)
+            {
+                changePortErrMsg("true");
+            }
+
+            return;
+        }
 
         // Define the event handler method
         private void DeviceRemovedEvent(object sender, EventArrivedEventArgs e)
         {
+            portConn.Close();
             bool checkUSB = checkIfUsbAlive();
+            Console.WriteLine(checkUSB);
             if (checkUSB == false)
             {
                 changePortErrMsg("false");
@@ -1307,6 +1325,7 @@ namespace IlluminationController2
 
         bool checkIfUsbAlive()
         {
+            string reply = "";
             foreach (string portName in SerialPort.GetPortNames())
             {
                 portConn.Close();
@@ -1325,9 +1344,15 @@ namespace IlluminationController2
                 Console.WriteLine("sent data");
                 Thread.Sleep(50);
 
-                string reply = portConn.ReadExisting();
+                try
+                {
+                    reply = portConn.ReadExisting();
 
+                }
+                catch
+                {
 
+                }
 
                 Console.WriteLine(reply);
                 if (reply == "INIT COMMS")
@@ -1516,6 +1541,7 @@ namespace IlluminationController2
             {
                 portConn.Write(sendToHardware);
 
+                Thread.Sleep(1000);
                 enableUploadBtn("filler");
                    
             }
@@ -4307,14 +4333,6 @@ namespace IlluminationController2
             }
         }
         
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            button5.Enabled = false;
-            Thread retryConn = new Thread(restartConn);
-            retryConn.Start();
-        }
-
          void restartConn()
          {
             bool status = false;
@@ -4323,22 +4341,8 @@ namespace IlluminationController2
                 status = checkIfUsbAlive();
             }
 
-            reEnableRetryButton("filler");
          }
 
-        void reEnableRetryButton(string filler)
-        {
-            if (button5.InvokeRequired)
-            {
-                SetTextCallback d = new SetTextCallback(reEnableRetryButton);
-                this.Invoke(d, new object[] { filler });
-            }
-            else
-            {
-                button5.Enabled = true;
-                label101.Visible = false;
-            }
-        }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {

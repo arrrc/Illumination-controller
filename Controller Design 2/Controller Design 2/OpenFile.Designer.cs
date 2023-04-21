@@ -72,6 +72,7 @@
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(218, 36);
             this.guna2ComboBox1.TabIndex = 3;
+            this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // guna2Button1
             // 

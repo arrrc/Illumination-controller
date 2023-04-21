@@ -28,8 +28,8 @@ namespace Controller_Design_2
         }
 
         // Global Variables
-        int c1_rgb_value = 0;
-        int c2_rgb_value = 0;
+        public int c1_rgb_value = 0;
+        public int c2_rgb_value = 0;
         int c3_rgb_value = 0;
         int c4_rgb_value = 0;
         int c5_rgb_value = 0;
@@ -158,6 +158,19 @@ namespace Controller_Design_2
         int led1_delay;
         int led2_delay;
         int led3_delay;
+
+        static SerialPort portConn;
+        public string sendToHardware = "";
+        string dataReceived = "";
+        bool didDataReceiveThreadExit = false;
+        int numTimesDataSent = 0;
+        List<string> config = new List<string>();
+        int noTimesRemoveEventFired = 0;
+        List<string> splitData = new List<string>();
+
+
+
+        delegate void SetTextCallback(string text);
 
         // Global Functions
         public bool checkIntensity(string intensity)
@@ -409,7 +422,192 @@ namespace Controller_Design_2
 
         private void MainApp_Load(object sender, EventArgs e)
         {
-            //ControlExtension.Draggable(MainApp, true);
+            portConn = new SerialPort();
+            portConn.BaudRate = 9600;
+            int counter = 0;
+
+            while (COMport.Text == "" && counter < 5)
+            {
+                foreach (string portName in SerialPort.GetPortNames())
+                {
+                    Console.WriteLine(portName);
+                    portConn.PortName = portName;
+                    portConn.Open();
+                    portConn.Write("test");
+                    portConn.Write("test");
+                    Thread.Sleep(1000);
+                    string test = portConn.ReadExisting();
+                    Console.WriteLine(test);
+
+                    portConn.Write("INIT COMMS");
+                    Console.WriteLine("sent data");
+
+
+                    Thread.Sleep(1000);
+                    string reply = portConn.ReadExisting();
+
+
+                    if (reply == "INIT COMMS")
+                    {
+                        Console.WriteLine("port is open");
+                        COMport.Text = portName;
+                        portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+
+                        break;
+                    }
+                    else
+                    {
+                        portConn.Close();
+                        continue;
+                    }
+                }
+                counter++;
+            }
+
+            if (counter == 5)
+            {
+                portError.Visible = true;
+                portError.Text = "USB not plugged in, plug it in\nand hit retry connection";
+                portError.ForeColor = System.Drawing.Color.Red;
+            }
+
+
+        
+
+            // Declare a ManagementEventWatcher object and set up the event handler
+            ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+            deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+
+            // Set up the query for USB device removal
+            WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
+
+
+            // Start listening for the USB device removal event
+            deviceRemoveWatcher.Query = removalQuery;
+
+            deviceRemoveWatcher.Start();
+        }
+
+        private void DeviceRemovedEvent(object sender, EventArrivedEventArgs e)
+        {
+            bool checkUSB = checkIfUsbAlive();
+            if (checkUSB == false)
+            {
+                changePortErrMsg("false");
+            }
+
+            return;
+        }
+
+        void changePortErrMsg(string data)
+        {
+            if (portError.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(changePortErrMsg);
+                this.Invoke(d, new object[] { data });
+            }
+            else
+            {
+                if (data == "false")
+                {
+                    portError.ForeColor = Color.Red;
+                    portError.Text = "USB has been unplugged, click retry connection to connect to the board";
+                    COMport.Text = "";
+                    closePort.Enabled = false;
+                }
+                else
+                {
+                    portError.Text = "";
+                    closePort.Enabled = true;
+                }
+            }
+        }
+
+        bool checkIfUsbAlive()
+        {
+            foreach (string portName in SerialPort.GetPortNames())
+            {
+                portConn.Close();
+
+                Console.WriteLine(portName);
+                portConn.PortName = portName;
+                try
+                {
+                    portConn.Open();
+                }
+                catch
+                {
+                    continue;
+                }
+                portConn.Write("INIT COMMS");
+                Console.WriteLine("sent data");
+                Thread.Sleep(50);
+
+                string reply = portConn.ReadExisting();
+
+
+
+                Console.WriteLine(reply);
+                if (reply == "INIT COMMS")
+                {
+                    updateComPortTextbox(portName);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        void updateComPortTextbox(string port)
+        {
+            if (COMport.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(updateComPortTextbox);
+                this.Invoke(d, new object[] { port });
+            }
+            else
+            {
+                COMport.Text = port;
+                portError.Text = "";
+            }
+        }
+
+        void receiveDataHandler(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                Thread.Sleep(3000);
+                dataReceived = portConn.ReadExisting();
+                Console.WriteLine(dataReceived);
+                didDataReceiveThreadExit = true;
+                updateConsole(dataReceived);
+            }
+            catch
+            {
+
+            }
+        }
+
+        void updateConsole(string consoleData)
+        {
+            if (consoleDisplay.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(updateConsole);
+                this.Invoke(d, new object[] { consoleData });
+            }
+            else
+            {
+                splitData.Clear();
+
+
+                splitData = consoleData.Split('.').ToList();
+                //Console.WriteLine(consoleData);
+
+                foreach (string s in splitData)
+                {
+                    //Console.WriteLine(s);
+                    consoleDisplay.Items.Add(s);
+                }
+            }
         }
 
         private void MainApp_MouseDown(object sender, MouseEventArgs e)
@@ -1164,6 +1362,145 @@ namespace Controller_Design_2
             }
             led3_testStop++;
             if (led3_testStop == 2) { led3_testStop = 0; }
+        }
+
+        private void updateFile_Click(object sender, EventArgs e)
+        {
+            generateConfig();
+            SaveFile saveForm = new SaveFile();
+            saveForm.mainForm = this;
+            saveForm.ShowDialog();
+        }
+
+        public void generateConfig()
+        {
+            string c1_addText = displayValues("CH1", c1_rgb_value.ToString(), c1_edge_value.ToString().ToString(), c1_mode_value, c1_strobe_value, c1_pulse_value.ToString(), c1_delay_value.ToString());
+            string c2_addText = displayValues("CH2", c2_rgb_value.ToString(), c2_edge_value.ToString().ToString(), c2_mode_value, c2_strobe_value, c2_pulse_value.ToString(), c1_delay_value.ToString());
+            string c3_addText = displayValues("CH3", c3_rgb_value.ToString(), c3_edge_value.ToString().ToString(), c3_mode_value, c3_strobe_value, c3_pulse_value.ToString(), c3_delay_value.ToString());
+            string c4_addText = displayValues("CH4", c4_rgb_value.ToString(), c4_edge_value.ToString().ToString(), c4_mode_value, c4_strobe_value, c4_pulse_value.ToString(), c4_delay_value.ToString());
+            string c5_addText = displayValues("CH5", c5_rgb_value.ToString(), c5_edge_value.ToString().ToString(), c5_mode_value, c5_strobe_value, c5_pulse_value.ToString(), c5_delay_value.ToString());
+            string c6_addText = displayValues("CH6", c6_rgb_value.ToString(), c6_edge_value.ToString().ToString(), c6_mode_value, c6_strobe_value, c6_pulse_value.ToString(), c6_delay_value.ToString());
+            string c7_addText = displayValues("CH7", c7_rgb_value.ToString(), c7_edge_value.ToString().ToString(), c7_mode_value, c7_strobe_value, c7_pulse_value.ToString(), c7_delay_value.ToString());
+            string c8_addText = displayValues("CH8", c8_rgb_value.ToString(), c8_edge_value.ToString().ToString(), c8_mode_value, c8_strobe_value, c8_pulse_value.ToString(), c8_delay_value.ToString());
+            string c9_addText = displayValues("CH9", c9_rgb_value.ToString(), c9_edge_value.ToString().ToString(), c9_mode_value, c9_strobe_value, c9_pulse_value.ToString(), c9_delay_value.ToString());
+            string c10_addText = displayValues("CH10", c10_rgb_value.ToString(), c10_edge_value.ToString().ToString(), c10_mode_value, c10_strobe_value, c10_pulse_value.ToString(), c10_delay_value.ToString());
+            string c11_addText = displayValues("CH11", c11_rgb_value.ToString(), c11_edge_value.ToString().ToString(), c11_mode_value, c11_strobe_value, c11_pulse_value.ToString(), c11_delay_value.ToString());
+            string c12_addText = displayValues("CH12", c12_rgb_value.ToString(), c12_edge_value.ToString().ToString(), c12_mode_value, c12_strobe_value, c12_pulse_value.ToString(), c12_delay_value.ToString());
+            string c13_addText = displayValues("CH13", c13_rgb_value.ToString(), c13_edge_value.ToString().ToString(), c13_mode_value, c13_strobe_value, c13_pulse_value.ToString(), c13_delay_value.ToString());
+            string c14_addText = displayValues("CH14", c14_rgb_value.ToString(), c14_edge_value.ToString().ToString(), c14_mode_value, c14_strobe_value, c14_pulse_value.ToString(), c14_delay_value.ToString());
+            string c15_addText = displayValues("CH15", c15_rgb_value.ToString(), c15_edge_value.ToString().ToString(), c15_mode_value, c15_strobe_value, c15_pulse_value.ToString(), c15_delay_value.ToString());
+            string c16_addText = displayValues("CH16", c16_rgb_value.ToString(), c16_edge_value.ToString(), c16_mode_value, c16_strobe_value, c16_pulse_value.ToString(), c16_delay_value.ToString());
+
+            string g1_setting = "";
+            string g2_setting = "";
+            string g3_setting = "";
+            string g4_setting = "";
+            string g5_setting = "";
+
+            if(c010203_isGrouped == true)
+            {
+                g1_setting = "GROUPED";
+            }
+
+            if (c040506_isGrouped == true)
+            {
+                g2_setting = "GROUPED";
+            }
+
+            if (c070809_isGrouped == true)
+            {
+                g3_setting = "GROUPED";
+            }
+
+            if (c101112_isGrouped == true)
+            {
+                g4_setting = "GROUPED";
+            }
+
+            if (c131415_isGrouped == true)
+            {
+                g5_setting = "GROUPED";
+            }
+
+            string g1_addText = displaySettings(g1_setting, "Group 1", "CH1", "CH2", "CH3");
+            string g2_addText = displaySettings(g2_setting, "Group 2", "CH4", "CH5", "CH6");
+            string g3_addText = displaySettings(g3_setting, "Group 3", "CH7", "CH8", "CH9");
+            string g4_addText = displaySettings(g4_setting, "Group 4", "CH10", "CH11", "CH12");
+            string g5_addText = displaySettings(g5_setting, "Group 5", "CH13", "CH14", "CH15");
+            string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16] .";
+
+            //uses global list to add data and generate the string to send to the hardware
+            config.Clear();
+            sendToHardware = "";
+
+            config.Add("MAIN BOARD = " + selectBoard.Text + ".");
+
+            config.Add(g1_addText);
+            config.Add(c1_addText);
+            config.Add(c2_addText);
+            config.Add(c3_addText);
+
+            config.Add(g2_addText);
+            config.Add(c4_addText);
+            config.Add(c5_addText);
+            config.Add(c6_addText);
+
+            config.Add(g3_addText);
+            config.Add(c7_addText);
+            config.Add(c8_addText);
+            config.Add(c9_addText);
+
+            config.Add(g4_addText);
+            config.Add(c10_addText);
+            config.Add(c11_addText);
+            config.Add(c12_addText);
+
+            config.Add(g5_addText);
+            config.Add(c13_addText);
+            config.Add(c14_addText);
+            config.Add(c15_addText);
+
+            config.Add(g6_addText);
+            config.Add(c16_addText);
+
+            for (int i = 0; i < config.Count(); i++)
+            {
+                sendToHardware += config[i].ToString();
+            }
+            sendToHardware += "\n\\r\\n";
+
+            Console.WriteLine(sendToHardware);
+        }
+
+        private string displayValues(string channel, string intensity, string edge, string mode, string strobe, string pulse, string delay)
+        {
+            if (intensity == "") { intensity = "None"; }
+            if (edge == "") { edge = "None"; }
+            if (mode == "") { mode = "None"; }
+            if (strobe == "") { strobe = "None"; }
+            if (pulse == "") { pulse = "None"; }
+            if (delay == "") { delay = "None"; }
+
+            string consoleDisplay = $"\n[{channel} Settings]: " +
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
+
+            return consoleDisplay;
+        }
+
+        private string displaySettings(string setting, string group, string first, string second, string third)
+        {
+            if (setting == "Grouped")
+            {
+                return $"\n{group} Settings, [GROUPED Red:{first}, Green:{second}, Blue:{third}] .";
+            }
+            else if (setting == "Ungrouped")
+            {
+                return $"\n{group} Settings, [UNGROUPED:Red:{first}, Green:{second}, Blue:{third}] .";
+            }
+            else
+            {
+                return "displaySettings function went wrong";
+            }
         }
     }
 }

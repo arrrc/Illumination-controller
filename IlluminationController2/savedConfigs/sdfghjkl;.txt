@@ -1,4 +1,4 @@
-MAIN BOARD = Board 2.
+MAIN BOARD = .
 Group 1 Settings, [UNGROUPED:Red:CH1, Green:CH2, Blue:CH3] .
 [CH1 Settings]: Intensity: 4096, Edge: Falling, Mode: Strobe, Strobe: 1, Pulse: 1000, Delay: 1000 .
 [CH2 Settings]: Intensity: 4096, Edge: Rising, Mode: Static, Strobe: None, Pulse: 0, Delay: 0 .
