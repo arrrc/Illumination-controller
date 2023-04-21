@@ -34,6 +34,12 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.led3_test = new Guna.UI2.WinForms.Guna2Button();
+            this.led3_light = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.led2_light = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.led2_test = new Guna.UI2.WinForms.Guna2Button();
+            this.led1_light = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.led1_test = new Guna.UI2.WinForms.Guna2Button();
             this.clearStrobe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel27 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -98,12 +104,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -142,12 +142,12 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.guna2Button3);
-            this.panel5.Controls.Add(this.guna2CircleButton3);
-            this.panel5.Controls.Add(this.guna2CircleButton2);
-            this.panel5.Controls.Add(this.guna2Button2);
-            this.panel5.Controls.Add(this.guna2CircleButton1);
-            this.panel5.Controls.Add(this.guna2Button1);
+            this.panel5.Controls.Add(this.led3_test);
+            this.panel5.Controls.Add(this.led3_light);
+            this.panel5.Controls.Add(this.led2_light);
+            this.panel5.Controls.Add(this.led2_test);
+            this.panel5.Controls.Add(this.led1_light);
+            this.panel5.Controls.Add(this.led1_test);
             this.panel5.Controls.Add(this.clearStrobe);
             this.panel5.Controls.Add(this.guna2HtmlLabel27);
             this.panel5.Controls.Add(this.guna2HtmlLabel26);
@@ -195,6 +195,111 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(626, 641);
             this.panel5.TabIndex = 1;
+            // 
+            // led3_test
+            // 
+            this.led3_test.BorderRadius = 10;
+            this.led3_test.BorderThickness = 1;
+            this.led3_test.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.led3_test.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.led3_test.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.led3_test.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.led3_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.led3_test.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.led3_test.ForeColor = System.Drawing.Color.Black;
+            this.led3_test.Location = new System.Drawing.Point(409, 481);
+            this.led3_test.Name = "led3_test";
+            this.led3_test.Size = new System.Drawing.Size(52, 26);
+            this.led3_test.TabIndex = 51;
+            this.led3_test.Text = "Test";
+            this.led3_test.Click += new System.EventHandler(this.led3_test_Click);
+            // 
+            // led3_light
+            // 
+            this.led3_light.BorderThickness = 1;
+            this.led3_light.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.led3_light.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.led3_light.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.led3_light.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.led3_light.FillColor = System.Drawing.Color.Blue;
+            this.led3_light.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.led3_light.ForeColor = System.Drawing.Color.Blue;
+            this.led3_light.Location = new System.Drawing.Point(479, 472);
+            this.led3_light.Name = "led3_light";
+            this.led3_light.PressedColor = System.Drawing.Color.Blue;
+            this.led3_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.led3_light.Size = new System.Drawing.Size(84, 45);
+            this.led3_light.TabIndex = 50;
+            // 
+            // led2_light
+            // 
+            this.led2_light.BorderThickness = 1;
+            this.led2_light.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.led2_light.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.led2_light.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.led2_light.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.led2_light.FillColor = System.Drawing.Color.Lime;
+            this.led2_light.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.led2_light.ForeColor = System.Drawing.Color.Lime;
+            this.led2_light.Location = new System.Drawing.Point(282, 472);
+            this.led2_light.Name = "led2_light";
+            this.led2_light.PressedColor = System.Drawing.Color.Lime;
+            this.led2_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.led2_light.Size = new System.Drawing.Size(84, 45);
+            this.led2_light.TabIndex = 49;
+            // 
+            // led2_test
+            // 
+            this.led2_test.BorderRadius = 10;
+            this.led2_test.BorderThickness = 1;
+            this.led2_test.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.led2_test.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.led2_test.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.led2_test.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.led2_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.led2_test.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.led2_test.ForeColor = System.Drawing.Color.Black;
+            this.led2_test.Location = new System.Drawing.Point(215, 481);
+            this.led2_test.Name = "led2_test";
+            this.led2_test.Size = new System.Drawing.Size(52, 26);
+            this.led2_test.TabIndex = 48;
+            this.led2_test.Text = "Test";
+            this.led2_test.Click += new System.EventHandler(this.led2_test_Click);
+            // 
+            // led1_light
+            // 
+            this.led1_light.BorderThickness = 1;
+            this.led1_light.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.led1_light.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.led1_light.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.led1_light.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.led1_light.FillColor = System.Drawing.Color.Red;
+            this.led1_light.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.led1_light.ForeColor = System.Drawing.Color.Red;
+            this.led1_light.Location = new System.Drawing.Point(84, 472);
+            this.led1_light.Name = "led1_light";
+            this.led1_light.PressedColor = System.Drawing.Color.Red;
+            this.led1_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.led1_light.Size = new System.Drawing.Size(84, 45);
+            this.led1_light.TabIndex = 47;
+            // 
+            // led1_test
+            // 
+            this.led1_test.BorderRadius = 10;
+            this.led1_test.BorderThickness = 1;
+            this.led1_test.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.led1_test.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.led1_test.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.led1_test.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.led1_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.led1_test.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.led1_test.ForeColor = System.Drawing.Color.Black;
+            this.led1_test.Location = new System.Drawing.Point(11, 481);
+            this.led1_test.Name = "led1_test";
+            this.led1_test.Size = new System.Drawing.Size(52, 26);
+            this.led1_test.TabIndex = 46;
+            this.led1_test.Text = "Test";
+            this.led1_test.Click += new System.EventHandler(this.led1_test_Click);
             // 
             // clearStrobe
             // 
@@ -288,12 +393,13 @@
             this.strobeChannel.Size = new System.Drawing.Size(105, 36);
             this.strobeChannel.StartIndex = 0;
             this.strobeChannel.TabIndex = 40;
+            this.strobeChannel.SelectedIndexChanged += new System.EventHandler(this.strobeChannel_SelectedIndexChanged);
             // 
             // errorText
             // 
             this.errorText.BackColor = System.Drawing.Color.Transparent;
             this.errorText.ForeColor = System.Drawing.Color.White;
-            this.errorText.Location = new System.Drawing.Point(11, 539);
+            this.errorText.Location = new System.Drawing.Point(11, 531);
             this.errorText.Name = "errorText";
             this.errorText.Size = new System.Drawing.Size(52, 15);
             this.errorText.TabIndex = 39;
@@ -393,9 +499,9 @@
             this.testButton.ForeColor = System.Drawing.Color.Black;
             this.testButton.Location = new System.Drawing.Point(11, 600);
             this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(52, 26);
+            this.testButton.Size = new System.Drawing.Size(63, 26);
             this.testButton.TabIndex = 32;
-            this.testButton.Text = "Test";
+            this.testButton.Text = "Reset";
             // 
             // clearIntensity
             // 
@@ -480,7 +586,7 @@
             this.led3_intensity.BorderColor = System.Drawing.Color.Black;
             this.led3_intensity.BorderRadius = 10;
             this.led3_intensity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.led3_intensity.DefaultText = "";
+            this.led3_intensity.DefaultText = "0";
             this.led3_intensity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.led3_intensity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.led3_intensity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -492,7 +598,7 @@
             this.led3_intensity.Location = new System.Drawing.Point(479, 308);
             this.led3_intensity.Name = "led3_intensity";
             this.led3_intensity.PasswordChar = '\0';
-            this.led3_intensity.PlaceholderText = "4096";
+            this.led3_intensity.PlaceholderText = "0 - 4096";
             this.led3_intensity.SelectedText = "";
             this.led3_intensity.Size = new System.Drawing.Size(84, 30);
             this.led3_intensity.TabIndex = 28;
@@ -585,7 +691,7 @@
             this.led2_intensity.BorderColor = System.Drawing.Color.Black;
             this.led2_intensity.BorderRadius = 10;
             this.led2_intensity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.led2_intensity.DefaultText = "";
+            this.led2_intensity.DefaultText = "0";
             this.led2_intensity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.led2_intensity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.led2_intensity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -597,7 +703,7 @@
             this.led2_intensity.Location = new System.Drawing.Point(282, 308);
             this.led2_intensity.Name = "led2_intensity";
             this.led2_intensity.PasswordChar = '\0';
-            this.led2_intensity.PlaceholderText = "4096";
+            this.led2_intensity.PlaceholderText = "0 - 4096";
             this.led2_intensity.SelectedText = "";
             this.led2_intensity.Size = new System.Drawing.Size(84, 30);
             this.led2_intensity.TabIndex = 22;
@@ -690,7 +796,7 @@
             this.led1_intensity.BorderColor = System.Drawing.Color.Black;
             this.led1_intensity.BorderRadius = 10;
             this.led1_intensity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.led1_intensity.DefaultText = "";
+            this.led1_intensity.DefaultText = "0";
             this.led1_intensity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.led1_intensity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.led1_intensity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -702,7 +808,7 @@
             this.led1_intensity.Location = new System.Drawing.Point(84, 308);
             this.led1_intensity.Name = "led1_intensity";
             this.led1_intensity.PasswordChar = '\0';
-            this.led1_intensity.PlaceholderText = "4096";
+            this.led1_intensity.PlaceholderText = "0 - 4096";
             this.led1_intensity.SelectedText = "";
             this.led1_intensity.Size = new System.Drawing.Size(84, 30);
             this.led1_intensity.TabIndex = 16;
@@ -734,7 +840,7 @@
             this.setPulse.BorderColor = System.Drawing.Color.Black;
             this.setPulse.BorderRadius = 10;
             this.setPulse.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.setPulse.DefaultText = "";
+            this.setPulse.DefaultText = "0";
             this.setPulse.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.setPulse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.setPulse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -746,18 +852,19 @@
             this.setPulse.Location = new System.Drawing.Point(262, 135);
             this.setPulse.Name = "setPulse";
             this.setPulse.PasswordChar = '\0';
-            this.setPulse.PlaceholderText = "1000";
+            this.setPulse.PlaceholderText = "";
             this.setPulse.SelectedText = "";
             this.setPulse.Size = new System.Drawing.Size(104, 36);
             this.setPulse.TabIndex = 13;
             this.setPulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.setPulse.TextChanged += new System.EventHandler(this.setPulse_TextChanged);
             // 
             // setDelay
             // 
             this.setDelay.BorderColor = System.Drawing.Color.Black;
             this.setDelay.BorderRadius = 10;
             this.setDelay.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.setDelay.DefaultText = "";
+            this.setDelay.DefaultText = "0";
             this.setDelay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.setDelay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.setDelay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -769,11 +876,12 @@
             this.setDelay.Location = new System.Drawing.Point(262, 195);
             this.setDelay.Name = "setDelay";
             this.setDelay.PasswordChar = '\0';
-            this.setDelay.PlaceholderText = "1000";
+            this.setDelay.PlaceholderText = "";
             this.setDelay.SelectedText = "";
             this.setDelay.Size = new System.Drawing.Size(104, 36);
             this.setDelay.TabIndex = 12;
             this.setDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.setDelay.TextChanged += new System.EventHandler(this.setDelay_TextChanged);
             // 
             // setEdge
             // 
@@ -796,6 +904,7 @@
             this.setEdge.Size = new System.Drawing.Size(105, 36);
             this.setEdge.StartIndex = 0;
             this.setEdge.TabIndex = 11;
+            this.setEdge.SelectedIndexChanged += new System.EventHandler(this.setEdge_SelectedIndexChanged);
             // 
             // guna2HtmlLabel10
             // 
@@ -900,7 +1009,7 @@
             this.consoleDisplay.FormattingEnabled = true;
             this.consoleDisplay.Location = new System.Drawing.Point(1, 30);
             this.consoleDisplay.Name = "consoleDisplay";
-            this.consoleDisplay.Size = new System.Drawing.Size(393, 550);
+            this.consoleDisplay.Size = new System.Drawing.Size(393, 602);
             this.consoleDisplay.TabIndex = 7;
             // 
             // guna2HtmlLabel5
@@ -1181,108 +1290,6 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(11, 481);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(52, 26);
-            this.guna2Button1.TabIndex = 46;
-            this.guna2Button1.Text = "Test";
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.BorderThickness = 1;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.Enabled = false;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Red;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(84, 472);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(84, 45);
-            this.guna2CircleButton1.TabIndex = 47;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(215, 481);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(52, 26);
-            this.guna2Button2.TabIndex = 48;
-            this.guna2Button2.Text = "Test";
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.BorderThickness = 1;
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.Enabled = false;
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.Lime;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(282, 472);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(84, 45);
-            this.guna2CircleButton2.TabIndex = 49;
-            // 
-            // guna2CircleButton3
-            // 
-            this.guna2CircleButton3.BorderThickness = 1;
-            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton3.Enabled = false;
-            this.guna2CircleButton3.FillColor = System.Drawing.Color.Blue;
-            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton3.Location = new System.Drawing.Point(479, 472);
-            this.guna2CircleButton3.Name = "guna2CircleButton3";
-            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton3.Size = new System.Drawing.Size(84, 45);
-            this.guna2CircleButton3.TabIndex = 50;
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(409, 481);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(52, 26);
-            this.guna2Button3.TabIndex = 51;
-            this.guna2Button3.Text = "Test";
-            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1385,12 +1392,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
         private Guna.UI2.WinForms.Guna2Button clearStrobe;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button led3_test;
+        private Guna.UI2.WinForms.Guna2CircleButton led3_light;
+        private Guna.UI2.WinForms.Guna2CircleButton led2_light;
+        private Guna.UI2.WinForms.Guna2Button led2_test;
+        private Guna.UI2.WinForms.Guna2CircleButton led1_light;
+        private Guna.UI2.WinForms.Guna2Button led1_test;
     }
 }
 
