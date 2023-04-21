@@ -34,6 +34,7 @@
             this.uploadConfig = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label101 = new System.Windows.Forms.Label();
             this.comPort = new System.Windows.Forms.TextBox();
             this.portError = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -454,6 +455,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label101);
             this.panel2.Controls.Add(this.comPort);
             this.panel2.Controls.Add(this.portError);
             this.panel2.Controls.Add(this.panel5);
@@ -476,6 +478,16 @@
             this.panel2.Size = new System.Drawing.Size(197, 828);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(0, 154);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(47, 13);
+            this.label101.TabIndex = 32;
+            this.label101.Text = "label101";
+            this.label101.Visible = false;
             // 
             // comPort
             // 
@@ -4938,6 +4950,7 @@
         private System.Windows.Forms.Label c16_error;
         private System.Windows.Forms.Label portError;
         private System.Windows.Forms.TextBox comPort;
+        private System.Windows.Forms.Label label101;
     }
 }
 

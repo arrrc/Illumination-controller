@@ -89,6 +89,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(109, 24);
             this.guna2Button1.TabIndex = 7;
             this.guna2Button1.Text = "Select";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // OpenFile
             // 
@@ -102,7 +103,7 @@
             this.Controls.Add(this.CloseButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OpenFile";
-            this.Text = "Form2";
+            this.Text = "s";
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

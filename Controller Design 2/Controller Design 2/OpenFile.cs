@@ -16,5 +16,10 @@ namespace Controller_Design_2
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
