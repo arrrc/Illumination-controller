@@ -34,6 +34,7 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.led_help = new Guna.UI2.WinForms.Guna2CircleButton();
             this.led3_test = new Guna.UI2.WinForms.Guna2Button();
             this.led3_light = new Guna.UI2.WinForms.Guna2CircleButton();
             this.led2_light = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -88,6 +89,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.retryConn = new Guna.UI2.WinForms.Guna2Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.bs_help = new Guna.UI2.WinForms.Guna2CircleButton();
             this.portError = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.COMport = new Guna.UI2.WinForms.Guna2TextBox();
             this.selectBoard = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -97,6 +99,7 @@
             this.openPort = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.fc_help = new Guna.UI2.WinForms.Guna2CircleButton();
             this.uploadFile = new Guna.UI2.WinForms.Guna2Button();
             this.updateFile = new Guna.UI2.WinForms.Guna2Button();
             this.switchFile = new Guna.UI2.WinForms.Guna2Button();
@@ -143,6 +146,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.led_help);
             this.panel5.Controls.Add(this.led3_test);
             this.panel5.Controls.Add(this.led3_light);
             this.panel5.Controls.Add(this.led2_light);
@@ -196,6 +200,23 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(626, 641);
             this.panel5.TabIndex = 1;
+            // 
+            // led_help
+            // 
+            this.led_help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.led_help.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.led_help.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.led_help.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.led_help.FillColor = System.Drawing.Color.White;
+            this.led_help.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.led_help.ForeColor = System.Drawing.Color.White;
+            this.led_help.Image = ((System.Drawing.Image)(resources.GetObject("led_help.Image")));
+            this.led_help.Location = new System.Drawing.Point(105, 6);
+            this.led_help.Name = "led_help";
+            this.led_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.led_help.Size = new System.Drawing.Size(20, 20);
+            this.led_help.TabIndex = 52;
+            this.led_help.Click += new System.EventHandler(this.led_help_Click);
             // 
             // led3_test
             // 
@@ -1053,6 +1074,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.bs_help);
             this.panel7.Controls.Add(this.portError);
             this.panel7.Controls.Add(this.COMport);
             this.panel7.Controls.Add(this.selectBoard);
@@ -1067,14 +1089,30 @@
             this.panel7.Size = new System.Drawing.Size(215, 263);
             this.panel7.TabIndex = 1;
             // 
+            // bs_help
+            // 
+            this.bs_help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bs_help.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bs_help.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bs_help.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bs_help.FillColor = System.Drawing.Color.White;
+            this.bs_help.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bs_help.ForeColor = System.Drawing.Color.White;
+            this.bs_help.Image = ((System.Drawing.Image)(resources.GetObject("bs_help.Image")));
+            this.bs_help.Location = new System.Drawing.Point(143, 6);
+            this.bs_help.Name = "bs_help";
+            this.bs_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.bs_help.Size = new System.Drawing.Size(20, 20);
+            this.bs_help.TabIndex = 54;
+            // 
             // portError
             // 
             this.portError.BackColor = System.Drawing.Color.Transparent;
-            this.portError.Location = new System.Drawing.Point(28, 223);
+            this.portError.Location = new System.Drawing.Point(16, 216);
             this.portError.Name = "portError";
-            this.portError.Size = new System.Drawing.Size(92, 15);
+            this.portError.Size = new System.Drawing.Size(113, 15);
             this.portError.TabIndex = 11;
-            this.portError.Text = "guna2HtmlLabel20";
+            this.portError.Text = "Board comnection error";
             // 
             // COMport
             // 
@@ -1196,6 +1234,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.fc_help);
             this.panel6.Controls.Add(this.uploadFile);
             this.panel6.Controls.Add(this.updateFile);
             this.panel6.Controls.Add(this.switchFile);
@@ -1205,6 +1244,23 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(215, 147);
             this.panel6.TabIndex = 0;
+            // 
+            // fc_help
+            // 
+            this.fc_help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.fc_help.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.fc_help.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fc_help.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.fc_help.FillColor = System.Drawing.Color.White;
+            this.fc_help.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.fc_help.ForeColor = System.Drawing.Color.White;
+            this.fc_help.Image = ((System.Drawing.Image)(resources.GetObject("fc_help.Image")));
+            this.fc_help.Location = new System.Drawing.Point(126, 6);
+            this.fc_help.Name = "fc_help";
+            this.fc_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.fc_help.Size = new System.Drawing.Size(20, 20);
+            this.fc_help.TabIndex = 53;
+            this.fc_help.Click += new System.EventHandler(this.fc_help_Click);
             // 
             // uploadFile
             // 
@@ -1411,6 +1467,9 @@
         private Guna.UI2.WinForms.Guna2CircleButton led1_light;
         private Guna.UI2.WinForms.Guna2Button led1_test;
         private Guna.UI2.WinForms.Guna2HtmlLabel portError;
+        private Guna.UI2.WinForms.Guna2CircleButton led_help;
+        private Guna.UI2.WinForms.Guna2CircleButton bs_help;
+        private Guna.UI2.WinForms.Guna2CircleButton fc_help;
     }
 }
 

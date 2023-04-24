@@ -124,6 +124,36 @@
     <value>53</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bs_help.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE+1
+        kksKwkAQROcAip5CBH+nmUW+hFxBF4pu9B4mKC4E9Rou/d0navXYgtNOdKMNj0B3VU1nGPWXCsOw5/v+
+        DN8VEQTB1PO8Lo/LK0mSOsQ7cHNwBRutdY3ldpEZp52FycXJGYKVtw7xnpH9NdsehUYH0IqWEKGakH1w
+        xZ202G5OnzhE3xix3QRkDgFtMCNcMzBnu/mFXAwNtD5RMsvYbgLGUkB8CgBDtiuFC2miUQjBp4AijuMG
+        2x+F5lKIiAtj9a31n5WmaRXDoxRL8NgOeEgVttlFIUhfQPj2JriXl5pfK4qiNoIGZGD61sP5XSl1B6Ez
+        MjG3MyQ7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="led_help.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE+1
+        kksKwkAQROcAip5CBH+nmUW+hFxBF4pu9B4mKC4E9Rou/d0navXYgtNOdKMNj0B3VU1nGPWXCsOw5/v+
+        DN8VEQTB1PO8Lo/LK0mSOsQ7cHNwBRutdY3ldpEZp52FycXJGYKVtw7xnpH9NdsehUYH0IqWEKGakH1w
+        xZ202G5OnzhE3xix3QRkDgFtMCNcMzBnu/mFXAwNtD5RMsvYbgLGUkB8CgBDtiuFC2miUQjBp4AijuMG
+        2x+F5lKIiAtj9a31n5WmaRXDoxRL8NgOeEgVttlFIUhfQPj2JriXl5pfK4qiNoIGZGD61sP5XSl1B6Ez
+        MjG3MyQ7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="fc_help.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE+1
+        kksKwkAQROcAip5CBH+nmUW+hFxBF4pu9B4mKC4E9Rou/d0navXYgtNOdKMNj0B3VU1nGPWXCsOw5/v+
+        DN8VEQTB1PO8Lo/LK0mSOsQ7cHNwBRutdY3ldpEZp52FycXJGYKVtw7xnpH9NdsehUYH0IqWEKGakH1w
+        xZ202G5OnzhE3xix3QRkDgFtMCNcMzBnu/mFXAwNtD5RMsvYbgLGUkB8CgBDtiuFC2miUQjBp4AijuMG
+        2x+F5lKIiAtj9a31n5WmaRXDoxRL8NgOeEgVttlFIUhfQPj2JriXl5pfK4qiNoIGZGD61sP5XSl1B6Ez
+        MjG3MyQ7AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="uploadFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAG1JREFUSEtj

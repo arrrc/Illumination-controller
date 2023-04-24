@@ -1502,5 +1502,40 @@ namespace Controller_Design_2
                 return "displaySettings function went wrong";
             }
         }
+
+        private void fc_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Switch File\n" +
+                            "Choose a configuration file that you have previously saved.\n\n" +
+                            "Update File\n" +
+                            "If this file is saved, you can choose to update it to save the new configurations you have made to the currently saved one.\n\n" +
+                            "Upload File\n" +
+                            "Send the data over to the board to program the connected light controller.\n" +
+                            "Data will also be displayed on the console for user to examine the configurations that they have made."
+                ,"Info on File Control Settings", MessageBoxButtons.OK);
+        }
+
+        private void led_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Channel Selection\n" +
+                            "A group normally consists of 3 channels in the order of [1,2,3] , [4,5,6] , [7,8,9] , [10,11,12] , [13,14,15].\n" +
+                            "Except for Channel 16 will be on its own, due to the hardware limitations.\n" +
+                            "Users can have the all the channels but channel 16 to be grouped or ungrouped.\n" +
+                            "Grouped > Channels will display RGB on the device being programmed.\n" +
+                            "Ungrouped > Channels will display their respective static RGB colours (RED/GREEN/BLUE)\n\n" +
+
+                            "Strobe Settings\n" +
+                            "Users should first select the channel to configure their respective strobe settings. By default, Channel 1 is first selected for the user.\n" +
+                            "Pulse > How long the light stays on for.\n" +
+                            "Delay > how long the light stays off for.\n" +
+                            "Edge > Rising state, Falling state, None. Results are only visible on the device.\n\n" +
+
+                            "LED Settings\n" +
+                            "Intensity > How strong is the light.\n" +
+                            "Mode > if the user selects static, the channel will not inherit the above strobe settings. If the user selects strobe, it will inheirt the above strobe settings.\n" +
+                            "Strobe > Users can selects the none or the numbers 1-8. The numbers represent the 8 buttons that when pressed will cause their respective lights to strobe on the device.\n" +
+                            "If users input the values correctly, users are able to test the strobe and LED settings via the testing area."
+                , "Info on LED Settings", MessageBoxButtons.OK);
+        }
     }
 }
