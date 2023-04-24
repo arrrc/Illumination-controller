@@ -124,7 +124,7 @@
     <value>53</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bs_help.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="led_help.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE+1
         kksKwkAQROcAip5CBH+nmUW+hFxBF4pu9B4mKC4E9Rou/d0navXYgtNOdKMNj0B3VU1nGPWXCsOw5/v+
@@ -134,7 +134,7 @@
         MjG3MyQ7AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="led_help.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bs_help.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE+1
         kksKwkAQROcAip5CBH+nmUW+hFxBF4pu9B4mKC4E9Rou/d0navXYgtNOdKMNj0B3VU1nGPWXCsOw5/v+

@@ -1108,7 +1108,7 @@
             // portError
             // 
             this.portError.BackColor = System.Drawing.Color.Transparent;
-            this.portError.Location = new System.Drawing.Point(16, 216);
+            this.portError.Location = new System.Drawing.Point(17, 216);
             this.portError.Name = "portError";
             this.portError.Size = new System.Drawing.Size(113, 15);
             this.portError.TabIndex = 11;

@@ -221,7 +221,6 @@ namespace Controller_Design_2
                 { 15, -1 },
                 { 16, -1 },
         };
-        
 
         public string getError(int channel, bool error)
         {
@@ -1508,7 +1507,7 @@ namespace Controller_Design_2
             MessageBox.Show("Switch File\n" +
                             "Choose a configuration file that you have previously saved.\n\n" +
                             "Update File\n" +
-                            "If this file is saved, you can choose to update it to save the new configurations you have made to the currently saved one.\n\n" +
+                            "If this file is saved, you can choose to update it to save the new changes you have made to the currently saved one.\n\n" +
                             "Upload File\n" +
                             "Send the data over to the board to program the connected light controller.\n" +
                             "Data will also be displayed on the console for user to examine the configurations that they have made."
