@@ -222,6 +222,180 @@ namespace Controller_Design_2
                 { 16, -1 },
         };
 
+        public void displayModes()
+        {
+            // To test Mode Values
+            Console.WriteLine("Display Modes");
+            Console.WriteLine("Channel 1 " + c1_mode_value);
+            Console.WriteLine("Channel 2 " + c2_mode_value);
+            Console.WriteLine("Channel 3 " + c3_mode_value);
+            Console.WriteLine("Channel 4 " + c4_mode_value);
+            Console.WriteLine("Channel 5 " + c5_mode_value);
+            Console.WriteLine("Channel 6 " + c6_mode_value);
+            Console.WriteLine("Channel 7 " + c7_mode_value);
+            Console.WriteLine("Channel 8 " + c8_mode_value);
+            Console.WriteLine("Channel 9 " + c9_mode_value);
+            Console.WriteLine("Channel 10 " + c10_mode_value);
+            Console.WriteLine("Channel 11 " + c11_mode_value);
+            Console.WriteLine("Channel 12 " + c12_mode_value);
+            Console.WriteLine("Channel 13 " + c13_mode_value);
+            Console.WriteLine("Channel 14 " + c14_mode_value);
+            Console.WriteLine("Channel 15 " + c15_mode_value);
+            Console.WriteLine("Channel 16 " + c16_mode_value);
+
+        }
+
+        public void displayStrobes()
+        {
+            // To test Mode Values
+            Console.WriteLine("Display Strobe Values");
+            Console.WriteLine("Channel 1 " + c1_strobe_value);
+            Console.WriteLine("Channel 2 " + c2_strobe_value);
+            Console.WriteLine("Channel 3 " + c3_strobe_value);
+            Console.WriteLine("Channel 4 " + c4_strobe_value);
+            Console.WriteLine("Channel 5 " + c5_strobe_value);
+            Console.WriteLine("Channel 6 " + c6_strobe_value);
+            Console.WriteLine("Channel 7 " + c7_strobe_value);
+            Console.WriteLine("Channel 8 " + c8_strobe_value);
+            Console.WriteLine("Channel 9 " + c9_strobe_value);
+            Console.WriteLine("Channel 10 " + c10_strobe_value);
+            Console.WriteLine("Channel 11 " + c11_strobe_value);
+            Console.WriteLine("Channel 12 " + c12_strobe_value);
+            Console.WriteLine("Channel 13 " + c13_strobe_value);
+            Console.WriteLine("Channel 14 " + c14_strobe_value);
+            Console.WriteLine("Channel 15 " + c15_strobe_value);
+            Console.WriteLine("Channel 16 " + c16_strobe_value);
+
+        }
+
+        public int returnStrobe(string value)
+        {
+            if (value == "None") { return 0; }
+            else if (value == "1") { return 1; }
+            else if (value == "2") { return 2; }
+            else if (value == "3") { return 3; }
+            else if (value == "4") { return 4; }
+            else if (value == "5") { return 5; }
+            else if (value == "6") { return 6; }
+            else if (value == "7") { return 7; }
+            else { return 8; }
+        }
+
+        public void setStrobe()
+        {
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                led1_strobe.SelectedIndex = returnStrobe(c1_strobe_value);
+                led2_strobe.SelectedIndex = returnStrobe(c2_strobe_value);
+                led3_strobe.SelectedIndex = returnStrobe(c3_strobe_value);
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                led1_strobe.SelectedIndex = returnStrobe(c4_strobe_value);
+                led2_strobe.SelectedIndex = returnStrobe(c5_strobe_value);
+                led3_strobe.SelectedIndex = returnStrobe(c6_strobe_value);
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                led1_strobe.SelectedIndex = returnStrobe(c7_strobe_value);
+                led2_strobe.SelectedIndex = returnStrobe(c8_strobe_value);
+                led3_strobe.SelectedIndex = returnStrobe(c9_strobe_value);
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                led1_strobe.SelectedIndex = returnStrobe(c10_strobe_value);
+                led2_strobe.SelectedIndex = returnStrobe(c11_strobe_value);
+                led3_strobe.SelectedIndex = returnStrobe(c12_strobe_value);
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                led1_strobe.SelectedIndex = returnStrobe(c13_strobe_value);
+                led2_strobe.SelectedIndex = returnStrobe(c14_strobe_value);
+                led3_strobe.SelectedIndex = returnStrobe(c15_strobe_value);
+            }
+            else
+            {
+                led1_strobe.SelectedIndex = returnStrobe(c16_strobe_value);
+                led2_strobe.SelectedIndex = 0;
+                led3_strobe.SelectedIndex = 0;
+            }
+        }
+
+        public void setModes()
+        {
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                if (c1_mode_value == "Static") { led1_mode.SelectedIndex = 0;  led1_strobe.Enabled = false; }
+                else if (c1_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; }
+
+                if (c2_mode_value == "Static")  { led2_mode.SelectedIndex = 0; led2_strobe.Enabled = false; }
+                else if (c2_mode_value == "Strobe") { led2_mode.SelectedIndex = 1; led2_strobe.Enabled = true; }
+
+                if (c3_mode_value == "Static") { led3_mode.SelectedIndex = 0; led3_strobe.Enabled = false; }
+                else if (c3_mode_value == "Strobe")  { led3_mode.SelectedIndex = 1; led3_strobe.Enabled = true; }
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                if (c4_mode_value == "Static") { led1_mode.SelectedIndex = 0; led1_strobe.Enabled = false; }
+                else if (c4_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; }
+
+                if (c5_mode_value == "Static") { led2_mode.SelectedIndex = 0; led2_strobe.Enabled = false; }
+                else if (c5_mode_value == "Strobe") { led2_mode.SelectedIndex = 1; led2_strobe.Enabled = true; }
+
+                if (c6_mode_value == "Static") { led3_mode.SelectedIndex = 0; led3_strobe.Enabled = false; }
+                else if (c6_mode_value == "Strobe") { led3_mode.SelectedIndex = 1; led3_strobe.Enabled = true; }
+            }
+            //Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                if (c7_mode_value == "Static") { led1_mode.SelectedIndex = 0; led1_strobe.Enabled = false; }
+                else if (c7_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; }
+
+                if (c8_mode_value == "Static") { led2_mode.SelectedIndex = 0; led2_strobe.Enabled = false; }
+                else if (c8_mode_value == "Strobe") { led2_mode.SelectedIndex = 1; led2_strobe.Enabled = true; }
+
+                if (c9_mode_value == "Static") { led3_mode.SelectedIndex = 0; led3_strobe.Enabled = false; }
+                else if (c9_mode_value == "Strobe") { led3_mode.SelectedIndex = 1; led3_strobe.Enabled = true; }
+            }
+            //Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                if (c10_mode_value == "Static") { led1_mode.SelectedIndex = 0; led1_strobe.Enabled = false; }
+                else if (c10_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; }
+
+                if (c11_mode_value == "Static") { led2_mode.SelectedIndex = 0; led2_strobe.Enabled = false; }
+                else if (c11_mode_value == "Strobe") { led2_mode.SelectedIndex = 1; led2_strobe.Enabled = true; }
+
+                if (c12_mode_value == "Static") { led3_mode.SelectedIndex = 0; led3_strobe.Enabled = false; }
+                else if (c12_mode_value == "Strobe") { led3_mode.SelectedIndex = 1; led3_strobe.Enabled = true; }
+            }
+            //Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                if (c13_mode_value == "Static") { led1_mode.SelectedIndex = 0; led1_strobe.Enabled = false; }
+                else if (c13_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; }
+
+                if (c14_mode_value == "Static") { led2_mode.SelectedIndex = 0; led2_strobe.Enabled = false; }
+                else if (c14_mode_value == "Strobe") { led2_mode.SelectedIndex = 1; led2_strobe.Enabled = true; }
+
+                if (c15_mode_value == "Static") { led3_mode.SelectedIndex = 0; led3_strobe.Enabled = false; }
+                else if (c15_mode_value == "Strobe") { led3_mode.SelectedIndex = 1; led3_strobe.Enabled = true; }
+            }
+            else
+            {
+                if (c16_mode_value == "Static") { led1_mode.SelectedIndex = 0; led1_strobe.Enabled = false; }
+                else if (c16_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; }
+            }
+
+        }
+
         public string getError(int channel, bool error)
         {
             string[] intensityErrors =
@@ -631,7 +805,6 @@ namespace Controller_Design_2
 
         private void chooseGrp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine("Action Changed");
             // Channels 1 2 3
             if (c010203_isCurrent)
             {
@@ -674,18 +847,112 @@ namespace Controller_Design_2
         {
             if (led1_mode.SelectedIndex == 0) { led1_strobe.Enabled = false; }
             else { led1_strobe.Enabled = true; }
+
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                c1_mode_value = led1_mode.Text;
+                
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                c4_mode_value = led1_mode.Text;
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                c7_mode_value = led1_mode.Text;
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                c10_mode_value = led1_mode.Text;
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                c13_mode_value = led1_mode.Text;
+            }
+            else
+            {
+                c16_mode_value = led1_mode.Text;
+            }
+            //displayModes();
         }
 
         private void led2_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (led2_mode.SelectedIndex == 0) { led2_strobe.Enabled = false; }
             else { led2_strobe.Enabled = true; }
+
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                c2_mode_value = led2_mode.Text;
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                c5_mode_value = led2_mode.Text;
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                c8_mode_value = led2_mode.Text;
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                c11_mode_value = led2_mode.Text;
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                c14_mode_value = led2_mode.Text;
+            }
+            else
+            {
+                // Do nothing
+            }
+            //displayModes();
         }
 
         private void led3_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (led3_mode.SelectedIndex == 0) { led3_strobe.Enabled = false; }
             else { led3_strobe.Enabled = true; }
+
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                c3_mode_value = led3_mode.Text;
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                c6_mode_value = led3_mode.Text;
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                c9_mode_value = led3_mode.Text;
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                c12_mode_value = led3_mode.Text;
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                c15_mode_value = led3_mode.Text;
+            }
+            else
+            {
+                // Do nothing
+            }
+            //displayModes();
         }
 
         private void clearStrobe_Click(object sender, EventArgs e)
@@ -776,6 +1043,9 @@ namespace Controller_Design_2
             led1_testStop = 0;
             led2_testStop = 0;
             led3_testStop = 0;
+
+            Console.WriteLine("Group Changed");
+
             if (selectGrp.SelectedIndex == 0)
             {
                 c010203_isCurrent = true;
@@ -903,7 +1173,6 @@ namespace Controller_Design_2
 
                 if (c101112_isGrouped) { chooseGrp.SelectedIndex = 0; }
                 else { chooseGrp.SelectedIndex = 1; }
-
             }
             else if (selectGrp.SelectedIndex == 4)
             {
@@ -936,6 +1205,7 @@ namespace Controller_Design_2
 
                 if (c131415_isGrouped) { chooseGrp.SelectedIndex = 0; }
                 else { chooseGrp.SelectedIndex = 1; }
+
             }
             else
             {
@@ -967,6 +1237,10 @@ namespace Controller_Design_2
 
                 chooseGrp.Enabled = false;
             }
+            setModes();
+            setStrobe();
+            //displayModes();
+            displayStrobes();
         }
 
         private void strobeChannel_SelectedIndexChanged(object sender, EventArgs e)
@@ -1535,6 +1809,108 @@ namespace Controller_Design_2
                             "Strobe > Users can selects the none or the numbers 1-8. The numbers represent the 8 buttons that when pressed will cause their respective lights to strobe on the device.\n" +
                             "If users input the values correctly, users are able to test the strobe and LED settings via the testing area."
                 , "Info on LED Settings", MessageBoxButtons.OK);
+        }
+
+        private void led1_strobe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                c1_strobe_value = led1_strobe.Text;
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                c4_strobe_value = led1_strobe.Text;
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                c7_strobe_value = led1_strobe.Text;
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                c10_strobe_value = led1_strobe.Text;
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                c13_strobe_value = led1_strobe.Text;
+            }
+            else
+            {
+                c16_strobe_value = led1_strobe.Text;
+            }
+            displayStrobes();
+        }
+
+        private void led2_strobe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                c2_strobe_value = led2_strobe.Text;
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                c5_strobe_value = led2_strobe.Text;
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                c8_strobe_value = led2_strobe.Text;
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                c11_strobe_value = led2_strobe.Text;
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                c14_strobe_value = led2_strobe.Text;
+            }
+            else
+            {
+                // Do nothing
+            }
+            displayStrobes();
+        }
+
+        private void led3_strobe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                c3_strobe_value = led3_strobe.Text;
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                c6_strobe_value = led3_strobe.Text;
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                c9_strobe_value = led3_strobe.Text;
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                c12_strobe_value = led3_strobe.Text;
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                c15_strobe_value = led3_strobe.Text;
+            }
+            else
+            {
+                // Do nothing
+            }
+            displayStrobes();
         }
     }
 }

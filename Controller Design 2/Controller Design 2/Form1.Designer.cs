@@ -55,7 +55,6 @@
             this.led2_channel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.led1_channel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.testButton = new Guna.UI2.WinForms.Guna2Button();
-            this.clearIntensity = new Guna.UI2.WinForms.Guna2Button();
             this.led3_strobe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.led3_mode = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -167,7 +166,6 @@
             this.panel5.Controls.Add(this.led2_channel);
             this.panel5.Controls.Add(this.led1_channel);
             this.panel5.Controls.Add(this.testButton);
-            this.panel5.Controls.Add(this.clearIntensity);
             this.panel5.Controls.Add(this.led3_strobe);
             this.panel5.Controls.Add(this.led3_mode);
             this.panel5.Controls.Add(this.guna2HtmlLabel17);
@@ -525,23 +523,6 @@
             this.testButton.TabIndex = 32;
             this.testButton.Text = "Reset";
             // 
-            // clearIntensity
-            // 
-            this.clearIntensity.BorderRadius = 10;
-            this.clearIntensity.BorderThickness = 1;
-            this.clearIntensity.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.clearIntensity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.clearIntensity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.clearIntensity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.clearIntensity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.clearIntensity.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.clearIntensity.ForeColor = System.Drawing.Color.Black;
-            this.clearIntensity.Location = new System.Drawing.Point(347, 600);
-            this.clearIntensity.Name = "clearIntensity";
-            this.clearIntensity.Size = new System.Drawing.Size(119, 26);
-            this.clearIntensity.TabIndex = 7;
-            this.clearIntensity.Text = "Clear Intensity";
-            // 
             // led3_strobe
             // 
             this.led3_strobe.BackColor = System.Drawing.Color.Transparent;
@@ -570,6 +551,7 @@
             this.led3_strobe.Size = new System.Drawing.Size(84, 36);
             this.led3_strobe.StartIndex = 0;
             this.led3_strobe.TabIndex = 31;
+            this.led3_strobe.SelectedIndexChanged += new System.EventHandler(this.led3_strobe_SelectedIndexChanged);
             // 
             // led3_mode
             // 
@@ -675,6 +657,7 @@
             this.led2_strobe.Size = new System.Drawing.Size(84, 36);
             this.led2_strobe.StartIndex = 0;
             this.led2_strobe.TabIndex = 25;
+            this.led2_strobe.SelectedIndexChanged += new System.EventHandler(this.led2_strobe_SelectedIndexChanged);
             // 
             // led2_mode
             // 
@@ -780,6 +763,7 @@
             this.led1_strobe.Size = new System.Drawing.Size(84, 36);
             this.led1_strobe.StartIndex = 0;
             this.led1_strobe.TabIndex = 19;
+            this.led1_strobe.SelectedIndexChanged += new System.EventHandler(this.led1_strobe_SelectedIndexChanged);
             // 
             // led1_mode
             // 
@@ -1445,7 +1429,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private Guna.UI2.WinForms.Guna2Button testButton;
-        private Guna.UI2.WinForms.Guna2Button clearIntensity;
         private Guna.UI2.WinForms.Guna2HtmlLabel led3_channel;
         private Guna.UI2.WinForms.Guna2HtmlLabel led2_channel;
         private Guna.UI2.WinForms.Guna2HtmlLabel led1_channel;
