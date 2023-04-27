@@ -45,22 +45,22 @@ namespace Controller_Design_2
         public int c15_rgb_value = 0;
         public int c16_rgb_value = 0;
 
-        public int c1_edge_value = 0;
-        public int c2_edge_value = 0;
-        public int c3_edge_value = 0;
-        public int c4_edge_value = 0;
-        public int c5_edge_value = 0;
-        public int c6_edge_value = 0;
-        public int c7_edge_value = 0;
-        public int c8_edge_value = 0;
-        public int c9_edge_value = 0;
-        public int c10_edge_value = 0;
-        public int c11_edge_value = 0;
-        public int c12_edge_value = 0;
-        public int c13_edge_value = 0;
-        public int c14_edge_value = 0;
-        public int c15_edge_value = 0;
-        public int c16_edge_value = 0;
+        public string c1_edge_value = "None";
+        public string c2_edge_value = "None";
+        public string c3_edge_value = "None";
+        public string c4_edge_value = "None";
+        public string c5_edge_value = "None";
+        public string c6_edge_value = "None";
+        public string c7_edge_value = "None";
+        public string c8_edge_value = "None";
+        public string c9_edge_value = "None";
+        public string c10_edge_value = "None";
+        public string c11_edge_value = "None";
+        public string c12_edge_value = "None";
+        public string c13_edge_value = "None";
+        public string c14_edge_value = "None";
+        public string c15_edge_value = "None";
+        public string c16_edge_value = "None";
 
         public int c1_pulse_value = 0;
         public int c2_pulse_value = 0;
@@ -143,7 +143,7 @@ namespace Controller_Design_2
         bool c131415_isCurrent = false;
         bool c160000_isCurrent = false;
 
-        int currentStrobe = 1;
+        string currentStrobe = "Group 1";
         
         int led1_testStop;
         int led2_testStop;
@@ -200,6 +200,21 @@ namespace Controller_Design_2
             return final_rgb;
         }
 
+        public int returnEdgeIndex(string value)
+        {
+            if (value == "Rising")
+            {
+                return 1;
+            }
+            else if (value == "Falling")
+            {
+                return 2;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
         // {Channel, Position} ; -1 for Not in use
         int[,] position =
@@ -882,32 +897,107 @@ namespace Controller_Design_2
             // Channels 1 2 3
             if (c010203_isCurrent)
             {
-                if (chooseGrp.SelectedIndex == 0) { c010203_isGrouped = true; }
-                else { c010203_isGrouped = false; }
+                if (chooseGrp.SelectedIndex == 0) 
+                { 
+                    c010203_isGrouped = true; 
+                }
+                else 
+                { 
+                    c010203_isGrouped = false; 
+                }
+                c1_edge_value = "None";
+                c2_edge_value = "None";
+                c3_edge_value = "None";
+                c1_pulse_value = 0;
+                c2_pulse_value = 0;
+                c3_pulse_value = 0;
+                c1_delay_value = 0;
+                c2_delay_value = 0;
+                c3_delay_value = 0;
             }
             // Channels 4 5 6
             else if (c040506_isCurrent)
             {
-                if (chooseGrp.SelectedIndex == 0) { c040506_isGrouped = true; }
-                else { c040506_isGrouped = false; }
+                if (chooseGrp.SelectedIndex == 0) 
+                { 
+                    c040506_isGrouped = true; 
+                }
+                else 
+                { 
+                    c040506_isGrouped = false; 
+                }
+                c4_edge_value = "None";
+                c5_edge_value = "None";
+                c6_edge_value = "None";
+                c4_pulse_value = 0;
+                c5_pulse_value = 0;
+                c6_pulse_value = 0;
+                c4_delay_value = 0;
+                c5_delay_value = 0;
+                c6_delay_value = 0;
             }
             // Channels 7 8 9
             else if (c070809_isCurrent)
             {
-                if (chooseGrp.SelectedIndex == 0) { c070809_isGrouped = true; }
-                else { c070809_isGrouped = false; }
+                if (chooseGrp.SelectedIndex == 0) 
+                {
+                    c070809_isGrouped = true; 
+                }
+                else 
+                { 
+                    c070809_isGrouped = false; 
+                }
+                c7_edge_value = "None";
+                c8_edge_value = "None";
+                c9_edge_value = "None";
+                c7_pulse_value = 0;
+                c8_pulse_value = 0;
+                c9_pulse_value = 0;
+                c7_delay_value = 0;
+                c8_delay_value = 0;
+                c9_delay_value = 0;
             }
             // Channels 10 11 12
             else if (c101112_isCurrent)
             {
-                if (chooseGrp.SelectedIndex == 0) { c101112_isGrouped = true; }
-                else { c101112_isGrouped = false; }
+                if (chooseGrp.SelectedIndex == 0) 
+                { 
+                    c101112_isGrouped = true; 
+                }
+                else 
+                { 
+                    c101112_isGrouped = false; 
+                }
+                c10_edge_value = "None";
+                c11_edge_value = "None";
+                c12_edge_value = "None";
+                c10_pulse_value = 0;
+                c11_pulse_value = 0;
+                c12_pulse_value = 0;
+                c10_delay_value = 0;
+                c11_delay_value = 0;
+                c12_delay_value = 0;
             }
             // Channels 13 14 15
             else if (c131415_isCurrent)
             {
-                if (chooseGrp.SelectedIndex == 0) { c131415_isGrouped = true; }
-                else { c131415_isGrouped = false; }
+                if (chooseGrp.SelectedIndex == 0) 
+                { 
+                    c131415_isGrouped = true; 
+                }
+                else 
+                { 
+                    c131415_isGrouped = false; 
+                }
+                c13_edge_value = "None";
+                c14_edge_value = "None";
+                c15_edge_value = "None";
+                c13_pulse_value = 0;
+                c14_pulse_value = 0;
+                c15_pulse_value = 0;
+                c13_delay_value = 0;
+                c14_delay_value = 0;
+                c15_delay_value = 0;
             }
 
             //Console.WriteLine("c000123 " + c010203_isGrouped);
@@ -915,6 +1005,62 @@ namespace Controller_Design_2
             //Console.WriteLine("c000789 " + c070809_isGrouped);
             //Console.WriteLine("c101112 " + c101112_isGrouped);
             //Console.WriteLine("c131415 " + c131415_isGrouped);
+
+            // Change Strobe Settings Visuals
+            strobeChannel.Items.Clear();
+            if (c010203_isGrouped)
+            {
+                strobeChannel.Items.Add("Group 1");
+            }
+            else
+            {
+                strobeChannel.Items.Add("Channel 1");
+                strobeChannel.Items.Add("Channel 2");
+                strobeChannel.Items.Add("Channel 3");
+            }
+
+            if (c040506_isGrouped)
+            {
+                strobeChannel.Items.Add("Group 2");
+            }
+            else
+            {
+                strobeChannel.Items.Add("Channel 4");
+                strobeChannel.Items.Add("Channel 5");
+                strobeChannel.Items.Add("Channel 6");
+            }
+
+            if (c070809_isGrouped)
+            {
+                strobeChannel.Items.Add("Group 3");
+            }
+            else
+            {
+                strobeChannel.Items.Add("Channel 7");
+                strobeChannel.Items.Add("Channel 8");
+                strobeChannel.Items.Add("Channel 9");
+            }
+            if (c101112_isGrouped)
+            {
+                strobeChannel.Items.Add("Group 4");
+            }
+            else
+            {
+                strobeChannel.Items.Add("Channel 10");
+                strobeChannel.Items.Add("Channel 11");
+                strobeChannel.Items.Add("Channel 12");
+            }
+            if (c131415_isGrouped)
+            {
+                strobeChannel.Items.Add("Group 5");
+            }
+            else
+            {
+                strobeChannel.Items.Add("Channel 13");
+                strobeChannel.Items.Add("Channel 14");
+                strobeChannel.Items.Add("Channel 15");
+            }
+            strobeChannel.Items.Add("Channel 16");
         }
 
         private void led1_mode_SelectedIndexChanged(object sender, EventArgs e)
@@ -1319,180 +1465,354 @@ namespace Controller_Design_2
 
         private void strobeChannel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (strobeChannel.SelectedIndex == 0) { 
-                currentStrobe = 1;
-                setEdge.SelectedIndex = c1_edge_value;
-                setPulse.Text = Convert.ToString(c1_pulse_value);
-                setDelay.Text = Convert.ToString(c1_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 1) { 
-                currentStrobe = 2;
-                setEdge.SelectedIndex = c2_edge_value;
-                setPulse.Text = Convert.ToString(c2_pulse_value);
-                setDelay.Text = Convert.ToString(c2_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 2) { 
-                currentStrobe = 3;
-                setEdge.SelectedIndex = c3_edge_value;
-                setPulse.Text = Convert.ToString(c3_pulse_value);
-                setDelay.Text = Convert.ToString(c3_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 3) { 
-                currentStrobe = 4;
-                setEdge.SelectedIndex = c4_edge_value;
-                setPulse.Text = Convert.ToString(c4_pulse_value);
-                setDelay.Text = Convert.ToString(c4_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 4) { 
-                currentStrobe = 5;
-                setEdge.SelectedIndex = c5_edge_value;
-                setPulse.Text = Convert.ToString(c5_pulse_value);
-                setDelay.Text = Convert.ToString(c5_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 5) { 
-                currentStrobe = 6;
-                setEdge.SelectedIndex = c6_edge_value;
-                setPulse.Text = Convert.ToString(c6_pulse_value);
-                setDelay.Text = Convert.ToString(c6_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 6) { 
-                currentStrobe = 7;
-                setEdge.SelectedIndex = c7_edge_value;
-                setPulse.Text = Convert.ToString(c7_pulse_value);
-                setDelay.Text = Convert.ToString(c7_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 7) { 
-                currentStrobe = 8;
-                setEdge.SelectedIndex = c8_edge_value;
-                setPulse.Text = Convert.ToString(c8_pulse_value);
-                setDelay.Text = Convert.ToString(c8_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 8) { 
-                currentStrobe = 9;
-                setEdge.SelectedIndex = c9_edge_value;
-                setPulse.Text = Convert.ToString(c9_pulse_value);
-                setDelay.Text = Convert.ToString(c9_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 9) { 
-                currentStrobe = 10;
-                setEdge.SelectedIndex = c10_edge_value;
-                setPulse.Text = Convert.ToString(c10_pulse_value);
-                setDelay.Text = Convert.ToString(c10_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 10) { 
-                currentStrobe = 11;
-                setEdge.SelectedIndex = c11_edge_value;
-                setPulse.Text = Convert.ToString(c11_pulse_value);
-                setDelay.Text = Convert.ToString(c11_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 11) { 
-                currentStrobe = 12;
-                setEdge.SelectedIndex = c12_edge_value;
-                setPulse.Text = Convert.ToString(c12_pulse_value);
-                setDelay.Text = Convert.ToString(c12_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 12) { 
-                currentStrobe = 13;
-                setEdge.SelectedIndex = c13_edge_value;
-                setPulse.Text = Convert.ToString(c13_pulse_value);
-                setDelay.Text = Convert.ToString(c13_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 13) { 
-                currentStrobe = 14;
-                setEdge.SelectedIndex = c14_edge_value;
-                setPulse.Text = Convert.ToString(c14_pulse_value);
-                setDelay.Text = Convert.ToString(c14_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 14) { 
-                currentStrobe = 15;
-                setEdge.SelectedIndex = c15_edge_value;
-                setPulse.Text = Convert.ToString(c15_pulse_value);
-                setDelay.Text = Convert.ToString(c15_delay_value);
-            }
-            else if (strobeChannel.SelectedIndex == 15) { 
-                currentStrobe = 16;
-                setEdge.SelectedIndex = c16_edge_value;
-                setPulse.Text = Convert.ToString(c16_pulse_value);
-                setDelay.Text = Convert.ToString(c16_delay_value);
+            string StrobeIndex = strobeChannel.Text;
+            Console.WriteLine(StrobeIndex);
+
+            switch (StrobeIndex)
+            {
+                case "Group 1":
+                    currentStrobe = "Group 1";
+                    setEdge.SelectedIndex = returnEdgeIndex(c1_edge_value);
+                    setPulse.Text = Convert.ToString(c1_pulse_value);
+                    setDelay.Text = Convert.ToString(c1_delay_value);
+                    break;
+                case "Group 2":
+                    currentStrobe = "Group 2";
+                    setEdge.SelectedIndex = returnEdgeIndex(c4_edge_value);
+                    setPulse.Text = Convert.ToString(c4_pulse_value);
+                    setDelay.Text = Convert.ToString(c4_delay_value);
+                    break;
+                case "Group 3":
+                    currentStrobe = "Group 3";
+                    setEdge.SelectedIndex = returnEdgeIndex(c7_edge_value);
+                    setPulse.Text = Convert.ToString(c7_pulse_value);
+                    setDelay.Text = Convert.ToString(c7_delay_value);
+                    break;
+                case "Group 4":
+                    currentStrobe = "Group 4";
+                    setEdge.SelectedIndex = returnEdgeIndex(c10_edge_value);
+                    setPulse.Text = Convert.ToString(c10_pulse_value);
+                    setDelay.Text = Convert.ToString(c10_delay_value);
+                    break;
+                case "Group 5":
+                    currentStrobe = "Group 5";
+                    setEdge.SelectedIndex = returnEdgeIndex(c13_edge_value);
+                    setPulse.Text = Convert.ToString(c13_pulse_value);
+                    setDelay.Text = Convert.ToString(c13_delay_value);
+                    break;
+                case "Channel 1":
+                    currentStrobe = "Channel 1";
+                    setEdge.SelectedIndex = returnEdgeIndex(c1_edge_value);
+                    setPulse.Text = Convert.ToString(c1_pulse_value);
+                    setDelay.Text = Convert.ToString(c1_delay_value);
+                    break;
+                case "Channel 2":
+                    currentStrobe = "Channel 2";
+                    setEdge.SelectedIndex = returnEdgeIndex(c2_edge_value);
+                    setPulse.Text = Convert.ToString(c2_pulse_value);
+                    setDelay.Text = Convert.ToString(c2_delay_value);
+                    break;
+                case "Channel 3":
+                    currentStrobe = "Channel 3";
+                    setEdge.SelectedIndex = returnEdgeIndex(c3_edge_value);
+                    setPulse.Text = Convert.ToString(c3_pulse_value);
+                    setDelay.Text = Convert.ToString(c3_delay_value);
+                    break;
+                case "Channel 4":
+                    currentStrobe = "Channel 4";
+                    setEdge.SelectedIndex = returnEdgeIndex(c4_edge_value);
+                    setPulse.Text = Convert.ToString(c4_pulse_value);
+                    setDelay.Text = Convert.ToString(c4_delay_value);
+                    break;
+                case "Channel 5":
+                    currentStrobe = "Channel 5";
+                    setEdge.SelectedIndex = returnEdgeIndex(c5_edge_value);
+                    setPulse.Text = Convert.ToString(c5_pulse_value);
+                    setDelay.Text = Convert.ToString(c5_delay_value);
+                    break;
+                case "Channel 6":
+                    currentStrobe = "Channel 6";
+                    setEdge.SelectedIndex = returnEdgeIndex(c6_edge_value);
+                    setPulse.Text = Convert.ToString(c6_pulse_value);
+                    setDelay.Text = Convert.ToString(c6_delay_value);
+                    break;
+                case "Channel 7":
+                    currentStrobe = "Channel 7";
+                    setEdge.SelectedIndex = returnEdgeIndex(c7_edge_value);
+                    setPulse.Text = Convert.ToString(c7_pulse_value);
+                    setDelay.Text = Convert.ToString(c7_delay_value);
+                    break;
+                case "Channel 8":
+                    currentStrobe = "Channel 8";
+                    setEdge.SelectedIndex = returnEdgeIndex(c9_edge_value);
+                    setPulse.Text = Convert.ToString(c9_pulse_value);
+                    setDelay.Text = Convert.ToString(c9_delay_value);
+                    break;
+                case "Channel 9":
+                    currentStrobe = "Channel 9";
+                    setEdge.SelectedIndex = returnEdgeIndex(c9_edge_value);
+                    setPulse.Text = Convert.ToString(c9_pulse_value);
+                    setDelay.Text = Convert.ToString(c9_delay_value);
+                    break;
+                case "Channel 10":
+                    currentStrobe = "Channel 10";
+                    setEdge.SelectedIndex = returnEdgeIndex(c10_edge_value);
+                    setPulse.Text = Convert.ToString(c10_pulse_value);
+                    setDelay.Text = Convert.ToString(c10_delay_value);
+                    break;
+                case "Channel 11":
+                    currentStrobe = "Channel 11";
+                    setEdge.SelectedIndex = returnEdgeIndex(c11_edge_value);
+                    setPulse.Text = Convert.ToString(c11_pulse_value);
+                    setDelay.Text = Convert.ToString(c11_delay_value);
+                    break;
+                case "Channel 12":
+                    currentStrobe = "Channel 12";
+                    setEdge.SelectedIndex = returnEdgeIndex(c12_edge_value);
+                    setPulse.Text = Convert.ToString(c12_pulse_value);
+                    setDelay.Text = Convert.ToString(c12_delay_value);
+                    break;
+                case "Channel 13":
+                    currentStrobe = "Channel 13";
+                    setEdge.SelectedIndex = returnEdgeIndex(c13_edge_value);
+                    setPulse.Text = Convert.ToString(c13_pulse_value);
+                    setDelay.Text = Convert.ToString(c13_delay_value);
+                    break;
+                case "Channel 14":
+                    currentStrobe = "Channel 14";
+                    setEdge.SelectedIndex = returnEdgeIndex(c14_edge_value);
+                    setPulse.Text = Convert.ToString(c14_pulse_value);
+                    setDelay.Text = Convert.ToString(c14_delay_value);
+                    break;
+                case "Channel 15":
+                    currentStrobe = "Channel 15";
+                    setEdge.SelectedIndex = returnEdgeIndex(c15_edge_value);
+                    setPulse.Text = Convert.ToString(c15_pulse_value);
+                    setDelay.Text = Convert.ToString(c15_delay_value);
+                    break;
+                case "Channel 16":
+                    currentStrobe = "Channel 16";
+                    setEdge.SelectedIndex = returnEdgeIndex(c16_edge_value);
+                    setPulse.Text = Convert.ToString(c16_pulse_value);
+                    setDelay.Text = Convert.ToString(c16_delay_value);
+                    break;
             }
 
-            //Console.WriteLine(currentStrobe); 
+            //if (strobeChannel.SelectedIndex == 0)
+            //{
+            //    currentStrobe = 1;
+            //    setEdge.SelectedIndex = c1_edge_value;
+            //    setPulse.Text = Convert.ToString(c1_pulse_value);
+            //    setDelay.Text = Convert.ToString(c1_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 1)
+            //{
+            //    currentStrobe = 2;
+            //    setEdge.SelectedIndex = c2_edge_value;
+            //    setPulse.Text = Convert.ToString(c2_pulse_value);
+            //    setDelay.Text = Convert.ToString(c2_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 2)
+            //{
+            //    currentStrobe = 3;
+            //    setEdge.SelectedIndex = c3_edge_value;
+            //    setPulse.Text = Convert.ToString(c3_pulse_value);
+            //    setDelay.Text = Convert.ToString(c3_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 3)
+            //{
+            //    currentStrobe = 4;
+            //    setEdge.SelectedIndex = c4_edge_value;
+            //    setPulse.Text = Convert.ToString(c4_pulse_value);
+            //    setDelay.Text = Convert.ToString(c4_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 4)
+            //{
+            //    currentStrobe = 5;
+            //    setEdge.SelectedIndex = c5_edge_value;
+            //    setPulse.Text = Convert.ToString(c5_pulse_value);
+            //    setDelay.Text = Convert.ToString(c5_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 5)
+            //{
+            //    currentStrobe = 6;
+            //    setEdge.SelectedIndex = c6_edge_value;
+            //    setPulse.Text = Convert.ToString(c6_pulse_value);
+            //    setDelay.Text = Convert.ToString(c6_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 6)
+            //{
+            //    currentStrobe = 7;
+            //    setEdge.SelectedIndex = c7_edge_value;
+            //    setPulse.Text = Convert.ToString(c7_pulse_value);
+            //    setDelay.Text = Convert.ToString(c7_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 7)
+            //{
+            //    currentStrobe = 8;
+            //    setEdge.SelectedIndex = c8_edge_value;
+            //    setPulse.Text = Convert.ToString(c8_pulse_value);
+            //    setDelay.Text = Convert.ToString(c8_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 8)
+            //{
+            //    currentStrobe = 9;
+            //    setEdge.SelectedIndex = c9_edge_value;
+            //    setPulse.Text = Convert.ToString(c9_pulse_value);
+            //    setDelay.Text = Convert.ToString(c9_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 9)
+            //{
+            //    currentStrobe = 10;
+            //    setEdge.SelectedIndex = c10_edge_value;
+            //    setPulse.Text = Convert.ToString(c10_pulse_value);
+            //    setDelay.Text = Convert.ToString(c10_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 10)
+            //{
+            //    currentStrobe = 11;
+            //    setEdge.SelectedIndex = c11_edge_value;
+            //    setPulse.Text = Convert.ToString(c11_pulse_value);
+            //    setDelay.Text = Convert.ToString(c11_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 11)
+            //{
+            //    currentStrobe = 12;
+            //    setEdge.SelectedIndex = c12_edge_value;
+            //    setPulse.Text = Convert.ToString(c12_pulse_value);
+            //    setDelay.Text = Convert.ToString(c12_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 12)
+            //{
+            //    currentStrobe = 13;
+            //    setEdge.SelectedIndex = c13_edge_value;
+            //    setPulse.Text = Convert.ToString(c13_pulse_value);
+            //    setDelay.Text = Convert.ToString(c13_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 13)
+            //{
+            //    currentStrobe = 14;
+            //    setEdge.SelectedIndex = c14_edge_value;
+            //    setPulse.Text = Convert.ToString(c14_pulse_value);
+            //    setDelay.Text = Convert.ToString(c14_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 14)
+            //{
+            //    currentStrobe = 15;
+            //    setEdge.SelectedIndex = c15_edge_value;
+            //    setPulse.Text = Convert.ToString(c15_pulse_value);
+            //    setDelay.Text = Convert.ToString(c15_delay_value);
+            //}
+            //else if (strobeChannel.SelectedIndex == 15)
+            //{
+            //    currentStrobe = 16;
+            //    setEdge.SelectedIndex = c16_edge_value;
+            //    setPulse.Text = Convert.ToString(c16_pulse_value);
+            //    setDelay.Text = Convert.ToString(c16_delay_value);
+            //}
+
+
         }
 
         private void setEdge_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int edge_value = setEdge.SelectedIndex;
+            string edge_value = setEdge.Text;
             //Console.WriteLine(edge_value);
 
             switch (currentStrobe)
             {
-                case 1:
+                case "Group 1":
                     c1_edge_value = edge_value;
-                    break;
-                case 2:
                     c2_edge_value = edge_value;
-                    break;
-                case 3:
                     c3_edge_value = edge_value;
                     break;
-                case 4:
+                case "Group 2":
                     c4_edge_value = edge_value;
-                    break;
-                case 5:
                     c5_edge_value = edge_value;
-                    break;
-                case 6:
                     c6_edge_value = edge_value;
                     break;
-                case 7:
+                case "Group 3":
                     c7_edge_value = edge_value;
-                    break;
-                case 8:
                     c8_edge_value = edge_value;
-                    break;
-                case 9:
                     c9_edge_value = edge_value;
                     break;
-                case 10:
+                case "Group 4":
                     c10_edge_value = edge_value;
-                    break;
-                case 11:
                     c11_edge_value = edge_value;
-                    break;
-                case 12:
                     c12_edge_value = edge_value;
                     break;
-                case 13:
+                case "Group 5":
                     c13_edge_value = edge_value;
-                    break;
-                case 14:
                     c14_edge_value = edge_value;
-                    break;
-                case 15:
                     c15_edge_value = edge_value;
                     break;
-                case 16:
+                case "Channel 1":
+                    c1_edge_value = edge_value;
+                    break;
+                case "Channel 2":
+                    c2_edge_value = edge_value;
+                    break;
+                case "Channel 3":
+                    c3_edge_value = edge_value;
+                    break;
+                case "Channel 4":
+                    c4_edge_value = edge_value;
+                    break;
+                case "Channel 5":
+                    c5_edge_value = edge_value;
+                    break;
+                case "Channel 6":
+                    c6_edge_value = edge_value;
+                    break;
+                case "Channel 7":
+                    c7_edge_value = edge_value;
+                    break;
+                case "Channel 8":
+                    c8_edge_value = edge_value;
+                    break;
+                case "Channel 9":
+                    c9_edge_value = edge_value;
+                    break;
+                case "Channel 10":
+                    c10_edge_value = edge_value;
+                    break;
+                case "Channel 11":
+                    c11_edge_value = edge_value;
+                    break;
+                case "Channel 12":
+                    c12_edge_value = edge_value;
+                    break;
+                case "Channel 13":
+                    c13_edge_value = edge_value;
+                    break;
+                case "Channel 14":
+                    c14_edge_value = edge_value;
+                    break;
+                case "Channel 15":
+                    c15_edge_value = edge_value;
+                    break;
+                case "Channel 16":
                     c16_edge_value = edge_value;
                     break;
             } // End of Switch Loop
 
             // To test Edge Values
-            //Console.WriteLine("Channel 1 " + c1_edge_value);
-            //Console.WriteLine("Channel 2 " + c2_edge_value);
-            //Console.WriteLine("Channel 3 " + c3_edge_value);
-            //Console.WriteLine("Channel 4 " + c4_edge_value);
-            //Console.WriteLine("Channel 5 " + c5_edge_value);
-            //Console.WriteLine("Channel 6 " + c6_edge_value);
-            //Console.WriteLine("Channel 7 " + c7_edge_value);
-            //Console.WriteLine("Channel 8 " + c8_edge_value);
-            //Console.WriteLine("Channel 9 " + c9_edge_value);
-            //Console.WriteLine("Channel 10 " + c10_edge_value);
-            //Console.WriteLine("Channel 11 " + c11_edge_value);
-            //Console.WriteLine("Channel 12 " + c12_edge_value);
-            //Console.WriteLine("Channel 13 " + c13_edge_value);
-            //Console.WriteLine("Channel 14 " + c14_edge_value);
-            //Console.WriteLine("Channel 15 " + c15_edge_value);
-            //Console.WriteLine("Channel 16 " + c16_edge_value);
+            Console.WriteLine("Channel 1 " + c1_edge_value);
+            Console.WriteLine("Channel 2 " + c2_edge_value);
+            Console.WriteLine("Channel 3 " + c3_edge_value);
+            Console.WriteLine("Channel 4 " + c4_edge_value);
+            Console.WriteLine("Channel 5 " + c5_edge_value);
+            Console.WriteLine("Channel 6 " + c6_edge_value);
+            Console.WriteLine("Channel 7 " + c7_edge_value);
+            Console.WriteLine("Channel 8 " + c8_edge_value);
+            Console.WriteLine("Channel 9 " + c9_edge_value);
+            Console.WriteLine("Channel 10 " + c10_edge_value);
+            Console.WriteLine("Channel 11 " + c11_edge_value);
+            Console.WriteLine("Channel 12 " + c12_edge_value);
+            Console.WriteLine("Channel 13 " + c13_edge_value);
+            Console.WriteLine("Channel 14 " + c14_edge_value);
+            Console.WriteLine("Channel 15 " + c15_edge_value);
+            Console.WriteLine("Channel 16 " + c16_edge_value);
         }
 
         private void setPulse_TextChanged(object sender, EventArgs e)
@@ -1502,73 +1822,98 @@ namespace Controller_Design_2
                 int pulse_value = Convert.ToInt32(setPulse.Text);
                 switch (currentStrobe)
                 {
-                    case 1:
+                    case "Group 1":
                         c1_pulse_value = pulse_value;
-                        break;
-                    case 2:
                         c2_pulse_value = pulse_value;
-                        break;
-                    case 3:
                         c3_pulse_value = pulse_value;
                         break;
-                    case 4:
+                    case "Group 2":
                         c4_pulse_value = pulse_value;
-                        break;
-                    case 5:
                         c5_pulse_value = pulse_value;
-                        break;
-                    case 6:
                         c6_pulse_value = pulse_value;
                         break;
-                    case 7:
+                    case "Group 3":
                         c7_pulse_value = pulse_value;
-                        break;
-                    case 8:
                         c8_pulse_value = pulse_value;
-                        break;
-                    case 9:
                         c9_pulse_value = pulse_value;
                         break;
-                    case 10:
+                    case "Group 4":
                         c10_pulse_value = pulse_value;
-                        break;
-                    case 11:
                         c11_pulse_value = pulse_value;
-                        break;
-                    case 12:
                         c12_pulse_value = pulse_value;
                         break;
-                    case 13:
+                    case "Group 5":
                         c13_pulse_value = pulse_value;
-                        break;
-                    case 14:
                         c14_pulse_value = pulse_value;
-                        break;
-                    case 15:
                         c15_pulse_value = pulse_value;
                         break;
-                    case 16:
+                    case "Channel 1":
+                        c1_pulse_value = pulse_value;
+                        break;
+                    case "Channel 2":
+                        c2_pulse_value = pulse_value;
+                        break;
+                    case "Channel 3":
+                        c3_pulse_value = pulse_value;
+                        break;
+                    case "Channel 4":
+                        c4_pulse_value = pulse_value;
+                        break;
+                    case "Channel 5":
+                        c5_pulse_value = pulse_value;
+                        break;
+                    case "Channel 6":
+                        c6_pulse_value = pulse_value;
+                        break;
+                    case "Channel 7":
+                        c7_pulse_value = pulse_value;
+                        break;
+                    case "Channel 8":
+                        c8_pulse_value = pulse_value;
+                        break;
+                    case "Channel 9":
+                        c9_pulse_value = pulse_value;
+                        break;
+                    case "Channel 10":
+                        c10_pulse_value = pulse_value;
+                        break;
+                    case "Channel 11":
+                        c11_pulse_value = pulse_value;
+                        break;
+                    case "Channel 12":
+                        c12_pulse_value = pulse_value;
+                        break;
+                    case "Channel 13":
+                        c13_pulse_value = pulse_value;
+                        break;
+                    case "Channel 14":
+                        c14_pulse_value = pulse_value;
+                        break;
+                    case "Channel 15":
+                        c15_pulse_value = pulse_value;
+                        break;
+                    case "Channel 16":
                         c16_pulse_value = pulse_value;
                         break;
                 } // End of Switch Loop
 
                 // To test Pulse Values
-                //Console.WriteLine("Channel 1 " + c1_pulse_value);
-                //Console.WriteLine("Channel 2 " + c2_pulse_value);
-                //Console.WriteLine("Channel 3 " + c3_pulse_value);
-                //Console.WriteLine("Channel 4 " + c4_pulse_value);
-                //Console.WriteLine("Channel 5 " + c5_pulse_value);
-                //Console.WriteLine("Channel 6 " + c6_pulse_value);
-                //Console.WriteLine("Channel 7 " + c7_pulse_value);
-                //Console.WriteLine("Channel 8 " + c8_pulse_value);
-                //Console.WriteLine("Channel 9 " + c9_pulse_value);
-                //Console.WriteLine("Channel 10 " + c10_pulse_value);
-                //Console.WriteLine("Channel 11 " + c11_pulse_value);
-                //Console.WriteLine("Channel 12 " + c12_pulse_value);
-                //Console.WriteLine("Channel 13 " + c13_pulse_value);
-                //Console.WriteLine("Channel 14 " + c14_pulse_value);
-                //Console.WriteLine("Channel 15 " + c15_pulse_value);
-                //Console.WriteLine("Channel 16 " + c16_pulse_value);
+                Console.WriteLine("Channel 1 " + c1_pulse_value);
+                Console.WriteLine("Channel 2 " + c2_pulse_value);
+                Console.WriteLine("Channel 3 " + c3_pulse_value);
+                Console.WriteLine("Channel 4 " + c4_pulse_value);
+                Console.WriteLine("Channel 5 " + c5_pulse_value);
+                Console.WriteLine("Channel 6 " + c6_pulse_value);
+                Console.WriteLine("Channel 7 " + c7_pulse_value);
+                Console.WriteLine("Channel 8 " + c8_pulse_value);
+                Console.WriteLine("Channel 9 " + c9_pulse_value);
+                Console.WriteLine("Channel 10 " + c10_pulse_value);
+                Console.WriteLine("Channel 11 " + c11_pulse_value);
+                Console.WriteLine("Channel 12 " + c12_pulse_value);
+                Console.WriteLine("Channel 13 " + c13_pulse_value);
+                Console.WriteLine("Channel 14 " + c14_pulse_value);
+                Console.WriteLine("Channel 15 " + c15_pulse_value);
+                Console.WriteLine("Channel 16 " + c16_pulse_value);
             }
             else
             {
@@ -1583,73 +1928,98 @@ namespace Controller_Design_2
                 int delay_value = Convert.ToInt32(setDelay.Text);
                 switch (currentStrobe)
                 {
-                    case 1:
+                    case "Group 1":
                         c1_delay_value = delay_value;
-                        break;
-                    case 2:
                         c2_delay_value = delay_value;
-                        break;
-                    case 3:
                         c3_delay_value = delay_value;
                         break;
-                    case 4:
+                    case "Group 2":
                         c4_delay_value = delay_value;
-                        break;
-                    case 5:
                         c5_delay_value = delay_value;
-                        break;
-                    case 6:
                         c6_delay_value = delay_value;
                         break;
-                    case 7:
+                    case "Group 3":
                         c7_delay_value = delay_value;
-                        break;
-                    case 8:
                         c8_delay_value = delay_value;
-                        break;
-                    case 9:
                         c9_delay_value = delay_value;
                         break;
-                    case 10:
+                    case "Group 4":
                         c10_delay_value = delay_value;
-                        break;
-                    case 11:
                         c11_delay_value = delay_value;
-                        break;
-                    case 12:
                         c12_delay_value = delay_value;
                         break;
-                    case 13:
+                    case "Group 5":
                         c13_delay_value = delay_value;
-                        break;
-                    case 14:
                         c14_delay_value = delay_value;
-                        break;
-                    case 15:
                         c15_delay_value = delay_value;
                         break;
-                    case 16:
+                    case "Channel 1":
+                        c1_delay_value = delay_value;
+                        break;
+                    case "Channel 2":
+                        c2_delay_value = delay_value;
+                        break;
+                    case "Channel 3":
+                        c3_delay_value = delay_value;
+                        break;
+                    case "Channel 4":
+                        c4_delay_value = delay_value;
+                        break;
+                    case "Channel 5":
+                        c5_delay_value = delay_value;
+                        break;
+                    case "Channel 6":
+                        c6_delay_value = delay_value;
+                        break;
+                    case "Channel 7":
+                        c7_delay_value = delay_value;
+                        break;
+                    case "Channel 8":
+                        c8_delay_value = delay_value;
+                        break;
+                    case "Channel 9":
+                        c9_delay_value = delay_value;
+                        break;
+                    case "Channel 10":
+                        c10_delay_value = delay_value;
+                        break;
+                    case "Channel 11":
+                        c11_delay_value = delay_value;
+                        break;
+                    case "Channel 12":
+                        c12_delay_value = delay_value;
+                        break;
+                    case "Channel 13":
+                        c13_delay_value = delay_value;
+                        break;
+                    case "Channel 14":
+                        c14_delay_value = delay_value;
+                        break;
+                    case "Channel 15":
+                        c15_delay_value = delay_value;
+                        break;
+                    case "Channel 16":
                         c16_delay_value = delay_value;
                         break;
                 } // End of Switch Loop
 
                 // To test Pulse Values
-                //Console.WriteLine("Channel 1 " + c1_delay_value);
-                //Console.WriteLine("Channel 2 " + c2_delay_value);
-                //Console.WriteLine("Channel 3 " + c3_delay_value);
-                //Console.WriteLine("Channel 4 " + c4_delay_value);
-                //Console.WriteLine("Channel 5 " + c5_delay_value);
-                //Console.WriteLine("Channel 6 " + c6_delay_value);
-                //Console.WriteLine("Channel 7 " + c7_delay_value);
-                //Console.WriteLine("Channel 8 " + c8_delay_value);
-                //Console.WriteLine("Channel 9 " + c9_delay_value);
-                //Console.WriteLine("Channel 10 " + c10_delay_value);
-                //Console.WriteLine("Channel 11 " + c11_delay_value);
-                //Console.WriteLine("Channel 12 " + c12_delay_value);
-                //Console.WriteLine("Channel 13 " + c13_delay_value);
-                //Console.WriteLine("Channel 14 " + c14_delay_value);
-                //Console.WriteLine("Channel 15 " + c15_delay_value);
-                //Console.WriteLine("Channel 16 " + c16_delay_value);
+                Console.WriteLine("Channel 1 " + c1_delay_value);
+                Console.WriteLine("Channel 2 " + c2_delay_value);
+                Console.WriteLine("Channel 3 " + c3_delay_value);
+                Console.WriteLine("Channel 4 " + c4_delay_value);
+                Console.WriteLine("Channel 5 " + c5_delay_value);
+                Console.WriteLine("Channel 6 " + c6_delay_value);
+                Console.WriteLine("Channel 7 " + c7_delay_value);
+                Console.WriteLine("Channel 8 " + c8_delay_value);
+                Console.WriteLine("Channel 9 " + c9_delay_value);
+                Console.WriteLine("Channel 10 " + c10_delay_value);
+                Console.WriteLine("Channel 11 " + c11_delay_value);
+                Console.WriteLine("Channel 12 " + c12_delay_value);
+                Console.WriteLine("Channel 13 " + c13_delay_value);
+                Console.WriteLine("Channel 14 " + c14_delay_value);
+                Console.WriteLine("Channel 15 " + c15_delay_value);
+                Console.WriteLine("Channel 16 " + c16_delay_value);
             }
             else
             {

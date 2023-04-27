@@ -208,7 +208,7 @@ namespace Controller_Design_2
                             mainForm.c1_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c1_edge_value = Convert.ToInt32(edge);
+                        mainForm.c1_edge_value = edge;
                         mainForm.c1_mode_value = mode;
                         mainForm.c1_strobe_value = strobe;
 
@@ -241,7 +241,7 @@ namespace Controller_Design_2
                             mainForm.c2_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c2_edge_value = Convert.ToInt32(edge);
+                        mainForm.c2_edge_value = edge;
                         mainForm.c2_mode_value = mode;
                         mainForm.c2_strobe_value = strobe;
 
@@ -274,7 +274,7 @@ namespace Controller_Design_2
                             mainForm.c3_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c3_edge_value = Convert.ToInt32(edge);
+                        mainForm.c3_edge_value = edge;
                         mainForm.c3_mode_value = mode;
                         mainForm.c3_strobe_value = strobe;
 
@@ -308,7 +308,7 @@ namespace Controller_Design_2
                             mainForm.c4_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c4_edge_value = Convert.ToInt32(edge);
+                        mainForm.c4_edge_value = edge;
                         mainForm.c4_mode_value = mode;
                         mainForm.c4_strobe_value = strobe;
 
@@ -342,7 +342,7 @@ namespace Controller_Design_2
                             mainForm.c5_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c5_edge_value = Convert.ToInt32(edge);
+                        mainForm.c5_edge_value = edge;
                         mainForm.c5_mode_value = mode;
                         mainForm.c5_strobe_value = strobe;
 
@@ -376,7 +376,7 @@ namespace Controller_Design_2
                             mainForm.c6_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c6_edge_value = Convert.ToInt32(edge);
+                        mainForm.c6_edge_value = edge;
                         mainForm.c6_mode_value = mode;
                         mainForm.c6_strobe_value = strobe;
 
@@ -410,7 +410,7 @@ namespace Controller_Design_2
                             mainForm.c7_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c7_edge_value = Convert.ToInt32(edge);
+                        mainForm.c7_edge_value = edge;
                         mainForm.c7_mode_value = mode;
                         mainForm.c7_strobe_value = strobe;
 
@@ -444,7 +444,7 @@ namespace Controller_Design_2
                             mainForm.c8_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c8_edge_value = Convert.ToInt32(edge);
+                        mainForm.c8_edge_value = edge;
                         mainForm.c8_mode_value = mode;
                         mainForm.c8_strobe_value = strobe;
 
@@ -478,7 +478,7 @@ namespace Controller_Design_2
                             mainForm.c9_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c9_edge_value = Convert.ToInt32(edge);
+                        mainForm.c9_edge_value = edge;
                         mainForm.c9_mode_value = mode;
                         mainForm.c9_strobe_value = strobe;
 
@@ -512,7 +512,7 @@ namespace Controller_Design_2
                             mainForm.c10_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c10_edge_value = Convert.ToInt32(edge);
+                        mainForm.c10_edge_value = edge;
                         mainForm.c10_mode_value = mode;
                         mainForm.c10_strobe_value = strobe;
 
@@ -546,7 +546,7 @@ namespace Controller_Design_2
                             mainForm.c11_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c11_edge_value = Convert.ToInt32(edge);
+                        mainForm.c11_edge_value = edge;
                         mainForm.c11_mode_value = mode;
                         mainForm.c11_strobe_value = strobe;
 
@@ -580,7 +580,7 @@ namespace Controller_Design_2
                             mainForm.c12_delay_value =  Convert.ToInt32(delay);
                         }
 
-                        mainForm.c12_edge_value = Convert.ToInt32(edge);
+                        mainForm.c12_edge_value = edge;
                         mainForm.c12_mode_value = mode;
                         mainForm.c12_strobe_value = strobe;
 
@@ -614,7 +614,7 @@ namespace Controller_Design_2
                             mainForm.c13_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c13_edge_value = Convert.ToInt32(edge);
+                        mainForm.c13_edge_value = edge;
                         mainForm.c13_mode_value = mode;
                         mainForm.c13_strobe_value = strobe;
 
@@ -648,7 +648,7 @@ namespace Controller_Design_2
                             mainForm.c14_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c14_edge_value = Convert.ToInt32(edge);
+                        mainForm.c14_edge_value = edge;
                         mainForm.c14_mode_value = mode;
                         mainForm.c14_strobe_value = strobe;
 
@@ -682,7 +682,7 @@ namespace Controller_Design_2
                             mainForm.c15_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c15_edge_value = Convert.ToInt32(edge);
+                        mainForm.c15_edge_value = edge;
                         mainForm.c15_mode_value = mode;
                         mainForm.c15_strobe_value = strobe;
 
@@ -716,7 +716,7 @@ namespace Controller_Design_2
                             mainForm.c16_delay_value = Convert.ToInt32(delay);
                         }
 
-                        mainForm.c16_edge_value = Convert.ToInt32(edge);
+                        mainForm.c16_edge_value = edge;
                         mainForm.c16_mode_value = mode;
                         mainForm.c16_strobe_value = strobe;
 

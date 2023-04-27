@@ -32,7 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.consoleDisplay = new System.Windows.Forms.ListBox();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.bs_help = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.portError = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.COMport = new Guna.UI2.WinForms.Guna2TextBox();
+            this.selectBoard = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.closePort = new Guna.UI2.WinForms.Guna2Button();
+            this.openPort = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.fc_help = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.uploadFile = new Guna.UI2.WinForms.Guna2Button();
+            this.updateFile = new Guna.UI2.WinForms.Guna2Button();
+            this.switchFile = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.clearIntensity = new Guna.UI2.WinForms.Guna2Button();
             this.led_help = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -83,36 +102,17 @@
             this.chooseGrp = new Guna.UI2.WinForms.Guna2ComboBox();
             this.selectGrp = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.consoleDisplay = new System.Windows.Forms.ListBox();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.bs_help = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.portError = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.COMport = new Guna.UI2.WinForms.Guna2TextBox();
-            this.selectBoard = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.closePort = new Guna.UI2.WinForms.Guna2Button();
-            this.openPort = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.fc_help = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.uploadFile = new Guna.UI2.WinForms.Guna2Button();
-            this.updateFile = new Guna.UI2.WinForms.Guna2Button();
-            this.switchFile = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2GradientPanel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             this.SuspendLayout();
@@ -134,13 +134,302 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1408, 750);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
-            // panel3
+            // panel4
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Location = new System.Drawing.Point(215, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1320, 641);
-            this.panel3.TabIndex = 2;
+            this.panel4.Controls.Add(this.consoleDisplay);
+            this.panel4.Controls.Add(this.guna2HtmlLabel5);
+            this.panel4.Location = new System.Drawing.Point(840, 63);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(567, 641);
+            this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // consoleDisplay
+            // 
+            this.consoleDisplay.FormattingEnabled = true;
+            this.consoleDisplay.Location = new System.Drawing.Point(1, 30);
+            this.consoleDisplay.Name = "consoleDisplay";
+            this.consoleDisplay.Size = new System.Drawing.Size(550, 602);
+            this.consoleDisplay.TabIndex = 7;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(0, 6);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(61, 18);
+            this.guna2HtmlLabel5.TabIndex = 6;
+            this.guna2HtmlLabel5.Text = "Console";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Location = new System.Drawing.Point(0, 61);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(215, 641);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.bs_help);
+            this.panel7.Controls.Add(this.portError);
+            this.panel7.Controls.Add(this.COMport);
+            this.panel7.Controls.Add(this.selectBoard);
+            this.panel7.Controls.Add(this.guna2HtmlLabel7);
+            this.panel7.Controls.Add(this.guna2HtmlLabel6);
+            this.panel7.Controls.Add(this.closePort);
+            this.panel7.Controls.Add(this.openPort);
+            this.panel7.Controls.Add(this.guna2HtmlLabel3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(215, 218);
+            this.panel7.TabIndex = 1;
+            // 
+            // bs_help
+            // 
+            this.bs_help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bs_help.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bs_help.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bs_help.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bs_help.FillColor = System.Drawing.Color.White;
+            this.bs_help.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bs_help.ForeColor = System.Drawing.Color.White;
+            this.bs_help.Image = ((System.Drawing.Image)(resources.GetObject("bs_help.Image")));
+            this.bs_help.Location = new System.Drawing.Point(143, 6);
+            this.bs_help.Name = "bs_help";
+            this.bs_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.bs_help.Size = new System.Drawing.Size(20, 20);
+            this.bs_help.TabIndex = 54;
+            // 
+            // portError
+            // 
+            this.portError.BackColor = System.Drawing.Color.Transparent;
+            this.portError.Location = new System.Drawing.Point(15, 191);
+            this.portError.Name = "portError";
+            this.portError.Size = new System.Drawing.Size(113, 15);
+            this.portError.TabIndex = 11;
+            this.portError.Text = "Board comnection error";
+            // 
+            // COMport
+            // 
+            this.COMport.BorderColor = System.Drawing.Color.Black;
+            this.COMport.BorderRadius = 10;
+            this.COMport.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.COMport.DefaultText = "";
+            this.COMport.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.COMport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.COMport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.COMport.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.COMport.Enabled = false;
+            this.COMport.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.COMport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.COMport.ForeColor = System.Drawing.Color.Black;
+            this.COMport.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.COMport.Location = new System.Drawing.Point(94, 32);
+            this.COMport.Name = "COMport";
+            this.COMport.PasswordChar = '\0';
+            this.COMport.PlaceholderForeColor = System.Drawing.Color.White;
+            this.COMport.PlaceholderText = "";
+            this.COMport.SelectedText = "";
+            this.COMport.Size = new System.Drawing.Size(75, 22);
+            this.COMport.TabIndex = 9;
+            this.COMport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // selectBoard
+            // 
+            this.selectBoard.BackColor = System.Drawing.Color.Transparent;
+            this.selectBoard.BorderColor = System.Drawing.Color.Black;
+            this.selectBoard.BorderRadius = 10;
+            this.selectBoard.DisplayMember = "1";
+            this.selectBoard.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.selectBoard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectBoard.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.selectBoard.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.selectBoard.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectBoard.ForeColor = System.Drawing.Color.Black;
+            this.selectBoard.ItemHeight = 30;
+            this.selectBoard.Items.AddRange(new object[] {
+            "Board 1",
+            "Board 2",
+            "Board 3",
+            "Board 4",
+            "Board 5",
+            "Board 6",
+            "Board 7",
+            "Board 8"});
+            this.selectBoard.Location = new System.Drawing.Point(22, 140);
+            this.selectBoard.Name = "selectBoard";
+            this.selectBoard.Size = new System.Drawing.Size(96, 36);
+            this.selectBoard.StartIndex = 0;
+            this.selectBoard.TabIndex = 8;
+            this.selectBoard.ValueMember = "1";
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(24, 34);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(62, 18);
+            this.guna2HtmlLabel7.TabIndex = 7;
+            this.guna2HtmlLabel7.Text = "COM Port :";
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(22, 116);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(68, 18);
+            this.guna2HtmlLabel6.TabIndex = 6;
+            this.guna2HtmlLabel6.Text = "Select Board";
+            // 
+            // closePort
+            // 
+            this.closePort.BorderRadius = 10;
+            this.closePort.BorderThickness = 1;
+            this.closePort.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closePort.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closePort.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closePort.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closePort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.closePort.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.closePort.ForeColor = System.Drawing.Color.Black;
+            this.closePort.Location = new System.Drawing.Point(110, 67);
+            this.closePort.Name = "closePort";
+            this.closePort.Size = new System.Drawing.Size(81, 26);
+            this.closePort.TabIndex = 5;
+            this.closePort.Text = "Close port";
+            this.closePort.Click += new System.EventHandler(this.closePort_Click);
+            // 
+            // openPort
+            // 
+            this.openPort.BorderRadius = 10;
+            this.openPort.BorderThickness = 1;
+            this.openPort.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.openPort.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.openPort.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.openPort.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.openPort.Enabled = false;
+            this.openPort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.openPort.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.openPort.ForeColor = System.Drawing.Color.Black;
+            this.openPort.Location = new System.Drawing.Point(23, 67);
+            this.openPort.Name = "openPort";
+            this.openPort.Size = new System.Drawing.Size(81, 26);
+            this.openPort.TabIndex = 2;
+            this.openPort.Text = "Open port";
+            this.openPort.Click += new System.EventHandler(this.openPort_Click);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(23, 6);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(114, 18);
+            this.guna2HtmlLabel3.TabIndex = 4;
+            this.guna2HtmlLabel3.Text = "Board Settings";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.fc_help);
+            this.panel6.Controls.Add(this.uploadFile);
+            this.panel6.Controls.Add(this.updateFile);
+            this.panel6.Controls.Add(this.switchFile);
+            this.panel6.Controls.Add(this.guna2HtmlLabel2);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(215, 147);
+            this.panel6.TabIndex = 0;
+            // 
+            // fc_help
+            // 
+            this.fc_help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.fc_help.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.fc_help.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fc_help.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.fc_help.FillColor = System.Drawing.Color.White;
+            this.fc_help.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.fc_help.ForeColor = System.Drawing.Color.White;
+            this.fc_help.Image = ((System.Drawing.Image)(resources.GetObject("fc_help.Image")));
+            this.fc_help.Location = new System.Drawing.Point(126, 6);
+            this.fc_help.Name = "fc_help";
+            this.fc_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.fc_help.Size = new System.Drawing.Size(20, 20);
+            this.fc_help.TabIndex = 53;
+            this.fc_help.Click += new System.EventHandler(this.fc_help_Click);
+            // 
+            // uploadFile
+            // 
+            this.uploadFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.uploadFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.uploadFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.uploadFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.uploadFile.FillColor = System.Drawing.Color.White;
+            this.uploadFile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.uploadFile.ForeColor = System.Drawing.Color.Black;
+            this.uploadFile.Image = ((System.Drawing.Image)(resources.GetObject("uploadFile.Image")));
+            this.uploadFile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.uploadFile.Location = new System.Drawing.Point(12, 98);
+            this.uploadFile.Name = "uploadFile";
+            this.uploadFile.Size = new System.Drawing.Size(128, 28);
+            this.uploadFile.TabIndex = 3;
+            this.uploadFile.Text = "Upload File";
+            this.uploadFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.uploadFile.Click += new System.EventHandler(this.uploadFile_Click);
+            // 
+            // updateFile
+            // 
+            this.updateFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.updateFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.updateFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.updateFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.updateFile.FillColor = System.Drawing.Color.White;
+            this.updateFile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.updateFile.ForeColor = System.Drawing.Color.Black;
+            this.updateFile.Image = ((System.Drawing.Image)(resources.GetObject("updateFile.Image")));
+            this.updateFile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.updateFile.Location = new System.Drawing.Point(12, 64);
+            this.updateFile.Name = "updateFile";
+            this.updateFile.Size = new System.Drawing.Size(128, 28);
+            this.updateFile.TabIndex = 2;
+            this.updateFile.Text = "Update File";
+            this.updateFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.updateFile.Click += new System.EventHandler(this.updateFile_Click);
+            // 
+            // switchFile
+            // 
+            this.switchFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.switchFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.switchFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.switchFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.switchFile.FillColor = System.Drawing.Color.White;
+            this.switchFile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.switchFile.ForeColor = System.Drawing.Color.Black;
+            this.switchFile.Image = ((System.Drawing.Image)(resources.GetObject("switchFile.Image")));
+            this.switchFile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.switchFile.Location = new System.Drawing.Point(12, 30);
+            this.switchFile.Name = "switchFile";
+            this.switchFile.Size = new System.Drawing.Size(128, 28);
+            this.switchFile.TabIndex = 1;
+            this.switchFile.Text = "Switch File";
+            this.switchFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.switchFile.Click += new System.EventHandler(this.switchFile_Click);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(23, 6);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(97, 18);
+            this.guna2HtmlLabel2.TabIndex = 0;
+            this.guna2HtmlLabel2.Text = "File Controls";
             // 
             // panel5
             // 
@@ -409,21 +698,11 @@
             this.strobeChannel.ForeColor = System.Drawing.Color.Black;
             this.strobeChannel.ItemHeight = 30;
             this.strobeChannel.Items.AddRange(new object[] {
-            "Channel 1",
-            "Channel 2",
-            "Channel 3",
-            "Channel 4",
-            "Channel 5",
-            "Channel 6",
-            "Channel 7",
-            "Channel 8",
-            "Channel 9",
-            "Channel 10",
-            "Channel 11",
-            "Channel 12",
-            "Channel 13",
-            "Channel 14",
-            "Channel 15",
+            "Group 1",
+            "Group 2",
+            "Group 3",
+            "Group 4",
+            "Group 5",
             "Channel 16"});
             this.strobeChannel.Location = new System.Drawing.Point(81, 135);
             this.strobeChannel.Name = "strobeChannel";
@@ -1017,303 +1296,6 @@
             this.guna2HtmlLabel4.TabIndex = 5;
             this.guna2HtmlLabel4.Text = "LED Settings";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.consoleDisplay);
-            this.panel4.Controls.Add(this.guna2HtmlLabel5);
-            this.panel4.Location = new System.Drawing.Point(840, 63);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(567, 641);
-            this.panel4.TabIndex = 0;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // consoleDisplay
-            // 
-            this.consoleDisplay.FormattingEnabled = true;
-            this.consoleDisplay.Location = new System.Drawing.Point(1, 30);
-            this.consoleDisplay.Name = "consoleDisplay";
-            this.consoleDisplay.Size = new System.Drawing.Size(550, 602);
-            this.consoleDisplay.TabIndex = 7;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(0, 6);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(61, 18);
-            this.guna2HtmlLabel5.TabIndex = 6;
-            this.guna2HtmlLabel5.Text = "Console";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Location = new System.Drawing.Point(0, 61);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 641);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.bs_help);
-            this.panel7.Controls.Add(this.portError);
-            this.panel7.Controls.Add(this.COMport);
-            this.panel7.Controls.Add(this.selectBoard);
-            this.panel7.Controls.Add(this.guna2HtmlLabel7);
-            this.panel7.Controls.Add(this.guna2HtmlLabel6);
-            this.panel7.Controls.Add(this.closePort);
-            this.panel7.Controls.Add(this.openPort);
-            this.panel7.Controls.Add(this.guna2HtmlLabel3);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 147);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(215, 218);
-            this.panel7.TabIndex = 1;
-            // 
-            // bs_help
-            // 
-            this.bs_help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bs_help.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bs_help.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bs_help.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bs_help.FillColor = System.Drawing.Color.White;
-            this.bs_help.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bs_help.ForeColor = System.Drawing.Color.White;
-            this.bs_help.Image = ((System.Drawing.Image)(resources.GetObject("bs_help.Image")));
-            this.bs_help.Location = new System.Drawing.Point(143, 6);
-            this.bs_help.Name = "bs_help";
-            this.bs_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.bs_help.Size = new System.Drawing.Size(20, 20);
-            this.bs_help.TabIndex = 54;
-            // 
-            // portError
-            // 
-            this.portError.BackColor = System.Drawing.Color.Transparent;
-            this.portError.Location = new System.Drawing.Point(15, 191);
-            this.portError.Name = "portError";
-            this.portError.Size = new System.Drawing.Size(113, 15);
-            this.portError.TabIndex = 11;
-            this.portError.Text = "Board comnection error";
-            // 
-            // COMport
-            // 
-            this.COMport.BorderColor = System.Drawing.Color.Black;
-            this.COMport.BorderRadius = 10;
-            this.COMport.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.COMport.DefaultText = "";
-            this.COMport.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.COMport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.COMport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.COMport.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.COMport.Enabled = false;
-            this.COMport.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.COMport.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.COMport.ForeColor = System.Drawing.Color.Black;
-            this.COMport.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.COMport.Location = new System.Drawing.Point(94, 32);
-            this.COMport.Name = "COMport";
-            this.COMport.PasswordChar = '\0';
-            this.COMport.PlaceholderForeColor = System.Drawing.Color.White;
-            this.COMport.PlaceholderText = "";
-            this.COMport.SelectedText = "";
-            this.COMport.Size = new System.Drawing.Size(75, 22);
-            this.COMport.TabIndex = 9;
-            this.COMport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // selectBoard
-            // 
-            this.selectBoard.BackColor = System.Drawing.Color.Transparent;
-            this.selectBoard.BorderColor = System.Drawing.Color.Black;
-            this.selectBoard.BorderRadius = 10;
-            this.selectBoard.DisplayMember = "1";
-            this.selectBoard.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.selectBoard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectBoard.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.selectBoard.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.selectBoard.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectBoard.ForeColor = System.Drawing.Color.Black;
-            this.selectBoard.ItemHeight = 30;
-            this.selectBoard.Items.AddRange(new object[] {
-            "Board 1",
-            "Board 2",
-            "Board 3",
-            "Board 4",
-            "Board 5",
-            "Board 6",
-            "Board 7",
-            "Board 8"});
-            this.selectBoard.Location = new System.Drawing.Point(22, 140);
-            this.selectBoard.Name = "selectBoard";
-            this.selectBoard.Size = new System.Drawing.Size(96, 36);
-            this.selectBoard.StartIndex = 0;
-            this.selectBoard.TabIndex = 8;
-            this.selectBoard.ValueMember = "1";
-            // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(24, 34);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(62, 18);
-            this.guna2HtmlLabel7.TabIndex = 7;
-            this.guna2HtmlLabel7.Text = "COM Port :";
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(22, 116);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(68, 18);
-            this.guna2HtmlLabel6.TabIndex = 6;
-            this.guna2HtmlLabel6.Text = "Select Board";
-            // 
-            // closePort
-            // 
-            this.closePort.BorderRadius = 10;
-            this.closePort.BorderThickness = 1;
-            this.closePort.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.closePort.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.closePort.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.closePort.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.closePort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.closePort.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.closePort.ForeColor = System.Drawing.Color.Black;
-            this.closePort.Location = new System.Drawing.Point(110, 67);
-            this.closePort.Name = "closePort";
-            this.closePort.Size = new System.Drawing.Size(81, 26);
-            this.closePort.TabIndex = 5;
-            this.closePort.Text = "Close port";
-            this.closePort.Click += new System.EventHandler(this.closePort_Click);
-            // 
-            // openPort
-            // 
-            this.openPort.BorderRadius = 10;
-            this.openPort.BorderThickness = 1;
-            this.openPort.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.openPort.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.openPort.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.openPort.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.openPort.Enabled = false;
-            this.openPort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.openPort.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.openPort.ForeColor = System.Drawing.Color.Black;
-            this.openPort.Location = new System.Drawing.Point(23, 67);
-            this.openPort.Name = "openPort";
-            this.openPort.Size = new System.Drawing.Size(81, 26);
-            this.openPort.TabIndex = 2;
-            this.openPort.Text = "Open port";
-            this.openPort.Click += new System.EventHandler(this.openPort_Click);
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(23, 6);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(114, 18);
-            this.guna2HtmlLabel3.TabIndex = 4;
-            this.guna2HtmlLabel3.Text = "Board Settings";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.fc_help);
-            this.panel6.Controls.Add(this.uploadFile);
-            this.panel6.Controls.Add(this.updateFile);
-            this.panel6.Controls.Add(this.switchFile);
-            this.panel6.Controls.Add(this.guna2HtmlLabel2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(215, 147);
-            this.panel6.TabIndex = 0;
-            // 
-            // fc_help
-            // 
-            this.fc_help.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.fc_help.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.fc_help.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.fc_help.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.fc_help.FillColor = System.Drawing.Color.White;
-            this.fc_help.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.fc_help.ForeColor = System.Drawing.Color.White;
-            this.fc_help.Image = ((System.Drawing.Image)(resources.GetObject("fc_help.Image")));
-            this.fc_help.Location = new System.Drawing.Point(126, 6);
-            this.fc_help.Name = "fc_help";
-            this.fc_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.fc_help.Size = new System.Drawing.Size(20, 20);
-            this.fc_help.TabIndex = 53;
-            this.fc_help.Click += new System.EventHandler(this.fc_help_Click);
-            // 
-            // uploadFile
-            // 
-            this.uploadFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.uploadFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.uploadFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.uploadFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.uploadFile.FillColor = System.Drawing.Color.White;
-            this.uploadFile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.uploadFile.ForeColor = System.Drawing.Color.Black;
-            this.uploadFile.Image = ((System.Drawing.Image)(resources.GetObject("uploadFile.Image")));
-            this.uploadFile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.uploadFile.Location = new System.Drawing.Point(12, 98);
-            this.uploadFile.Name = "uploadFile";
-            this.uploadFile.Size = new System.Drawing.Size(128, 28);
-            this.uploadFile.TabIndex = 3;
-            this.uploadFile.Text = "Upload File";
-            this.uploadFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.uploadFile.Click += new System.EventHandler(this.uploadFile_Click);
-            // 
-            // updateFile
-            // 
-            this.updateFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.updateFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.updateFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.updateFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.updateFile.FillColor = System.Drawing.Color.White;
-            this.updateFile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.updateFile.ForeColor = System.Drawing.Color.Black;
-            this.updateFile.Image = ((System.Drawing.Image)(resources.GetObject("updateFile.Image")));
-            this.updateFile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.updateFile.Location = new System.Drawing.Point(12, 64);
-            this.updateFile.Name = "updateFile";
-            this.updateFile.Size = new System.Drawing.Size(128, 28);
-            this.updateFile.TabIndex = 2;
-            this.updateFile.Text = "Update File";
-            this.updateFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.updateFile.Click += new System.EventHandler(this.updateFile_Click);
-            // 
-            // switchFile
-            // 
-            this.switchFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.switchFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.switchFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.switchFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.switchFile.FillColor = System.Drawing.Color.White;
-            this.switchFile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.switchFile.ForeColor = System.Drawing.Color.Black;
-            this.switchFile.Image = ((System.Drawing.Image)(resources.GetObject("switchFile.Image")));
-            this.switchFile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.switchFile.Location = new System.Drawing.Point(12, 30);
-            this.switchFile.Name = "switchFile";
-            this.switchFile.Size = new System.Drawing.Size(128, 28);
-            this.switchFile.TabIndex = 1;
-            this.switchFile.Text = "Switch File";
-            this.switchFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.switchFile.Click += new System.EventHandler(this.switchFile_Click);
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(23, 6);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(97, 18);
-            this.guna2HtmlLabel2.TabIndex = 0;
-            this.guna2HtmlLabel2.Text = "File Controls";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -1323,6 +1305,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1449, 61);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Location = new System.Drawing.Point(215, 58);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1320, 641);
+            this.panel3.TabIndex = 2;
             // 
             // guna2HtmlLabel1
             // 
@@ -1360,8 +1350,6 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainApp_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainApp_MouseUp);
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1369,6 +1357,8 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
