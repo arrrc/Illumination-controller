@@ -107,6 +107,7 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.clearIntensity = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -145,6 +146,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.clearIntensity);
             this.panel5.Controls.Add(this.led_help);
             this.panel5.Controls.Add(this.led3_test);
             this.panel5.Controls.Add(this.led3_light);
@@ -332,11 +334,11 @@
             this.clearStrobe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.clearStrobe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearStrobe.ForeColor = System.Drawing.Color.Black;
-            this.clearStrobe.Location = new System.Drawing.Point(472, 600);
+            this.clearStrobe.Location = new System.Drawing.Point(427, 600);
             this.clearStrobe.Name = "clearStrobe";
-            this.clearStrobe.Size = new System.Drawing.Size(91, 26);
+            this.clearStrobe.Size = new System.Drawing.Size(136, 26);
             this.clearStrobe.TabIndex = 45;
-            this.clearStrobe.Text = "Clear Strobe";
+            this.clearStrobe.Text = "Clear Strobe Buttons";
             this.clearStrobe.Click += new System.EventHandler(this.clearStrobe_Click);
             // 
             // guna2HtmlLabel27
@@ -1342,6 +1344,24 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // clearIntensity
+            // 
+            this.clearIntensity.BorderRadius = 10;
+            this.clearIntensity.BorderThickness = 1;
+            this.clearIntensity.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.clearIntensity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.clearIntensity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.clearIntensity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearIntensity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.clearIntensity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.clearIntensity.ForeColor = System.Drawing.Color.Black;
+            this.clearIntensity.Location = new System.Drawing.Point(318, 600);
+            this.clearIntensity.Name = "clearIntensity";
+            this.clearIntensity.Size = new System.Drawing.Size(103, 26);
+            this.clearIntensity.TabIndex = 53;
+            this.clearIntensity.Text = "Clear Intensity";
+            this.clearIntensity.Click += new System.EventHandler(this.clearIntensity_Click);
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1453,6 +1473,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton led_help;
         private Guna.UI2.WinForms.Guna2CircleButton bs_help;
         private Guna.UI2.WinForms.Guna2CircleButton fc_help;
+        private Guna.UI2.WinForms.Guna2Button clearIntensity;
     }
 }
 

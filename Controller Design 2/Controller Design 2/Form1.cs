@@ -441,11 +441,6 @@ namespace Controller_Design_2
                 errorText.ForeColor = Color.White;
             }
 
-            //if (errorTextStr[0] == ',')
-            //{
-            //    errorTextStr.Remove(0, 2);
-            //}
-
             return errorTextStr;
         }
 
@@ -969,7 +964,7 @@ namespace Controller_Design_2
             {
                 int rgb_value = getRGB(led1_intensity.Text);
                 
-                errorText.Text = getError(1, false);
+                //errorText.Text = getError(1, false);
                 led1_light.FillColor = Color.FromArgb(rgb_value, 0, 0);
 
                 if (c010203_isCurrent) { c1_rgb_value = Convert.ToInt32(led1_intensity.Text); Console.WriteLine("C1 rgb is updated"); }
@@ -983,8 +978,8 @@ namespace Controller_Design_2
             else
             {
                 // Set error text
-                errorText.ForeColor = Color.Red;
-                errorText.Text = getError(1, true);
+                //errorText.ForeColor = Color.Red;
+                //errorText.Text = getError(1, true);
             };
         }
 
@@ -994,7 +989,7 @@ namespace Controller_Design_2
             if (checkIntensity(led2_intensity.Text))
             {
                 int rgb_value = getRGB(led2_intensity.Text);
-                errorText.Text = getError(2, false);
+                //errorText.Text = getError(2, false);
 
                 led2_light.FillColor = Color.FromArgb(0, rgb_value, 0);
 
@@ -1008,8 +1003,8 @@ namespace Controller_Design_2
             else
             {
                 // Set error text
-                errorText.ForeColor = Color.Red;
-                errorText.Text = getError(2, true);
+                //errorText.ForeColor = Color.Red;
+                //errorText.Text = getError(2, true);
             };
         }
 
@@ -1019,7 +1014,7 @@ namespace Controller_Design_2
             if (checkIntensity(led3_intensity.Text))
             {
                 int rgb_value = getRGB(led3_intensity.Text);
-                errorText.Text = getError(3, false);
+                //errorText.Text = getError(3, false);
 
                 led3_light.FillColor = Color.FromArgb(0, 0, rgb_value);
 
@@ -1033,8 +1028,8 @@ namespace Controller_Design_2
             else
             {
                 // Set error text
-                errorText.ForeColor = Color.Red;
-                errorText.Text = getError(3, true);
+                //errorText.ForeColor = Color.Red;
+                //errorText.Text = getError(3, true);
             };
         }
 
@@ -1806,7 +1801,7 @@ namespace Controller_Design_2
                             "LED Settings\n" +
                             "Intensity > How strong is the light.\n" +
                             "Mode > if the user selects static, the channel will not inherit the above strobe settings. If the user selects strobe, it will inheirt the above strobe settings.\n" +
-                            "Strobe > Users can selects the none or the numbers 1-8. The numbers represent the 8 buttons that when pressed will cause their respective lights to strobe on the device.\n" +
+                            "Strobe > Users can select none or the numbers 1 through 8. The numbers represent the 8 buttons that when pressed will cause their respective lights to strobe on the device.\n" +
                             "If users input the values correctly, users are able to test the strobe and LED settings via the testing area."
                 , "Info on LED Settings", MessageBoxButtons.OK);
         }
@@ -1911,6 +1906,13 @@ namespace Controller_Design_2
                 // Do nothing
             }
             displayStrobes();
+        }
+
+        private void clearIntensity_Click(object sender, EventArgs e)
+        {
+            led1_intensity.Text = "0";
+            led2_intensity.Text = "0";
+            led3_intensity.Text = "0";
         }
     }
 }
