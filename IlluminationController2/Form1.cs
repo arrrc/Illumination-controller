@@ -1235,7 +1235,7 @@ namespace IlluminationController2
                         Console.WriteLine("port is open");
                         comPort.Text = portName;
                         portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
-
+                        enableConfig("filler");
                         break;
                     }
                     else
@@ -1252,6 +1252,7 @@ namespace IlluminationController2
                 label101.Visible = true;
                 label101.Text = "USB not plugged in, plug it in\nand hit retry connection";
                 label101.ForeColor = System.Drawing.Color.Red;
+                disableConfig("filler");
             }
 
             // Declare a ManagementEventWatcher object and set up the event handler
@@ -1280,6 +1281,7 @@ namespace IlluminationController2
             if (checkUSB == true)
             {
                 changePortErrMsg("true");
+                enableConfig("filler");
             }
 
             return;
@@ -1294,9 +1296,38 @@ namespace IlluminationController2
             if (checkUSB == false)
             {
                 changePortErrMsg("false");
+                disableConfig("filler");
             }
             
             return;
+        }
+
+        private void disableConfig(string filler)
+        {
+            if (mainTab.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(disableConfig);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                mainTab.Enabled = false;
+            }
+
+        }
+
+        private void enableConfig(string filler)
+        {
+            if (mainTab.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(enableConfig);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                mainTab.Enabled = true;
+            }
+
         }
 
         void changePortErrMsg(string data)
