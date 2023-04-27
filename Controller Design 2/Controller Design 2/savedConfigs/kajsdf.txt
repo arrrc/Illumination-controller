@@ -1,6 +1,6 @@
 MAIN BOARD = Board 1.
 Group 1 Settings, [GROUPED Red:CH1, Green:CH2, Blue:CH3] .
-[CH1 Settings]: Intensity: 0, Edge: 0, Mode: Static, Strobe: None, Pulse: 0, Delay: 0 .
+[CH1 Settings]: Intensity: 4096, Edge: 0, Mode: Static, Strobe: None, Pulse: 0, Delay: 0 .
 [CH2 Settings]: Intensity: 0, Edge: 0, Mode: Static, Strobe: None, Pulse: 0, Delay: 0 .
 [CH3 Settings]: Intensity: 0, Edge: 0, Mode: Static, Strobe: None, Pulse: 0, Delay: 0 .
 Group 2 Settings, [GROUPED Red:CH4, Green:CH5, Blue:CH6] .

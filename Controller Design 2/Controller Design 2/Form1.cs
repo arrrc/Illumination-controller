@@ -1831,7 +1831,7 @@ namespace Controller_Design_2
             if (delay == "") { delay = "None"; }
 
             string consoleDisplay = $"\n[{channel} Settings]: " +
-                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, .Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
 
             return consoleDisplay;
         }
@@ -2102,6 +2102,11 @@ namespace Controller_Design_2
             OpenFile fileSelect = new OpenFile();
             fileSelect.mainForm = this;
             fileSelect.ShowDialog();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

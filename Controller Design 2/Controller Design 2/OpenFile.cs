@@ -80,27 +80,33 @@ namespace Controller_Design_2
                     int modeNextCommaIndexPos = splitString[i].IndexOf(",", modeIndexPos);
                     int modeLengthBetweenBothIndex = modeNextCommaIndexPos - modeIndexPos;
 
-                    int strobeIndexPos = splitString[i + 1].IndexOf("Strobe") + 8;
-                    int strobeNextCommaIndexPos = splitString[i + 1].IndexOf(',');
+                    int strobeIndexPos = splitString[i].IndexOf("Strobe:") + 8;
+                    int strobeNextCommaIndexPos = splitString[i].IndexOf(",", strobeIndexPos);
                     int strobeLengthBetweenBothIndex = strobeNextCommaIndexPos - strobeIndexPos;
 
-                    int pulseIndexPos = splitString[i + 1].IndexOf("Pulse") + 7;
-                    int pulseNextCommaIndexPos = splitString[i + 1].IndexOf(",", pulseIndexPos);
+                    int pulseIndexPos = splitString[i].IndexOf("Pulse") + 7;
+                    int pulseNextCommaIndexPos = splitString[i].IndexOf(",", pulseIndexPos);
                     int pulseLengthBetweenBothIndex = pulseNextCommaIndexPos - pulseIndexPos;
 
-                    int delayIndexPos = splitString[i + 1].IndexOf("Delay") + 7;
+                    int delayIndexPos = splitString[i].IndexOf("Delay") + 7;
                     //there is a space at the end of the line
-                    int delayEndOfLineIndex = splitString[i + 1].IndexOf(" ", delayIndexPos);
+                    int delayEndOfLineIndex = splitString[i].IndexOf(" ", delayIndexPos);
                     int delayLengthBetweenBothIndex = delayEndOfLineIndex - delayIndexPos;
 
                     intensity = splitString[i].Substring(intensityIndexPos, intensityLengthBetweenBothIndex);
                     edge = splitString[i].Substring(edgeIndexPos, edgeLengthBetweenBothIndex);
                     mode = splitString[i].Substring(modeIndexPos, modeLengthBetweenBothIndex);
-                    strobe = splitString[i + 1].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
-                    pulse = splitString[i + 1].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
-                    delay = splitString[i + 1].Substring(delayIndexPos, delayLengthBetweenBothIndex);
+                    strobe = splitString[i].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
+                    pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
+                    delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
 
-                    Console.WriteLine(strobeIndexPos);
+
+                    Console.WriteLine(intensity);
+                    Console.WriteLine(edge);
+                    Console.WriteLine(mode);
+                    Console.WriteLine(strobe);
+                    Console.WriteLine(pulse);
+                    Console.WriteLine(delay);
 
                 }
 

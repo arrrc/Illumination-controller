@@ -108,7 +108,6 @@
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2GradientPanel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,22 +124,22 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 30;
-            this.guna2GradientPanel1.Controls.Add(this.panel3);
+            this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2GradientPanel1.Controls.Add(this.panel4);
             this.guna2GradientPanel1.Controls.Add(this.panel2);
+            this.guna2GradientPanel1.Controls.Add(this.panel5);
             this.guna2GradientPanel1.Controls.Add(this.panel1);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(7, 8);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1249, 702);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1408, 750);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(215, 61);
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Location = new System.Drawing.Point(215, 58);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1034, 641);
+            this.panel3.Size = new System.Drawing.Size(1320, 641);
             this.panel3.TabIndex = 2;
             // 
             // panel5
@@ -194,8 +193,7 @@
             this.panel5.Controls.Add(this.chooseGrp);
             this.panel5.Controls.Add(this.selectGrp);
             this.panel5.Controls.Add(this.guna2HtmlLabel4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Location = new System.Drawing.Point(216, 63);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(626, 641);
             this.panel5.TabIndex = 1;
@@ -1023,18 +1021,18 @@
             // 
             this.panel4.Controls.Add(this.consoleDisplay);
             this.panel4.Controls.Add(this.guna2HtmlLabel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(626, 0);
+            this.panel4.Location = new System.Drawing.Point(840, 63);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(408, 641);
+            this.panel4.Size = new System.Drawing.Size(567, 641);
             this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // consoleDisplay
             // 
             this.consoleDisplay.FormattingEnabled = true;
             this.consoleDisplay.Location = new System.Drawing.Point(1, 30);
             this.consoleDisplay.Name = "consoleDisplay";
-            this.consoleDisplay.Size = new System.Drawing.Size(407, 602);
+            this.consoleDisplay.Size = new System.Drawing.Size(550, 602);
             this.consoleDisplay.TabIndex = 7;
             // 
             // guna2HtmlLabel5
@@ -1051,7 +1049,6 @@
             // 
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 61);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 641);
@@ -1319,12 +1316,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.guna2HtmlLabel1);
             this.panel1.Controls.Add(this.CloseButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1249, 61);
+            this.panel1.Size = new System.Drawing.Size(1449, 61);
             this.panel1.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -1340,7 +1337,7 @@
             // CloseButton
             // 
             this.CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("CloseButton.Image")));
-            this.CloseButton.Location = new System.Drawing.Point(1203, 13);
+            this.CloseButton.Location = new System.Drawing.Point(1375, 11);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(32, 32);
             this.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1353,7 +1350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1269, 717);
+            this.ClientSize = new System.Drawing.Size(1428, 745);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainApp";
@@ -1363,7 +1360,6 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainApp_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainApp_MouseUp);
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
