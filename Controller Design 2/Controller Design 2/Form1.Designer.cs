@@ -34,6 +34,7 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.clearIntensity = new Guna.UI2.WinForms.Guna2Button();
             this.led_help = new Guna.UI2.WinForms.Guna2CircleButton();
             this.led3_test = new Guna.UI2.WinForms.Guna2Button();
             this.led3_light = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -86,7 +87,6 @@
             this.consoleDisplay = new System.Windows.Forms.ListBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.retryConn = new Guna.UI2.WinForms.Guna2Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bs_help = new Guna.UI2.WinForms.Guna2CircleButton();
             this.portError = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -107,7 +107,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.clearIntensity = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -200,6 +199,24 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(626, 641);
             this.panel5.TabIndex = 1;
+            // 
+            // clearIntensity
+            // 
+            this.clearIntensity.BorderRadius = 10;
+            this.clearIntensity.BorderThickness = 1;
+            this.clearIntensity.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.clearIntensity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.clearIntensity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.clearIntensity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearIntensity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.clearIntensity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.clearIntensity.ForeColor = System.Drawing.Color.Black;
+            this.clearIntensity.Location = new System.Drawing.Point(318, 600);
+            this.clearIntensity.Name = "clearIntensity";
+            this.clearIntensity.Size = new System.Drawing.Size(103, 26);
+            this.clearIntensity.TabIndex = 53;
+            this.clearIntensity.Text = "Clear Intensity";
+            this.clearIntensity.Click += new System.EventHandler(this.clearIntensity_Click);
             // 
             // led_help
             // 
@@ -1017,7 +1034,7 @@
             this.consoleDisplay.FormattingEnabled = true;
             this.consoleDisplay.Location = new System.Drawing.Point(1, 30);
             this.consoleDisplay.Name = "consoleDisplay";
-            this.consoleDisplay.Size = new System.Drawing.Size(393, 602);
+            this.consoleDisplay.Size = new System.Drawing.Size(407, 602);
             this.consoleDisplay.TabIndex = 7;
             // 
             // guna2HtmlLabel5
@@ -1032,7 +1049,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.retryConn);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1040,23 +1056,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 641);
             this.panel2.TabIndex = 1;
-            // 
-            // retryConn
-            // 
-            this.retryConn.BorderRadius = 10;
-            this.retryConn.BorderThickness = 1;
-            this.retryConn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.retryConn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.retryConn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.retryConn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.retryConn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.retryConn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.retryConn.ForeColor = System.Drawing.Color.Black;
-            this.retryConn.Location = new System.Drawing.Point(23, 246);
-            this.retryConn.Name = "retryConn";
-            this.retryConn.Size = new System.Drawing.Size(168, 26);
-            this.retryConn.TabIndex = 6;
-            this.retryConn.Text = "Retry Connection";
             // 
             // panel7
             // 
@@ -1072,7 +1071,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 147);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(215, 263);
+            this.panel7.Size = new System.Drawing.Size(215, 218);
             this.panel7.TabIndex = 1;
             // 
             // bs_help
@@ -1094,7 +1093,7 @@
             // portError
             // 
             this.portError.BackColor = System.Drawing.Color.Transparent;
-            this.portError.Location = new System.Drawing.Point(17, 216);
+            this.portError.Location = new System.Drawing.Point(15, 191);
             this.portError.Name = "portError";
             this.portError.Size = new System.Drawing.Size(113, 15);
             this.portError.TabIndex = 11;
@@ -1147,7 +1146,7 @@
             "Board 6",
             "Board 7",
             "Board 8"});
-            this.selectBoard.Location = new System.Drawing.Point(24, 165);
+            this.selectBoard.Location = new System.Drawing.Point(22, 140);
             this.selectBoard.Name = "selectBoard";
             this.selectBoard.Size = new System.Drawing.Size(96, 36);
             this.selectBoard.StartIndex = 0;
@@ -1168,7 +1167,7 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(24, 141);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(22, 116);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(68, 18);
             this.guna2HtmlLabel6.TabIndex = 6;
@@ -1190,6 +1189,7 @@
             this.closePort.Size = new System.Drawing.Size(81, 26);
             this.closePort.TabIndex = 5;
             this.closePort.Text = "Close port";
+            this.closePort.Click += new System.EventHandler(this.closePort_Click);
             // 
             // openPort
             // 
@@ -1199,6 +1199,7 @@
             this.openPort.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.openPort.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.openPort.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.openPort.Enabled = false;
             this.openPort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.openPort.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.openPort.ForeColor = System.Drawing.Color.Black;
@@ -1207,6 +1208,7 @@
             this.openPort.Size = new System.Drawing.Size(81, 26);
             this.openPort.TabIndex = 2;
             this.openPort.Text = "Open port";
+            this.openPort.Click += new System.EventHandler(this.openPort_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -1265,6 +1267,7 @@
             this.uploadFile.TabIndex = 3;
             this.uploadFile.Text = "Upload File";
             this.uploadFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.uploadFile.Click += new System.EventHandler(this.uploadFile_Click);
             // 
             // updateFile
             // 
@@ -1302,6 +1305,7 @@
             this.switchFile.TabIndex = 1;
             this.switchFile.Text = "Switch File";
             this.switchFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.switchFile.Click += new System.EventHandler(this.switchFile_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -1344,30 +1348,12 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // clearIntensity
-            // 
-            this.clearIntensity.BorderRadius = 10;
-            this.clearIntensity.BorderThickness = 1;
-            this.clearIntensity.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.clearIntensity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.clearIntensity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.clearIntensity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.clearIntensity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.clearIntensity.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.clearIntensity.ForeColor = System.Drawing.Color.Black;
-            this.clearIntensity.Location = new System.Drawing.Point(318, 600);
-            this.clearIntensity.Name = "clearIntensity";
-            this.clearIntensity.Size = new System.Drawing.Size(103, 26);
-            this.clearIntensity.TabIndex = 53;
-            this.clearIntensity.Text = "Clear Intensity";
-            this.clearIntensity.Click += new System.EventHandler(this.clearIntensity_Click);
-            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1263, 717);
+            this.ClientSize = new System.Drawing.Size(1269, 717);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainApp";
@@ -1416,7 +1402,6 @@
         private Guna.UI2.WinForms.Guna2Button closePort;
         private Guna.UI2.WinForms.Guna2Button openPort;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2Button retryConn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2ComboBox selectBoard;

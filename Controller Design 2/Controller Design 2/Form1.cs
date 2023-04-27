@@ -30,111 +30,111 @@ namespace Controller_Design_2
         // Global Variables
         public int c1_rgb_value = 0;
         public int c2_rgb_value = 0;
-        int c3_rgb_value = 0;
-        int c4_rgb_value = 0;
-        int c5_rgb_value = 0;
-        int c6_rgb_value = 0;
-        int c7_rgb_value = 0;
-        int c8_rgb_value = 0;
-        int c9_rgb_value = 0;
-        int c10_rgb_value = 0;
-        int c11_rgb_value = 0;
-        int c12_rgb_value = 0;
-        int c13_rgb_value = 0;
-        int c14_rgb_value = 0;
-        int c15_rgb_value = 0;
-        int c16_rgb_value = 0;
+        public int c3_rgb_value = 0;
+        public int c4_rgb_value = 0;
+        public int c5_rgb_value = 0;
+        public int c6_rgb_value = 0;
+        public int c7_rgb_value = 0;
+        public int c8_rgb_value = 0;
+        public int c9_rgb_value = 0;
+        public int c10_rgb_value = 0;
+        public int c11_rgb_value = 0;
+        public int c12_rgb_value = 0;
+        public int c13_rgb_value = 0;
+        public int c14_rgb_value = 0;
+        public int c15_rgb_value = 0;
+        public int c16_rgb_value = 0;
 
-        int c1_edge_value = 0;
-        int c2_edge_value = 0;
-        int c3_edge_value = 0;
-        int c4_edge_value = 0;
-        int c5_edge_value = 0;
-        int c6_edge_value = 0;
-        int c7_edge_value = 0;
-        int c8_edge_value = 0;
-        int c9_edge_value = 0;
-        int c10_edge_value = 0;
-        int c11_edge_value = 0;
-        int c12_edge_value = 0;
-        int c13_edge_value = 0;
-        int c14_edge_value = 0;
-        int c15_edge_value = 0;
-        int c16_edge_value = 0;
+        public int c1_edge_value = 0;
+        public int c2_edge_value = 0;
+        public int c3_edge_value = 0;
+        public int c4_edge_value = 0;
+        public int c5_edge_value = 0;
+        public int c6_edge_value = 0;
+        public int c7_edge_value = 0;
+        public int c8_edge_value = 0;
+        public int c9_edge_value = 0;
+        public int c10_edge_value = 0;
+        public int c11_edge_value = 0;
+        public int c12_edge_value = 0;
+        public int c13_edge_value = 0;
+        public int c14_edge_value = 0;
+        public int c15_edge_value = 0;
+        public int c16_edge_value = 0;
 
-        int c1_pulse_value = 0;
-        int c2_pulse_value = 0;
-        int c3_pulse_value = 0;
-        int c4_pulse_value = 0;
-        int c5_pulse_value = 0;
-        int c6_pulse_value = 0;
-        int c7_pulse_value = 0;
-        int c8_pulse_value = 0;
-        int c9_pulse_value = 0;
-        int c10_pulse_value = 0;
-        int c11_pulse_value = 0;
-        int c12_pulse_value = 0;
-        int c13_pulse_value = 0;
-        int c14_pulse_value = 0;
-        int c15_pulse_value = 0;
-        int c16_pulse_value = 0;
+        public int c1_pulse_value = 0;
+        public int c2_pulse_value = 0;
+        public int c3_pulse_value = 0;
+        public int c4_pulse_value = 0;
+        public int c5_pulse_value = 0;
+        public int c6_pulse_value = 0;
+        public int c7_pulse_value = 0;
+        public int c8_pulse_value = 0;
+        public int c9_pulse_value = 0;
+        public int c10_pulse_value = 0;
+        public int c11_pulse_value = 0;
+        public int c12_pulse_value = 0;
+        public int c13_pulse_value = 0;
+        public int c14_pulse_value = 0;
+        public int c15_pulse_value = 0;
+        public int c16_pulse_value = 0;
 
-        int c1_delay_value = 0;
-        int c2_delay_value = 0;
-        int c3_delay_value = 0;
-        int c4_delay_value = 0;
-        int c5_delay_value = 0;
-        int c6_delay_value = 0;
-        int c7_delay_value = 0;
-        int c8_delay_value = 0;
-        int c9_delay_value = 0;
-        int c10_delay_value = 0;
-        int c11_delay_value = 0;
-        int c12_delay_value = 0;
-        int c13_delay_value = 0;
-        int c14_delay_value = 0;
-        int c15_delay_value = 0;
-        int c16_delay_value = 0;
+        public int c1_delay_value = 0;
+        public int c2_delay_value = 0;
+        public int c3_delay_value = 0;
+        public int c4_delay_value = 0;
+        public int c5_delay_value = 0;
+        public int c6_delay_value = 0;
+        public int c7_delay_value = 0;
+        public int c8_delay_value = 0;
+        public int c9_delay_value = 0;
+        public int c10_delay_value = 0;
+        public int c11_delay_value = 0;
+        public int c12_delay_value = 0;
+        public int c13_delay_value = 0;
+        public int c14_delay_value = 0;
+        public int c15_delay_value = 0;
+        public int c16_delay_value = 0;
 
-        string c1_mode_value = "Static";
-        string c2_mode_value = "Static";
-        string c3_mode_value = "Static";
-        string c4_mode_value = "Static";
-        string c5_mode_value = "Static";
-        string c6_mode_value = "Static";
-        string c7_mode_value = "Static";
-        string c8_mode_value = "Static";
-        string c9_mode_value = "Static";
-        string c10_mode_value = "Static";
-        string c11_mode_value = "Static";
-        string c12_mode_value = "Static";
-        string c13_mode_value = "Static";
-        string c14_mode_value = "Static";
-        string c15_mode_value = "Static";
-        string c16_mode_value = "Static";
+        public string c1_mode_value = "Static";
+        public string c2_mode_value = "Static";
+        public string c3_mode_value = "Static";
+        public string c4_mode_value = "Static";
+        public string c5_mode_value = "Static";
+        public string c6_mode_value = "Static";
+        public string c7_mode_value = "Static";
+        public string c8_mode_value = "Static";
+        public string c9_mode_value = "Static";
+        public string c10_mode_value = "Static";
+        public string c11_mode_value = "Static";
+        public string c12_mode_value = "Static";
+        public string c13_mode_value = "Static";
+        public string c14_mode_value = "Static";
+        public string c15_mode_value = "Static";
+        public string c16_mode_value = "Static";
 
-        string c1_strobe_value = "None";
-        string c2_strobe_value = "None";
-        string c3_strobe_value = "None";
-        string c4_strobe_value = "None";
-        string c5_strobe_value = "None";
-        string c6_strobe_value = "None";
-        string c7_strobe_value = "None";
-        string c8_strobe_value = "None";
-        string c9_strobe_value = "None";
-        string c10_strobe_value = "None";
-        string c11_strobe_value = "None";
-        string c12_strobe_value = "None";
-        string c13_strobe_value = "None";
-        string c14_strobe_value = "None";
-        string c15_strobe_value = "None";
-        string c16_strobe_value = "None";
+        public string c1_strobe_value = "None";
+        public string c2_strobe_value = "None";
+        public string c3_strobe_value = "None";
+        public string c4_strobe_value = "None";
+        public string c5_strobe_value = "None";
+        public string c6_strobe_value = "None";
+        public string c7_strobe_value = "None";
+        public string c8_strobe_value = "None";
+        public string c9_strobe_value = "None";
+        public string c10_strobe_value = "None";
+        public string c11_strobe_value = "None";
+        public string c12_strobe_value = "None";
+        public string c13_strobe_value = "None";
+        public string c14_strobe_value = "None";
+        public string c15_strobe_value = "None";
+        public string c16_strobe_value = "None";
 
-        bool c010203_isGrouped = true;
-        bool c040506_isGrouped = true;
-        bool c070809_isGrouped = true;
-        bool c101112_isGrouped = true;
-        bool c131415_isGrouped = true;
+        public bool c010203_isGrouped = true;
+        public bool c040506_isGrouped = true;
+        public bool c070809_isGrouped = true;
+        public bool c101112_isGrouped = true;
+        public bool c131415_isGrouped = true;
 
         bool c010203_isCurrent = true;
         bool c040506_isCurrent = false;
@@ -620,6 +620,7 @@ namespace Controller_Design_2
                         Console.WriteLine("port is open");
                         COMport.Text = portName;
                         portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+                        enableConfig("filler");
 
                         break;
                     }
@@ -637,23 +638,38 @@ namespace Controller_Design_2
                 portError.Visible = true;
                 portError.Text = "USB not plugged in, plug it in\nand hit retry connection";
                 portError.ForeColor = System.Drawing.Color.Red;
+                disableConfig("filler");
             }
-
-
-        
-
             // Declare a ManagementEventWatcher object and set up the event handler
             ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+            ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
+
+            deviceInsertionWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
             deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
 
             // Set up the query for USB device removal
             WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
-
+            WqlEventQuery insertionQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
 
             // Start listening for the USB device removal event
             deviceRemoveWatcher.Query = removalQuery;
+            deviceInsertionWatcher.Query = insertionQuery;
 
+            deviceInsertionWatcher.Start();
             deviceRemoveWatcher.Start();
+        }
+
+        private void DeviceInsertedEvent(object sender, EventArrivedEventArgs e)
+        {
+            Console.WriteLine("EVENT FIRING");
+            bool checkUSB = checkIfUsbAlive();
+            if (checkUSB == true)
+            {
+                changePortErrMsg("true");
+                enableConfig("filler");
+            }
+
+            return;
         }
 
         private void DeviceRemovedEvent(object sender, EventArrivedEventArgs e)
@@ -662,9 +678,72 @@ namespace Controller_Design_2
             if (checkUSB == false)
             {
                 changePortErrMsg("false");
+                disableConfig("filler");
             }
 
             return;
+        }
+
+        private void disableConfig(string filler)
+        {
+            if (panel5.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(disableConfig);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                led1_intensity.Enabled = false;
+                led1_mode.Enabled = false; 
+                led1_strobe.Enabled = false;
+                led1_test.Enabled = false;
+                led2_intensity.Enabled = false;
+                led2_mode.Enabled = false;
+                led2_strobe.Enabled = false;
+                led2_test.Enabled = false;
+                led3_intensity.Enabled = false;
+                led3_mode.Enabled = false;
+                led3_strobe.Enabled = false;
+                led3_test.Enabled = false;
+                strobeChannel.Enabled = false;
+                setEdge.Enabled = false;
+                setDelay.Enabled = false;
+                setPulse.Enabled = false;
+                selectGrp.Enabled = false;
+                chooseGrp.Enabled = false;
+            }
+
+        }
+
+        private void enableConfig(string filler)
+        {
+            if (panel5.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(enableConfig);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                led1_intensity.Enabled = true;
+                led1_mode.Enabled = true;
+                led1_strobe.Enabled = true;
+                led1_test.Enabled = true;
+                led2_intensity.Enabled = true;
+                led2_mode.Enabled = true;
+                led2_strobe.Enabled = true;
+                led2_test.Enabled = true;
+                led3_intensity.Enabled = true;
+                led3_mode.Enabled = true;
+                led3_strobe.Enabled = true;
+                led3_test.Enabled = true;
+                strobeChannel.Enabled = true;
+                setEdge.Enabled = true;
+                setDelay.Enabled = true;
+                setPulse.Enabled = true;
+                selectGrp.Enabled = true;
+                chooseGrp.Enabled = true;
+            }
+
         }
 
         void changePortErrMsg(string data)
@@ -1690,6 +1769,8 @@ namespace Controller_Design_2
                 g5_setting = "GROUPED";
             }
 
+            Console.WriteLine(g1_setting);
+
             string g1_addText = displaySettings(g1_setting, "Group 1", "CH1", "CH2", "CH3");
             string g2_addText = displaySettings(g2_setting, "Group 2", "CH4", "CH5", "CH6");
             string g3_addText = displaySettings(g3_setting, "Group 3", "CH7", "CH8", "CH9");
@@ -1750,18 +1831,18 @@ namespace Controller_Design_2
             if (delay == "") { delay = "None"; }
 
             string consoleDisplay = $"\n[{channel} Settings]: " +
-                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, .Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
 
             return consoleDisplay;
         }
 
         private string displaySettings(string setting, string group, string first, string second, string third)
         {
-            if (setting == "Grouped")
+            if (setting == "GROUPED")
             {
                 return $"\n{group} Settings, [GROUPED Red:{first}, Green:{second}, Blue:{third}] .";
             }
-            else if (setting == "Ungrouped")
+            else if (setting == "UNGROUPED")
             {
                 return $"\n{group} Settings, [UNGROUPED:Red:{first}, Green:{second}, Blue:{third}] .";
             }
@@ -1913,6 +1994,114 @@ namespace Controller_Design_2
             led1_intensity.Text = "0";
             led2_intensity.Text = "0";
             led3_intensity.Text = "0";
+        }
+
+        private void closePort_Click(object sender, EventArgs e)
+        {
+            if (portConn.IsOpen)
+            {
+                portConn.Close();
+                closePort.Enabled = false;
+                openPort.Enabled = true;
+                uploadFile.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Port is already closed");
+            }
+        }
+
+        private void openPort_Click(object sender, EventArgs e)
+        {
+
+            portConn.Open();
+
+
+            if (selectBoard.Text == "")
+            {
+                closePort.Enabled = true;
+                openPort.Enabled = false;
+                uploadFile.Enabled = false;
+            }
+            else
+            {
+                closePort.Enabled = true;
+                openPort.Enabled = false;
+                uploadFile.Enabled = true;
+            }
+
+            
+        }
+
+        private void uploadFile_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+                //Grab Values
+                generateConfig();
+                string board = sendToHardware.Substring(13, 7);
+
+                string path = @"..\..\savedConfigs";
+
+                path += "\\" + board + ".txt";
+
+                File.WriteAllText(path, sendToHardware);
+
+                //clear console
+                consoleDisplay.Items.Clear();
+
+                Console.WriteLine(sendToHardware);
+
+                uploadFile.Enabled = false;
+                Thread sendData = new Thread(sendDataToHardware);
+                sendData.Start();
+            //}
+            //catch
+            //{
+            //    Console.WriteLine("Device disconnected");
+            //    consoleDisplay.Items.Add("Device is not connected");
+            //}
+        }
+
+        void sendDataToHardware()
+        {
+            Console.WriteLine("test");
+
+            try
+            {
+                portConn.Write(sendToHardware);
+
+                Thread.Sleep(1000);
+                enableUploadBtn("filler");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please select a COM Port");
+            }
+
+
+            Thread.CurrentThread.Abort();
+        }
+
+        void enableUploadBtn(string filler)
+        {
+            if (uploadFile.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(enableUploadBtn);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                uploadFile.Enabled = true;
+            }
+        }
+
+        private void switchFile_Click(object sender, EventArgs e)
+        {
+            OpenFile fileSelect = new OpenFile();
+            fileSelect.mainForm = this;
+            fileSelect.ShowDialog();
         }
     }
 }

@@ -79,6 +79,8 @@ namespace Controller_Design_2
                     Console.WriteLine(path);
                     File.WriteAllText(path, config);
                     MessageBox.Show("File has been overwritten");
+                    this.Close();
+
                 }
                 else
                 {
@@ -91,6 +93,8 @@ namespace Controller_Design_2
                 Console.WriteLine(path);
                 File.WriteAllText(path, config);
                 MessageBox.Show("File has been saved");
+                this.Close();
+
             }
 
 
@@ -101,12 +105,12 @@ namespace Controller_Design_2
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void SaveFile_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void MainApp_MouseDown(object sender, MouseEventArgs e)
@@ -127,6 +131,11 @@ namespace Controller_Design_2
         private void MainApp_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

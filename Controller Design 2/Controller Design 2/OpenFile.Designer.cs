@@ -45,6 +45,7 @@
             this.CloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CloseButton.TabIndex = 1;
             this.CloseButton.TabStop = false;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -73,6 +74,7 @@
             this.guna2ComboBox1.Size = new System.Drawing.Size(218, 36);
             this.guna2ComboBox1.TabIndex = 3;
             this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            this.guna2ComboBox1.Click += new System.EventHandler(this.guna2ComboBox1_Click);
             // 
             // guna2Button1
             // 

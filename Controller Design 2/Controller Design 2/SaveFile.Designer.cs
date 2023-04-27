@@ -78,6 +78,7 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(250, 40);
             this.guna2TextBox1.TabIndex = 5;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2Button1
             // 
