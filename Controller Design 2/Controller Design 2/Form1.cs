@@ -296,6 +296,49 @@ namespace Controller_Design_2
             else { return 8; }
         }
 
+        public void setIntensity()
+        {
+            // Channels 1 2 3
+            if (c010203_isCurrent)
+            {
+                led1_intensity.Text = c1_rgb_value.ToString();
+                led2_intensity.Text = c2_rgb_value.ToString();
+                led3_intensity.Text = c3_rgb_value.ToString();
+            }
+            // Channels 4 5 6
+            else if (c040506_isCurrent)
+            {
+                led1_intensity.Text = c4_rgb_value.ToString();
+                led2_intensity.Text = c5_rgb_value.ToString();
+                led3_intensity.Text = c6_rgb_value.ToString();
+            }
+            // Channels 7 8 9
+            else if (c070809_isCurrent)
+            {
+                led1_intensity.Text = c7_rgb_value.ToString();
+                led2_intensity.Text = c8_rgb_value.ToString();
+                led3_intensity.Text = c9_rgb_value.ToString();
+            }
+            // Channels 10 11 12
+            else if (c101112_isCurrent)
+            {
+                led1_intensity.Text = c10_rgb_value.ToString();
+                led2_intensity.Text = c11_rgb_value.ToString();
+                led3_intensity.Text = c12_rgb_value.ToString();
+            }
+            // Channels 13 14 15
+            else if (c131415_isCurrent)
+            {
+                led1_intensity.Text = c13_rgb_value.ToString();
+                led2_intensity.Text = c14_rgb_value.ToString();
+                led3_intensity.Text = c15_rgb_value.ToString();
+            }
+            else
+            {
+                led1_intensity.Text = c16_rgb_value.ToString();
+            }
+        }
+
         public void setStrobe()
         {
             // Channels 1 2 3
@@ -1072,69 +1115,119 @@ namespace Controller_Design_2
             if (c010203_isCurrent)
             {
                 c1_mode_value = led1_mode.Text;
-                
+                if (c010203_isGrouped)
+                {
+                    c2_mode_value = led1_mode.Text;
+                    c3_mode_value = led1_mode.Text;
+                }
             }
             // Channels 4 5 6
             else if (c040506_isCurrent)
             {
                 c4_mode_value = led1_mode.Text;
+                if (c040506_isGrouped)
+                {
+                    c5_mode_value = led1_mode.Text;
+                    c6_mode_value = led1_mode.Text;
+                }
             }
             // Channels 7 8 9
             else if (c070809_isCurrent)
             {
                 c7_mode_value = led1_mode.Text;
+                if (c070809_isGrouped)
+                {
+                    c8_mode_value = led1_mode.Text;
+                    c9_mode_value = led1_mode.Text;
+                }
             }
             // Channels 10 11 12
             else if (c101112_isCurrent)
             {
                 c10_mode_value = led1_mode.Text;
+                if (c101112_isGrouped)
+                {
+                    c11_mode_value = led1_mode.Text;
+                    c12_mode_value = led1_mode.Text;
+                }
             }
             // Channels 13 14 15
             else if (c131415_isCurrent)
             {
                 c13_mode_value = led1_mode.Text;
+                if (c131415_isGrouped)
+                {
+                    c14_mode_value = led1_mode.Text;
+                    c15_mode_value = led1_mode.Text;
+                }
             }
             else
             {
                 c16_mode_value = led1_mode.Text;
             }
+            setModes();
+
             //displayModes();
         }
 
         private void led2_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (led2_mode.SelectedIndex == 0) { led2_strobe.Enabled = false; }
-            else { led2_strobe.Enabled = true; }
-
             // Channels 1 2 3
             if (c010203_isCurrent)
             {
                 c2_mode_value = led2_mode.Text;
+                if (c010203_isGrouped)
+                {
+                    c1_mode_value = led2_mode.Text;
+                    c3_mode_value = led2_mode.Text;
+                }
             }
             // Channels 4 5 6
             else if (c040506_isCurrent)
             {
                 c5_mode_value = led2_mode.Text;
+                if (c040506_isGrouped)
+                {
+                    c4_mode_value = led2_mode.Text;
+                    c6_mode_value = led2_mode.Text;
+                }
             }
             // Channels 7 8 9
             else if (c070809_isCurrent)
             {
                 c8_mode_value = led2_mode.Text;
+                if (c070809_isGrouped)
+                {
+                    c7_mode_value = led2_mode.Text;
+                    c9_mode_value = led2_mode.Text;
+                }
             }
             // Channels 10 11 12
             else if (c101112_isCurrent)
             {
                 c11_mode_value = led2_mode.Text;
+                if (c101112_isGrouped)
+                {
+                    c10_mode_value = led2_mode.Text;
+                    c12_mode_value = led2_mode.Text;
+                }
             }
             // Channels 13 14 15
             else if (c131415_isCurrent)
             {
                 c14_mode_value = led2_mode.Text;
+                if (c131415_isGrouped)
+                {
+                    c13_mode_value = led2_mode.Text;
+                    c15_mode_value = led2_mode.Text;
+                }
             }
             else
             {
                 // Do nothing
             }
+            setModes();
+
             //displayModes();
         }
 
@@ -1147,31 +1240,58 @@ namespace Controller_Design_2
             if (c010203_isCurrent)
             {
                 c3_mode_value = led3_mode.Text;
+                if (c010203_isGrouped)
+                {
+                    c1_mode_value = led3_mode.Text;
+                    c2_mode_value = led3_mode.Text;
+                }
             }
             // Channels 4 5 6
             else if (c040506_isCurrent)
             {
                 c6_mode_value = led3_mode.Text;
+                if (c040506_isGrouped)
+                {
+                    c4_mode_value = led3_mode.Text;
+                    c5_mode_value = led3_mode.Text;
+                }
             }
             // Channels 7 8 9
             else if (c070809_isCurrent)
             {
                 c9_mode_value = led3_mode.Text;
+                if (c070809_isGrouped)
+                {
+                    c7_mode_value = led3_mode.Text;
+                    c8_mode_value = led3_mode.Text;
+                }
             }
             // Channels 10 11 12
             else if (c101112_isCurrent)
             {
                 c12_mode_value = led3_mode.Text;
+                if (c101112_isGrouped)
+                {
+                    c10_mode_value = led3_mode.Text;
+                    c11_mode_value = led3_mode.Text;
+                }
             }
             // Channels 13 14 15
             else if (c131415_isCurrent)
             {
                 c15_mode_value = led3_mode.Text;
+                if (c131415_isGrouped)
+                {
+                    c13_mode_value = led3_mode.Text;
+                    c14_mode_value = led3_mode.Text;
+                }
             }
             else
             {
                 // Do nothing
             }
+            setModes();
+
             //displayModes();
         }
 
@@ -1460,7 +1580,7 @@ namespace Controller_Design_2
             setModes();
             setStrobe();
             //displayModes();
-            displayStrobes();
+            //displayStrobes();
         }
 
         private void strobeChannel_SelectedIndexChanged(object sender, EventArgs e)
@@ -2033,22 +2153,22 @@ namespace Controller_Design_2
                 } // End of Switch Loop
 
                 // To test Pulse Values
-                Console.WriteLine("Channel 1 " + c1_pulse_value);
-                Console.WriteLine("Channel 2 " + c2_pulse_value);
-                Console.WriteLine("Channel 3 " + c3_pulse_value);
-                Console.WriteLine("Channel 4 " + c4_pulse_value);
-                Console.WriteLine("Channel 5 " + c5_pulse_value);
-                Console.WriteLine("Channel 6 " + c6_pulse_value);
-                Console.WriteLine("Channel 7 " + c7_pulse_value);
-                Console.WriteLine("Channel 8 " + c8_pulse_value);
-                Console.WriteLine("Channel 9 " + c9_pulse_value);
-                Console.WriteLine("Channel 10 " + c10_pulse_value);
-                Console.WriteLine("Channel 11 " + c11_pulse_value);
-                Console.WriteLine("Channel 12 " + c12_pulse_value);
-                Console.WriteLine("Channel 13 " + c13_pulse_value);
-                Console.WriteLine("Channel 14 " + c14_pulse_value);
-                Console.WriteLine("Channel 15 " + c15_pulse_value);
-                Console.WriteLine("Channel 16 " + c16_pulse_value);
+                //Console.WriteLine("Channel 1 " + c1_pulse_value);
+                //Console.WriteLine("Channel 2 " + c2_pulse_value);
+                //Console.WriteLine("Channel 3 " + c3_pulse_value);
+                //Console.WriteLine("Channel 4 " + c4_pulse_value);
+                //Console.WriteLine("Channel 5 " + c5_pulse_value);
+                //Console.WriteLine("Channel 6 " + c6_pulse_value);
+                //Console.WriteLine("Channel 7 " + c7_pulse_value);
+                //Console.WriteLine("Channel 8 " + c8_pulse_value);
+                //Console.WriteLine("Channel 9 " + c9_pulse_value);
+                //Console.WriteLine("Channel 10 " + c10_pulse_value);
+                //Console.WriteLine("Channel 11 " + c11_pulse_value);
+                //Console.WriteLine("Channel 12 " + c12_pulse_value);
+                //Console.WriteLine("Channel 13 " + c13_pulse_value);
+                //Console.WriteLine("Channel 14 " + c14_pulse_value);
+                //Console.WriteLine("Channel 15 " + c15_pulse_value);
+                //Console.WriteLine("Channel 16 " + c16_pulse_value);
             }
             else
             {
@@ -2139,22 +2259,22 @@ namespace Controller_Design_2
                 } // End of Switch Loop
 
                 // To test Pulse Values
-                Console.WriteLine("Channel 1 " + c1_delay_value);
-                Console.WriteLine("Channel 2 " + c2_delay_value);
-                Console.WriteLine("Channel 3 " + c3_delay_value);
-                Console.WriteLine("Channel 4 " + c4_delay_value);
-                Console.WriteLine("Channel 5 " + c5_delay_value);
-                Console.WriteLine("Channel 6 " + c6_delay_value);
-                Console.WriteLine("Channel 7 " + c7_delay_value);
-                Console.WriteLine("Channel 8 " + c8_delay_value);
-                Console.WriteLine("Channel 9 " + c9_delay_value);
-                Console.WriteLine("Channel 10 " + c10_delay_value);
-                Console.WriteLine("Channel 11 " + c11_delay_value);
-                Console.WriteLine("Channel 12 " + c12_delay_value);
-                Console.WriteLine("Channel 13 " + c13_delay_value);
-                Console.WriteLine("Channel 14 " + c14_delay_value);
-                Console.WriteLine("Channel 15 " + c15_delay_value);
-                Console.WriteLine("Channel 16 " + c16_delay_value);
+                //Console.WriteLine("Channel 1 " + c1_delay_value);
+                //Console.WriteLine("Channel 2 " + c2_delay_value);
+                //Console.WriteLine("Channel 3 " + c3_delay_value);
+                //Console.WriteLine("Channel 4 " + c4_delay_value);
+                //Console.WriteLine("Channel 5 " + c5_delay_value);
+                //Console.WriteLine("Channel 6 " + c6_delay_value);
+                //Console.WriteLine("Channel 7 " + c7_delay_value);
+                //Console.WriteLine("Channel 8 " + c8_delay_value);
+                //Console.WriteLine("Channel 9 " + c9_delay_value);
+                //Console.WriteLine("Channel 10 " + c10_delay_value);
+                //Console.WriteLine("Channel 11 " + c11_delay_value);
+                //Console.WriteLine("Channel 12 " + c12_delay_value);
+                //Console.WriteLine("Channel 13 " + c13_delay_value);
+                //Console.WriteLine("Channel 14 " + c14_delay_value);
+                //Console.WriteLine("Channel 15 " + c15_delay_value);
+                //Console.WriteLine("Channel 16 " + c16_delay_value);
             }
             else
             {
@@ -2423,7 +2543,7 @@ namespace Controller_Design_2
             {
                 c16_strobe_value = led1_strobe.Text;
             }
-            displayStrobes();
+            //displayStrobes();
         }
 
         private void led2_strobe_SelectedIndexChanged(object sender, EventArgs e)
@@ -2457,7 +2577,7 @@ namespace Controller_Design_2
             {
                 // Do nothing
             }
-            displayStrobes();
+            //displayStrobes();
         }
 
         private void led3_strobe_SelectedIndexChanged(object sender, EventArgs e)
@@ -2491,7 +2611,7 @@ namespace Controller_Design_2
             {
                 // Do nothing
             }
-            displayStrobes();
+            //displayStrobes();
         }
 
         private void clearIntensity_Click(object sender, EventArgs e)

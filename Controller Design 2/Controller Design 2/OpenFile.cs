@@ -54,7 +54,7 @@ namespace Controller_Design_2
                 if (splitString[i][0] == 'G')
                 {
                     string groupedOrUngroup = splitString[i].Substring(20, 7);
-                    Console.WriteLine(groupedOrUngroup);
+                    //Console.WriteLine(groupedOrUngroup);
                     if (groupedOrUngroup == "GROUPED")
                     {
                         grouped = true;
@@ -101,28 +101,28 @@ namespace Controller_Design_2
                     delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
 
 
-                    Console.WriteLine(intensity);
-                    Console.WriteLine(edge);
-                    Console.WriteLine(mode);
-                    Console.WriteLine(strobe);
-                    Console.WriteLine(pulse);
-                    Console.WriteLine(delay);
+                    //Console.WriteLine(intensity);
+                    //Console.WriteLine(edge);
+                    //Console.WriteLine(mode);
+                    //Console.WriteLine(strobe);
+                    //Console.WriteLine(pulse);
+                    //Console.WriteLine(delay);
 
                 }
 
 
-                Console.WriteLine(intensity);
-                Console.WriteLine(edge);
-                Console.WriteLine(mode);
-                Console.WriteLine(strobe);
-                Console.WriteLine(pulse);
-                Console.WriteLine(delay);
+                //Console.WriteLine(intensity);
+                //Console.WriteLine(edge);
+                //Console.WriteLine(mode);
+                //Console.WriteLine(strobe);
+                //Console.WriteLine(pulse);
+                //Console.WriteLine(delay);
 
                 switch (i)
                 {
                     //group cases
                     case 1:
-                        Console.WriteLine("THIS PART IS RUNNING HADBGFSHIAHFSHAJGFUJG");
+                        //Console.WriteLine("THIS PART IS RUNNING HADBGFSHIAHFSHAJGFUJG");
 
                         if (grouped == true)
                         {
@@ -130,7 +130,7 @@ namespace Controller_Design_2
                         }
                         else
                         {
-                            Console.WriteLine("THIS PART IS RUNNING LOL");
+                            //Console.WriteLine("THIS PART IS RUNNING LOL");
                             mainForm.c010203_isGrouped = false;
                         }
                         break;
@@ -188,7 +188,7 @@ namespace Controller_Design_2
                         else
                         {
                             mainForm.c1_rgb_value = Convert.ToInt32(intensity);
-                            Console.WriteLine("THE VALUE IS MF " +  mainForm.c1_rgb_value);
+                            //Console.WriteLine("THE VALUE IS MF " +  mainForm.c1_rgb_value);
                         }
 
                         if (pulse == "0")
@@ -748,7 +748,7 @@ namespace Controller_Design_2
 
             foreach (string file in fileList)
             {
-                Console.WriteLine(file);
+                //Console.WriteLine(file);
                 string fileName = file.Substring(19);
                 if (fileName == "Board 1.txt" || fileName == "Board 2.txt" || fileName == "Board 3.txt" || fileName == "Board 4.txt" || fileName == "Board 5.txt" || fileName == "Board 6.txt" || fileName == "Board 7.txt" || fileName == "Board 8.txt")
                 {
