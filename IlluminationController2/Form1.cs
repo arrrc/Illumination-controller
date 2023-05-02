@@ -542,7 +542,13 @@ namespace IlluminationController2
         {
             c1_testStop = 0;
             c1_test.Text = "Test";
-            if (c1_mode.SelectedIndex == 1)
+            if (g1_setting.SelectedIndex == 1)
+            {
+                c2_mode.SelectedIndex = c1_mode.SelectedIndex;
+                c3_mode.SelectedIndex = c1_mode.SelectedIndex;
+            }
+
+                if (c1_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
                 c1_strobe.Enabled = true;
@@ -1077,6 +1083,9 @@ namespace IlluminationController2
                 c2_delay.ReadOnly = false;
                 c3_pulse.ReadOnly = false;
                 c3_delay.ReadOnly = false;
+                c2_mode.Enabled = true;
+                c3_mode.Enabled = true;
+
 
                 // Abort threads
 
@@ -1087,7 +1096,18 @@ namespace IlluminationController2
                 c2_delay.ReadOnly = true;
                 c3_pulse.ReadOnly = true;
                 c3_delay.ReadOnly = true;
-                
+                c2_mode.Enabled = false;
+                c3_mode.Enabled = false;
+
+
+                c2_pulse.Text = c1_pulse.Text;
+                c3_pulse.Text = c1_pulse.Text;
+                c2_delay.Text = c1_delay.Text;
+                c3_delay.Text = c1_delay.Text;
+
+                c2_mode.SelectedIndex = c1_mode.SelectedIndex;
+                c3_mode.SelectedIndex = c1_mode.SelectedIndex;
+
             }
         }
 
@@ -1680,7 +1700,8 @@ namespace IlluminationController2
                 c5_delay.ReadOnly = false;
                 c6_pulse.ReadOnly = false;
                 c6_delay.ReadOnly = false;
-
+                c5_mode.Enabled = true;
+                c6_mode.Enabled = true;
                 // Abort threads
 
             }
@@ -1690,6 +1711,17 @@ namespace IlluminationController2
                 c5_delay.ReadOnly = true;
                 c6_pulse.ReadOnly = true;
                 c6_delay.ReadOnly = true;
+                c5_mode.Enabled = false;
+                c6_mode.Enabled = false;
+
+
+                c5_pulse.Text = c4_pulse.Text;
+                c6_pulse.Text = c4_pulse.Text;
+                c5_delay.Text = c4_delay.Text;
+                c6_delay.Text = c4_delay.Text;
+
+                c5_mode.SelectedIndex = c4_mode.SelectedIndex;
+                c6_mode.SelectedIndex = c4_mode.SelectedIndex;
 
             }
         }
@@ -1729,6 +1761,8 @@ namespace IlluminationController2
                 c8_delay.ReadOnly = false;
                 c9_pulse.ReadOnly = false;
                 c9_delay.ReadOnly = false;
+                c8_mode.Enabled = true;
+                c9_mode.Enabled = true;
 
                 // Abort threads
 
@@ -1739,6 +1773,16 @@ namespace IlluminationController2
                 c8_delay.ReadOnly = true;
                 c9_pulse.ReadOnly = true;
                 c9_delay.ReadOnly = true;
+                c8_mode.Enabled = false;
+                c9_mode.Enabled = false;
+
+                c8_pulse.Text = c7_pulse.Text;
+                c9_pulse.Text = c7_pulse.Text;
+                c8_delay.Text = c7_delay.Text;
+                c9_delay.Text = c7_delay.Text;
+
+                c8_mode.SelectedIndex = c7_mode.SelectedIndex;
+                c9_mode.SelectedIndex = c7_mode.SelectedIndex;
 
             }
         }
@@ -1778,6 +1822,8 @@ namespace IlluminationController2
                 c11_delay.ReadOnly = false;
                 c12_pulse.ReadOnly = false;
                 c12_delay.ReadOnly = false;
+                c11_mode.Enabled = true;
+                c12_mode.Enabled = true;
 
                 // Abort threads
 
@@ -1788,7 +1834,17 @@ namespace IlluminationController2
                 c11_delay.ReadOnly = true;
                 c12_pulse.ReadOnly = true;
                 c12_delay.ReadOnly = true;
+                c11_mode.Enabled = false;
+                c12_mode.Enabled = false;
 
+                c11_pulse.Text = c10_pulse.Text;
+                c12_pulse.Text = c10_pulse.Text;
+                c11_delay.Text = c10_delay.Text;
+                c12_delay.Text = c10_delay.Text;
+
+                
+                c11_mode.SelectedIndex = c10_mode.SelectedIndex;
+                c12_mode.SelectedIndex = c10_mode.SelectedIndex;
             }
         }
 
@@ -1827,7 +1883,9 @@ namespace IlluminationController2
                 c14_delay.ReadOnly = false;
                 c15_pulse.ReadOnly = false;
                 c15_delay.ReadOnly = false;
-                 
+                c14_mode.Enabled = true;
+                c15_mode.Enabled = true;
+
                 // Abort threads
 
             }
@@ -1837,6 +1895,16 @@ namespace IlluminationController2
                 c14_delay.ReadOnly = true;
                 c15_pulse.ReadOnly = true;
                 c15_delay.ReadOnly = true;
+                c14_mode.Enabled = false;
+                c15_mode.Enabled = false;
+
+                c14_pulse.Text = c13_pulse.Text;
+                c15_pulse.Text = c13_pulse.Text;
+                c14_delay.Text = c13_delay.Text;
+                c15_delay.Text = c13_delay.Text;
+
+                c14_mode.SelectedIndex = c13_mode.SelectedIndex;
+                c15_mode.SelectedIndex = c13_mode.SelectedIndex;
 
             }
         }
@@ -1900,6 +1968,12 @@ namespace IlluminationController2
         {
             c4_testStop = 0;
             c4_test.Text = "Test";
+            if (g2_setting.SelectedIndex == 1)
+            {
+                c5_mode.SelectedIndex = c4_mode.SelectedIndex;
+                c6_mode.SelectedIndex = c4_mode.SelectedIndex;
+            }
+
             if (c4_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
@@ -2385,6 +2459,12 @@ namespace IlluminationController2
         {
             c7_testStop = 0;
             c7_test.Text = "Test";
+            if (g3_setting.SelectedIndex == 1)
+            {
+                c8_mode.SelectedIndex = c7_mode.SelectedIndex;
+                c9_mode.SelectedIndex = c7_mode.SelectedIndex;
+            }
+
             if (c7_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
@@ -2870,6 +2950,12 @@ namespace IlluminationController2
         {
             c10_testStop = 0;
             c10_test.Text = "Test";
+            if (g4_setting.SelectedIndex == 1)
+            {
+                c11_mode.SelectedIndex = c10_mode.SelectedIndex;
+                c12_mode.SelectedIndex = c10_mode.SelectedIndex;
+            }
+
             if (c10_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
@@ -3354,6 +3440,12 @@ namespace IlluminationController2
         {
             c13_testStop = 0;
             c13_test.Text = "Test";
+            if (g5_setting.SelectedIndex == 1)
+            {
+                c14_mode.SelectedIndex = c13_mode.SelectedIndex;
+                c15_mode.SelectedIndex = c13_mode.SelectedIndex;
+            }
+
             if (c13_mode.SelectedIndex == 1)
             {
                 // Strobe is selected
