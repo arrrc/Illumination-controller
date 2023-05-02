@@ -227,7 +227,7 @@ namespace IlluminationController2
             if (delay == "") { delay = "None"; }
 
             string consoleDisplay = $"\n[{channel} Settings]: " +
-                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay}";
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} ";
 
             return consoleDisplay;
         }
