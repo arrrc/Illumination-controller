@@ -571,10 +571,11 @@ namespace IlluminationController2
             // Pulse
             c1_testStop = 0;
             c1_test.Text = "Test";
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text))
+            //if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text))
+            if(checkPulse(c1_pulse.Text))
             {
                 int pulse_value = Convert.ToInt32(c1_pulse.Text);
-                int delay_value = Convert.ToInt32(c1_delay.Text);
+                //int delay_value = Convert.ToInt32(c1_delay.Text);
 
                 c1_test.Enabled = true;
                 c1_error.ForeColor = Color.White;
@@ -582,8 +583,22 @@ namespace IlluminationController2
                 c1_test.Enabled = true;
 
                 c1_pulse_value = pulse_value;
-                c1_delay_value = delay_value;
-                
+                //c1_delay_value = delay_value;
+
+                if (g1_setting.SelectedIndex == 1)
+                {
+                    c2_pulse_value = pulse_value;
+                    c3_pulse_value = pulse_value;
+                    c2_pulse.Text = c1_pulse.Text;
+                    c3_pulse.Text = c1_pulse.Text;
+
+                    
+                }
+                else
+                {
+
+                }
+
             }
             else
             {
@@ -611,9 +626,10 @@ namespace IlluminationController2
             // Delay
             c1_testStop = 0;
             c1_test.Text = "Test";
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text))
+            //if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text))
+            if(checkDelay(c1_delay.Text))
             {
-                int pulse_value = Convert.ToInt32(c1_pulse.Text);
+                //int pulse_value = Convert.ToInt32(c1_pulse.Text);
                 int delay_value = Convert.ToInt32(c1_delay.Text);
 
                 c1_test.Enabled = true;
@@ -621,8 +637,21 @@ namespace IlluminationController2
                 c1_error.Text = "Error: ";
                 c1_test.Enabled = true;
 
-                c1_pulse_value = pulse_value;
+                //c1_pulse_value = pulse_value;
                 c1_delay_value = delay_value;
+                if (g1_setting.SelectedIndex == 1)
+                {
+                    
+
+                    c2_delay_value = delay_value;
+                    c3_delay_value = delay_value;
+                    c2_delay.Text = c1_delay.Text;
+                    c3_delay.Text = c1_delay.Text;
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -1044,13 +1073,20 @@ namespace IlluminationController2
             c3_test.Text = "Test";
             if (g1_setting.SelectedIndex == 0)
             {
-                
+                c2_pulse.ReadOnly = false;
+                c2_delay.ReadOnly = false;
+                c3_pulse.ReadOnly = false;
+                c3_delay.ReadOnly = false;
 
                 // Abort threads
-                
+
             }
             else if (g1_setting.SelectedIndex == 1)
             {
+                c2_pulse.ReadOnly = true;
+                c2_delay.ReadOnly = true;
+                c3_pulse.ReadOnly = true;
+                c3_delay.ReadOnly = true;
                 
             }
         }
@@ -1342,13 +1378,14 @@ namespace IlluminationController2
                 if (data == "false")
                 {
                     portError.ForeColor = Color.Red;
-                    portError.Text = "USB has been unplugged, click\nretry connection to connect to the board";
+                    portError.Text = "USB has been unplugged, plug\nthe USB back in to edit config";
                     comPort.Text = "";
                     closeConn.Enabled = false;
                 }
                 else
                 {
                     portError.Text = "";
+                    label101.Text = "";
                     closeConn.Enabled = true;
                 }
             }
@@ -1639,14 +1676,21 @@ namespace IlluminationController2
             c6_test.Text = "Test";
             if (g2_setting.SelectedIndex == 0)
             {
-                
+                c5_pulse.ReadOnly = false;
+                c5_delay.ReadOnly = false;
+                c6_pulse.ReadOnly = false;
+                c6_delay.ReadOnly = false;
 
                 // Abort threads
 
             }
             else if (g2_setting.SelectedIndex == 1)
             {
-                
+                c5_pulse.ReadOnly = true;
+                c5_delay.ReadOnly = true;
+                c6_pulse.ReadOnly = true;
+                c6_delay.ReadOnly = true;
+
             }
         }
 
@@ -1681,14 +1725,21 @@ namespace IlluminationController2
             c9_test.Text = "Test";
             if (g3_setting.SelectedIndex == 0)
             {
-                
+                c8_pulse.ReadOnly = false;
+                c8_delay.ReadOnly = false;
+                c9_pulse.ReadOnly = false;
+                c9_delay.ReadOnly = false;
 
                 // Abort threads
 
             }
             else if (g3_setting.SelectedIndex == 1)
             {
-                
+                c8_pulse.ReadOnly = true;
+                c8_delay.ReadOnly = true;
+                c9_pulse.ReadOnly = true;
+                c9_delay.ReadOnly = true;
+
             }
         }
 
@@ -1723,14 +1774,21 @@ namespace IlluminationController2
             c12_test.Text = "Test";
             if (g4_setting.SelectedIndex == 0)
             {
-                
+                c11_pulse.ReadOnly = false;
+                c11_delay.ReadOnly = false;
+                c12_pulse.ReadOnly = false;
+                c12_delay.ReadOnly = false;
 
                 // Abort threads
 
             }
             else if (g4_setting.SelectedIndex == 1)
             {
-                
+                c11_pulse.ReadOnly = true;
+                c11_delay.ReadOnly = true;
+                c12_pulse.ReadOnly = true;
+                c12_delay.ReadOnly = true;
+
             }
         }
 
@@ -1765,13 +1823,21 @@ namespace IlluminationController2
             c15_test.Text = "Test";
             if (g5_setting.SelectedIndex == 0)
             {
-                
+                c14_pulse.ReadOnly = false;
+                c14_delay.ReadOnly = false;
+                c15_pulse.ReadOnly = false;
+                c15_delay.ReadOnly = false;
+                 
                 // Abort threads
 
             }
             else if (g5_setting.SelectedIndex == 1)
             {
-                
+                c14_pulse.ReadOnly = true;
+                c14_delay.ReadOnly = true;
+                c15_pulse.ReadOnly = true;
+                c15_delay.ReadOnly = true;
+
             }
         }
 
@@ -1857,10 +1923,10 @@ namespace IlluminationController2
             // Pulse
             c4_testStop = 0;
             c4_test.Text = "Test";
-            if (checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text))
+            if (checkPulse(c4_pulse.Text))
             {
                 int pulse_value = Convert.ToInt32(c4_pulse.Text);
-                int delay_value = Convert.ToInt32(c4_delay.Text);
+                //int delay_value = Convert.ToInt32(c1_delay.Text);
 
                 c4_test.Enabled = true;
                 c4_error.ForeColor = Color.White;
@@ -1868,9 +1934,24 @@ namespace IlluminationController2
                 c4_test.Enabled = true;
 
                 c4_pulse_value = pulse_value;
-                c4_delay_value = delay_value;
+                //c1_delay_value = delay_value;
+
+                if (g2_setting.SelectedIndex == 1)
+                {
+                    c5_pulse_value = pulse_value;
+                    c6_pulse_value = pulse_value;
+                    c5_pulse.Text = c4_pulse.Text;
+                    c6_pulse.Text = c4_pulse.Text;
+
+
+                }
+                else
+                {
+
+                }
 
             }
+
             else
             {
                 c4_test.Enabled = false;
@@ -1897,9 +1978,9 @@ namespace IlluminationController2
             // Delay
             c4_testStop = 0;
             c4_test.Text = "Test";
-            if (checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text))
+            if (checkDelay(c4_delay.Text))
             {
-                int pulse_value = Convert.ToInt32(c4_pulse.Text);
+                //int pulse_value = Convert.ToInt32(c1_pulse.Text);
                 int delay_value = Convert.ToInt32(c4_delay.Text);
 
                 c4_test.Enabled = true;
@@ -1907,8 +1988,19 @@ namespace IlluminationController2
                 c4_error.Text = "Error: ";
                 c4_test.Enabled = true;
 
-                c4_pulse_value = pulse_value;
+                //c1_pulse_value = pulse_value;
                 c4_delay_value = delay_value;
+                if (g2_setting.SelectedIndex == 1)
+                {
+                    c5_delay_value = delay_value;
+                    c6_delay_value = delay_value;
+                    c5_delay.Text = c4_delay.Text;
+                    c6_delay.Text = c4_delay.Text;
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -2316,10 +2408,10 @@ namespace IlluminationController2
             // Pulse
             c7_testStop = 0;
             c7_test.Text = "Test";
-            if (checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text))
+            if (checkPulse(c7_pulse.Text))
             {
                 int pulse_value = Convert.ToInt32(c7_pulse.Text);
-                int delay_value = Convert.ToInt32(c7_delay.Text);
+                //int delay_value = Convert.ToInt32(c1_delay.Text);
 
                 c7_test.Enabled = true;
                 c7_error.ForeColor = Color.White;
@@ -2327,7 +2419,21 @@ namespace IlluminationController2
                 c7_test.Enabled = true;
 
                 c7_pulse_value = pulse_value;
-                c7_delay_value = delay_value;
+                //c1_delay_value = delay_value;
+
+                if (g3_setting.SelectedIndex == 1)
+                {
+                    c8_pulse_value = pulse_value;
+                    c9_pulse_value = pulse_value;
+                    c8_pulse.Text = c7_pulse.Text;
+                    c9_pulse.Text = c7_pulse.Text;
+
+
+                }
+                else
+                {
+
+                }
 
             }
             else
@@ -2356,9 +2462,9 @@ namespace IlluminationController2
             // Delay
             c7_testStop = 0;
             c7_test.Text = "Test";
-            if (checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text))
+            if (checkDelay(c7_delay.Text))
             {
-                int pulse_value = Convert.ToInt32(c7_pulse.Text);
+                //int pulse_value = Convert.ToInt32(c1_pulse.Text);
                 int delay_value = Convert.ToInt32(c7_delay.Text);
 
                 c7_test.Enabled = true;
@@ -2366,8 +2472,21 @@ namespace IlluminationController2
                 c7_error.Text = "Error: ";
                 c7_test.Enabled = true;
 
-                c7_pulse_value = pulse_value;
+                //c1_pulse_value = pulse_value;
                 c7_delay_value = delay_value;
+                if (g3_setting.SelectedIndex == 1)
+                {
+
+
+                    c8_delay_value = delay_value;
+                    c9_delay_value = delay_value;
+                    c8_delay.Text = c7_delay.Text;
+                    c9_delay.Text = c7_delay.Text;
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -2774,10 +2893,10 @@ namespace IlluminationController2
             // Pulse
             c10_testStop = 0;
             c10_test.Text = "Test";
-            if (checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text))
+            if (checkPulse(c10_pulse.Text))
             {
                 int pulse_value = Convert.ToInt32(c10_pulse.Text);
-                int delay_value = Convert.ToInt32(c10_delay.Text);
+                //int delay_value = Convert.ToInt32(c1_delay.Text);
 
                 c10_test.Enabled = true;
                 c10_error.ForeColor = Color.White;
@@ -2785,7 +2904,21 @@ namespace IlluminationController2
                 c10_test.Enabled = true;
 
                 c10_pulse_value = pulse_value;
-                c10_delay_value = delay_value;
+                //c1_delay_value = delay_value;
+
+                if (g4_setting.SelectedIndex == 1)
+                {
+                    c11_pulse_value = pulse_value;
+                    c12_pulse_value = pulse_value;
+                    c11_pulse.Text = c10_pulse.Text;
+                    c12_pulse.Text = c10_pulse.Text;
+
+
+                }
+                else
+                {
+
+                }
 
             }
             else
@@ -2814,9 +2947,9 @@ namespace IlluminationController2
             // Delay
             c10_testStop = 0;
             c10_test.Text = "Test";
-            if (checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text))
+            if (checkDelay(c10_delay.Text))
             {
-                int pulse_value = Convert.ToInt32(c10_pulse.Text);
+                //int pulse_value = Convert.ToInt32(c1_pulse.Text);
                 int delay_value = Convert.ToInt32(c10_delay.Text);
 
                 c10_test.Enabled = true;
@@ -2824,9 +2957,21 @@ namespace IlluminationController2
                 c10_error.Text = "Error: ";
                 c10_test.Enabled = true;
 
-                c10_pulse_value = pulse_value;
+                //c1_pulse_value = pulse_value;
                 c10_delay_value = delay_value;
+                if (g4_setting.SelectedIndex == 1)
+                {
 
+
+                    c11_delay_value = delay_value;
+                    c12_delay_value = delay_value;
+                    c11_delay.Text = c10_delay.Text;
+                    c12_delay.Text = c10_delay.Text;
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -3232,10 +3377,10 @@ namespace IlluminationController2
             // Pulse
             c13_testStop = 0;
             c13_test.Text = "Test";
-            if (checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text))
+            if (checkPulse(c13_pulse.Text))
             {
                 int pulse_value = Convert.ToInt32(c13_pulse.Text);
-                int delay_value = Convert.ToInt32(c13_delay.Text);
+                //int delay_value = Convert.ToInt32(c1_delay.Text);
 
                 c13_test.Enabled = true;
                 c13_error.ForeColor = Color.White;
@@ -3243,7 +3388,21 @@ namespace IlluminationController2
                 c13_test.Enabled = true;
 
                 c13_pulse_value = pulse_value;
-                c13_delay_value = delay_value;
+                //c1_delay_value = delay_value;
+
+                if (g5_setting.SelectedIndex == 1)
+                {
+                    c14_pulse_value = pulse_value;
+                    c15_pulse_value = pulse_value;
+                    c14_pulse.Text = c13_pulse.Text;
+                    c15_pulse.Text = c13_pulse.Text;
+
+
+                }
+                else
+                {
+
+                }
 
             }
             else
@@ -3272,9 +3431,9 @@ namespace IlluminationController2
             // Delay
             c13_testStop = 0;
             c13_test.Text = "Test";
-            if (checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text))
+            if (checkDelay(c13_delay.Text))
             {
-                int pulse_value = Convert.ToInt32(c13_pulse.Text);
+                //int pulse_value = Convert.ToInt32(c1_pulse.Text);
                 int delay_value = Convert.ToInt32(c13_delay.Text);
 
                 c13_test.Enabled = true;
@@ -3282,9 +3441,21 @@ namespace IlluminationController2
                 c13_error.Text = "Error: ";
                 c13_test.Enabled = true;
 
-                c13_pulse_value = pulse_value;
+                //c1_pulse_value = pulse_value;
                 c13_delay_value = delay_value;
+                if (g5_setting.SelectedIndex == 1)
+                {
 
+
+                    c14_delay_value = delay_value;
+                    c15_delay_value = delay_value;
+                    c14_delay.Text = c13_delay.Text;
+                    c15_delay.Text = c13_delay.Text;
+                }
+                else
+                {
+
+                }
             }
             else
             {
