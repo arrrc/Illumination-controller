@@ -227,7 +227,7 @@ namespace IlluminationController2
             if (delay == "") { delay = "None"; }
 
             string consoleDisplay = $"\n[{channel} Settings]: " +
-                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay}";
 
             return consoleDisplay;
         }
@@ -236,11 +236,11 @@ namespace IlluminationController2
         {
             if (setting == "Grouped")
             {
-                return $"\n{group} Settings, [GROUPED Red:{first}, Green:{second}, Blue:{third}] .";
+                return $"\n{group} Settings, [GROUPED Red:{first}, Green:{second}, Blue:{third}]";
             }
             else if (setting == "Ungrouped")
             {
-                return $"\n{group} Settings, [UNGROUPED:Red:{first}, Green:{second}, Blue:{third}] .";
+                return $"\n{group} Settings, [UNGROUPED:Red:{first}, Green:{second}, Blue:{third}]";
             }
             else
             {
@@ -1542,13 +1542,13 @@ namespace IlluminationController2
             string g3_addText = displaySettings(g3_setting.Text, "Group 3", "CH7", "CH8", "CH9");
             string g4_addText = displaySettings(g4_setting.Text, "Group 4", "CH10", "CH11", "CH12");
             string g5_addText = displaySettings(g5_setting.Text, "Group 5", "CH13", "CH14", "CH15");
-            string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16] .";
+            string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16]";
 
             //uses global list to add data and generate the string to send to the hardware
             config.Clear();
             sendToHardware = "";
 
-            config.Add("MAIN BOARD = " + lightSelect.Text + ".");
+            config.Add("MAIN BOARD = " + lightSelect.Text);
 
             config.Add(g1_addText);
             config.Add(c1_addText);
