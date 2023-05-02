@@ -266,6 +266,7 @@
             this.selectBoard.StartIndex = 0;
             this.selectBoard.TabIndex = 8;
             this.selectBoard.ValueMember = "1";
+            this.selectBoard.SelectedIndexChanged += new System.EventHandler(this.selectBoard_SelectedIndexChanged);
             // 
             // guna2HtmlLabel7
             // 

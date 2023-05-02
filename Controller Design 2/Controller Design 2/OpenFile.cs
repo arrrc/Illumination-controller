@@ -181,16 +181,17 @@ namespace Controller_Design_2
 
                     //light config cases
                     case 2:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c1_rgb_value = 0;
                         }
                         else
                         {
                             mainForm.c1_rgb_value = Convert.ToInt32(intensity);
+                            Console.WriteLine("THE VALUE IS MF " +  mainForm.c1_rgb_value);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c1_pulse_value = 0;
                         }
@@ -199,7 +200,7 @@ namespace Controller_Design_2
                             mainForm.c1_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c1_delay_value = 0;
                         }
@@ -214,7 +215,7 @@ namespace Controller_Design_2
 
                         break;
                     case 3:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c2_rgb_value = 0;
                         }
@@ -223,7 +224,7 @@ namespace Controller_Design_2
                             mainForm.c2_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c2_pulse_value = 0;
                         }
@@ -232,7 +233,7 @@ namespace Controller_Design_2
                             mainForm.c2_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c2_delay_value = 0;
                         }
@@ -247,7 +248,7 @@ namespace Controller_Design_2
 
                         break;
                     case 4:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c3_rgb_value = 0;
                         }
@@ -256,7 +257,7 @@ namespace Controller_Design_2
                             mainForm.c3_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c3_pulse_value = 0;
                         }
@@ -265,7 +266,7 @@ namespace Controller_Design_2
                             mainForm.c3_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c3_delay_value = 0;
                         }
@@ -281,7 +282,7 @@ namespace Controller_Design_2
                         break;
 
                     case 6:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c4_rgb_value = 0;
                         }
@@ -290,7 +291,7 @@ namespace Controller_Design_2
                             mainForm.c4_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c4_pulse_value = 0;
                         }
@@ -299,7 +300,7 @@ namespace Controller_Design_2
                             mainForm.c4_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c4_delay_value = 0;
                         }
@@ -315,7 +316,7 @@ namespace Controller_Design_2
                         break;
 
                     case 7:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c5_rgb_value = 0;
                         }
@@ -324,7 +325,7 @@ namespace Controller_Design_2
                             mainForm.c5_delay_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c5_rgb_value = 0;
                         }
@@ -333,7 +334,7 @@ namespace Controller_Design_2
                             mainForm.c5_delay_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c5_delay_value = 0;
                         }
@@ -349,7 +350,7 @@ namespace Controller_Design_2
                         break;
 
                     case 8:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c6_rgb_value = 0;
                         }
@@ -358,7 +359,7 @@ namespace Controller_Design_2
                             mainForm.c6_delay_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c6_rgb_value = 0;
                         }
@@ -367,7 +368,7 @@ namespace Controller_Design_2
                             mainForm.c6_delay_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c6_delay_value = 0;
                         }
@@ -383,7 +384,7 @@ namespace Controller_Design_2
                         break;
 
                     case 10:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c7_rgb_value = 0;
                         }
@@ -392,7 +393,7 @@ namespace Controller_Design_2
                             mainForm.c7_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c7_pulse_value = 0;
                         }
@@ -401,7 +402,7 @@ namespace Controller_Design_2
                             mainForm.c7_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c7_delay_value = 0;
                         }
@@ -417,7 +418,7 @@ namespace Controller_Design_2
                         break;
 
                     case 11:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c8_rgb_value = 0;
                         }
@@ -426,7 +427,7 @@ namespace Controller_Design_2
                             mainForm.c8_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c8_pulse_value = 0;
                         }
@@ -435,7 +436,7 @@ namespace Controller_Design_2
                             mainForm.c8_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c8_delay_value = 0;
                         }
@@ -451,7 +452,7 @@ namespace Controller_Design_2
                         break;
 
                     case 12:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c9_rgb_value = 0;
                         }
@@ -460,7 +461,7 @@ namespace Controller_Design_2
                             mainForm.c9_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c9_pulse_value = 0;
                         }
@@ -469,7 +470,7 @@ namespace Controller_Design_2
                             mainForm.c9_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c9_delay_value = 0;
                         }
@@ -485,7 +486,7 @@ namespace Controller_Design_2
                         break;
 
                     case 14:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c10_rgb_value = 0;
                         }
@@ -494,7 +495,7 @@ namespace Controller_Design_2
                             mainForm.c10_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c10_pulse_value = 0;
                         }
@@ -503,7 +504,7 @@ namespace Controller_Design_2
                             mainForm.c10_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c10_delay_value = 0;
                         }
@@ -519,7 +520,7 @@ namespace Controller_Design_2
                         break;
 
                     case 15:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c11_rgb_value = 0;
                         }
@@ -528,7 +529,7 @@ namespace Controller_Design_2
                             mainForm.c11_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c11_pulse_value = 0;
                         }
@@ -537,7 +538,7 @@ namespace Controller_Design_2
                             mainForm.c11_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c11_delay_value = 0;
                         }
@@ -553,7 +554,7 @@ namespace Controller_Design_2
                         break;
 
                     case 16:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c12_rgb_value = 0;
                         }
@@ -562,7 +563,7 @@ namespace Controller_Design_2
                             mainForm.c12_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c12_pulse_value = 0;
                         }
@@ -571,7 +572,7 @@ namespace Controller_Design_2
                             mainForm.c12_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c12_delay_value = 0;
                         }
@@ -587,7 +588,7 @@ namespace Controller_Design_2
                         break;
 
                     case 18:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c13_rgb_value = 0;
                         }
@@ -596,7 +597,7 @@ namespace Controller_Design_2
                             mainForm.c13_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c13_pulse_value = 0;
                         }
@@ -605,7 +606,7 @@ namespace Controller_Design_2
                             mainForm.c13_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c13_delay_value = 0;
                         }
@@ -621,7 +622,7 @@ namespace Controller_Design_2
                         break;
 
                     case 19:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c14_rgb_value = 0;
                         }
@@ -630,7 +631,7 @@ namespace Controller_Design_2
                             mainForm.c14_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c14_pulse_value = 0;
                         }
@@ -639,9 +640,9 @@ namespace Controller_Design_2
                             mainForm.c14_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
-                            mainForm.c14_delay_value = 0    ;
+                            mainForm.c14_delay_value = 0;
                         }
                         else
                         {
@@ -655,7 +656,7 @@ namespace Controller_Design_2
                         break;
 
                     case 20:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c15_rgb_value = 0;
                         }
@@ -664,7 +665,7 @@ namespace Controller_Design_2
                             mainForm.c15_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c15_pulse_value = 0;
                         }
@@ -673,7 +674,7 @@ namespace Controller_Design_2
                             mainForm.c15_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c15_delay_value = 0;
                         }
@@ -689,7 +690,7 @@ namespace Controller_Design_2
                         break;
 
                     case 22:
-                        if (intensity == "None")
+                        if (intensity == "0")
                         {
                             mainForm.c16_rgb_value = 0;
                         }
@@ -698,7 +699,7 @@ namespace Controller_Design_2
                             mainForm.c16_rgb_value = Convert.ToInt32(intensity);
                         }
 
-                        if (pulse == "None")
+                        if (pulse == "0")
                         {
                             mainForm.c16_pulse_value = 0;
                         }
@@ -707,7 +708,7 @@ namespace Controller_Design_2
                             mainForm.c16_pulse_value = Convert.ToInt32(pulse);
                         }
 
-                        if (delay == "None")
+                        if (delay == "0")
                         {
                             mainForm.c16_delay_value = 0;
                         }
@@ -720,12 +721,16 @@ namespace Controller_Design_2
                         mainForm.c16_mode_value = mode;
                         mainForm.c16_strobe_value = strobe;
 
+                        
                         break;
                 }
 
 
             }
 
+            mainForm.setModes();
+            mainForm.setStrobe();
+            mainForm.setStrobeSettings();
             MessageBox.Show("Config has been loaded");
             this.Close();
         }

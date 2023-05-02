@@ -1597,7 +1597,142 @@ namespace Controller_Design_2
                     setDelay.Text = Convert.ToString(c16_delay_value);
                     break;
             }
+        }
 
+        public void setStrobeSettings()
+        {
+            string StrobeIndex = strobeChannel.Text;
+            Console.WriteLine(StrobeIndex);
+
+            switch (StrobeIndex)
+            {
+                case "Group 1":
+                    currentStrobe = "Group 1";
+                    setEdge.SelectedIndex = returnEdgeIndex(c1_edge_value);
+                    setPulse.Text = Convert.ToString(c1_pulse_value);
+                    setDelay.Text = Convert.ToString(c1_delay_value);
+                    break;
+                case "Group 2":
+                    currentStrobe = "Group 2";
+                    setEdge.SelectedIndex = returnEdgeIndex(c4_edge_value);
+                    setPulse.Text = Convert.ToString(c4_pulse_value);
+                    setDelay.Text = Convert.ToString(c4_delay_value);
+                    break;
+                case "Group 3":
+                    currentStrobe = "Group 3";
+                    setEdge.SelectedIndex = returnEdgeIndex(c7_edge_value);
+                    setPulse.Text = Convert.ToString(c7_pulse_value);
+                    setDelay.Text = Convert.ToString(c7_delay_value);
+                    break;
+                case "Group 4":
+                    currentStrobe = "Group 4";
+                    setEdge.SelectedIndex = returnEdgeIndex(c10_edge_value);
+                    setPulse.Text = Convert.ToString(c10_pulse_value);
+                    setDelay.Text = Convert.ToString(c10_delay_value);
+                    break;
+                case "Group 5":
+                    currentStrobe = "Group 5";
+                    setEdge.SelectedIndex = returnEdgeIndex(c13_edge_value);
+                    setPulse.Text = Convert.ToString(c13_pulse_value);
+                    setDelay.Text = Convert.ToString(c13_delay_value);
+                    break;
+                case "Channel 1":
+                    currentStrobe = "Channel 1";
+                    setEdge.SelectedIndex = returnEdgeIndex(c1_edge_value);
+                    setPulse.Text = Convert.ToString(c1_pulse_value);
+                    setDelay.Text = Convert.ToString(c1_delay_value);
+                    break;
+                case "Channel 2":
+                    currentStrobe = "Channel 2";
+                    setEdge.SelectedIndex = returnEdgeIndex(c2_edge_value);
+                    setPulse.Text = Convert.ToString(c2_pulse_value);
+                    setDelay.Text = Convert.ToString(c2_delay_value);
+                    break;
+                case "Channel 3":
+                    currentStrobe = "Channel 3";
+                    setEdge.SelectedIndex = returnEdgeIndex(c3_edge_value);
+                    setPulse.Text = Convert.ToString(c3_pulse_value);
+                    setDelay.Text = Convert.ToString(c3_delay_value);
+                    break;
+                case "Channel 4":
+                    currentStrobe = "Channel 4";
+                    setEdge.SelectedIndex = returnEdgeIndex(c4_edge_value);
+                    setPulse.Text = Convert.ToString(c4_pulse_value);
+                    setDelay.Text = Convert.ToString(c4_delay_value);
+                    break;
+                case "Channel 5":
+                    currentStrobe = "Channel 5";
+                    setEdge.SelectedIndex = returnEdgeIndex(c5_edge_value);
+                    setPulse.Text = Convert.ToString(c5_pulse_value);
+                    setDelay.Text = Convert.ToString(c5_delay_value);
+                    break;
+                case "Channel 6":
+                    currentStrobe = "Channel 6";
+                    setEdge.SelectedIndex = returnEdgeIndex(c6_edge_value);
+                    setPulse.Text = Convert.ToString(c6_pulse_value);
+                    setDelay.Text = Convert.ToString(c6_delay_value);
+                    break;
+                case "Channel 7":
+                    currentStrobe = "Channel 7";
+                    setEdge.SelectedIndex = returnEdgeIndex(c7_edge_value);
+                    setPulse.Text = Convert.ToString(c7_pulse_value);
+                    setDelay.Text = Convert.ToString(c7_delay_value);
+                    break;
+                case "Channel 8":
+                    currentStrobe = "Channel 8";
+                    setEdge.SelectedIndex = returnEdgeIndex(c9_edge_value);
+                    setPulse.Text = Convert.ToString(c9_pulse_value);
+                    setDelay.Text = Convert.ToString(c9_delay_value);
+                    break;
+                case "Channel 9":
+                    currentStrobe = "Channel 9";
+                    setEdge.SelectedIndex = returnEdgeIndex(c9_edge_value);
+                    setPulse.Text = Convert.ToString(c9_pulse_value);
+                    setDelay.Text = Convert.ToString(c9_delay_value);
+                    break;
+                case "Channel 10":
+                    currentStrobe = "Channel 10";
+                    setEdge.SelectedIndex = returnEdgeIndex(c10_edge_value);
+                    setPulse.Text = Convert.ToString(c10_pulse_value);
+                    setDelay.Text = Convert.ToString(c10_delay_value);
+                    break;
+                case "Channel 11":
+                    currentStrobe = "Channel 11";
+                    setEdge.SelectedIndex = returnEdgeIndex(c11_edge_value);
+                    setPulse.Text = Convert.ToString(c11_pulse_value);
+                    setDelay.Text = Convert.ToString(c11_delay_value);
+                    break;
+                case "Channel 12":
+                    currentStrobe = "Channel 12";
+                    setEdge.SelectedIndex = returnEdgeIndex(c12_edge_value);
+                    setPulse.Text = Convert.ToString(c12_pulse_value);
+                    setDelay.Text = Convert.ToString(c12_delay_value);
+                    break;
+                case "Channel 13":
+                    currentStrobe = "Channel 13";
+                    setEdge.SelectedIndex = returnEdgeIndex(c13_edge_value);
+                    setPulse.Text = Convert.ToString(c13_pulse_value);
+                    setDelay.Text = Convert.ToString(c13_delay_value);
+                    break;
+                case "Channel 14":
+                    currentStrobe = "Channel 14";
+                    setEdge.SelectedIndex = returnEdgeIndex(c14_edge_value);
+                    setPulse.Text = Convert.ToString(c14_pulse_value);
+                    setDelay.Text = Convert.ToString(c14_delay_value);
+                    break;
+                case "Channel 15":
+                    currentStrobe = "Channel 15";
+                    setEdge.SelectedIndex = returnEdgeIndex(c15_edge_value);
+                    setPulse.Text = Convert.ToString(c15_pulse_value);
+                    setDelay.Text = Convert.ToString(c15_delay_value);
+                    break;
+                case "Channel 16":
+                    currentStrobe = "Channel 16";
+                    setEdge.SelectedIndex = returnEdgeIndex(c16_edge_value);
+                    setPulse.Text = Convert.ToString(c16_pulse_value);
+                    setDelay.Text = Convert.ToString(c16_delay_value);
+                    break;
+            }
             //if (strobeChannel.SelectedIndex == 0)
             //{
             //    currentStrobe = 1;
@@ -2478,5 +2613,707 @@ namespace Controller_Design_2
         {
 
         }
+
+        private void selectBoard_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        //    if (lightSelect.Text == "")
+        //    {
+        //        uploadConfig.Enabled = false;
+        //    }
+        //    else
+        //    {
+        //        loadLatestBoardConfig();
+        //    }
+        }
+
+        //private void loadLatestBoardConfig()
+        //{
+        //    bool grouped = false;
+        //    string intensity = "";
+        //    string edge = "";
+        //    string mode = "";
+        //    string strobe = "";
+        //    string pulse = "";
+        //    string delay = "";
+
+        //    string pathWithFileName = @"..\..\savedConfigs\" + selectBoard.Text + ".txt";
+
+        //    string loadedConfig = File.ReadAllText(pathWithFileName);
+
+
+        //    string[] splitString = loadedConfig.Split('.');
+
+
+        //    for (int i = 0; i < splitString.Length; i++)
+        //    {
+        //        if (splitString[i][1] == 'G')
+        //        {
+        //            string groupedOrUngroup = splitString[i].Substring(20, 7);
+        //            Console.WriteLine(groupedOrUngroup);
+        //            if (groupedOrUngroup == "GROUPED")
+        //            {
+        //                grouped = true;
+        //            }
+        //            else if (groupedOrUngroup == "UNGROUP")
+        //            {
+
+        //                grouped = false;
+        //            }
+        //        }
+
+        //        else if (splitString[i][1] == '[')
+        //        {
+        //            int intensityIndexPos = splitString[i].IndexOf("Intensity") + 11;
+        //            int intensityNextCommaIndexPos = splitString[i].IndexOf(",", intensityIndexPos);
+        //            int intensityLengthBetweenBothIndex = intensityNextCommaIndexPos - intensityIndexPos;
+
+        //            int edgeIndexPos = splitString[i].IndexOf("Edge") + 6;
+        //            int edgeNextCommaIndexPos = splitString[i].IndexOf(",", edgeIndexPos);
+        //            int edgeLengthBetweenBothIndex = edgeNextCommaIndexPos - edgeIndexPos;
+
+        //            int modeIndexPos = splitString[i].IndexOf("Mode") + 6;
+        //            int modeNextCommaIndexPos = splitString[i].IndexOf(",", modeIndexPos);
+        //            int modeLengthBetweenBothIndex = modeNextCommaIndexPos - modeIndexPos;
+
+        //            int strobeIndexPos = splitString[i].IndexOf("Strobe:") + 8;
+        //            int strobeNextCommaIndexPos = splitString[i].IndexOf(",", strobeIndexPos);
+        //            int strobeLengthBetweenBothIndex = strobeNextCommaIndexPos - strobeIndexPos;
+
+        //            int pulseIndexPos = splitString[i].IndexOf("Pulse") + 7;
+        //            int pulseNextCommaIndexPos = splitString[i].IndexOf(",", pulseIndexPos);
+        //            int pulseLengthBetweenBothIndex = pulseNextCommaIndexPos - pulseIndexPos;
+
+        //            int delayIndexPos = splitString[i].IndexOf("Delay") + 7;
+        //            //there is a space at the end of the line
+        //            int delayEndOfLineIndex = splitString[i].IndexOf(" ", delayIndexPos);
+        //            int delayLengthBetweenBothIndex = delayEndOfLineIndex - delayIndexPos;
+
+        //            intensity = splitString[i].Substring(intensityIndexPos, intensityLengthBetweenBothIndex);
+        //            edge = splitString[i].Substring(edgeIndexPos, edgeLengthBetweenBothIndex);
+        //            mode = splitString[i].Substring(modeIndexPos, modeLengthBetweenBothIndex);
+        //            strobe = splitString[i].Substring(strobeIndexPos, strobeLengthBetweenBothIndex);
+        //            pulse = splitString[i].Substring(pulseIndexPos, pulseLengthBetweenBothIndex);
+        //            delay = splitString[i].Substring(delayIndexPos, delayLengthBetweenBothIndex);
+
+        //            if (mode == "None")
+        //            {
+        //                mode = "Static";
+        //            }
+
+        //            Console.WriteLine(intensity);
+        //            Console.WriteLine(edge);
+        //            Console.WriteLine(mode);
+        //            Console.WriteLine(strobe);
+        //            Console.WriteLine(pulse);
+        //            Console.WriteLine(delay);
+        //        }
+        //        switch (i)
+        //        {
+        //            //group cases
+        //            case 1:
+        //                Console.WriteLine("THIS PART IS RUNNING HADBGFSHIAHFSHAJGFUJG");
+
+        //                if (c010203_isGrouped == true)
+        //                {
+        //                    g1_setting.SelectedIndex = 1;
+        //                }
+        //                else
+        //                {
+        //                    Console.WriteLine("THIS PART IS RUNNING LOL");
+        //                    g1_setting.SelectedIndex = 0;
+        //                }
+        //                break;
+
+        //            case 5:
+        //                if (c040506_isGrouped == true)
+        //                {
+        //                    g2_setting.SelectedIndex = 1;
+        //                }
+        //                else
+        //                {
+        //                    g2_setting.SelectedIndex = 0;
+        //                }
+        //                break;
+
+        //            case 9:
+        //                if (c070809_isGrouped == true)
+        //                {
+        //                    g3_setting.SelectedIndex = 1;
+        //                }
+        //                else
+        //                {
+        //                    g3_setting.SelectedIndex = 0;
+        //                }
+        //                break;
+
+        //            case 13:
+        //                if (c101112_isGrouped == true)
+        //                {
+        //                    g4_setting.SelectedIndex = 1;
+        //                }
+        //                else
+        //                {
+        //                    g4_setting.SelectedIndex = 0;
+        //                }
+        //                break;
+
+        //            case 17:
+        //                if (c131415_isGrouped == true)
+        //                {
+        //                    g5_setting.SelectedIndex = 1;
+        //                }
+        //                else
+        //                {
+        //                    g5_setting.SelectedIndex = 0;
+        //                }
+        //                break;
+
+        //            //light config cases
+        //            case 2:
+        //                if (intensity == "0")
+        //                {
+        //                    c1_rgb_value = 0;
+        //                }
+        //                else
+        //                {
+        //                    c1_rgb_value = Convert.ToInt32(intensity);
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c1_pulse_value = 0;
+        //                }
+        //                else
+        //                {
+        //                    c1_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c1_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c1_delay.Text = delay;
+        //                }
+
+        //                c1_edge.Text = edge;
+        //                c1_mode.Text = mode;
+        //                c1_strobe.Text = strobe;
+
+        //                break;
+        //            case 3:
+        //                if (intensity == "None")
+        //                {
+        //                    c2_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c2_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c2_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c2_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c2_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c2_delay.Text = delay;
+        //                }
+
+        //                c2_edge.Text = edge;
+        //                c2_mode.Text = mode;
+        //                c2_strobe.Text = strobe;
+
+        //                break;
+        //            case 4:
+        //                if (intensity == "None")
+        //                {
+        //                    c3_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c3_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c3_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c3_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c3_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c3_delay.Text = delay;
+        //                }
+
+        //                c3_edge.Text = edge;
+        //                c3_mode.Text = mode;
+        //                c3_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 6:
+        //                if (intensity == "None")
+        //                {
+        //                    c4_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c4_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c4_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c4_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c4_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c4_delay.Text = delay;
+        //                }
+
+        //                c4_edge.Text = edge;
+        //                c4_mode.Text = mode;
+        //                c4_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 7:
+        //                if (intensity == "None")
+        //                {
+        //                    c5_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c5_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c5_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c5_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c5_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c5_delay.Text = delay;
+        //                }
+
+        //                c5_edge.Text = edge;
+        //                c5_mode.Text = mode;
+        //                c5_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 8:
+        //                if (intensity == "None")
+        //                {
+        //                    c6_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c6_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c6_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c6_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c6_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c6_delay.Text = delay;
+        //                }
+
+        //                c6_edge.Text = edge;
+        //                c6_mode.Text = mode;
+        //                c6_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 10:
+        //                if (intensity == "None")
+        //                {
+        //                    c7_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c7_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c7_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c7_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c7_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c7_delay.Text = delay;
+        //                }
+
+        //                c7_edge.Text = edge;
+        //                c7_mode.Text = mode;
+        //                c7_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 11:
+        //                if (intensity == "None")
+        //                {
+        //                    c8_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c8_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c8_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c8_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c8_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c8_delay.Text = delay;
+        //                }
+
+        //                c8_edge.Text = edge;
+        //                c8_mode.Text = mode;
+        //                c8_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 12:
+        //                if (intensity == "None")
+        //                {
+        //                    c9_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c9_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c9_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c9_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c9_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c9_delay.Text = delay;
+        //                }
+
+        //                c9_edge.Text = edge;
+        //                c9_mode.Text = mode;
+        //                c9_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 14:
+        //                if (intensity == "None")
+        //                {
+        //                    c10_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c10_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c10_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c10_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c10_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c10_delay.Text = delay;
+        //                }
+
+        //                c10_edge.Text = edge;
+        //                c10_mode.Text = mode;
+        //                c10_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 15:
+        //                if (intensity == "None")
+        //                {
+        //                    c11_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c11_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c11_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c11_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c11_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c11_delay.Text = delay;
+        //                }
+
+        //                c11_edge.Text = edge;
+        //                c11_mode.Text = mode;
+        //                c11_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 16:
+        //                if (intensity == "None")
+        //                {
+        //                    c12_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c12_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c12_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c12_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c12_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c12_delay.Text = delay;
+        //                }
+
+        //                c12_edge.Text = edge;
+        //                c12_mode.Text = mode;
+        //                c12_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 18:
+        //                if (intensity == "None")
+        //                {
+        //                    c13_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c13_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c13_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c13_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c13_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c13_delay.Text = delay;
+        //                }
+
+        //                c13_edge.Text = edge;
+        //                c13_mode.Text = mode;
+        //                c13_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 19:
+        //                if (intensity == "None")
+        //                {
+        //                    c14_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c14_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c14_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c14_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c14_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c14_delay.Text = delay;
+        //                }
+
+        //                c14_edge.Text = edge;
+        //                c14_mode.Text = mode;
+        //                c14_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 20:
+        //                if (intensity == "None")
+        //                {
+        //                    c15_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c15_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c15_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c15_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c15_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c15_delay.Text = delay;
+        //                }
+
+        //                c15_edge.Text = edge;
+        //                c15_mode.Text = mode;
+        //                c15_strobe.Text = strobe;
+
+        //                break;
+
+        //            case 22:
+        //                if (intensity == "None")
+        //                {
+        //                    c16_intensity.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c16_intensity.Text = intensity;
+        //                }
+
+        //                if (pulse == "None")
+        //                {
+        //                    c16_pulse.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c16_pulse.Text = pulse;
+        //                }
+
+        //                if (delay == "None")
+        //                {
+        //                    c16_delay.Text = "0";
+        //                }
+        //                else
+        //                {
+        //                    c16_delay.Text = delay;
+        //                }
+
+        //                c16_edge.Text = edge;
+        //                c16_mode.Text = mode;
+        //                c16_strobe.Text = strobe;
+
+        //                break;
+        //        }
+
+
+        //    }
+        //}
     }
 }
