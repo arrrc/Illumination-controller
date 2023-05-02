@@ -46,12 +46,12 @@ namespace Controller_Design_2
             loadedConfig = File.ReadAllText(pathWithFilename);
 
             //there is a space at the beginning of the array
-            string[] splitString = loadedConfig.Split('.');
+            string[] splitString = loadedConfig.Split('\n');
 
 
             for (int i = 0; i < splitString.Length; i++)
             {
-                if (splitString[i][1] == 'G')
+                if (splitString[i][0] == 'G')
                 {
                     string groupedOrUngroup = splitString[i].Substring(20, 7);
                     Console.WriteLine(groupedOrUngroup);
@@ -66,7 +66,7 @@ namespace Controller_Design_2
                     }
                 }
 
-                else if (splitString[i][1] == '[')
+                else if (splitString[i][0] == '[')
                 {
                     int intensityIndexPos = splitString[i].IndexOf("Intensity") + 11;
                     int intensityNextCommaIndexPos = splitString[i].IndexOf(",", intensityIndexPos);

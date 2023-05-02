@@ -2336,7 +2336,7 @@ namespace Controller_Design_2
             if (delay == "") { delay = "None"; }
 
             string consoleDisplay = $"\n[{channel} Settings]: " +
-                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} .";
+                $"Intensity: {intensity}, Edge: {edge}, Mode: {mode}, Strobe: {strobe}, Pulse: {pulse}, Delay: {delay} ";
 
             return consoleDisplay;
         }
@@ -2345,11 +2345,11 @@ namespace Controller_Design_2
         {
             if (setting == "GROUPED")
             {
-                return $"\n{group} Settings, [GROUPED Red:{first}, Green:{second}, Blue:{third}] .";
+                return $"\n{group} Settings, [GROUPED Red:{first}, Green:{second}, Blue:{third}] ";
             }
             else if (setting == "UNGROUPED")
             {
-                return $"\n{group} Settings, [UNGROUPED:Red:{first}, Green:{second}, Blue:{third}] .";
+                return $"\n{group} Settings, [UNGROUPED:Red:{first}, Green:{second}, Blue:{third}] ";
             }
             else
             {
