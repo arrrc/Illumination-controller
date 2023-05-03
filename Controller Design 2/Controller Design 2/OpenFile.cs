@@ -731,6 +731,7 @@ namespace Controller_Design_2
             mainForm.setModes();
             mainForm.setStrobe();
             mainForm.setStrobeSettings();
+            mainForm.setIntensity();
             MessageBox.Show("Config has been loaded");
             this.Close();
         }

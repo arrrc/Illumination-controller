@@ -389,14 +389,15 @@ namespace Controller_Design_2
             // Channels 1 2 3
             if (c010203_isCurrent)
             {
-                if (c1_mode_value == "Static") { led1_mode.SelectedIndex = 0;  led1_strobe.Enabled = false; }
-                else if (c1_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; }
+                Console.WriteLine("working");
+                if (c1_mode_value == "Static") { led1_mode.SelectedIndex = 0;  led1_strobe.Enabled = false; Console.WriteLine("channel 1 working"); }
+                else if (c1_mode_value == "Strobe") { led1_mode.SelectedIndex = 1; led1_strobe.Enabled = true; Console.WriteLine("channel 1 working"); }
 
-                if (c2_mode_value == "Static")  { led2_mode.SelectedIndex = 0; led2_strobe.Enabled = false; }
-                else if (c2_mode_value == "Strobe") { led2_mode.SelectedIndex = 1; led2_strobe.Enabled = true; }
+                if (c2_mode_value == "Static")  { led2_mode.SelectedIndex = 0; led2_strobe.Enabled = false; Console.WriteLine("channel 2 working"); }
+                else if (c2_mode_value == "Strobe") { led2_mode.SelectedIndex = 1; led2_strobe.Enabled = true; Console.WriteLine("channel 2 working"); }
 
-                if (c3_mode_value == "Static") { led3_mode.SelectedIndex = 0; led3_strobe.Enabled = false; }
-                else if (c3_mode_value == "Strobe")  { led3_mode.SelectedIndex = 1; led3_strobe.Enabled = true; }
+                if (c3_mode_value == "Static") { led3_mode.SelectedIndex = 0; led3_strobe.Enabled = false; Console.WriteLine("channel 3 working"); }
+                else if (c3_mode_value == "Strobe")  { led3_mode.SelectedIndex = 1; led3_strobe.Enabled = true; Console.WriteLine("channel 3 working"); }
             }
             // Channels 4 5 6
             else if (c040506_isCurrent)
@@ -957,6 +958,8 @@ namespace Controller_Design_2
                 c1_delay_value = 0;
                 c2_delay_value = 0;
                 c3_delay_value = 0;
+                setModes();
+
             }
             // Channels 4 5 6
             else if (c040506_isCurrent)
@@ -978,6 +981,8 @@ namespace Controller_Design_2
                 c4_delay_value = 0;
                 c5_delay_value = 0;
                 c6_delay_value = 0;
+                setModes();
+
             }
             // Channels 7 8 9
             else if (c070809_isCurrent)
@@ -999,6 +1004,8 @@ namespace Controller_Design_2
                 c7_delay_value = 0;
                 c8_delay_value = 0;
                 c9_delay_value = 0;
+                setModes();
+
             }
             // Channels 10 11 12
             else if (c101112_isCurrent)
@@ -1020,6 +1027,8 @@ namespace Controller_Design_2
                 c10_delay_value = 0;
                 c11_delay_value = 0;
                 c12_delay_value = 0;
+                setModes();
+
             }
             // Channels 13 14 15
             else if (c131415_isCurrent)
@@ -1041,6 +1050,12 @@ namespace Controller_Design_2
                 c13_delay_value = 0;
                 c14_delay_value = 0;
                 c15_delay_value = 0;
+                setModes();
+
+            }
+            else
+            {
+
             }
 
             //Console.WriteLine("c000123 " + c010203_isGrouped);
@@ -1104,6 +1119,8 @@ namespace Controller_Design_2
                 strobeChannel.Items.Add("Channel 15");
             }
             strobeChannel.Items.Add("Channel 16");
+            setModes();
+
         }
 
         private void led1_mode_SelectedIndexChanged(object sender, EventArgs e)
