@@ -672,7 +672,7 @@ namespace Controller_Design_2
                     string test = portConn.ReadExisting();
                     Console.WriteLine(test);
 
-                    portConn.Write("INIT COMMS");
+                    portConn.Write("Q");
                     Console.WriteLine("sent data");
 
 
@@ -680,7 +680,7 @@ namespace Controller_Design_2
                     string reply = portConn.ReadExisting();
 
 
-                    if (reply == "INIT COMMS")
+                    if (reply == "Q")
                     {
                         Console.WriteLine("port is open");
                         COMport.Text = portName;
@@ -851,7 +851,7 @@ namespace Controller_Design_2
                 {
                     continue;
                 }
-                portConn.Write("INIT COMMS");
+                portConn.Write("Q");
                 Console.WriteLine("sent data");
                 Thread.Sleep(50);
 
@@ -860,7 +860,7 @@ namespace Controller_Design_2
 
 
                 Console.WriteLine(reply);
-                if (reply == "INIT COMMS")
+                if (reply == "Q")
                 {
                     updateComPortTextbox(portName);
                     return true;

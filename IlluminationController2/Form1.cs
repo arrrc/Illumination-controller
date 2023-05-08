@@ -13,6 +13,8 @@ using System.IO;
 using System.Windows.Forms.VisualStyles;
 using System.Management;
 using System.Diagnostics;
+using static System.Net.WebRequestMethods;
+using File = System.IO.File;
 //using System.Text.Json;
 //using System.Text.Json.Serialization;
 
@@ -1169,37 +1171,11 @@ namespace IlluminationController2
             if (comPort.Text == "")
             {
                 MessageBox.Show("Please select a COM port");
-            }
-            //else if (portConn.IsOpen)
-            //{
-            //    try
-            //    {
-            //        portConn.Write("INIT COMMS");
-            //    }
-            //    catch
-            //    {
-            //        Console.WriteLine("device disconnected");
-            //    }
-            //}
+            }          
             else
             {
                 portConn.Open();
 
-
-                //portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
-
-
-                //try
-                //{
-                //    string messageReceived = portConn.ReadExisting();
-                //    portConn.Write("abba");
-                //    Console.WriteLine(messageReceived);
-
-                //}
-                //catch
-                //{
-                //    Console.WriteLine("device disconnected");
-                //}
                 if (lightSelect.Text == "")
                 {
                     closeConn.Enabled = true;
@@ -1261,83 +1237,96 @@ namespace IlluminationController2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            portConn = new SerialPort();
-            portConn.BaudRate = 9600;
-            int counter = 0;
-
-            while (comPort.Text == "" && counter < 5)
+            try
             {
-                foreach (string portName in SerialPort.GetPortNames())
+                portConn = new SerialPort();
+                portConn.BaudRate = 9600;
+                int counter = 0;
+
+                while (comPort.Text == "" && counter < 3)
                 {
-                    Console.WriteLine(portName);
-                    portConn.PortName = portName;
-                    portConn.Open();
-                    portConn.Write("test");
-                    portConn.Write("test");
-                    Thread.Sleep(1000);
-                    string test = portConn.ReadExisting();
-                    Console.WriteLine(test);
-
-                    portConn.Write("INIT COMMS");
-                    Console.WriteLine("sent data");
-
-
-                    Thread.Sleep(1000);
-                    string reply = portConn.ReadExisting();
-
-
-                    if (reply == "INIT COMMS")
+                    foreach (string portName in SerialPort.GetPortNames())
                     {
-                        Console.WriteLine("port is open");
-                        comPort.Text = portName;
-                        portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
-                        enableConfig("filler");
-                        break;
+                        Console.WriteLine(portName);
+                        portConn.PortName = portName;
+                        portConn.Open();
+                        portConn.Write("test");
+                        portConn.Write("test");
+                        Thread.Sleep(1000);
+                        string test = portConn.ReadExisting();
+                        Console.WriteLine(test);
+
+                        portConn.Write("Q");
+                        Console.WriteLine("sent data");
+
+
+                        Thread.Sleep(1000);
+                        string reply = portConn.ReadExisting();
+
+
+                        if (reply == "Q")
+                        {
+                            Console.WriteLine("port is open");
+                            comPort.Text = portName;
+                            portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+                            enableConfig("filler");
+                            break;
+                        }
+                        else
+                        {
+                            portConn.Close();
+                            continue;
+                        }
                     }
-                    else
-                    {
-                        portConn.Close();
-                        continue;
-                    }
+                    counter++;
                 }
-                counter++;
-            }
 
-            if(counter == 5)
+                if (counter >= 3)
+                {
+                    label101.Visible = true;
+                    label101.Text = "USB not plugged in, plug it in";
+                    label101.ForeColor = System.Drawing.Color.Red;
+                    disableConfig("filler");
+                }
+
+                // Declare a ManagementEventWatcher object and set up the event handler
+                ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+                ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
+
+                deviceInsertionWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
+                deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+
+                // Set up the query for USB device removal
+                WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
+                WqlEventQuery insertionQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
+
+                // Start listening for the USB device removal event
+                deviceRemoveWatcher.Query = removalQuery;
+                deviceInsertionWatcher.Query = insertionQuery;
+
+                deviceInsertionWatcher.Start();
+                deviceRemoveWatcher.Start();
+            }
+            catch
             {
-                label101.Visible = true;
-                label101.Text = "USB not plugged in, plug it in\nand hit retry connection";
-                label101.ForeColor = System.Drawing.Color.Red;
-                disableConfig("filler");
+                MessageBox.Show("App is already running");
+                Application.Exit();
             }
-
-            // Declare a ManagementEventWatcher object and set up the event handler
-            ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
-            ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
-
-            deviceInsertionWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
-            deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
-
-            // Set up the query for USB device removal
-            WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
-            WqlEventQuery insertionQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
-
-            // Start listening for the USB device removal event
-            deviceRemoveWatcher.Query = removalQuery;
-            deviceInsertionWatcher.Query = insertionQuery;
-
-            deviceInsertionWatcher.Start();
-            deviceRemoveWatcher.Start();
         }
 
         private void DeviceInsertedEvent(object sender, EventArrivedEventArgs e)
         {
+            //changePortErrMsg("retry");
             Console.WriteLine("EVENT FIRING");
             bool checkUSB = checkIfUsbAlive();
             if (checkUSB == true)
             {
                 changePortErrMsg("true");
                 enableConfig("filler");
+            }
+            else
+            {
+                changePortErrMsg("retry");
             }
 
             return;
@@ -1388,7 +1377,7 @@ namespace IlluminationController2
 
         void changePortErrMsg(string data)
         {
-            if (portError.InvokeRequired)
+            if (label101.InvokeRequired)
             {
                 SetTextCallback d = new SetTextCallback(changePortErrMsg);
                 this.Invoke(d, new object[] { data });
@@ -1397,16 +1386,24 @@ namespace IlluminationController2
             {
                 if (data == "false")
                 {
-                    portError.ForeColor = Color.Red;
-                    portError.Text = "USB has been unplugged, plug\nthe USB back in to edit config";
+                    label101.Visible = true;
+                    label101.ForeColor = Color.Red;
+                    label101.Text = "USB has been unplugged, plug\nthe USB back in to edit config";
                     comPort.Text = "";
                     closeConn.Enabled = false;
                 }
-                else
+                else if (data == "true")
                 {
+                    
                     portError.Text = "";
                     label101.Text = "";
                     closeConn.Enabled = true;
+                }
+                else
+                {
+                    label101.Visible = true;
+                    Console.WriteLine("RETRYING");
+                    label101.Text = "Retrying...";
                 }
             }
         }
@@ -1428,7 +1425,7 @@ namespace IlluminationController2
                 {
                     continue;
                 }
-                portConn.Write("INIT COMMS");
+                portConn.Write("Q");
                 Console.WriteLine("sent data");
                 Thread.Sleep(50);
 
@@ -1443,7 +1440,7 @@ namespace IlluminationController2
                 }
 
                 Console.WriteLine(reply);
-                if (reply == "INIT COMMS")
+                if (reply == "Q")
                 {
                     updateComPortTextbox(portName);
                     return true;
@@ -1462,7 +1459,7 @@ namespace IlluminationController2
             else
             {
                 comPort.Text = port;
-                portError.Text = "";
+                label101.Text = "";
             }
         }
 
@@ -1476,7 +1473,7 @@ namespace IlluminationController2
                 portConn.PortName = portName;
                 portConn.Open();
 
-                portConn.Write("INIT COMMS");
+                portConn.Write("Q");
                 Console.WriteLine("sent data");
                 Thread.Sleep(50);
 
@@ -1485,7 +1482,7 @@ namespace IlluminationController2
 
 
                 Console.WriteLine(reply);
-                if (reply == "INIT COMMS")
+                if (reply == "Q")
                 {
                     Console.WriteLine("port is open");
                     comPort.Text = portName;

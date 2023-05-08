@@ -41,3 +41,8 @@ C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\
 C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.openFile.resources
 C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.saveFile.resources
 C:\Users\WZS20\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.csproj.CopyComplete
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug\IlluminationController2.exe.manifest
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\bin\Debug\IlluminationController2.application
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.TrustInfo.xml
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.exe.manifest
+C:\Users\WZS19\Documents\GitHub\Illumination-controller\IlluminationController2\obj\Debug\IlluminationController2.application
