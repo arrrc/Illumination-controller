@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.testUpdatedComms = new System.Windows.Forms.Button();
             this.switchConfig = new System.Windows.Forms.Button();
             this.updateConfig = new System.Windows.Forms.Button();
             this.uploadConfig = new System.Windows.Forms.Button();
@@ -364,7 +365,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.testUpdatedComms = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -412,6 +412,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 828);
             this.panel1.TabIndex = 0;
+            // 
+            // testUpdatedComms
+            // 
+            this.testUpdatedComms.Location = new System.Drawing.Point(7, 165);
+            this.testUpdatedComms.Name = "testUpdatedComms";
+            this.testUpdatedComms.Size = new System.Drawing.Size(144, 29);
+            this.testUpdatedComms.TabIndex = 5;
+            this.testUpdatedComms.Text = "testUpdatedComms";
+            this.testUpdatedComms.UseVisualStyleBackColor = true;
+            this.testUpdatedComms.Click += new System.EventHandler(this.testUpdatedComms_Click);
             // 
             // switchConfig
             // 
@@ -889,14 +899,14 @@
             // 
             this.lightSelect.FormattingEnabled = true;
             this.lightSelect.Items.AddRange(new object[] {
+            "Board 0",
             "Board 1",
             "Board 2",
             "Board 3",
             "Board 4",
             "Board 5",
             "Board 6",
-            "Board 7",
-            "Board 8"});
+            "Board 7"});
             this.lightSelect.Location = new System.Drawing.Point(104, 52);
             this.lightSelect.Name = "lightSelect";
             this.lightSelect.Size = new System.Drawing.Size(77, 21);
@@ -4526,16 +4536,6 @@
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "LED Settings";
-            // 
-            // testUpdatedComms
-            // 
-            this.testUpdatedComms.Location = new System.Drawing.Point(7, 165);
-            this.testUpdatedComms.Name = "testUpdatedComms";
-            this.testUpdatedComms.Size = new System.Drawing.Size(144, 29);
-            this.testUpdatedComms.TabIndex = 5;
-            this.testUpdatedComms.Text = "testUpdatedComms";
-            this.testUpdatedComms.UseVisualStyleBackColor = true;
-            this.testUpdatedComms.Click += new System.EventHandler(this.testUpdatedComms_Click);
             // 
             // Form1
             // 
