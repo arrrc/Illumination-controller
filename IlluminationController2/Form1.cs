@@ -1240,7 +1240,7 @@ namespace IlluminationController2
             try
             {
                 portConn = new SerialPort();
-                portConn.BaudRate = 9600;
+                portConn.BaudRate = 115200;
                 int counter = 0;
 
                 while (comPort.Text == "" && counter < 3)
@@ -1250,21 +1250,20 @@ namespace IlluminationController2
                         Console.WriteLine(portName);
                         portConn.PortName = portName;
                         portConn.Open();
-                        portConn.Write("test");
-                        portConn.Write("test");
+
                         Thread.Sleep(1000);
                         string test = portConn.ReadExisting();
                         Console.WriteLine(test);
 
-                        portConn.Write("Q");
+                        portConn.Write("QB\r\n");
                         Console.WriteLine("sent data");
 
 
-                        Thread.Sleep(1000);
+                        Thread.Sleep(1200);
                         string reply = portConn.ReadExisting();
+                        Console.WriteLine(reply);
 
-
-                        if (reply == "Q")
+                        if (reply.Contains("PICS"))
                         {
                             Console.WriteLine("port is open");
                             comPort.Text = portName;
@@ -1650,6 +1649,90 @@ namespace IlluminationController2
             {
                 uploadConfig.Enabled = true;
             }
+        }
+
+        void intensity_set()
+        {
+            portConn.Write("IS " + lightSelect.Text + ", " + "1, " + c1_intensity + "\r\n");
+            portConn.Write("IS " + lightSelect.Text + ", " + "2, " + c2_intensity + "\r\n");
+            portConn.Write("IS " + lightSelect.Text + ", " + "3, " + c3_intensity + "\r\n");
+            portConn.Write("IS " + lightSelect.Text + ", " + "4, " + c4_intensity + "\r\n");
+            portConn.Write("IS " + lightSelect.Text + ", " + "5, " + c5_intensity + "\r\n");
+            portConn.Write("IS " + lightSelect.Text + ", " + "6, " + c6_intensity + "\r\n");
+            portConn.Write("IS " + lightSelect.Text + ", " + "7, " + c7_intensity + "\r\n");
+            portConn.Write("IS " + lightSelect.Text + ", " + "8, " + c8_intensity + "\r\n");
+            Console.WriteLine(portConn.ReadExisting());
+
+        }
+
+        void mode_set()
+        {
+            portConn.Write("MS " + lightSelect.Text + ", 1, " + c1_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + lightSelect.Text + ", 2, " + c2_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + lightSelect.Text + ", 3, " + c3_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + lightSelect.Text + ", 4, " + c4_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + lightSelect.Text + ", 5, " + c5_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + lightSelect.Text + ", 6, " + c6_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + lightSelect.Text + ", 7, " + c7_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + lightSelect.Text + ", 8, " + c8_mode.SelectedIndex.ToString() + "\r\n");
+            Console.WriteLine(portConn.ReadExisting());
+
+        }
+
+        void edge_set()
+        {
+            portConn.Write("ES " + lightSelect.Text + ", 1, " + c1_edge + "\r\n");
+            portConn.Write("ES " + lightSelect.Text + ", 2, " + c2_edge + "\r\n");
+            portConn.Write("ES " + lightSelect.Text + ", 3, " + c3_edge + "\r\n");
+            portConn.Write("ES " + lightSelect.Text + ", 4, " + c4_edge + "\r\n");
+            portConn.Write("ES " + lightSelect.Text + ", 5, " + c5_edge + "\r\n");
+            portConn.Write("ES " + lightSelect.Text + ", 6, " + c6_edge + "\r\n");
+            portConn.Write("ES " + lightSelect.Text + ", 7, " + c7_edge + "\r\n");
+            portConn.Write("ES " + lightSelect.Text + ", 8, " + c8_edge + "\r\n");
+            Console.WriteLine(portConn.ReadExisting());
+
+        }
+
+        void strobe_set()
+        {
+            portConn.Write("SS " + lightSelect.Text + ", 1, " + c1_strobe + "\r\n");
+            portConn.Write("SS " + lightSelect.Text + ", 2, " + c2_strobe + "\r\n");
+            portConn.Write("SS " + lightSelect.Text + ", 3, " + c3_strobe + "\r\n");
+            portConn.Write("SS " + lightSelect.Text + ", 4, " + c4_strobe + "\r\n");
+            portConn.Write("SS " + lightSelect.Text + ", 5, " + c5_strobe + "\r\n");
+            portConn.Write("SS " + lightSelect.Text + ", 6, " + c6_strobe + "\r\n");
+            portConn.Write("SS " + lightSelect.Text + ", 7, " + c7_strobe + "\r\n");
+            portConn.Write("SS " + lightSelect.Text + ", 8, " + c8_strobe + "\r\n");
+            Console.WriteLine(portConn.ReadExisting());
+
+        }
+
+        void pulse_set()
+        {
+            portConn.Write("PS " + lightSelect.Text + ", 1, " + c1_pulse + "\r\n");
+            portConn.Write("PS " + lightSelect.Text + ", 2, " + c2_pulse + "\r\n");
+            portConn.Write("PS " + lightSelect.Text + ", 3, " + c3_pulse + "\r\n");
+            portConn.Write("PS " + lightSelect.Text + ", 4, " + c4_pulse + "\r\n");
+            portConn.Write("PS " + lightSelect.Text + ", 5, " + c5_pulse + "\r\n");
+            portConn.Write("PS " + lightSelect.Text + ", 6, " + c6_pulse + "\r\n");
+            portConn.Write("PS " + lightSelect.Text + ", 7, " + c7_pulse + "\r\n");
+            portConn.Write("PS " + lightSelect.Text + ", 8, " + c8_pulse + "\r\n");
+            Console.WriteLine(portConn.ReadExisting());
+
+        }
+
+        void delay_set()
+        {
+            portConn.Write("DS " + lightSelect.Text + ", 1, " + c1_delay + "\r\n");
+            portConn.Write("DS " + lightSelect.Text + ", 2, " + c2_delay + "\r\n");
+            portConn.Write("DS " + lightSelect.Text + ", 3, " + c3_delay + "\r\n");
+            portConn.Write("DS " + lightSelect.Text + ", 4, " + c4_delay + "\r\n");
+            portConn.Write("DS " + lightSelect.Text + ", 5, " + c5_delay + "\r\n");
+            portConn.Write("DS " + lightSelect.Text + ", 6, " + c6_delay + "\r\n");
+            portConn.Write("DS " + lightSelect.Text + ", 7, " + c7_delay + "\r\n");
+            portConn.Write("DS " + lightSelect.Text + ", 8, " + c8_delay + "\r\n");
+            Console.WriteLine(portConn.ReadExisting());
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -4813,6 +4896,17 @@ namespace IlluminationController2
             c15_intensity.Text = "0";
             c16_intensity.Text = "0";
 
+        }
+
+        private void testUpdatedComms_Click(object sender, EventArgs e)
+        {
+            intensity_set();
+            mode_set();
+            pulse_set();
+            delay_set();
+            edge_set();
+            strobe_set();
+            Console.WriteLine("COMPLETED");
         }
     }
 }

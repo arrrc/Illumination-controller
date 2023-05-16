@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IlluminationController2.exe" size="175104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IlluminationController2.exe" size="170496">
       <assemblyIdentity name="IlluminationController2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>c1ey+drOUoP4KLiL8W6tLmhhnUcU9c3YPaPl3J6xeX8=</dsig:DigestValue>
+        <dsig:DigestValue>v3IcH98fyjpQmjLOSxvJQpDHiI6Rf5CH2emLjBgReI8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -65,13 +65,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="IlluminationController2.exe.config" size="184">
+  <file name="IlluminationController2.exe.config" size="189">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>X+GtgC9o18R9u9jmAWK6iKuu0WLaXTgchdPkk1MRli4=</dsig:DigestValue>
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

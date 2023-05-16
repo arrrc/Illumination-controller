@@ -364,6 +364,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.testUpdatedComms = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -401,6 +402,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.testUpdatedComms);
             this.panel1.Controls.Add(this.switchConfig);
             this.panel1.Controls.Add(this.updateConfig);
             this.panel1.Controls.Add(this.uploadConfig);
@@ -1178,8 +1180,8 @@
             // 
             this.c3_mode.FormattingEnabled = true;
             this.c3_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c3_mode.Location = new System.Drawing.Point(75, 120);
             this.c3_mode.Name = "c3_mode";
             this.c3_mode.Size = new System.Drawing.Size(69, 21);
@@ -1395,8 +1397,8 @@
             // 
             this.c1_mode.FormattingEnabled = true;
             this.c1_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c1_mode.Location = new System.Drawing.Point(75, 120);
             this.c1_mode.Name = "c1_mode";
             this.c1_mode.Size = new System.Drawing.Size(69, 21);
@@ -1612,8 +1614,8 @@
             // 
             this.c2_mode.FormattingEnabled = true;
             this.c2_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c2_mode.Location = new System.Drawing.Point(75, 120);
             this.c2_mode.Name = "c2_mode";
             this.c2_mode.Size = new System.Drawing.Size(69, 21);
@@ -1838,8 +1840,8 @@
             // 
             this.c6_mode.FormattingEnabled = true;
             this.c6_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c6_mode.Location = new System.Drawing.Point(75, 120);
             this.c6_mode.Name = "c6_mode";
             this.c6_mode.Size = new System.Drawing.Size(69, 21);
@@ -2050,8 +2052,8 @@
             // 
             this.c4_mode.FormattingEnabled = true;
             this.c4_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c4_mode.Location = new System.Drawing.Point(75, 120);
             this.c4_mode.Name = "c4_mode";
             this.c4_mode.Size = new System.Drawing.Size(69, 21);
@@ -2262,8 +2264,8 @@
             // 
             this.c5_mode.FormattingEnabled = true;
             this.c5_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c5_mode.Location = new System.Drawing.Point(75, 120);
             this.c5_mode.Name = "c5_mode";
             this.c5_mode.Size = new System.Drawing.Size(69, 21);
@@ -2487,8 +2489,8 @@
             // 
             this.c9_mode.FormattingEnabled = true;
             this.c9_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c9_mode.Location = new System.Drawing.Point(75, 120);
             this.c9_mode.Name = "c9_mode";
             this.c9_mode.Size = new System.Drawing.Size(69, 21);
@@ -2699,8 +2701,8 @@
             // 
             this.c7_mode.FormattingEnabled = true;
             this.c7_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c7_mode.Location = new System.Drawing.Point(75, 120);
             this.c7_mode.Name = "c7_mode";
             this.c7_mode.Size = new System.Drawing.Size(69, 21);
@@ -2911,8 +2913,8 @@
             // 
             this.c8_mode.FormattingEnabled = true;
             this.c8_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c8_mode.Location = new System.Drawing.Point(75, 120);
             this.c8_mode.Name = "c8_mode";
             this.c8_mode.Size = new System.Drawing.Size(69, 21);
@@ -3136,8 +3138,8 @@
             // 
             this.c12_mode.FormattingEnabled = true;
             this.c12_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c12_mode.Location = new System.Drawing.Point(75, 120);
             this.c12_mode.Name = "c12_mode";
             this.c12_mode.Size = new System.Drawing.Size(69, 21);
@@ -3348,8 +3350,8 @@
             // 
             this.c10_mode.FormattingEnabled = true;
             this.c10_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c10_mode.Location = new System.Drawing.Point(75, 120);
             this.c10_mode.Name = "c10_mode";
             this.c10_mode.Size = new System.Drawing.Size(69, 21);
@@ -3560,8 +3562,8 @@
             // 
             this.c11_mode.FormattingEnabled = true;
             this.c11_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c11_mode.Location = new System.Drawing.Point(75, 120);
             this.c11_mode.Name = "c11_mode";
             this.c11_mode.Size = new System.Drawing.Size(69, 21);
@@ -3785,8 +3787,8 @@
             // 
             this.c15_mode.FormattingEnabled = true;
             this.c15_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c15_mode.Location = new System.Drawing.Point(75, 120);
             this.c15_mode.Name = "c15_mode";
             this.c15_mode.Size = new System.Drawing.Size(69, 21);
@@ -3999,8 +4001,8 @@
             // 
             this.c13_mode.FormattingEnabled = true;
             this.c13_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c13_mode.Location = new System.Drawing.Point(75, 120);
             this.c13_mode.Name = "c13_mode";
             this.c13_mode.Size = new System.Drawing.Size(69, 21);
@@ -4211,8 +4213,8 @@
             // 
             this.c14_mode.FormattingEnabled = true;
             this.c14_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c14_mode.Location = new System.Drawing.Point(75, 120);
             this.c14_mode.Name = "c14_mode";
             this.c14_mode.Size = new System.Drawing.Size(69, 21);
@@ -4446,8 +4448,8 @@
             // 
             this.c16_mode.FormattingEnabled = true;
             this.c16_mode.Items.AddRange(new object[] {
-            "Static",
-            "Strobe"});
+            "Strobe",
+            "Static"});
             this.c16_mode.Location = new System.Drawing.Point(75, 120);
             this.c16_mode.Name = "c16_mode";
             this.c16_mode.Size = new System.Drawing.Size(69, 21);
@@ -4524,6 +4526,16 @@
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "LED Settings";
+            // 
+            // testUpdatedComms
+            // 
+            this.testUpdatedComms.Location = new System.Drawing.Point(7, 165);
+            this.testUpdatedComms.Name = "testUpdatedComms";
+            this.testUpdatedComms.Size = new System.Drawing.Size(144, 29);
+            this.testUpdatedComms.TabIndex = 5;
+            this.testUpdatedComms.Text = "testUpdatedComms";
+            this.testUpdatedComms.UseVisualStyleBackColor = true;
+            this.testUpdatedComms.Click += new System.EventHandler(this.testUpdatedComms_Click);
             // 
             // Form1
             // 
@@ -4938,6 +4950,7 @@
         private System.Windows.Forms.Label portError;
         private System.Windows.Forms.TextBox comPort;
         private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Button testUpdatedComms;
     }
 }
 
