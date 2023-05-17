@@ -522,18 +522,6 @@ namespace IlluminationController2
                 c1_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
         }
 
         private void c1_edge_SelectedIndexChanged(object sender, EventArgs e)
@@ -551,7 +539,7 @@ namespace IlluminationController2
                 c3_mode.SelectedIndex = c1_mode.SelectedIndex;
             }
 
-                if (c1_mode.SelectedIndex == 1)
+                if (c1_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c1_strobe.Enabled = true;
@@ -617,17 +605,7 @@ namespace IlluminationController2
                 c1_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c1_delay_TextChanged(object sender, EventArgs e)
@@ -671,17 +649,7 @@ namespace IlluminationController2
                 
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c1_status_Click(object sender, EventArgs e)
@@ -731,7 +699,7 @@ namespace IlluminationController2
         {
             c2_testStop = 0;
             c2_test.Text = "Test";
-            if (c2_mode.SelectedIndex == 1)
+            if (c2_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c2_strobe.Enabled = true;
@@ -780,17 +748,7 @@ namespace IlluminationController2
                 c2_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c2_delay_TextChanged(object sender, EventArgs e)
@@ -819,17 +777,7 @@ namespace IlluminationController2
                 c2_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c2_status_Click(object sender, EventArgs e)
@@ -887,17 +835,7 @@ namespace IlluminationController2
 
             }
 
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+            
         }
 
         private void c3_edge_SelectedIndexChanged(object sender, EventArgs e)
@@ -909,7 +847,7 @@ namespace IlluminationController2
         {
             c3_testStop = 0;
             c3_test.Text = "Test";
-            if (c3_mode.SelectedIndex == 1)
+            if (c3_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c3_strobe.Enabled = true;
@@ -958,17 +896,7 @@ namespace IlluminationController2
                 c3_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c3_delay_TextChanged(object sender, EventArgs e)
@@ -997,17 +925,7 @@ namespace IlluminationController2
                 c3_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c3_status_Click(object sender, EventArgs e)
@@ -1059,17 +977,7 @@ namespace IlluminationController2
 
             }
 
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+            
         }
 
         private void g1_setting_SelectedIndexChanged(object sender, EventArgs e)
@@ -1606,6 +1514,13 @@ namespace IlluminationController2
                 uploadConfig.Enabled = false;
                 Thread sendData = new Thread(sendDataToHardware);
                 sendData.Start();
+                intensity_set();
+                mode_set();
+                pulse_set();
+                delay_set();
+                edge_set();
+                strobe_set();
+                Console.WriteLine("COMPLETED");
             }
             catch
             {
@@ -1656,14 +1571,14 @@ namespace IlluminationController2
         {
             int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
             string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("IS " + boardNum + ", " + "1, " + c1_intensity.Text + "\r\n");
-            portConn.Write("IS " + boardNum + ", " + "2, " + c2_intensity.Text + "\r\n");
-            portConn.Write("IS " + boardNum + ", " + "3, " + c3_intensity.Text + "\r\n");
-            portConn.Write("IS " + boardNum + ", " + "4, " + c4_intensity.Text + "\r\n");
-            portConn.Write("IS " + boardNum + ", " + "5, " + c5_intensity.Text + "\r\n");
-            portConn.Write("IS " + boardNum + ", " + "6, " + c6_intensity.Text + "\r\n");
-            portConn.Write("IS " + boardNum + ", " + "7, " + c7_intensity.Text + "\r\n");
-            portConn.Write("IS " + boardNum + ", " + "8, " + c8_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "0, " + c1_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "1, " + c2_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "2, " + c3_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "3, " + c4_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "4, " + c5_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "5, " + c6_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "6, " + c7_intensity.Text + "\r\n");
+            portConn.Write("IS " + boardNum + ", " + "7, " + c8_intensity.Text + "\r\n");
             Console.WriteLine(portConn.ReadExisting());
             Console.WriteLine("IS " + boardNum + ", " + "1, " + c1_intensity.Text + "\r\n");
         }
@@ -1672,14 +1587,14 @@ namespace IlluminationController2
         {
             int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
             string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("MS " + boardNum + ", 1, " + c1_mode.SelectedIndex.ToString() + "\r\n");
-            portConn.Write("MS " + boardNum + ", 2, " + c2_mode.SelectedIndex.ToString() + "\r\n");
-            portConn.Write("MS " + boardNum + ", 3, " + c3_mode.SelectedIndex.ToString() + "\r\n");
-            portConn.Write("MS " + boardNum + ", 4, " + c4_mode.SelectedIndex.ToString() + "\r\n");
-            portConn.Write("MS " + boardNum + ", 5, " + c5_mode.SelectedIndex.ToString() + "\r\n");
-            portConn.Write("MS " + boardNum + ", 6, " + c6_mode.SelectedIndex.ToString() + "\r\n");
-            portConn.Write("MS " + boardNum + ", 7, " + c7_mode.SelectedIndex.ToString() + "\r\n");
-            portConn.Write("MS " + boardNum + ", 8, " + c8_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 0, " + c1_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 1, " + c2_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 2, " + c3_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 3, " + c4_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 4, " + c5_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 5, " + c6_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 6, " + c7_mode.SelectedIndex.ToString() + "\r\n");
+            portConn.Write("MS " + boardNum + ", 7, " + c8_mode.SelectedIndex.ToString() + "\r\n");
             Console.WriteLine(portConn.ReadExisting());
 
         }
@@ -1688,14 +1603,14 @@ namespace IlluminationController2
         {
             int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
             string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("ES " + boardNum + ", 1, " + c1_edge.Text + "\r\n");
-            portConn.Write("ES " + boardNum + ", 2, " + c2_edge.Text + "\r\n");
-            portConn.Write("ES " + boardNum + ", 3, " + c3_edge.Text + "\r\n");
-            portConn.Write("ES " + boardNum + ", 4, " + c4_edge.Text + "\r\n");
-            portConn.Write("ES " + boardNum + ", 5, " + c5_edge.Text + "\r\n");
-            portConn.Write("ES " + boardNum + ", 6, " + c6_edge.Text + "\r\n");
-            portConn.Write("ES " + boardNum + ", 7, " + c7_edge.Text + "\r\n");
-            portConn.Write("ES " + boardNum + ", 8, " + c8_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 0, " + c1_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 1, " + c2_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 2, " + c3_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 3, " + c4_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 4, " + c5_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 5, " + c6_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 6, " + c7_edge.Text + "\r\n");
+            portConn.Write("ES " + boardNum + ", 7, " + c8_edge.Text + "\r\n");
             Console.WriteLine(portConn.ReadExisting());
 
         }
@@ -1704,14 +1619,14 @@ namespace IlluminationController2
         {
             int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
             string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("SS " + boardNum + ", 1, " + c1_strobe.Text + "\r\n");
-            portConn.Write("SS " + boardNum + ", 2, " + c2_strobe.Text + "\r\n");
-            portConn.Write("SS " + boardNum + ", 3, " + c3_strobe.Text + "\r\n");
-            portConn.Write("SS " + boardNum + ", 4, " + c4_strobe.Text + "\r\n");
-            portConn.Write("SS " + boardNum + ", 5, " + c5_strobe.Text + "\r\n");
-            portConn.Write("SS " + boardNum + ", 6, " + c6_strobe.Text + "\r\n");
-            portConn.Write("SS " + boardNum + ", 7, " + c7_strobe.Text + "\r\n");
-            portConn.Write("SS " + boardNum + ", 8, " + c8_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 0, " + c1_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 1, " + c2_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 2, " + c3_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 3, " + c4_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 4, " + c5_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 5, " + c6_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 6, " + c7_strobe.Text + "\r\n");
+            portConn.Write("SS " + boardNum + ", 7, " + c8_strobe.Text + "\r\n");
             Console.WriteLine(portConn.ReadExisting());
 
         }
@@ -1720,14 +1635,14 @@ namespace IlluminationController2
         {
             int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
             string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("PS " + boardNum + ", 1, " + c1_pulse.Text + "\r\n");
-            portConn.Write("PS " + boardNum + ", 2, " + c2_pulse.Text + "\r\n");
-            portConn.Write("PS " + boardNum + ", 3, " + c3_pulse.Text + "\r\n");
-            portConn.Write("PS " + boardNum + ", 4, " + c4_pulse.Text + "\r\n");
-            portConn.Write("PS " + boardNum + ", 5, " + c5_pulse.Text + "\r\n");
-            portConn.Write("PS " + boardNum + ", 6, " + c6_pulse.Text + "\r\n");
-            portConn.Write("PS " + boardNum + ", 7, " + c7_pulse.Text + "\r\n");
-            portConn.Write("PS " + boardNum + ", 8, " + c8_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 0, " + c1_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 1, " + c2_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 2, " + c3_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 3, " + c4_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 4, " + c5_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 5, " + c6_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 6, " + c7_pulse.Text + "\r\n");
+            portConn.Write("PS " + boardNum + ", 7, " + c8_pulse.Text + "\r\n");
             Console.WriteLine(portConn.ReadExisting());
 
         }
@@ -1736,14 +1651,14 @@ namespace IlluminationController2
         {
             int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
             string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("DS " + boardNum + ", 1, " + c1_delay.Text + "\r\n");
-            portConn.Write("DS " + boardNum + ", 2, " + c2_delay.Text + "\r\n");
-            portConn.Write("DS " + boardNum + ", 3, " + c3_delay.Text + "\r\n");
-            portConn.Write("DS " + boardNum + ", 4, " + c4_delay.Text + "\r\n");
-            portConn.Write("DS " + boardNum + ", 5, " + c5_delay.Text + "\r\n");
-            portConn.Write("DS " + boardNum + ", 6, " + c6_delay.Text + "\r\n");
-            portConn.Write("DS " + boardNum + ", 7, " + c7_delay.Text + "\r\n");
-            portConn.Write("DS " + boardNum + ", 8, " + c8_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 0, " + c1_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 1, " + c2_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 2, " + c3_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 3, " + c4_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 4, " + c5_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 5, " + c6_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 6, " + c7_delay.Text + "\r\n");
+            portConn.Write("DS " + boardNum + ", 7, " + c8_delay.Text + "\r\n");
             Console.WriteLine(portConn.ReadExisting());
 
         }
@@ -2044,17 +1959,7 @@ namespace IlluminationController2
 
             }
 
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+            
         }
 
         private void c4_mode_SelectedIndexChanged(object sender, EventArgs e)
@@ -2067,7 +1972,7 @@ namespace IlluminationController2
                 c6_mode.SelectedIndex = c4_mode.SelectedIndex;
             }
 
-            if (c4_mode.SelectedIndex == 1)
+            if (c4_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c4_strobe.Enabled = true;
@@ -2127,17 +2032,7 @@ namespace IlluminationController2
                 c4_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c4_delay_TextChanged(object sender, EventArgs e)
@@ -2178,17 +2073,7 @@ namespace IlluminationController2
 
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c4_test_Click(object sender, EventArgs e)
@@ -2230,24 +2115,14 @@ namespace IlluminationController2
 
             }
 
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c5_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c5_testStop = 0;
             c5_test.Text = "Test";
-            if (c5_mode.SelectedIndex == 1)
+            if (c5_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c5_strobe.Enabled = true;
@@ -2292,17 +2167,7 @@ namespace IlluminationController2
                 c5_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c5_delay_TextChanged(object sender, EventArgs e)
@@ -2331,17 +2196,7 @@ namespace IlluminationController2
                 c5_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c5_test_Click(object sender, EventArgs e)
@@ -2383,24 +2238,14 @@ namespace IlluminationController2
 
             }
 
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c6_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c6_testStop = 0;
             c6_test.Text = "Test";
-            if (c6_mode.SelectedIndex == 1)
+            if (c6_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c6_strobe.Enabled = true;
@@ -2445,17 +2290,7 @@ namespace IlluminationController2
                 c6_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c6_delay_TextChanged(object sender, EventArgs e)
@@ -2485,17 +2320,7 @@ namespace IlluminationController2
 
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c6_test_Click(object sender, EventArgs e)
@@ -2535,17 +2360,6 @@ namespace IlluminationController2
                 c7_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
         }
 
         private void c7_mode_SelectedIndexChanged(object sender, EventArgs e)
@@ -2558,7 +2372,7 @@ namespace IlluminationController2
                 c9_mode.SelectedIndex = c7_mode.SelectedIndex;
             }
 
-            if (c7_mode.SelectedIndex == 1)
+            if (c7_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c7_strobe.Enabled = true;
@@ -2617,17 +2431,7 @@ namespace IlluminationController2
                 c7_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c7_delay_TextChanged(object sender, EventArgs e)
@@ -2669,17 +2473,7 @@ namespace IlluminationController2
                 c7_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c7_test_Click(object sender, EventArgs e)
@@ -2721,24 +2515,14 @@ namespace IlluminationController2
 
             }
 
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c8_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c8_testStop = 0;
             c8_test.Text = "Test";
-            if (c8_mode.SelectedIndex == 1)
+            if (c8_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c8_strobe.Enabled = true;
@@ -2783,17 +2567,7 @@ namespace IlluminationController2
                 c8_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c8_delay_TextChanged(object sender, EventArgs e)
@@ -2822,17 +2596,7 @@ namespace IlluminationController2
                 c8_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c8_test_Click(object sender, EventArgs e)
@@ -2874,24 +2638,14 @@ namespace IlluminationController2
 
             }
 
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c9_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c9_testStop = 0;
             c9_test.Text = "Test";
-            if (c9_mode.SelectedIndex == 1)
+            if (c9_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c9_strobe.Enabled = true;
@@ -2936,17 +2690,7 @@ namespace IlluminationController2
                 c9_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c9_delay_TextChanged(object sender, EventArgs e)
@@ -2976,17 +2720,7 @@ namespace IlluminationController2
                 c9_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c9_test_Click(object sender, EventArgs e)
@@ -3026,17 +2760,7 @@ namespace IlluminationController2
                 c10_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c10_mode_SelectedIndexChanged(object sender, EventArgs e)
@@ -3049,7 +2773,7 @@ namespace IlluminationController2
                 c12_mode.SelectedIndex = c10_mode.SelectedIndex;
             }
 
-            if (c10_mode.SelectedIndex == 1)
+            if (c10_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c10_strobe.Enabled = true;
@@ -3108,17 +2832,7 @@ namespace IlluminationController2
                 c10_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c10_delay_TextChanged(object sender, EventArgs e)
@@ -3160,17 +2874,7 @@ namespace IlluminationController2
                 c10_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c10_test_Click(object sender, EventArgs e)
@@ -3211,24 +2915,14 @@ namespace IlluminationController2
                 c11_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c11_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c11_testStop = 0;
             c11_test.Text = "Test";
-            if (c11_mode.SelectedIndex == 1)
+            if (c11_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c11_strobe.Enabled = true;
@@ -3273,17 +2967,7 @@ namespace IlluminationController2
                 c11_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c11_delay_TextChanged(object sender, EventArgs e)
@@ -3313,17 +2997,7 @@ namespace IlluminationController2
                 c11_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c11_test_Click(object sender, EventArgs e)
@@ -3364,24 +3038,14 @@ namespace IlluminationController2
                 c12_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c12_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c12_testStop = 0;
             c12_test.Text = "Test";
-            if (c12_mode.SelectedIndex == 1)
+            if (c12_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c12_strobe.Enabled = true;
@@ -3426,17 +3090,7 @@ namespace IlluminationController2
                 c12_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c12_delay_TextChanged(object sender, EventArgs e)
@@ -3466,17 +3120,7 @@ namespace IlluminationController2
                 c12_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c12_test_Click(object sender, EventArgs e)
@@ -3516,17 +3160,7 @@ namespace IlluminationController2
                 c13_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c13_mode_SelectedIndexChanged(object sender, EventArgs e)
@@ -3539,7 +3173,7 @@ namespace IlluminationController2
                 c15_mode.SelectedIndex = c13_mode.SelectedIndex;
             }
 
-            if (c13_mode.SelectedIndex == 1)
+            if (c13_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c13_strobe.Enabled = true;
@@ -3598,17 +3232,7 @@ namespace IlluminationController2
                 c13_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c13_delay_TextChanged(object sender, EventArgs e)
@@ -3650,17 +3274,7 @@ namespace IlluminationController2
                 c13_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c13_test_Click(object sender, EventArgs e)
@@ -3701,24 +3315,14 @@ namespace IlluminationController2
                 c14_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c14_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c14_testStop = 0;
             c14_test.Text = "Test";
-            if (c14_mode.SelectedIndex == 1)
+            if (c14_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c14_strobe.Enabled = true;
@@ -3763,17 +3367,7 @@ namespace IlluminationController2
                 c14_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c14_delay_TextChanged(object sender, EventArgs e)
@@ -3803,17 +3397,7 @@ namespace IlluminationController2
                 c14_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c14_test_Click(object sender, EventArgs e)
@@ -3854,24 +3438,14 @@ namespace IlluminationController2
                 c15_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
             }
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c15_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
             c15_testStop = 0;
             c15_test.Text = "Test";
-            if (c15_mode.SelectedIndex == 1)
+            if (c15_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c15_strobe.Enabled = true;
@@ -3916,17 +3490,7 @@ namespace IlluminationController2
                 c15_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c15_delay_TextChanged(object sender, EventArgs e)
@@ -3956,17 +3520,7 @@ namespace IlluminationController2
                 c15_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c15_test_Click(object sender, EventArgs e)
@@ -4005,6 +3559,7 @@ namespace IlluminationController2
             else
             {
                 loadLatestBoardConfig();
+                uploadConfig.Enabled = true;
             }
         }
 
@@ -4775,17 +4330,7 @@ namespace IlluminationController2
 
             }
             
-            if (checkIntensity(c1_intensity.Text) && checkIntensity(c2_intensity.Text) && checkIntensity(c3_intensity.Text) && checkIntensity(c4_intensity.Text) && checkIntensity(c5_intensity.Text) && checkIntensity(c6_intensity.Text) && checkIntensity(c7_intensity.Text) && checkIntensity(c8_intensity.Text) && checkIntensity(c9_intensity.Text) && checkIntensity(c10_intensity.Text) && checkIntensity(c11_intensity.Text) && checkIntensity(c12_intensity.Text) && checkIntensity(c13_intensity.Text) && checkIntensity(c14_intensity.Text) && checkIntensity(c15_intensity.Text) && checkIntensity(c16_intensity.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c16_edge_SelectedIndexChanged(object sender, EventArgs e)
@@ -4797,7 +4342,7 @@ namespace IlluminationController2
         {
             c16_testStop = 0;
             c16_test.Text = "Test";
-            if (c16_mode.SelectedIndex == 1)
+            if (c16_mode.SelectedIndex == 0)
             {
                 // Strobe is selected
                 c16_strobe.Enabled = true;
@@ -4846,17 +4391,7 @@ namespace IlluminationController2
                 c16_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c16_delay_TextChanged(object sender, EventArgs e)
@@ -4885,17 +4420,7 @@ namespace IlluminationController2
                 c16_test.Enabled = false;
             }
 
-            if (checkPulse(c1_pulse.Text) && checkDelay(c1_delay.Text) && checkPulse(c2_pulse.Text) && checkDelay(c2_delay.Text) && checkPulse(c3_pulse.Text) && checkDelay(c3_delay.Text) && checkPulse(c4_pulse.Text) && checkDelay(c4_delay.Text) && checkPulse(c5_pulse.Text) && checkDelay(c5_delay.Text) && checkPulse(c6_pulse.Text) && checkDelay(c6_delay.Text) && checkPulse(c7_pulse.Text) && checkDelay(c7_delay.Text) && checkPulse(c8_pulse.Text) && checkDelay(c8_delay.Text) && checkPulse(c9_pulse.Text) && checkDelay(c9_delay.Text) && checkPulse(c10_pulse.Text) && checkDelay(c10_delay.Text) && checkPulse(c11_pulse.Text) && checkDelay(c11_delay.Text) && checkPulse(c12_pulse.Text) && checkDelay(c12_delay.Text) && checkPulse(c13_pulse.Text) && checkDelay(c13_delay.Text) && checkPulse(c14_pulse.Text) && checkDelay(c14_delay.Text) && checkPulse(c15_pulse.Text) && checkDelay(c15_delay.Text) && checkPulse(c16_pulse.Text) && checkDelay(c16_delay.Text))
-            {
-                if (lightSelect.Text != "")
-                {
-                    uploadConfig.Enabled = true;
-                }
-            }
-            else
-            {
-                uploadConfig.Enabled = false;
-            }
+
         }
 
         private void c13_edge_SelectedIndexChanged(object sender, EventArgs e)
@@ -4927,17 +4452,6 @@ namespace IlluminationController2
             c15_intensity.Text = "0";
             c16_intensity.Text = "0";
 
-        }
-
-        private void testUpdatedComms_Click(object sender, EventArgs e)
-        {
-            intensity_set();
-            mode_set();
-            pulse_set();
-            delay_set();
-            edge_set();
-            strobe_set();
-            Console.WriteLine("COMPLETED");
         }
     }
 }

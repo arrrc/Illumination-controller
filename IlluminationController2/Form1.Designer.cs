@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.testUpdatedComms = new System.Windows.Forms.Button();
             this.switchConfig = new System.Windows.Forms.Button();
             this.updateConfig = new System.Windows.Forms.Button();
             this.uploadConfig = new System.Windows.Forms.Button();
@@ -402,7 +401,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.testUpdatedComms);
             this.panel1.Controls.Add(this.switchConfig);
             this.panel1.Controls.Add(this.updateConfig);
             this.panel1.Controls.Add(this.uploadConfig);
@@ -412,16 +410,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 828);
             this.panel1.TabIndex = 0;
-            // 
-            // testUpdatedComms
-            // 
-            this.testUpdatedComms.Location = new System.Drawing.Point(7, 165);
-            this.testUpdatedComms.Name = "testUpdatedComms";
-            this.testUpdatedComms.Size = new System.Drawing.Size(144, 29);
-            this.testUpdatedComms.TabIndex = 5;
-            this.testUpdatedComms.Text = "testUpdatedComms";
-            this.testUpdatedComms.UseVisualStyleBackColor = true;
-            this.testUpdatedComms.Click += new System.EventHandler(this.testUpdatedComms_Click);
             // 
             // switchConfig
             // 
@@ -4950,7 +4938,6 @@
         private System.Windows.Forms.Label portError;
         private System.Windows.Forms.TextBox comPort;
         private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.Button testUpdatedComms;
     }
 }
 
