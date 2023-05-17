@@ -608,6 +608,7 @@
             // 
             // g5_setting
             // 
+            this.g5_setting.Enabled = false;
             this.g5_setting.FormattingEnabled = true;
             this.g5_setting.Items.AddRange(new object[] {
             "Ungrouped",
@@ -616,7 +617,7 @@
             this.g5_setting.Name = "g5_setting";
             this.g5_setting.Size = new System.Drawing.Size(77, 21);
             this.g5_setting.TabIndex = 21;
-            this.g5_setting.Text = "Ungrouped";
+            this.g5_setting.Text = "Grouped";
             this.g5_setting.SelectedIndexChanged += new System.EventHandler(this.g5_setting_SelectedIndexChanged);
             // 
             // g4_panel
@@ -674,6 +675,7 @@
             // 
             // g4_setting
             // 
+            this.g4_setting.Enabled = false;
             this.g4_setting.FormattingEnabled = true;
             this.g4_setting.Items.AddRange(new object[] {
             "Ungrouped",
@@ -682,7 +684,7 @@
             this.g4_setting.Name = "g4_setting";
             this.g4_setting.Size = new System.Drawing.Size(77, 21);
             this.g4_setting.TabIndex = 21;
-            this.g4_setting.Text = "Ungrouped";
+            this.g4_setting.Text = "Grouped";
             this.g4_setting.SelectedIndexChanged += new System.EventHandler(this.g4_setting_SelectedIndexChanged);
             // 
             // g3_panel
@@ -740,6 +742,7 @@
             // 
             // g3_setting
             // 
+            this.g3_setting.Enabled = false;
             this.g3_setting.FormattingEnabled = true;
             this.g3_setting.Items.AddRange(new object[] {
             "Ungrouped",
@@ -748,7 +751,7 @@
             this.g3_setting.Name = "g3_setting";
             this.g3_setting.Size = new System.Drawing.Size(77, 21);
             this.g3_setting.TabIndex = 21;
-            this.g3_setting.Text = "Ungrouped";
+            this.g3_setting.Text = "Grouped";
             this.g3_setting.SelectedIndexChanged += new System.EventHandler(this.g3_setting_SelectedIndexChanged);
             // 
             // g2_panel
@@ -806,6 +809,7 @@
             // 
             // g2_setting
             // 
+            this.g2_setting.Enabled = false;
             this.g2_setting.FormattingEnabled = true;
             this.g2_setting.Items.AddRange(new object[] {
             "Ungrouped",
@@ -814,7 +818,7 @@
             this.g2_setting.Name = "g2_setting";
             this.g2_setting.Size = new System.Drawing.Size(77, 21);
             this.g2_setting.TabIndex = 21;
-            this.g2_setting.Text = "Ungrouped";
+            this.g2_setting.Text = "Grouped";
             this.g2_setting.SelectedIndexChanged += new System.EventHandler(this.g2_setting_SelectedIndexChanged);
             // 
             // g1_panel
@@ -872,6 +876,7 @@
             // 
             // g1_setting
             // 
+            this.g1_setting.Enabled = false;
             this.g1_setting.FormattingEnabled = true;
             this.g1_setting.Items.AddRange(new object[] {
             "Ungrouped",
@@ -880,7 +885,7 @@
             this.g1_setting.Name = "g1_setting";
             this.g1_setting.Size = new System.Drawing.Size(77, 21);
             this.g1_setting.TabIndex = 21;
-            this.g1_setting.Text = "Ungrouped";
+            this.g1_setting.Text = "Grouped";
             this.g1_setting.SelectedIndexChanged += new System.EventHandler(this.g1_setting_SelectedIndexChanged);
             // 
             // lightSelect
