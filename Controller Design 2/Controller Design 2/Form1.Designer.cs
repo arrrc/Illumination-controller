@@ -216,6 +216,7 @@
             this.portError.Size = new System.Drawing.Size(113, 14);
             this.portError.TabIndex = 11;
             this.portError.Text = "Board comnection error";
+            this.portError.Visible = false;
             // 
             // COMport
             // 

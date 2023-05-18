@@ -866,15 +866,38 @@ namespace Controller_Design_2
                 Console.WriteLine(portName);
                 portConn.PortName = portName;
 
-                portConn.Open();
-                
+                try
+                {
+                    portConn.Open();
 
-                portConn.Write("QB\r\n");
+                }
+                catch
+                {
+
+                }
+
+
+                try
+                {
+                    portConn.Write("QB\r\n");
+
+                }
+                catch
+                {
+                    return false;
+                }
                 Console.WriteLine("sent data");
                 Thread.Sleep(2000);
 
-                reply = portConn.ReadExisting();
+                try
+                {
+                    reply = portConn.ReadExisting();
 
+                }
+                catch
+                {
+
+                }
 
 
                 Console.WriteLine(reply);
