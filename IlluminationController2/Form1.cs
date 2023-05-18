@@ -1152,17 +1152,13 @@ namespace IlluminationController2
                 portConn.BaudRate = 115200;
                 int counter = 0;
 
-                while (comPort.Text == "" && counter < 3)
+                while (comPort.Text == "" && counter < 5)
                 {
                     foreach (string portName in SerialPort.GetPortNames())
                     {
                         Console.WriteLine(portName);
                         portConn.PortName = portName;
                         portConn.Open();
-
-                        Thread.Sleep(1000);
-                        string test = portConn.ReadExisting();
-                        Console.WriteLine(test);
 
                         portConn.Write("QB\r\n");
                         Console.WriteLine("sent data");
@@ -1189,7 +1185,7 @@ namespace IlluminationController2
                     counter++;
                 }
 
-                if (counter >= 3)
+                if (counter >= 5)
                 {
                     label101.Visible = true;
                     label101.Text = "USB not plugged in, plug it in";

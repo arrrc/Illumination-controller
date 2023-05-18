@@ -133,6 +133,7 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1408, 750);
             this.guna2GradientPanel1.TabIndex = 0;
+            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // panel4
             // 
@@ -185,7 +186,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 147);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(215, 218);
+            this.panel7.Size = new System.Drawing.Size(215, 227);
             this.panel7.TabIndex = 1;
             // 
             // bs_help
@@ -207,10 +208,12 @@
             // 
             // portError
             // 
+            this.portError.AutoSize = false;
+            this.portError.AutoSizeHeightOnly = true;
             this.portError.BackColor = System.Drawing.Color.Transparent;
-            this.portError.Location = new System.Drawing.Point(15, 191);
+            this.portError.Location = new System.Drawing.Point(12, 182);
             this.portError.Name = "portError";
-            this.portError.Size = new System.Drawing.Size(113, 15);
+            this.portError.Size = new System.Drawing.Size(113, 14);
             this.portError.TabIndex = 11;
             this.portError.Text = "Board comnection error";
             // 
@@ -1200,7 +1203,6 @@
             this.setEdge.ForeColor = System.Drawing.Color.Black;
             this.setEdge.ItemHeight = 30;
             this.setEdge.Items.AddRange(new object[] {
-            "None",
             "Rising ",
             "Falling"});
             this.setEdge.Location = new System.Drawing.Point(82, 195);

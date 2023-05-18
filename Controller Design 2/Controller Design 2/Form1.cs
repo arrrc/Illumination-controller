@@ -655,79 +655,91 @@ namespace Controller_Design_2
 
         private void MainApp_Load(object sender, EventArgs e)
         {
-            portConn = new SerialPort();
-            portConn.BaudRate = 9600;
-            int counter = 0;
-
-            while (COMport.Text == "" && counter < 5)
+            try
             {
-                foreach (string portName in SerialPort.GetPortNames())
+                portConn = new SerialPort();
+                portConn.BaudRate = 115200;
+                int counter = 0;
+
+                while (COMport.Text == "" && counter < 5)
                 {
-                    Console.WriteLine(portName);
-                    portConn.PortName = portName;
-                    portConn.Open();
-                    portConn.Write("test");
-                    portConn.Write("test");
-                    Thread.Sleep(1000);
-                    string test = portConn.ReadExisting();
-                    Console.WriteLine(test);
-
-                    portConn.Write("Q");
-                    Console.WriteLine("sent data");
-
-
-                    Thread.Sleep(1000);
-                    string reply = portConn.ReadExisting();
-
-
-                    if (reply == "Q")
+                    foreach (string portName in SerialPort.GetPortNames())
                     {
-                        Console.WriteLine("port is open");
-                        COMport.Text = portName;
-                        portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
-                        enableConfig("filler");
+                        Console.WriteLine(portName);
+                        portConn.PortName = portName;
+                        portConn.Open();
 
-                        break;
+                        portConn.Write("QB\r\n");
+                        Console.WriteLine("sent data");
+
+
+                        Thread.Sleep(1200);
+                        string reply = portConn.ReadExisting();
+                        Console.WriteLine(reply);
+
+                        if (reply.Contains("PICS"))
+                        {
+                            Console.WriteLine("port is open");
+                            COMport.Text = portName;
+                            portConn.DataReceived += new SerialDataReceivedEventHandler(receiveDataHandler);
+                            enableConfig("filler");
+                            break;
+                        }
+                        else
+                        {
+                            portConn.Close();
+                            continue;
+                        }
                     }
-                    else
-                    {
-                        portConn.Close();
-                        continue;
-                    }
+                    counter++;
                 }
-                counter++;
-            }
 
-            if (counter == 5)
+                if (counter >= 5)
+                {
+                    portError.Visible = true;
+                    portError.Text = "USB not plugged in, plug it in";
+                    portError.ForeColor = System.Drawing.Color.Red;
+                    disableConfig("filler");
+                }
+
+                // Declare a ManagementEventWatcher object and set up the event handler
+                ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+                ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
+
+                deviceInsertionWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
+                deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+
+                // Set up the query for USB device removal
+                WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
+                WqlEventQuery insertionQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
+
+                // Start listening for the USB device removal event
+                deviceRemoveWatcher.Query = removalQuery;
+                deviceInsertionWatcher.Query = insertionQuery;
+
+                deviceInsertionWatcher.Start();
+                deviceRemoveWatcher.Start();
+            }
+            catch
             {
-                portError.Visible = true;
-                portError.Text = "USB not plugged in, plug it in\nand hit retry connection";
-                portError.ForeColor = System.Drawing.Color.Red;
-                disableConfig("filler");
+                MessageBox.Show("App is already running");
+                Application.Exit();
             }
-            // Declare a ManagementEventWatcher object and set up the event handler
-            ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
-            ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
-
-            deviceInsertionWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
-            deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
-
-            // Set up the query for USB device removal
-            WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
-            WqlEventQuery insertionQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
-
-            // Start listening for the USB device removal event
-            deviceRemoveWatcher.Query = removalQuery;
-            deviceInsertionWatcher.Query = insertionQuery;
-
-            deviceInsertionWatcher.Start();
-            deviceRemoveWatcher.Start();
         }
 
         private void DeviceInsertedEvent(object sender, EventArrivedEventArgs e)
         {
             Console.WriteLine("EVENT FIRING");
             bool checkUSB = checkIfUsbAlive();
+            Console.WriteLine(checkUSB);
+            while (checkUSB == false)
+            {
+                Console.WriteLine(checkUSB);
+
+                checkUSB = checkIfUsbAlive();
+                changePortErrMsg("retry");
+            }
+
             if (checkUSB == true)
             {
                 changePortErrMsg("true");
@@ -822,45 +834,51 @@ namespace Controller_Design_2
             {
                 if (data == "false")
                 {
+                    portError.Visible = true;
                     portError.ForeColor = Color.Red;
-                    portError.Text = "USB has been unplugged, click retry connection to connect to the board";
+                    portError.Text = "USB has been unplugged, plug the USB back in";
                     COMport.Text = "";
                     closePort.Enabled = false;
                 }
-                else
+                else if (data == "true")
                 {
+
+                    portError.Text = "";
                     portError.Text = "";
                     closePort.Enabled = true;
+                }
+                else
+                {
+                    portError.Visible = true;
+                    Console.WriteLine("RETRYING");
+                    portError.Text = "Retrying...";
                 }
             }
         }
 
         bool checkIfUsbAlive()
         {
+            string reply = "";
             foreach (string portName in SerialPort.GetPortNames())
             {
                 portConn.Close();
 
                 Console.WriteLine(portName);
                 portConn.PortName = portName;
-                try
-                {
-                    portConn.Open();
-                }
-                catch
-                {
-                    continue;
-                }
-                portConn.Write("Q");
-                Console.WriteLine("sent data");
-                Thread.Sleep(50);
 
-                string reply = portConn.ReadExisting();
+                portConn.Open();
+                
+
+                portConn.Write("QB\r\n");
+                Console.WriteLine("sent data");
+                Thread.Sleep(2000);
+
+                reply = portConn.ReadExisting();
 
 
 
                 Console.WriteLine(reply);
-                if (reply == "Q")
+                if (reply.Contains("PICS"))
                 {
                     updateComPortTextbox(portName);
                     return true;
@@ -2716,18 +2734,24 @@ namespace Controller_Design_2
         {
             Console.WriteLine("test");
 
-            try
-            {
-                portConn.Write(sendToHardware);
+            intensity_set("filler");
+            Thread.Sleep(10);
+            mode_set("filler");
+            Thread.Sleep(10);
 
-                Thread.Sleep(1000);
-                enableUploadBtn("filler");
+            pulse_set("filler");
+            Thread.Sleep(10);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please select a COM Port");
-            }
+            delay_set("filler");
+            Thread.Sleep(10);
+
+            edge_set("filler");
+            Thread.Sleep(10);
+
+            strobe_set("filler");
+            Thread.Sleep(10);
+
+            enableUploadBtn("filler");
 
 
             Thread.CurrentThread.Abort();
@@ -2746,6 +2770,268 @@ namespace Controller_Design_2
             }
         }
 
+        void intensity_set(string filler)
+        {
+            if (selectBoard.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(intensity_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = selectBoard.Text.IndexOf(" ") + 1;
+                string boardNum = selectBoard.Text.Substring(boardNumIndex);
+                portConn.Write("IS " + boardNum + ", " + "0, " + c1_rgb_value.ToString() + "\r\n");
+                portConn.Write("IS " + boardNum + ", " + "1, " + c2_rgb_value.ToString() + "\r\n");
+
+                portConn.Write("IS " + boardNum + ", " + "2, " + c3_rgb_value.ToString() + "\r\n");
+
+                portConn.Write("IS " + boardNum + ", " + "3, " + c4_rgb_value.ToString() + "\r\n");
+
+                portConn.Write("IS " + boardNum + ", " + "4, " + c5_rgb_value.ToString() + "\r\n");
+
+                portConn.Write("IS " + boardNum + ", " + "5, " + c6_rgb_value.ToString() + "\r\n");
+
+                portConn.Write("IS " + boardNum + ", " + "6, " + c7_rgb_value.ToString() + "\r\n");
+
+                portConn.Write("IS " + boardNum + ", " + "7, " + c8_rgb_value.ToString() + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+                Console.WriteLine("IS " + boardNum + ", " + "1, " + c1_rgb_value.ToString() + "\r\n");
+            }
+
+        }
+
+        void mode_set(string filler)
+        {
+            if (selectBoard.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(mode_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = selectBoard.Text.IndexOf(" ") + 1;
+                string boardNum = selectBoard.Text.Substring(boardNumIndex);
+
+                string c1ModeNum = "0";
+                string c2ModeNum = "0";
+                string c3ModeNum = "0";
+                string c4ModeNum = "0";
+                string c5ModeNum = "0";
+                string c6ModeNum = "0";
+                string c7ModeNum = "0";
+                string c8ModeNum = "0";
+
+                if (c1_mode_value == "Static")
+                {
+                    c1ModeNum = "1";
+                }
+                if (c2_mode_value == "Static")
+                {
+                    c2ModeNum = "1";
+                }
+                if (c3_mode_value == "Static")
+                {
+                    c3ModeNum = "1";
+                }
+                if (c4_mode_value == "Static")
+                {
+                    c4ModeNum = "1";
+                }
+                if (c5_mode_value == "Static")
+                {
+                    c5ModeNum = "1";
+                }
+                if (c6_mode_value == "Static")
+                {
+                    c6ModeNum = "1";
+                }
+                if (c7_mode_value == "Static")
+                {
+                    c7ModeNum = "1";
+                }
+                if (c8_mode_value == "Static")
+                {
+                    c8ModeNum = "1";
+                }
+
+                portConn.Write("MS " + boardNum + ", 0, " + c1ModeNum + "\r\n");
+
+                portConn.Write("MS " + boardNum + ", 1, " + c2ModeNum + "\r\n");
+
+
+                portConn.Write("MS " + boardNum + ", 2, " + c3ModeNum + "\r\n");
+
+
+                portConn.Write("MS " + boardNum + ", 3, " + c4ModeNum + "\r\n");
+
+
+                portConn.Write("MS " + boardNum + ", 4, " + c5ModeNum + "\r\n");
+
+
+                portConn.Write("MS " + boardNum + ", 5, " + c6ModeNum + "\r\n");
+
+
+                portConn.Write("MS " + boardNum + ", 6, " + c7ModeNum + "\r\n");
+
+
+                portConn.Write("MS " + boardNum + ", 7, " + c8ModeNum + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+        }
+
+        void edge_set(string filler)
+        {
+            if (selectBoard.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(edge_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = selectBoard.Text.IndexOf(" ") + 1;
+                string boardNum = selectBoard.Text.Substring(boardNumIndex);
+                portConn.Write("ES " + boardNum + ", 0, " + c1_edge_value + "\r\n");
+
+
+                portConn.Write("ES " + boardNum + ", 1, " + c2_edge_value + "\r\n");
+
+
+                portConn.Write("ES " + boardNum + ", 2, " + c3_edge_value + "\r\n");
+
+
+                portConn.Write("ES " + boardNum + ", 3, " + c4_edge_value + "\r\n");
+
+
+                portConn.Write("ES " + boardNum + ", 4, " + c5_edge_value + "\r\n");
+
+
+                portConn.Write("ES " + boardNum + ", 5, " + c6_edge_value + "\r\n");
+
+
+                portConn.Write("ES " + boardNum + ", 6, " + c7_edge_value + "\r\n");
+
+
+                portConn.Write("ES " + boardNum + ", 7, " + c8_edge_value + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+
+
+        }
+
+        void strobe_set(string filler)
+        {
+            if (selectBoard.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(strobe_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = selectBoard.Text.IndexOf(" ") + 1;
+                string boardNum = selectBoard.Text.Substring(boardNumIndex);
+                portConn.Write("SS " + boardNum + ", 0, " + c1_strobe_value + "\r\n");
+
+
+                portConn.Write("SS " + boardNum + ", 1, " + c2_strobe_value + "\r\n");
+
+
+                portConn.Write("SS " + boardNum + ", 2, " + c3_strobe_value + "\r\n");
+
+
+                portConn.Write("SS " + boardNum + ", 3, " + c4_strobe_value + "\r\n");
+
+
+                portConn.Write("SS " + boardNum + ", 4, " + c5_strobe_value + "\r\n");
+
+
+                portConn.Write("SS " + boardNum + ", 5, " + c6_strobe_value + "\r\n");
+
+
+                portConn.Write("SS " + boardNum + ", 6, " + c7_strobe_value + "\r\n");
+
+
+                portConn.Write("SS " + boardNum + ", 7, " + c8_strobe_value + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+
+
+        }
+
+        void pulse_set(string filler)
+        {
+            if (selectBoard.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(pulse_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = selectBoard.Text.IndexOf(" ") + 1;
+                string boardNum = selectBoard.Text.Substring(boardNumIndex);
+                portConn.Write("PS " + boardNum + ", 0, " + c1_pulse_value.ToString() + "\r\n");
+
+
+                portConn.Write("PS " + boardNum + ", 1, " + c2_pulse_value.ToString() + "\r\n");
+
+
+                portConn.Write("PS " + boardNum + ", 2, " + c3_pulse_value.ToString() + "\r\n");
+
+
+                portConn.Write("PS " + boardNum + ", 3, " + c4_pulse_value.ToString() + "\r\n");
+
+
+                portConn.Write("PS " + boardNum + ", 4, " + c5_pulse_value.ToString() + "\r\n");
+
+
+                portConn.Write("PS " + boardNum + ", 5, " + c6_pulse_value.ToString() + "\r\n");
+
+
+                portConn.Write("PS " + boardNum + ", 6, " + c7_pulse_value.ToString() + "\r\n");
+
+
+                portConn.Write("PS " + boardNum + ", 7, " + c8_pulse_value.ToString() + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+        }
+
+        void delay_set(string filler)
+        {
+            if (selectBoard.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(delay_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = selectBoard.Text.IndexOf(" ") + 1;
+                string boardNum = selectBoard.Text.Substring(boardNumIndex);
+                portConn.Write("DS " + boardNum + ", 0, " + c1_delay_value.ToString() + "\r\n");
+
+
+                portConn.Write("DS " + boardNum + ", 1, " + c2_delay_value.ToString() + "\r\n");
+
+
+                portConn.Write("DS " + boardNum + ", 2, " + c3_delay_value.ToString() + "\r\n");
+
+
+                portConn.Write("DS " + boardNum + ", 3, " + c4_delay_value.ToString() + "\r\n");
+
+
+                portConn.Write("DS " + boardNum + ", 4, " + c5_delay_value.ToString() + "\r\n");
+
+
+                portConn.Write("DS " + boardNum + ", 5, " + c6_delay_value.ToString() + "\r\n");
+
+
+                portConn.Write("DS " + boardNum + ", 6, " + c7_delay_value.ToString() + "\r\n");
+
+
+                portConn.Write("DS " + boardNum + ", 7, " + c8_delay_value.ToString() + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+        }
+
         private void switchFile_Click(object sender, EventArgs e)
         {
             OpenFile fileSelect = new OpenFile();
@@ -2760,7 +3046,7 @@ namespace Controller_Design_2
 
         private void selectBoard_SelectedIndexChanged(object sender, EventArgs e)
         {
-        //    if (lightSelect.Text == "")
+        //    if (selectBoard.Text == "")
         //    {
         //        uploadConfig.Enabled = false;
         //    }
@@ -2773,6 +3059,11 @@ namespace Controller_Design_2
         private void bs_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("The com port is automatically selected by querying it for the board number, the app checks for whether the reply contains the string 'PICS', if it does contain it, the port is selected\n\nClick the open port/close port button to open or close the port\n\nSelect the board to send the configuration settings to.");
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private void loadLatestBoardConfig()
