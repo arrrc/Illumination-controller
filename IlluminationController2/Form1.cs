@@ -1227,14 +1227,17 @@ namespace IlluminationController2
             //changePortErrMsg("retry");
             Console.WriteLine("EVENT FIRING");
             bool checkUSB = checkIfUsbAlive();
+            while(checkUSB == false)
+            {
+                
+                checkUSB = checkIfUsbAlive();
+                changePortErrMsg("retry");
+            }
+
             if (checkUSB == true)
             {
                 changePortErrMsg("true");
                 enableConfig("filler");
-            }
-            else
-            {
-                changePortErrMsg("retry");
             }
 
             return;
@@ -1333,9 +1336,9 @@ namespace IlluminationController2
                 {
                     continue;
                 }
-                portConn.Write("Q");
+                portConn.Write("QB\r\n");
                 Console.WriteLine("sent data");
-                Thread.Sleep(50);
+                Thread.Sleep(1200);
 
                 try
                 {
@@ -1348,7 +1351,7 @@ namespace IlluminationController2
                 }
 
                 Console.WriteLine(reply);
-                if (reply == "Q")
+                if (reply.Contains("PICS")) 
                 {
                     updateComPortTextbox(portName);
                     return true;
@@ -1511,15 +1514,10 @@ namespace IlluminationController2
                 
                 Console.WriteLine(sendToHardware);
 
-                //uploadConfig.Enabled = false;
-                //Thread sendData = new Thread(sendDataToHardware);
-                //sendData.Start();
-                intensity_set();
-                mode_set();
-                pulse_set();
-                delay_set();
-                edge_set();
-                strobe_set();
+                uploadConfig.Enabled = false;
+                Thread sendData = new Thread(sendDataToHardware);
+                sendData.Start();
+                
                 Console.WriteLine("COMPLETED");
             }
             catch
@@ -1536,20 +1534,35 @@ namespace IlluminationController2
         void sendDataToHardware()
         {
             Console.WriteLine("test");
+            intensity_set("filler");
+            Thread.Sleep(10);
+            mode_set("filler");
+            Thread.Sleep(10);
 
-            try
-            {
-                portConn.Write(sendToHardware);
+            pulse_set("filler");
+            Thread.Sleep(10);
 
-                Thread.Sleep(1000);
-                enableUploadBtn("filler");
-                   
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please select a COM Port");
-            }
-            
+            delay_set("filler");
+            Thread.Sleep(10);
+
+            edge_set("filler");
+            Thread.Sleep(10);
+
+            strobe_set("filler");
+            Thread.Sleep(10);
+
+            enableUploadBtn("filler");
+            //try
+            //{
+            //    //portConn.Write(sendToHardware);
+            //    
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Please select a COM Port");
+            //}
+
 
             Thread.CurrentThread.Abort();
         }
@@ -1567,183 +1580,223 @@ namespace IlluminationController2
             }
         }
 
-        void intensity_set()
+        void intensity_set(string filler)
         {
-            int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
-            string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("IS " + boardNum + ", " + "0, " + c1_intensity.Text + "\r\n");
-            Thread.Sleep(50);
-            portConn.Write("IS " + boardNum + ", " + "1, " + c2_intensity.Text + "\r\n");
-            Thread.Sleep(50);
+            if (lightSelect.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(intensity_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
+                string boardNum = lightSelect.Text.Substring(boardNumIndex);
+                portConn.Write("IS " + boardNum + ", " + "0, " + c1_intensity.Text + "\r\n");
+                portConn.Write("IS " + boardNum + ", " + "1, " + c2_intensity.Text + "\r\n");
 
-            portConn.Write("IS " + boardNum + ", " + "2, " + c3_intensity.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("IS " + boardNum + ", " + "2, " + c3_intensity.Text + "\r\n");
 
-            portConn.Write("IS " + boardNum + ", " + "3, " + c4_intensity.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("IS " + boardNum + ", " + "3, " + c4_intensity.Text + "\r\n");
 
-            portConn.Write("IS " + boardNum + ", " + "4, " + c5_intensity.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("IS " + boardNum + ", " + "4, " + c5_intensity.Text + "\r\n");
 
-            portConn.Write("IS " + boardNum + ", " + "5, " + c6_intensity.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("IS " + boardNum + ", " + "5, " + c6_intensity.Text + "\r\n");
 
-            portConn.Write("IS " + boardNum + ", " + "6, " + c7_intensity.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("IS " + boardNum + ", " + "6, " + c7_intensity.Text + "\r\n");
 
-            portConn.Write("IS " + boardNum + ", " + "7, " + c8_intensity.Text + "\r\n");
-            Console.WriteLine(portConn.ReadExisting());
-            Console.WriteLine("IS " + boardNum + ", " + "1, " + c1_intensity.Text + "\r\n");
+                portConn.Write("IS " + boardNum + ", " + "7, " + c8_intensity.Text + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+                Console.WriteLine("IS " + boardNum + ", " + "1, " + c1_intensity.Text + "\r\n");
+            }
+            
         }
 
-        void mode_set()
+        void mode_set(string filler)
         {
-            int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
-            string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("MS " + boardNum + ", 0, " + c1_mode.SelectedIndex.ToString() + "\r\n");
-            Thread.Sleep(50);
+            if (lightSelect.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(mode_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else 
+            {
+                int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
+                string boardNum = lightSelect.Text.Substring(boardNumIndex);
+                portConn.Write("MS " + boardNum + ", 0, " + c1_mode.SelectedIndex.ToString() + "\r\n");
 
-            portConn.Write("MS " + boardNum + ", 1, " + c2_mode.SelectedIndex.ToString() + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("MS " + boardNum + ", 1, " + c2_mode.SelectedIndex.ToString() + "\r\n");
+                
 
-            portConn.Write("MS " + boardNum + ", 2, " + c3_mode.SelectedIndex.ToString() + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("MS " + boardNum + ", 2, " + c3_mode.SelectedIndex.ToString() + "\r\n");
+                
 
-            portConn.Write("MS " + boardNum + ", 3, " + c4_mode.SelectedIndex.ToString() + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("MS " + boardNum + ", 3, " + c4_mode.SelectedIndex.ToString() + "\r\n");
+                
 
-            portConn.Write("MS " + boardNum + ", 4, " + c5_mode.SelectedIndex.ToString() + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("MS " + boardNum + ", 4, " + c5_mode.SelectedIndex.ToString() + "\r\n");
+                
 
-            portConn.Write("MS " + boardNum + ", 5, " + c6_mode.SelectedIndex.ToString() + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("MS " + boardNum + ", 5, " + c6_mode.SelectedIndex.ToString() + "\r\n");
+                
 
-            portConn.Write("MS " + boardNum + ", 6, " + c7_mode.SelectedIndex.ToString() + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("MS " + boardNum + ", 6, " + c7_mode.SelectedIndex.ToString() + "\r\n");
+                
 
-            portConn.Write("MS " + boardNum + ", 7, " + c8_mode.SelectedIndex.ToString() + "\r\n");
-            Console.WriteLine(portConn.ReadExisting());
-
+                portConn.Write("MS " + boardNum + ", 7, " + c8_mode.SelectedIndex.ToString() + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
         }
 
-        void edge_set()
+        void edge_set(string filler)
         {
-            int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
-            string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("ES " + boardNum + ", 0, " + c1_edge.Text + "\r\n");
-            Thread.Sleep(50);
+            if (lightSelect.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(edge_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
+                string boardNum = lightSelect.Text.Substring(boardNumIndex);
+                portConn.Write("ES " + boardNum + ", 0, " + c1_edge.Text + "\r\n");
+                
 
-            portConn.Write("ES " + boardNum + ", 1, " + c2_edge.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("ES " + boardNum + ", 1, " + c2_edge.Text + "\r\n");
+                
 
-            portConn.Write("ES " + boardNum + ", 2, " + c3_edge.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("ES " + boardNum + ", 2, " + c3_edge.Text + "\r\n");
+                
 
-            portConn.Write("ES " + boardNum + ", 3, " + c4_edge.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("ES " + boardNum + ", 3, " + c4_edge.Text + "\r\n");
+                
 
-            portConn.Write("ES " + boardNum + ", 4, " + c5_edge.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("ES " + boardNum + ", 4, " + c5_edge.Text + "\r\n");
+                
 
-            portConn.Write("ES " + boardNum + ", 5, " + c6_edge.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("ES " + boardNum + ", 5, " + c6_edge.Text + "\r\n");
+                
 
-            portConn.Write("ES " + boardNum + ", 6, " + c7_edge.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("ES " + boardNum + ", 6, " + c7_edge.Text + "\r\n");
+                
 
-            portConn.Write("ES " + boardNum + ", 7, " + c8_edge.Text + "\r\n");
-            Console.WriteLine(portConn.ReadExisting());
-
-        }
-
-        void strobe_set()
-        {
-            int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
-            string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("SS " + boardNum + ", 0, " + c1_strobe.Text + "\r\n");
-            Thread.Sleep(50);
-
-            portConn.Write("SS " + boardNum + ", 1, " + c2_strobe.Text + "\r\n");
-            Thread.Sleep(50);
-
-            portConn.Write("SS " + boardNum + ", 2, " + c3_strobe.Text + "\r\n");
-            Thread.Sleep(50);
-
-            portConn.Write("SS " + boardNum + ", 3, " + c4_strobe.Text + "\r\n");
-            Thread.Sleep(50);
-
-            portConn.Write("SS " + boardNum + ", 4, " + c5_strobe.Text + "\r\n");
-            Thread.Sleep(50);
-
-            portConn.Write("SS " + boardNum + ", 5, " + c6_strobe.Text + "\r\n");
-            Thread.Sleep(50);
-
-            portConn.Write("SS " + boardNum + ", 6, " + c7_strobe.Text + "\r\n");
-            Thread.Sleep(50);
-
-            portConn.Write("SS " + boardNum + ", 7, " + c8_strobe.Text + "\r\n");
-            Console.WriteLine(portConn.ReadExisting());
+                portConn.Write("ES " + boardNum + ", 7, " + c8_edge.Text + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+            
 
         }
 
-        void pulse_set()
+        void strobe_set(string filler)
         {
-            int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
-            string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("PS " + boardNum + ", 0, " + c1_pulse.Text + "\r\n");
-            Thread.Sleep(50);
+            if (lightSelect.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(strobe_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
+                string boardNum = lightSelect.Text.Substring(boardNumIndex);
+                portConn.Write("SS " + boardNum + ", 0, " + c1_strobe.Text + "\r\n");
+                
 
-            portConn.Write("PS " + boardNum + ", 1, " + c2_pulse.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("SS " + boardNum + ", 1, " + c2_strobe.Text + "\r\n");
+                
 
-            portConn.Write("PS " + boardNum + ", 2, " + c3_pulse.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("SS " + boardNum + ", 2, " + c3_strobe.Text + "\r\n");
+                
 
-            portConn.Write("PS " + boardNum + ", 3, " + c4_pulse.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("SS " + boardNum + ", 3, " + c4_strobe.Text + "\r\n");
+                
 
-            portConn.Write("PS " + boardNum + ", 4, " + c5_pulse.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("SS " + boardNum + ", 4, " + c5_strobe.Text + "\r\n");
+                
 
-            portConn.Write("PS " + boardNum + ", 5, " + c6_pulse.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("SS " + boardNum + ", 5, " + c6_strobe.Text + "\r\n");
+                
 
-            portConn.Write("PS " + boardNum + ", 6, " + c7_pulse.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("SS " + boardNum + ", 6, " + c7_strobe.Text + "\r\n");
+                
 
-            portConn.Write("PS " + boardNum + ", 7, " + c8_pulse.Text + "\r\n");
-            Console.WriteLine(portConn.ReadExisting());
+                portConn.Write("SS " + boardNum + ", 7, " + c8_strobe.Text + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+           
 
         }
 
-        void delay_set()
+        void pulse_set(string filler)
         {
-            int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
-            string boardNum = lightSelect.Text.Substring(boardNumIndex);
-            portConn.Write("DS " + boardNum + ", 0, " + c1_delay.Text + "\r\n");
-            Thread.Sleep(50);
+            if (lightSelect.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(pulse_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
+                string boardNum = lightSelect.Text.Substring(boardNumIndex);
+                portConn.Write("PS " + boardNum + ", 0, " + c1_pulse.Text + "\r\n");
+                
 
-            portConn.Write("DS " + boardNum + ", 1, " + c2_delay.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("PS " + boardNum + ", 1, " + c2_pulse.Text + "\r\n");
+                
 
-            portConn.Write("DS " + boardNum + ", 2, " + c3_delay.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("PS " + boardNum + ", 2, " + c3_pulse.Text + "\r\n");
+                
 
-            portConn.Write("DS " + boardNum + ", 3, " + c4_delay.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("PS " + boardNum + ", 3, " + c4_pulse.Text + "\r\n");
+                
 
-            portConn.Write("DS " + boardNum + ", 4, " + c5_delay.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("PS " + boardNum + ", 4, " + c5_pulse.Text + "\r\n");
+                
 
-            portConn.Write("DS " + boardNum + ", 5, " + c6_delay.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("PS " + boardNum + ", 5, " + c6_pulse.Text + "\r\n");
+                
 
-            portConn.Write("DS " + boardNum + ", 6, " + c7_delay.Text + "\r\n");
-            Thread.Sleep(50);
+                portConn.Write("PS " + boardNum + ", 6, " + c7_pulse.Text + "\r\n");
+                
 
-            portConn.Write("DS " + boardNum + ", 7, " + c8_delay.Text + "\r\n");
-            Console.WriteLine(portConn.ReadExisting());
+                portConn.Write("PS " + boardNum + ", 7, " + c8_pulse.Text + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
+        }
 
+        void delay_set(string filler)
+        {
+            if (lightSelect.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(delay_set);
+                this.Invoke(d, new object[] { filler });
+            }
+            else
+            {
+                int boardNumIndex = lightSelect.Text.IndexOf(" ") + 1;
+                string boardNum = lightSelect.Text.Substring(boardNumIndex);
+                portConn.Write("DS " + boardNum + ", 0, " + c1_delay.Text + "\r\n");
+                
+
+                portConn.Write("DS " + boardNum + ", 1, " + c2_delay.Text + "\r\n");
+                
+
+                portConn.Write("DS " + boardNum + ", 2, " + c3_delay.Text + "\r\n");
+                
+
+                portConn.Write("DS " + boardNum + ", 3, " + c4_delay.Text + "\r\n");
+                
+
+                portConn.Write("DS " + boardNum + ", 4, " + c5_delay.Text + "\r\n");
+                
+
+                portConn.Write("DS " + boardNum + ", 5, " + c6_delay.Text + "\r\n");
+                
+
+                portConn.Write("DS " + boardNum + ", 6, " + c7_delay.Text + "\r\n");
+                
+
+                portConn.Write("DS " + boardNum + ", 7, " + c8_delay.Text + "\r\n");
+                Console.WriteLine(portConn.ReadExisting());
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -3692,16 +3745,17 @@ namespace IlluminationController2
                 File.CreateText(pathWithFileName);
             }
 
-            string[] splitString = loadedConfig.Split('.');
+            string[] splitString = loadedConfig.Split('\n');
 
 
             try
             {
                 for (int i = 0; i < splitString.Length; i++)
                 {
-                    if (splitString[i][1] == 'G')
+                    Console.WriteLine(splitString[i][0]);
+                    if (splitString[i][0] == 'G')
                     {
-                        string groupedOrUngroup = splitString[i].Substring(20, 7);
+                        string groupedOrUngroup = splitString[i].Substring(19, 7);
                         Console.WriteLine(groupedOrUngroup);
                         if (groupedOrUngroup == "GROUPED")
                         {

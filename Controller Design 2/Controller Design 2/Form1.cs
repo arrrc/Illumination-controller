@@ -2770,6 +2770,11 @@ namespace Controller_Design_2
         //    }
         }
 
+        private void bs_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The com port is automatically selected by querying it for the board number, the app checks for whether the reply contains the string 'PICS', if it does contain it, the port is selected\n\nClick the open port/close port button to open or close the port\n\nSelect the board to send the configuration settings to.");
+        }
+
         //private void loadLatestBoardConfig()
         //{
         //    bool grouped = false;

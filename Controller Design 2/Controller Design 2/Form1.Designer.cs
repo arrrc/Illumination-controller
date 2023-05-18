@@ -203,6 +203,7 @@
             this.bs_help.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.bs_help.Size = new System.Drawing.Size(20, 20);
             this.bs_help.TabIndex = 54;
+            this.bs_help.Click += new System.EventHandler(this.bs_help_Click);
             // 
             // portError
             // 

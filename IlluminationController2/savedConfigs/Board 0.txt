@@ -1,8 +1,8 @@
 MAIN BOARD = Board 0
 Group 1 Settings, [GROUPED Red:CH1, Green:CH2, Blue:CH3]
 [CH1 Settings]: Intensity: 10, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None 
-[CH2 Settings]: Intensity: 10, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None 
-[CH3 Settings]: Intensity: 10, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None 
+[CH2 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None 
+[CH3 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None 
 Group 2 Settings, [GROUPED Red:CH4, Green:CH5, Blue:CH6]
 [CH4 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None 
 [CH5 Settings]: Intensity: None, Edge: Rising, Mode: Static, Strobe: None, Pulse: None, Delay: None 
