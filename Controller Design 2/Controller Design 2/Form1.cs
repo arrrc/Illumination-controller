@@ -655,6 +655,13 @@ namespace Controller_Design_2
 
         private void MainApp_Load(object sender, EventArgs e)
         {
+            setEdge.Enabled = false;
+            setDelay.Enabled = false;
+            setPulse.Enabled = false;
+            strobeChannel.Enabled = false;
+            led1_strobe.Enabled = false;
+            led2_strobe.Enabled = false;
+            led3_strobe.Enabled = false;
             try
             {
                 portConn = new SerialPort();
@@ -803,20 +810,13 @@ namespace Controller_Design_2
             {
                 led1_intensity.Enabled = true;
                 led1_mode.Enabled = true;
-                led1_strobe.Enabled = true;
                 led1_test.Enabled = true;
                 led2_intensity.Enabled = true;
                 led2_mode.Enabled = true;
-                led2_strobe.Enabled = true;
                 led2_test.Enabled = true;
                 led3_intensity.Enabled = true;
                 led3_mode.Enabled = true;
-                led3_strobe.Enabled = true;
                 led3_test.Enabled = true;
-                strobeChannel.Enabled = true;
-                setEdge.Enabled = true;
-                setDelay.Enabled = true;
-                setPulse.Enabled = true;
                 selectGrp.Enabled = true;
                 chooseGrp.Enabled = true;
             }
@@ -1173,8 +1173,8 @@ namespace Controller_Design_2
 
         private void led1_mode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (led1_mode.SelectedIndex == 0) { led1_strobe.Enabled = false; }
-            else { led1_strobe.Enabled = true; }
+            if (led1_mode.SelectedIndex == 0) { led1_strobe.Enabled = false; strobeChannel.Enabled = false; setEdge.Enabled = false; setPulse.Enabled = false; setDelay.Enabled = false; }
+            else { led1_strobe.Enabled = true; strobeChannel.Enabled = true; setEdge.Enabled = true; setPulse.Enabled = true; setDelay.Enabled = true; }
 
             // Channels 1 2 3
             if (c010203_isCurrent)
