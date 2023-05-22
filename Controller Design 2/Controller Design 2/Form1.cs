@@ -148,6 +148,7 @@ namespace Controller_Design_2
         int led1_testStop;
         int led2_testStop;
         int led3_testStop;
+        int rgb_testStop;
 
         int led1_rgb;
         int led2_rgb;
@@ -158,6 +159,8 @@ namespace Controller_Design_2
         int led1_delay;
         int led2_delay;
         int led3_delay;
+        int rgb_pulse;
+        int rgb_delay;
 
         static SerialPort portConn;
         public string sendToHardware = "";
@@ -168,7 +171,7 @@ namespace Controller_Design_2
         int noTimesRemoveEventFired = 0;
         List<string> splitData = new List<string>();
 
-
+        Color RGB_blink_colour;
 
         delegate void SetTextCallback(string text);
 
@@ -545,6 +548,7 @@ namespace Controller_Design_2
                 led1_delay = c1_delay_value;
                 led2_delay = c2_delay_value;
                 led3_delay = c3_delay_value;
+
             }
             else if (c040506_isCurrent)
             {
@@ -646,6 +650,18 @@ namespace Controller_Design_2
                 Thread.Sleep(led3_delay);
             }
             led3_light.FillColor = Color.FromArgb(0, 0, led3_rgb);
+        }
+
+        private void rgb_lightLoop()
+        {
+            while (rgb_testStop == 1)
+            {
+                RGB_light.FillColor = RGB_blink_colour;
+                Thread.Sleep(rgb_pulse);
+                RGB_light.FillColor = Color.Transparent;
+                Thread.Sleep(rgb_delay);
+            }
+            RGB_light.FillColor = RGB_blink_colour;
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -983,18 +999,62 @@ namespace Controller_Design_2
             _dragging = false;
         }
 
+        public void RGB_Hide()
+        {
+            led1_testStop = 0;
+            led2_testStop = 0;
+            led3_testStop = 0;
+
+            led1_test.Visible = true;
+            led1_light.Visible = true;
+            led2_test.Visible = true;
+            led2_light.Visible = true;
+            led3_test.Visible = true;
+            led3_light.Visible = true;
+            RGB_light.Visible = false;
+        }
+
+        public void RGB_Show()
+        {
+            led1_testStop = 0;
+            led2_testStop = 0;
+            led3_testStop = 0;
+
+            led1_test.Visible = false;
+            led1_light.Visible = false;
+            led2_test.Visible = false;
+            led2_light.Visible = false;
+            led3_test.Visible = false;
+            led3_light.Visible = false;
+            RGB_light.Visible = true;
+        }
+
+        public Color set_rgb_values(int red, int green, int blue)
+        {
+            int rgb_red = getRGB(red.ToString());
+            int rgb_green = getRGB(green.ToString());
+            int rgb_blue = getRGB(blue.ToString());
+
+            Color RGB_Colour = Color.FromArgb(rgb_red, rgb_green, rgb_blue);
+            return RGB_Colour;
+        }
+
         private void chooseGrp_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RGB_blink_colour = Color.Transparent;
             // Channels 1 2 3
             if (c010203_isCurrent)
             {
                 if (chooseGrp.SelectedIndex == 0) 
                 { 
-                    c010203_isGrouped = true; 
+                    c010203_isGrouped = true;
+                    RGB_Show();
+                    RGB_blink_colour = set_rgb_values(c1_rgb_value, c2_rgb_value, c3_rgb_value);
                 }
                 else 
                 { 
-                    c010203_isGrouped = false; 
+                    c010203_isGrouped = false;
+                    RGB_Hide();
                 }
                 c1_edge_value = "None";
                 c2_edge_value = "None";
@@ -1006,18 +1066,22 @@ namespace Controller_Design_2
                 c2_delay_value = 0;
                 c3_delay_value = 0;
                 resetModes();
-
+                
+                
             }
             // Channels 4 5 6
             else if (c040506_isCurrent)
             {
                 if (chooseGrp.SelectedIndex == 0) 
                 { 
-                    c040506_isGrouped = true; 
+                    c040506_isGrouped = true;
+                    RGB_Show();
+                    RGB_blink_colour = set_rgb_values(c4_rgb_value, c5_rgb_value, c6_rgb_value);
                 }
                 else 
                 { 
-                    c040506_isGrouped = false; 
+                    c040506_isGrouped = false;
+                    RGB_Hide();
                 }
                 c4_edge_value = "None";
                 c5_edge_value = "None";
@@ -1029,18 +1093,20 @@ namespace Controller_Design_2
                 c5_delay_value = 0;
                 c6_delay_value = 0;
                 resetModes();
-
             }
             // Channels 7 8 9
             else if (c070809_isCurrent)
             {
                 if (chooseGrp.SelectedIndex == 0) 
                 {
-                    c070809_isGrouped = true; 
+                    c070809_isGrouped = true;
+                    RGB_Show();
+                    RGB_blink_colour = set_rgb_values(c7_rgb_value, c8_rgb_value, c9_rgb_value);
                 }
                 else 
                 { 
-                    c070809_isGrouped = false; 
+                    c070809_isGrouped = false;
+                    RGB_Hide();
                 }
                 c7_edge_value = "None";
                 c8_edge_value = "None";
@@ -1052,18 +1118,20 @@ namespace Controller_Design_2
                 c8_delay_value = 0;
                 c9_delay_value = 0;
                 resetModes();
-
             }
             // Channels 10 11 12
             else if (c101112_isCurrent)
             {
                 if (chooseGrp.SelectedIndex == 0) 
                 { 
-                    c101112_isGrouped = true; 
+                    c101112_isGrouped = true;
+                    RGB_Show();
+                    RGB_blink_colour = set_rgb_values(c10_rgb_value, c11_rgb_value, c12_rgb_value);
                 }
                 else 
                 { 
-                    c101112_isGrouped = false; 
+                    c101112_isGrouped = false;
+                    RGB_Hide();
                 }
                 c10_edge_value = "None";
                 c11_edge_value = "None";
@@ -1082,11 +1150,14 @@ namespace Controller_Design_2
             {
                 if (chooseGrp.SelectedIndex == 0) 
                 { 
-                    c131415_isGrouped = true; 
+                    c131415_isGrouped = true;
+                    RGB_Show();
+                    RGB_blink_colour = set_rgb_values(c13_rgb_value, c14_rgb_value, c15_rgb_value);
                 }
                 else 
                 { 
-                    c131415_isGrouped = false; 
+                    c131415_isGrouped = false;
+                    RGB_Hide();
                 }
                 c13_edge_value = "None";
                 c14_edge_value = "None";
@@ -1098,11 +1169,10 @@ namespace Controller_Design_2
                 c14_delay_value = 0;
                 c15_delay_value = 0;
                 resetModes();
-
             }
             else
             {
-
+                RGB_Show();
             }
             //displayModes();
 
@@ -1367,8 +1437,34 @@ namespace Controller_Design_2
             led3_strobe.SelectedIndex = 0;
         }
 
+        public void setRGB()
+        {
+            if (c010203_isCurrent)
+            {
+                RGB_blink_colour = set_rgb_values(c1_rgb_value, c2_rgb_value, c3_rgb_value);
+            }
+            else if (c040506_isCurrent)
+            {
+                RGB_blink_colour = set_rgb_values(c4_rgb_value, c5_rgb_value, c6_rgb_value);
+            }
+            else if (c070809_isCurrent)
+            {
+                RGB_blink_colour = set_rgb_values(c7_rgb_value, c8_rgb_value, c9_rgb_value);
+            }
+            else if (c101112_isCurrent)
+            {
+                RGB_blink_colour = set_rgb_values(c10_rgb_value, c11_rgb_value, c12_rgb_value);
+            }
+            else if (c131415_isCurrent)
+            {
+                RGB_blink_colour = set_rgb_values(c13_rgb_value, c14_rgb_value, c15_rgb_value);
+            }
+            RGB_light.FillColor = RGB_blink_colour;
+        }
+
         private void led1_intensity_TextChanged(object sender, EventArgs e)
         {
+            
             led1_testStop = 0;
             if (checkIntensity(led1_intensity.Text))
             {
@@ -1384,6 +1480,7 @@ namespace Controller_Design_2
                 else if (c131415_isCurrent) { c13_rgb_value = Convert.ToInt32(led1_intensity.Text); Console.WriteLine("C13 rgb is updated"); }
                 else { c16_rgb_value = Convert.ToInt32(led1_intensity.Text); Console.WriteLine("C16 is updated"); }
 
+                setRGB();
             }
             else
             {
@@ -1391,6 +1488,7 @@ namespace Controller_Design_2
                 //errorText.ForeColor = Color.Red;
                 //errorText.Text = getError(1, true);
             };
+
         }
 
         private void led2_intensity_TextChanged(object sender, EventArgs e)
@@ -1409,6 +1507,8 @@ namespace Controller_Design_2
                 else if (c101112_isCurrent) { c11_rgb_value = Convert.ToInt32(led2_intensity.Text); Console.WriteLine("C11 rgb is updated"); }
                 else if (c131415_isCurrent) { c14_rgb_value = Convert.ToInt32(led2_intensity.Text); Console.WriteLine("C14 rgb is updated"); }
                 else { Console.WriteLine("nothing is updated"); }
+
+                setRGB();
             }
             else
             {
@@ -1434,6 +1534,8 @@ namespace Controller_Design_2
                 else if (c101112_isCurrent) { c12_rgb_value = Convert.ToInt32(led3_intensity.Text); Console.WriteLine("C12 is updated"); }
                 else if (c131415_isCurrent) { c15_rgb_value = Convert.ToInt32(led3_intensity.Text); Console.WriteLine("C15 is updated"); }
                 else { Console.WriteLine("nothing is updated"); }
+
+                setRGB();
             }
             else
             {
@@ -3087,6 +3189,53 @@ namespace Controller_Design_2
         private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void RGB_test_Click(object sender, EventArgs e)
+        {
+            if (c010203_isCurrent)
+            {
+                rgb_pulse = c1_pulse_value;
+                rgb_delay = c1_delay_value;
+            }
+            else if (c040506_isCurrent)
+            {
+                rgb_pulse = c4_pulse_value;
+                rgb_delay = c4_delay_value;
+            }
+            else if (c070809_isCurrent)
+            {
+                rgb_pulse = c7_pulse_value;
+                rgb_delay = c7_delay_value;
+            }
+            else if (c101112_isCurrent)
+            {
+                rgb_pulse = c10_pulse_value;
+                rgb_delay = c10_delay_value;
+            }
+            else if (c131415_isCurrent)
+            {
+                rgb_pulse = c13_pulse_value;
+                rgb_delay = c13_delay_value;
+            }
+            else
+            {
+                rgb_pulse = 0;
+                rgb_delay = 0;
+            }
+            Thread rgb_blink = new Thread(rgb_lightLoop);
+            if (rgb_testStop == 0)
+            {
+                rgb_blink.Start();
+                RGB_test.Text = "Stop";
+            }
+            else
+            {
+                rgb_blink.Abort();
+                RGB_test.Text = "Start";
+            }
+            rgb_testStop++;
+            if (rgb_testStop == 2) { rgb_testStop = 0; }
         }
 
         //private void loadLatestBoardConfig()

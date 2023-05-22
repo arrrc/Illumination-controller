@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://wzs19/IlluminationController2/IlluminationController2.application" />
+    <deploymentProvider codebase="http://wzs20/IlluminationController2/IlluminationController2.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vb4JJga0pB+DxDV3t9x3dxj4MWIsAQB6w0H9jxZQDMI=</dsig:DigestValue>
+        <dsig:DigestValue>MFibUBzXznRIaZ2QG/rrsRvUYRquwHCB94dYfk6E1HE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

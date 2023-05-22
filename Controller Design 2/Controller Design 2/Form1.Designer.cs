@@ -107,6 +107,9 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.RGB_light = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.RGB_test = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -131,7 +134,7 @@
             this.guna2GradientPanel1.Controls.Add(this.panel1);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(7, 8);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1408, 750);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1408, 795);
             this.guna2GradientPanel1.TabIndex = 0;
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
@@ -141,7 +144,7 @@
             this.panel4.Controls.Add(this.guna2HtmlLabel5);
             this.panel4.Location = new System.Drawing.Point(840, 63);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(567, 641);
+            this.panel4.Size = new System.Drawing.Size(567, 684);
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -150,7 +153,7 @@
             this.consoleDisplay.FormattingEnabled = true;
             this.consoleDisplay.Location = new System.Drawing.Point(1, 30);
             this.consoleDisplay.Name = "consoleDisplay";
-            this.consoleDisplay.Size = new System.Drawing.Size(550, 602);
+            this.consoleDisplay.Size = new System.Drawing.Size(550, 641);
             this.consoleDisplay.TabIndex = 7;
             // 
             // guna2HtmlLabel5
@@ -169,7 +172,7 @@
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Location = new System.Drawing.Point(0, 61);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 641);
+            this.panel2.Size = new System.Drawing.Size(215, 686);
             this.panel2.TabIndex = 1;
             // 
             // panel7
@@ -439,6 +442,9 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.RGB_test);
+            this.panel5.Controls.Add(this.RGB_light);
+            this.panel5.Controls.Add(this.guna2HtmlLabel20);
             this.panel5.Controls.Add(this.clearIntensity);
             this.panel5.Controls.Add(this.led_help);
             this.panel5.Controls.Add(this.led3_test);
@@ -490,7 +496,7 @@
             this.panel5.Controls.Add(this.guna2HtmlLabel4);
             this.panel5.Location = new System.Drawing.Point(216, 63);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(626, 641);
+            this.panel5.Size = new System.Drawing.Size(626, 684);
             this.panel5.TabIndex = 1;
             // 
             // clearIntensity
@@ -504,7 +510,7 @@
             this.clearIntensity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.clearIntensity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearIntensity.ForeColor = System.Drawing.Color.Black;
-            this.clearIntensity.Location = new System.Drawing.Point(318, 600);
+            this.clearIntensity.Location = new System.Drawing.Point(318, 641);
             this.clearIntensity.Name = "clearIntensity";
             this.clearIntensity.Size = new System.Drawing.Size(103, 26);
             this.clearIntensity.TabIndex = 53;
@@ -539,7 +545,7 @@
             this.led3_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.led3_test.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.led3_test.ForeColor = System.Drawing.Color.Black;
-            this.led3_test.Location = new System.Drawing.Point(409, 481);
+            this.led3_test.Location = new System.Drawing.Point(412, 517);
             this.led3_test.Name = "led3_test";
             this.led3_test.Size = new System.Drawing.Size(52, 26);
             this.led3_test.TabIndex = 51;
@@ -556,7 +562,7 @@
             this.led3_light.FillColor = System.Drawing.Color.Blue;
             this.led3_light.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.led3_light.ForeColor = System.Drawing.Color.Blue;
-            this.led3_light.Location = new System.Drawing.Point(479, 472);
+            this.led3_light.Location = new System.Drawing.Point(479, 508);
             this.led3_light.Name = "led3_light";
             this.led3_light.PressedColor = System.Drawing.Color.Blue;
             this.led3_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -573,7 +579,7 @@
             this.led2_light.FillColor = System.Drawing.Color.Lime;
             this.led2_light.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.led2_light.ForeColor = System.Drawing.Color.Lime;
-            this.led2_light.Location = new System.Drawing.Point(282, 472);
+            this.led2_light.Location = new System.Drawing.Point(282, 508);
             this.led2_light.Name = "led2_light";
             this.led2_light.PressedColor = System.Drawing.Color.Lime;
             this.led2_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -591,7 +597,7 @@
             this.led2_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.led2_test.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.led2_test.ForeColor = System.Drawing.Color.Black;
-            this.led2_test.Location = new System.Drawing.Point(215, 481);
+            this.led2_test.Location = new System.Drawing.Point(215, 517);
             this.led2_test.Name = "led2_test";
             this.led2_test.Size = new System.Drawing.Size(52, 26);
             this.led2_test.TabIndex = 48;
@@ -608,7 +614,7 @@
             this.led1_light.FillColor = System.Drawing.Color.Red;
             this.led1_light.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.led1_light.ForeColor = System.Drawing.Color.Red;
-            this.led1_light.Location = new System.Drawing.Point(84, 472);
+            this.led1_light.Location = new System.Drawing.Point(84, 508);
             this.led1_light.Name = "led1_light";
             this.led1_light.PressedColor = System.Drawing.Color.Red;
             this.led1_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -626,7 +632,7 @@
             this.led1_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.led1_test.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.led1_test.ForeColor = System.Drawing.Color.Black;
-            this.led1_test.Location = new System.Drawing.Point(11, 481);
+            this.led1_test.Location = new System.Drawing.Point(17, 517);
             this.led1_test.Name = "led1_test";
             this.led1_test.Size = new System.Drawing.Size(52, 26);
             this.led1_test.TabIndex = 46;
@@ -644,7 +650,7 @@
             this.clearStrobe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.clearStrobe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearStrobe.ForeColor = System.Drawing.Color.Black;
-            this.clearStrobe.Location = new System.Drawing.Point(427, 600);
+            this.clearStrobe.Location = new System.Drawing.Point(427, 641);
             this.clearStrobe.Name = "clearStrobe";
             this.clearStrobe.Size = new System.Drawing.Size(136, 26);
             this.clearStrobe.TabIndex = 45;
@@ -721,7 +727,7 @@
             // 
             this.errorText.BackColor = System.Drawing.Color.Transparent;
             this.errorText.ForeColor = System.Drawing.Color.White;
-            this.errorText.Location = new System.Drawing.Point(11, 531);
+            this.errorText.Location = new System.Drawing.Point(11, 608);
             this.errorText.Name = "errorText";
             this.errorText.Size = new System.Drawing.Size(52, 15);
             this.errorText.TabIndex = 39;
@@ -819,7 +825,7 @@
             this.testButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.testButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.testButton.ForeColor = System.Drawing.Color.Black;
-            this.testButton.Location = new System.Drawing.Point(11, 600);
+            this.testButton.Location = new System.Drawing.Point(11, 641);
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(63, 26);
             this.testButton.TabIndex = 32;
@@ -1340,12 +1346,57 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // guna2HtmlLabel20
+            // 
+            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(0, 470);
+            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(69, 18);
+            this.guna2HtmlLabel20.TabIndex = 54;
+            this.guna2HtmlLabel20.Text = "Testing Area";
+            // 
+            // RGB_light
+            // 
+            this.RGB_light.BorderThickness = 1;
+            this.RGB_light.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_light.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_light.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RGB_light.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RGB_light.FillColor = System.Drawing.Color.Red;
+            this.RGB_light.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RGB_light.ForeColor = System.Drawing.Color.Red;
+            this.RGB_light.Location = new System.Drawing.Point(84, 508);
+            this.RGB_light.Name = "RGB_light";
+            this.RGB_light.PressedColor = System.Drawing.Color.Red;
+            this.RGB_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.RGB_light.Size = new System.Drawing.Size(84, 45);
+            this.RGB_light.TabIndex = 55;
+            // 
+            // RGB_test
+            // 
+            this.RGB_test.BorderRadius = 10;
+            this.RGB_test.BorderThickness = 1;
+            this.RGB_test.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_test.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_test.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RGB_test.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RGB_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RGB_test.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RGB_test.ForeColor = System.Drawing.Color.Black;
+            this.RGB_test.Location = new System.Drawing.Point(17, 517);
+            this.RGB_test.Name = "RGB_test";
+            this.RGB_test.Size = new System.Drawing.Size(52, 26);
+            this.RGB_test.TabIndex = 56;
+            this.RGB_test.Text = "Test";
+            this.RGB_test.Click += new System.EventHandler(this.RGB_test_Click);
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1428, 745);
+            this.ClientSize = new System.Drawing.Size(1428, 815);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainApp";
@@ -1450,6 +1501,9 @@
         private Guna.UI2.WinForms.Guna2CircleButton bs_help;
         private Guna.UI2.WinForms.Guna2CircleButton fc_help;
         private Guna.UI2.WinForms.Guna2Button clearIntensity;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
+        private Guna.UI2.WinForms.Guna2CircleButton RGB_light;
+        private Guna.UI2.WinForms.Guna2Button RGB_test;
     }
 }
 
