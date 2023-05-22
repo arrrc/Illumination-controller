@@ -671,13 +671,7 @@ namespace Controller_Design_2
 
         private void MainApp_Load(object sender, EventArgs e)
         {
-            setEdge.Enabled = false;
-            setDelay.Enabled = false;
-            setPulse.Enabled = false;
-            strobeChannel.Enabled = false;
-            led1_strobe.Enabled = false;
-            led2_strobe.Enabled = false;
-            led3_strobe.Enabled = false;
+
             try
             {
                 portConn = new SerialPort();
@@ -1004,6 +998,7 @@ namespace Controller_Design_2
             led1_testStop = 0;
             led2_testStop = 0;
             led3_testStop = 0;
+            rgb_testStop = 0;
 
             led1_test.Visible = true;
             led1_light.Visible = true;
@@ -1012,6 +1007,7 @@ namespace Controller_Design_2
             led3_test.Visible = true;
             led3_light.Visible = true;
             RGB_light.Visible = false;
+            RGB_test.Visible = false;
         }
 
         public void RGB_Show()
@@ -1019,6 +1015,7 @@ namespace Controller_Design_2
             led1_testStop = 0;
             led2_testStop = 0;
             led3_testStop = 0;
+            rgb_testStop = 0;
 
             led1_test.Visible = false;
             led1_light.Visible = false;
@@ -1027,6 +1024,7 @@ namespace Controller_Design_2
             led3_test.Visible = false;
             led3_light.Visible = false;
             RGB_light.Visible = true;
+            RGB_test.Visible = true;
         }
 
         public Color set_rgb_values(int red, int green, int blue)
@@ -1466,6 +1464,7 @@ namespace Controller_Design_2
         {
             
             led1_testStop = 0;
+            rgb_testStop = 0;
             if (checkIntensity(led1_intensity.Text))
             {
                 int rgb_value = getRGB(led1_intensity.Text);
@@ -1494,6 +1493,7 @@ namespace Controller_Design_2
         private void led2_intensity_TextChanged(object sender, EventArgs e)
         {
             led2_testStop = 0;
+            rgb_testStop = 0;
             if (checkIntensity(led2_intensity.Text))
             {
                 int rgb_value = getRGB(led2_intensity.Text);
@@ -1521,6 +1521,7 @@ namespace Controller_Design_2
         private void led3_intensity_TextChanged(object sender, EventArgs e)
         {
             led3_testStop = 0;
+            rgb_testStop = 0;
             if (checkIntensity(led3_intensity.Text))
             {
                 int rgb_value = getRGB(led3_intensity.Text);
@@ -1550,6 +1551,7 @@ namespace Controller_Design_2
             led1_testStop = 0;
             led2_testStop = 0;
             led3_testStop = 0;
+            rgb_testStop = 0;
 
             Console.WriteLine("Group Changed");
 

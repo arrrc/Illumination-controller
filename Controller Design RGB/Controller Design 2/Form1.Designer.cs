@@ -53,6 +53,9 @@
             this.switchFile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.RGB_test = new Guna.UI2.WinForms.Guna2Button();
+            this.RGB_light = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.clearIntensity = new Guna.UI2.WinForms.Guna2Button();
             this.led_help = new Guna.UI2.WinForms.Guna2CircleButton();
             this.led3_test = new Guna.UI2.WinForms.Guna2Button();
@@ -107,9 +110,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.RGB_light = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.RGB_test = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -498,6 +498,53 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(626, 684);
             this.panel5.TabIndex = 1;
+            // 
+            // RGB_test
+            // 
+            this.RGB_test.BorderRadius = 10;
+            this.RGB_test.BorderThickness = 1;
+            this.RGB_test.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_test.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_test.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RGB_test.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RGB_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RGB_test.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RGB_test.ForeColor = System.Drawing.Color.Black;
+            this.RGB_test.Location = new System.Drawing.Point(17, 517);
+            this.RGB_test.Name = "RGB_test";
+            this.RGB_test.Size = new System.Drawing.Size(52, 26);
+            this.RGB_test.TabIndex = 56;
+            this.RGB_test.Text = "Test";
+            this.RGB_test.Visible = false;
+            this.RGB_test.Click += new System.EventHandler(this.RGB_test_Click);
+            // 
+            // RGB_light
+            // 
+            this.RGB_light.BorderThickness = 1;
+            this.RGB_light.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_light.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RGB_light.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RGB_light.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RGB_light.FillColor = System.Drawing.Color.Red;
+            this.RGB_light.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RGB_light.ForeColor = System.Drawing.Color.Red;
+            this.RGB_light.Location = new System.Drawing.Point(84, 508);
+            this.RGB_light.Name = "RGB_light";
+            this.RGB_light.PressedColor = System.Drawing.Color.Red;
+            this.RGB_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.RGB_light.Size = new System.Drawing.Size(84, 45);
+            this.RGB_light.TabIndex = 55;
+            this.RGB_light.Visible = false;
+            // 
+            // guna2HtmlLabel20
+            // 
+            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(0, 470);
+            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(69, 18);
+            this.guna2HtmlLabel20.TabIndex = 54;
+            this.guna2HtmlLabel20.Text = "Testing Area";
             // 
             // clearIntensity
             // 
@@ -1345,51 +1392,6 @@
             this.CloseButton.TabIndex = 0;
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
-            // guna2HtmlLabel20
-            // 
-            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(0, 470);
-            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            this.guna2HtmlLabel20.Size = new System.Drawing.Size(69, 18);
-            this.guna2HtmlLabel20.TabIndex = 54;
-            this.guna2HtmlLabel20.Text = "Testing Area";
-            // 
-            // RGB_light
-            // 
-            this.RGB_light.BorderThickness = 1;
-            this.RGB_light.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.RGB_light.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.RGB_light.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.RGB_light.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.RGB_light.FillColor = System.Drawing.Color.Red;
-            this.RGB_light.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.RGB_light.ForeColor = System.Drawing.Color.Red;
-            this.RGB_light.Location = new System.Drawing.Point(84, 508);
-            this.RGB_light.Name = "RGB_light";
-            this.RGB_light.PressedColor = System.Drawing.Color.Red;
-            this.RGB_light.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.RGB_light.Size = new System.Drawing.Size(84, 45);
-            this.RGB_light.TabIndex = 55;
-            // 
-            // RGB_test
-            // 
-            this.RGB_test.BorderRadius = 10;
-            this.RGB_test.BorderThickness = 1;
-            this.RGB_test.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.RGB_test.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.RGB_test.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.RGB_test.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.RGB_test.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.RGB_test.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.RGB_test.ForeColor = System.Drawing.Color.Black;
-            this.RGB_test.Location = new System.Drawing.Point(17, 517);
-            this.RGB_test.Name = "RGB_test";
-            this.RGB_test.Size = new System.Drawing.Size(52, 26);
-            this.RGB_test.TabIndex = 56;
-            this.RGB_test.Text = "Test";
-            this.RGB_test.Click += new System.EventHandler(this.RGB_test_Click);
             // 
             // MainApp
             // 
