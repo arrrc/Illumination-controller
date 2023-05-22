@@ -260,14 +260,14 @@
             this.selectBoard.ForeColor = System.Drawing.Color.Black;
             this.selectBoard.ItemHeight = 30;
             this.selectBoard.Items.AddRange(new object[] {
+            "Board 0",
             "Board 1",
             "Board 2",
             "Board 3",
             "Board 4",
             "Board 5",
             "Board 6",
-            "Board 7",
-            "Board 8"});
+            "Board 7"});
             this.selectBoard.Location = new System.Drawing.Point(22, 140);
             this.selectBoard.Name = "selectBoard";
             this.selectBoard.Size = new System.Drawing.Size(96, 36);

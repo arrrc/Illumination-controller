@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IlluminationController2.exe" size="144384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IlluminationController2.exe" size="144896">
       <assemblyIdentity name="IlluminationController2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7r2j6SDrom3l7LE3BRP7oGU351UBUe0Ir437QeFofA4=</dsig:DigestValue>
+        <dsig:DigestValue>rZadHFP07lLAMLl9FIETAB6weYMLrMEJvNY/7VxgrpI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1181,6 +1181,7 @@
             // 
             // c3_mode
             // 
+            this.c3_mode.Enabled = false;
             this.c3_mode.FormattingEnabled = true;
             this.c3_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -1615,6 +1616,7 @@
             // 
             // c2_mode
             // 
+            this.c2_mode.Enabled = false;
             this.c2_mode.FormattingEnabled = true;
             this.c2_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -1841,6 +1843,7 @@
             // 
             // c6_mode
             // 
+            this.c6_mode.Enabled = false;
             this.c6_mode.FormattingEnabled = true;
             this.c6_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -2265,6 +2268,7 @@
             // 
             // c5_mode
             // 
+            this.c5_mode.Enabled = false;
             this.c5_mode.FormattingEnabled = true;
             this.c5_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -2490,6 +2494,7 @@
             // 
             // c9_mode
             // 
+            this.c9_mode.Enabled = false;
             this.c9_mode.FormattingEnabled = true;
             this.c9_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -2914,6 +2919,7 @@
             // 
             // c8_mode
             // 
+            this.c8_mode.Enabled = false;
             this.c8_mode.FormattingEnabled = true;
             this.c8_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -3139,6 +3145,7 @@
             // 
             // c12_mode
             // 
+            this.c12_mode.Enabled = false;
             this.c12_mode.FormattingEnabled = true;
             this.c12_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -3563,6 +3570,7 @@
             // 
             // c11_mode
             // 
+            this.c11_mode.Enabled = false;
             this.c11_mode.FormattingEnabled = true;
             this.c11_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -3788,6 +3796,7 @@
             // 
             // c15_mode
             // 
+            this.c15_mode.Enabled = false;
             this.c15_mode.FormattingEnabled = true;
             this.c15_mode.Items.AddRange(new object[] {
             "Strobe",
@@ -4214,6 +4223,7 @@
             // 
             // c14_mode
             // 
+            this.c14_mode.Enabled = false;
             this.c14_mode.FormattingEnabled = true;
             this.c14_mode.Items.AddRange(new object[] {
             "Strobe",

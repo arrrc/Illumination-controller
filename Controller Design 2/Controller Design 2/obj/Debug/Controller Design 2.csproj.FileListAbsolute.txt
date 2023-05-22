@@ -47,3 +47,19 @@ C:\Users\WZS19\Documents\GitHub\Illumination-controller\Controller Design 2\Cont
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\Controller Design 2\Controller Design 2\bin\Debug\Control.Draggable.dll
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\Controller Design 2\Controller Design 2\bin\Debug\Guna.UI2.dll
 C:\Users\WZS19\Documents\GitHub\Illumination-controller\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.csproj.CopyComplete
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\bin\Debug\Controller Design 2.exe.config
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\bin\Debug\Controller Design 2.exe
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\bin\Debug\Controller Design 2.pdb
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\bin\Debug\Control.Draggable.dll
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\bin\Debug\Guna.UI2.dll
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.csproj.AssemblyReference.cache
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.csproj.SuggestedBindingRedirects.cache
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller_Design_2.MainApp.resources
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller_Design_2.OpenFile.resources
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller_Design_2.Properties.Resources.resources
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller_Design_2.SaveFile.resources
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.csproj.GenerateResource.cache
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.csproj.CoreCompileInputs.cache
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.csproj.CopyComplete
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.exe
+C:\Users\WZS19\Desktop\Controller Design 2\Controller Design 2\obj\Debug\Controller Design 2.pdb
