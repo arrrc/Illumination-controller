@@ -27,6 +27,10 @@ namespace Controller_Design_2
             InitializeComponent();
         }
 
+        ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
+        ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
+
+
         // Global Variables
         public int c1_rgb_value = 0;
         public int c2_rgb_value = 0;
@@ -720,11 +724,11 @@ namespace Controller_Design_2
                 }
 
                 // Declare a ManagementEventWatcher object and set up the event handler
-                ManagementEventWatcher deviceRemoveWatcher = new ManagementEventWatcher();
-                ManagementEventWatcher deviceInsertionWatcher = new ManagementEventWatcher();
 
                 deviceInsertionWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
                 deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+
+                //deviceRemoveWatcher.Stopped += new StoppedEventHandler(subscribeEvent);
 
                 // Set up the query for USB device removal
                 WqlEventQuery removalQuery = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 3");
@@ -744,23 +748,39 @@ namespace Controller_Design_2
             }
         }
 
+        //void subscribeEvent(object sender, StoppedEventArgs e)
+        //{
+        //    deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+        //}
+
         private void DeviceInsertedEvent(object sender, EventArrivedEventArgs e)
         {
-            Console.WriteLine("EVENT FIRING");
+            
+            Console.WriteLine("DEVICE INSERTED");
             bool checkUSB = checkIfUsbAlive();
             Console.WriteLine(checkUSB);
+            int counter = 0;
             while (checkUSB == false)
             {
+                changePortErrMsg("retry");
+
                 Console.WriteLine(checkUSB);
 
                 checkUSB = checkIfUsbAlive();
-                changePortErrMsg("retry");
+
+                counter++;
             }
 
             if (checkUSB == true)
             {
                 changePortErrMsg("true");
                 enableConfig("filler");
+                Thread.Yield();
+                deviceInsertionWatcher.Stop();
+                deviceInsertionWatcher.Start();
+                //deviceInsertionWatcher.WaitForNextEvent();
+                //deviceInsertionWatcher.Dispose();
+                return;
             }
 
             return;
@@ -768,15 +788,33 @@ namespace Controller_Design_2
 
         private void DeviceRemovedEvent(object sender, EventArrivedEventArgs e)
         {
+            //deviceRemoveWatcher.Dispose();
+            Console.WriteLine("DEVICE REMOVED");
+
             bool checkUSB = checkIfUsbAlive();
             if (checkUSB == false)
             {
                 changePortErrMsg("false");
                 disableConfig("filler");
+                deviceRemoveWatcher.Stop();
+                deviceRemoveWatcher.Start();
+                //deviceRemoveWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
+
+                //deviceRemoveWatcher.Dispose();
+                //deviceRemoveWatcher.WaitForNextEvent();
+
+                return;
+
             }
+            deviceRemoveWatcher.Stop();
+            deviceRemoveWatcher.Start();
+            //deviceRemoveWatcher.Dispose();
+            //deviceRemoveWatcher.WaitForNextEvent();
 
             return;
         }
+
+
 
         private void disableConfig(string filler)
         {
@@ -883,7 +921,7 @@ namespace Controller_Design_2
                 }
                 catch
                 {
-
+                    return false;
                 }
 
 
@@ -906,7 +944,7 @@ namespace Controller_Design_2
                 }
                 catch
                 {
-
+                    return false;
                 }
 
 
@@ -917,6 +955,7 @@ namespace Controller_Design_2
                     return true;
                 }
             }
+
             return false;
         }
 
