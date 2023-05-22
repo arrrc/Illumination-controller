@@ -309,192 +309,192 @@ namespace IlluminationController2
         {
             while (c1_testStop == 1)
             {
-                c1_status.BackColor = Color.FromArgb(c1_rgb_value, 0, 0);
+                c1_status.BackColor = Color.FromArgb(255, 0, 0);
                 Thread.Sleep(c1_pulse_value);
                 c1_status.BackColor = Color.Transparent;
                 Thread.Sleep(c1_delay_value);
             }
-            c1_status.BackColor = Color.FromArgb(c1_rgb_value, 0, 0);
+            c1_status.BackColor = Color.FromArgb(255, 0, 0);
         }
 
         private void c2_light_loop()
         {
             while (c2_testStop == 1)
             {
-                c2_status.BackColor = Color.FromArgb(0, c2_rgb_value, 0);
+                c2_status.BackColor = Color.FromArgb(0, 255, 0);
                 Thread.Sleep(c2_pulse_value);
                 c2_status.BackColor = Color.Transparent;
                 Thread.Sleep(c2_delay_value);
             }
-            c2_status.BackColor = Color.FromArgb(0, c2_rgb_value, 0);
+            c2_status.BackColor = Color.FromArgb(0, 255, 0);
         }
 
         private void c3_light_loop()
         {
             while (c3_testStop == 1)
             {
-                c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
+                c3_status.BackColor = Color.FromArgb(0, 0, 255);
                 Thread.Sleep(c3_pulse_value);
                 c3_status.BackColor = Color.Transparent;
                 Thread.Sleep(c3_delay_value);
             }
-            c3_status.BackColor = Color.FromArgb(0, 0, c3_rgb_value);
+            c3_status.BackColor = Color.FromArgb(0, 0, 255);
         }
 
         private void c4_light_loop()
         {
             while (c4_testStop == 1)
             {
-                c4_status.BackColor = Color.FromArgb(c4_rgb_value, 0, 0);
+                c4_status.BackColor = Color.FromArgb(255, 0, 0);
                 Thread.Sleep(c4_pulse_value);
                 c4_status.BackColor = Color.Transparent;
                 Thread.Sleep(c4_delay_value);
             }
-            c4_status.BackColor = Color.FromArgb(c4_rgb_value, 0, 0);
+            c4_status.BackColor = Color.FromArgb(255, 0, 0);
         }
 
         private void c5_light_loop()
         {
             while (c5_testStop == 1)
             {
-                c5_status.BackColor = Color.FromArgb(0, c5_rgb_value, 0);
+                c5_status.BackColor = Color.FromArgb(0, 255, 0);
                 Thread.Sleep(c5_pulse_value);
                 c5_status.BackColor = Color.Transparent;
                 Thread.Sleep(c5_delay_value);
             }
-            c5_status.BackColor = Color.FromArgb(0, c5_rgb_value, 0);
+            c5_status.BackColor = Color.FromArgb(0, 255, 0);
         }
 
         private void c6_light_loop()
         {
             while (c6_testStop == 1)
             {
-                c6_status.BackColor = Color.FromArgb(0, 0, c6_rgb_value);
+                c6_status.BackColor = Color.FromArgb(0, 0, 255);
                 Thread.Sleep(c6_pulse_value);
                 c6_status.BackColor = Color.Transparent;
                 Thread.Sleep(c6_delay_value);
             }
-            c6_status.BackColor = Color.FromArgb(0, 0, c6_rgb_value);
+            c6_status.BackColor = Color.FromArgb(0, 0, 255);
         }
 
         private void c7_light_loop()
         {
             while (c7_testStop == 1)
             {
-                c7_status.BackColor = Color.FromArgb(c7_rgb_value, 0, 0);
+                c7_status.BackColor = Color.FromArgb(255, 0, 0);
                 Thread.Sleep(c7_pulse_value);
                 c7_status.BackColor = Color.Transparent;
                 Thread.Sleep(c7_delay_value);
             }
-            c7_status.BackColor = Color.FromArgb(c7_rgb_value, 0, 0);
+            c7_status.BackColor = Color.FromArgb(255, 0, 0);
         }
 
         private void c8_light_loop()
         {
             while (c8_testStop == 1)
             {
-                c8_status.BackColor = Color.FromArgb(0, c8_rgb_value, 0);
+                c8_status.BackColor = Color.FromArgb(0, 255, 0);
                 Thread.Sleep(c8_pulse_value);
                 c8_status.BackColor = Color.Transparent;
                 Thread.Sleep(c8_delay_value);
             }
-            c8_status.BackColor = Color.FromArgb(0, c8_rgb_value, 0);
+            c8_status.BackColor = Color.FromArgb(0, 255, 0);
         }
 
         private void c9_light_loop()
         {
             while (c9_testStop == 1)
             {
-                c9_status.BackColor = Color.FromArgb(0, 0, c9_rgb_value);
+                c9_status.BackColor = Color.FromArgb(0, 0, 255);
                 Thread.Sleep(c9_pulse_value);
                 c9_status.BackColor = Color.Transparent;
                 Thread.Sleep(c9_delay_value);
             }
-            c9_status.BackColor = Color.FromArgb(0, 0, c9_rgb_value);
+            c9_status.BackColor = Color.FromArgb(0, 0, 255);
         }
 
         private void c10_light_loop()
         {
             while (c10_testStop == 1)
             {
-                c10_status.BackColor = Color.FromArgb(c10_rgb_value, 0, 0);
+                c10_status.BackColor = Color.FromArgb(255, 0, 0);
                 Thread.Sleep(c10_pulse_value);
                 c10_status.BackColor = Color.Transparent;
                 Thread.Sleep(c10_delay_value);
             }
-            c10_status.BackColor = Color.FromArgb(c10_rgb_value, 0, 0);
+            c10_status.BackColor = Color.FromArgb(255, 0, 0);
         }
 
         private void c11_light_loop()
         {
             while (c11_testStop == 1)
             {
-                c11_status.BackColor = Color.FromArgb(0, c11_rgb_value, 0);
+                c11_status.BackColor = Color.FromArgb(0, 255, 0);
                 Thread.Sleep(c11_pulse_value);
                 c11_status.BackColor = Color.Transparent;
                 Thread.Sleep(c11_delay_value);
             }
-            c11_status.BackColor = Color.FromArgb(0, c11_rgb_value, 0);
+            c11_status.BackColor = Color.FromArgb(0, 255, 0);
         }
 
         private void c12_light_loop()
         {
             while (c12_testStop == 1)
             {
-                c12_status.BackColor = Color.FromArgb(0, 0, c12_rgb_value);
+                c12_status.BackColor = Color.FromArgb(0, 0, 255);
                 Thread.Sleep(c12_pulse_value);
                 c12_status.BackColor = Color.Transparent;
                 Thread.Sleep(c12_delay_value);
             }
-            c12_status.BackColor = Color.FromArgb(0, 0, c12_rgb_value);
+            c12_status.BackColor = Color.FromArgb(0, 0, 255);
         }
 
         private void c13_light_loop()
         {
             while (c13_testStop == 1)
             {
-                c13_status.BackColor = Color.FromArgb(c13_rgb_value, 0, 0);
+                c13_status.BackColor = Color.FromArgb(255, 0, 0);
                 Thread.Sleep(c13_pulse_value);
                 c13_status.BackColor = Color.Transparent;
                 Thread.Sleep(c13_delay_value);
             }
-            c13_status.BackColor = Color.FromArgb(c13_rgb_value, 0, 0);
+            c13_status.BackColor = Color.FromArgb(255, 0, 0);
         }
 
         private void c14_light_loop()
         {
             while (c14_testStop == 1)
             {
-                c14_status.BackColor = Color.FromArgb(0, c14_rgb_value, 0);
+                c14_status.BackColor = Color.FromArgb(0, 255, 0);
                 Thread.Sleep(c14_pulse_value);
                 c14_status.BackColor = Color.Transparent;
                 Thread.Sleep(c14_delay_value);
             }
-            c14_status.BackColor = Color.FromArgb(0, c14_rgb_value, 0);
+            c14_status.BackColor = Color.FromArgb(0, 255, 0);
         }
 
         private void c15_light_loop()
         {
             while (c15_testStop == 1)
             {
-                c15_status.BackColor = Color.FromArgb(0, 0, c15_rgb_value);
+                c15_status.BackColor = Color.FromArgb(0, 0, 255);
                 Thread.Sleep(c15_pulse_value);
                 c15_status.BackColor = Color.Transparent;
                 Thread.Sleep(c15_delay_value);
             }
-            c15_status.BackColor = Color.FromArgb(0, 0, c15_rgb_value);
+            c15_status.BackColor = Color.FromArgb(0, 0, 255);
         }
 
         private void c16_light_loop()
         {
             while (c16_testStop == 1)
             {
-                c16_status.BackColor = Color.FromArgb(0, 0, c16_rgb_value);
+                c16_status.BackColor = Color.FromArgb(255, 0, 0);
                 Thread.Sleep(c16_pulse_value);
                 c16_status.BackColor = Color.Transparent;
                 Thread.Sleep(c16_delay_value);
             }
-            c16_status.BackColor = Color.FromArgb(0, 0, c16_rgb_value);
+            c16_status.BackColor = Color.FromArgb(255, 0, 0);
         }
 
         // Channel 1
@@ -507,8 +507,8 @@ namespace IlluminationController2
         {
             if (checkIntensity(c1_intensity.Text))
             {
+                c1_test.Enabled = true;
                 int rgb_value = getRGB(c1_intensity.Text);
-                c1_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
                 c1_error.ForeColor = Color.White;
                 c1_error.Text = "Error: ";
 
@@ -516,8 +516,8 @@ namespace IlluminationController2
             }
             else
             {
+                //Console.WriteLine("Invalid Value");
                 c1_test.Enabled = false;
-                c1_status.BackColor = Color.Transparent;
                 c1_error.ForeColor = Color.Red;
                 c1_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -818,7 +818,7 @@ namespace IlluminationController2
             if (checkIntensity(c3_intensity.Text))
             {
                 int rgb_value = getRGB(c3_intensity.Text);
-                c3_status.BackColor = Color.FromArgb(0, 0, rgb_value);
+                c3_status.BackColor = Color.FromArgb(0, 0, 255);
                 c3_error.ForeColor = Color.White;
                 c3_error.Text = "Error: ";
 
@@ -829,7 +829,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c3_test.Enabled = false;
-                c3_status.BackColor = Color.Transparent;
                 c3_error.ForeColor = Color.Red;
                 c3_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -959,8 +958,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c2_intensity.Text))
             {
+                c2_test.Enabled = true;
                 int rgb_value = getRGB(c2_intensity.Text);
-                c2_status.BackColor = Color.FromArgb(0, rgb_value, 0);
+                c2_status.BackColor = Color.FromArgb(0, 255, 0);
                 c2_error.ForeColor = Color.White;
                 c2_error.Text = "Error: ";
 
@@ -971,7 +971,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c2_test.Enabled = false;
-                c2_status.BackColor = Color.Transparent;
                 c2_error.ForeColor = Color.Red;
                 c2_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -1507,7 +1506,18 @@ namespace IlluminationController2
 
                 //clear console
                 consoleDisplay.Items.Clear();
-                
+
+                string[] data = sendToHardware.Split('\n');
+
+                consoleDisplay.Items.Add("---------------------------------------------------------LOADED CONFIGURATION---------------------------------------------------------");
+
+                for (int i = 0; i < data.Length; i++) 
+                {
+                    consoleDisplay.Items.Add(data[i]);
+                }
+
+                consoleDisplay.Items.Add("------------------------------------------------------------------HARDWARE REPLY------------------------------------------------------------------");
+
                 Console.WriteLine(sendToHardware);
 
                 uploadConfig.Enabled = false;
@@ -1525,7 +1535,10 @@ namespace IlluminationController2
 
         }
 
-        
+        void sendCommand()
+        {
+            //to make command for the user to send, takes in the command(i.e. IS, MS, etc.), board number, channel number and value for the new configuration
+        }
 
         void sendDataToHardware()
         {
@@ -2074,8 +2087,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c4_intensity.Text))
             {
+                c4_test.Enabled = true;
                 int rgb_value = getRGB(c4_intensity.Text);
-                c4_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
+                c4_status.BackColor = Color.FromArgb(255, 0, 0);
                 c4_error.ForeColor = Color.White;
                 c4_error.Text = "Error: ";
 
@@ -2085,7 +2099,6 @@ namespace IlluminationController2
             else
             {
                 c4_test.Enabled = false;
-                c4_status.BackColor = Color.Transparent;
                 c4_error.ForeColor = Color.Red;
                 c4_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -2229,8 +2242,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c5_intensity.Text))
             {
+                c5_test.Enabled = true;
                 int rgb_value = getRGB(c5_intensity.Text);
-                c5_status.BackColor = Color.FromArgb(0, rgb_value, 0);
+                c5_status.BackColor = Color.FromArgb(0, 255, 0);
                 c5_error.ForeColor = Color.White;
                 c5_error.Text = "Error: ";
 
@@ -2241,7 +2255,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c5_test.Enabled = false;
-                c5_status.BackColor = Color.Transparent;
                 c5_error.ForeColor = Color.Red;
                 c5_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -2352,8 +2365,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c6_intensity.Text))
             {
+                c6_test.Enabled = true;
                 int rgb_value = getRGB(c6_intensity.Text);
-                c6_status.BackColor = Color.FromArgb(0, 0, rgb_value);
+                c6_status.BackColor = Color.FromArgb(0, 0, 255);
                 c6_error.ForeColor = Color.White;
                 c6_error.Text = "Error: ";
 
@@ -2364,7 +2378,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c6_test.Enabled = false;
-                c6_status.BackColor = Color.Transparent;
                 c6_error.ForeColor = Color.Red;
                 c6_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -2476,8 +2489,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c7_intensity.Text))
             {
+                c7_test.Enabled = true;
                 int rgb_value = getRGB(c7_intensity.Text);
-                c7_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
+                c7_status.BackColor = Color.FromArgb(255, 0, 0);
                 c7_error.ForeColor = Color.White;
                 c7_error.Text = "Error: ";
 
@@ -2487,7 +2501,6 @@ namespace IlluminationController2
             else
             {
                 c7_test.Enabled = false;
-                c7_status.BackColor = Color.Transparent;
                 c7_error.ForeColor = Color.Red;
                 c7_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -2629,8 +2642,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c8_intensity.Text))
             {
+                c8_test.Enabled = true;
                 int rgb_value = getRGB(c8_intensity.Text);
-                c8_status.BackColor = Color.FromArgb(0, rgb_value, 0);
+                c8_status.BackColor = Color.FromArgb(0, 255, 0);
                 c8_error.ForeColor = Color.White;
                 c8_error.Text = "Error: ";
 
@@ -2641,7 +2655,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c8_test.Enabled = false;
-                c8_status.BackColor = Color.Transparent;
                 c8_error.ForeColor = Color.Red;
                 c8_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -2753,7 +2766,7 @@ namespace IlluminationController2
             if (checkIntensity(c9_intensity.Text))
             {
                 int rgb_value = getRGB(c9_intensity.Text);
-                c9_status.BackColor = Color.FromArgb(0, 0, rgb_value);
+                c9_status.BackColor = Color.FromArgb(0, 0, 255);
                 c9_error.ForeColor = Color.White;
                 c9_error.Text = "Error: ";
 
@@ -2764,7 +2777,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c9_test.Enabled = false;
-                c9_status.BackColor = Color.Transparent;
                 c9_error.ForeColor = Color.Red;
                 c9_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -2876,8 +2888,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c10_intensity.Text))
             {
+                c10_test.Enabled = true;
                 int rgb_value = getRGB(c10_intensity.Text);
-                c10_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
+                c10_status.BackColor = Color.FromArgb(255, 0, 0);
                 c10_error.ForeColor = Color.White;
                 c10_error.Text = "Error: ";
 
@@ -2887,7 +2900,6 @@ namespace IlluminationController2
             else
             {
                 c10_test.Enabled = false;
-                c10_status.BackColor = Color.Transparent;
                 c10_error.ForeColor = Color.Red;
                 c10_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -3030,8 +3042,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c11_intensity.Text))
             {
+                c11_test.Enabled = true;
                 int rgb_value = getRGB(c11_intensity.Text);
-                c11_status.BackColor = Color.FromArgb(0, rgb_value, 0);
+                c11_status.BackColor = Color.FromArgb(0, 255, 0);
                 c11_error.ForeColor = Color.White;
                 c11_error.Text = "Error: ";
 
@@ -3042,7 +3055,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c11_test.Enabled = false;
-                c11_status.BackColor = Color.Transparent;
                 c11_error.ForeColor = Color.Red;
                 c11_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -3153,8 +3165,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c12_intensity.Text))
             {
+                c12_test.Enabled = true;
                 int rgb_value = getRGB(c12_intensity.Text);
-                c12_status.BackColor = Color.FromArgb(0, 0, rgb_value);
+                c12_status.BackColor = Color.FromArgb(0, 0, 255);
                 c12_error.ForeColor = Color.White;
                 c12_error.Text = "Error: ";
 
@@ -3165,7 +3178,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c12_test.Enabled = false;
-                c12_status.BackColor = Color.Transparent;
                 c12_error.ForeColor = Color.Red;
                 c12_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -3276,8 +3288,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c13_intensity.Text))
             {
+                c13_test.Enabled = true;
                 int rgb_value = getRGB(c13_intensity.Text);
-                c13_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
+                c13_status.BackColor = Color.FromArgb(255, 0, 0);
                 c13_error.ForeColor = Color.White;
                 c13_error.Text = "Error: ";
 
@@ -3287,7 +3300,6 @@ namespace IlluminationController2
             else
             {
                 c13_test.Enabled = false;
-                c13_status.BackColor = Color.Transparent;
                 c13_error.ForeColor = Color.Red;
                 c13_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -3430,8 +3442,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c14_intensity.Text))
             {
+                c14_test.Enabled = true;
                 int rgb_value = getRGB(c14_intensity.Text);
-                c14_status.BackColor = Color.FromArgb(0, rgb_value, 0);
+                c14_status.BackColor = Color.FromArgb(0, 255, 0);
                 c14_error.ForeColor = Color.White;
                 c14_error.Text = "Error: ";
 
@@ -3442,7 +3455,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c14_test.Enabled = false;
-                c14_status.BackColor = Color.Transparent;
                 c14_error.ForeColor = Color.Red;
                 c14_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -3553,8 +3565,9 @@ namespace IlluminationController2
         {
             if (checkIntensity(c15_intensity.Text))
             {
+                c15_test.Enabled = true;
                 int rgb_value = getRGB(c15_intensity.Text);
-                c15_status.BackColor = Color.FromArgb(0, 0, rgb_value);
+                c15_status.BackColor = Color.FromArgb(0, 0, 255);
                 c15_error.ForeColor = Color.White;
                 c15_error.Text = "Error: ";
 
@@ -3565,7 +3578,6 @@ namespace IlluminationController2
             {
                 //Console.WriteLine("Invalid Value");
                 c15_test.Enabled = false;
-                c15_status.BackColor = Color.Transparent;
                 c15_error.ForeColor = Color.Red;
                 c15_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 
@@ -4447,7 +4459,7 @@ namespace IlluminationController2
             if (checkIntensity(c16_intensity.Text))
             {
                 int rgb_value = getRGB(c16_intensity.Text);
-                c16_status.BackColor = Color.FromArgb(rgb_value, 0, 0);
+                c16_status.BackColor = Color.FromArgb(255, 0, 0);
                 c16_error.ForeColor = Color.White;
                 c16_error.Text = "Error: ";
 
@@ -4457,7 +4469,6 @@ namespace IlluminationController2
             else
             {
                 c16_test.Enabled = false;
-                c16_status.BackColor = Color.Transparent;
                 c16_error.ForeColor = Color.Red;
                 c16_error.Text = "Error: Invalid value inputted for intensity. Please use integers from 0 to 4096.";
 

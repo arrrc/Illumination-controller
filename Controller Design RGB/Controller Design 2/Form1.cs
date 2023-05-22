@@ -2829,8 +2829,8 @@ namespace Controller_Design_2
 
         private void uploadFile_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 //Grab Values
                 generateConfig();
                 string board = sendToHardware.Substring(13, 7);
@@ -2844,17 +2844,30 @@ namespace Controller_Design_2
                 //clear console
                 consoleDisplay.Items.Clear();
 
+                string[] data = sendToHardware.Split('\n');
+
+                consoleDisplay.Items.Add("---------------------------------------------------------LOADED CONFIGURATION---------------------------------------------------------");
+
+                for (int i = 0; i < data.Length; i++)
+                {
+                    consoleDisplay.Items.Add(data[i]);
+                }
+
+                consoleDisplay.Items.Add("------------------------------------------------------------------HARDWARE REPLY------------------------------------------------------------------");
+
                 Console.WriteLine(sendToHardware);
 
                 uploadFile.Enabled = false;
                 Thread sendData = new Thread(sendDataToHardware);
                 sendData.Start();
-            //}
-            //catch
-            //{
-            //    Console.WriteLine("Device disconnected");
-            //    consoleDisplay.Items.Add("Device is not connected");
-            //}
+
+                Console.WriteLine("COMPLETED");
+            }
+            catch
+            {
+                Console.WriteLine("Device disconnected");
+                consoleDisplay.Items.Add("Device is not connected");
+            }
         }
 
         void sendDataToHardware()

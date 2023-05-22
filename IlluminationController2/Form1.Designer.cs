@@ -1063,7 +1063,6 @@
             // 
             // c3_test
             // 
-            this.c3_test.Enabled = false;
             this.c3_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c3_test.Location = new System.Drawing.Point(464, 112);
             this.c3_test.Name = "c3_test";
@@ -1281,7 +1280,6 @@
             // 
             // c1_test
             // 
-            this.c1_test.Enabled = false;
             this.c1_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c1_test.Location = new System.Drawing.Point(464, 112);
             this.c1_test.Name = "c1_test";
@@ -1498,7 +1496,6 @@
             // 
             // c2_test
             // 
-            this.c2_test.Enabled = false;
             this.c2_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c2_test.Location = new System.Drawing.Point(464, 112);
             this.c2_test.Name = "c2_test";
@@ -1727,7 +1724,6 @@
             // 
             // c6_test
             // 
-            this.c6_test.Enabled = false;
             this.c6_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c6_test.Location = new System.Drawing.Point(464, 112);
             this.c6_test.Name = "c6_test";
@@ -1940,7 +1936,6 @@
             // 
             // c4_test
             // 
-            this.c4_test.Enabled = false;
             this.c4_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c4_test.Location = new System.Drawing.Point(464, 112);
             this.c4_test.Name = "c4_test";
@@ -2152,7 +2147,6 @@
             // 
             // c5_test
             // 
-            this.c5_test.Enabled = false;
             this.c5_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c5_test.Location = new System.Drawing.Point(464, 112);
             this.c5_test.Name = "c5_test";
@@ -2378,7 +2372,6 @@
             // 
             // c9_test
             // 
-            this.c9_test.Enabled = false;
             this.c9_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c9_test.Location = new System.Drawing.Point(464, 112);
             this.c9_test.Name = "c9_test";
@@ -2591,7 +2584,6 @@
             // 
             // c7_test
             // 
-            this.c7_test.Enabled = false;
             this.c7_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c7_test.Location = new System.Drawing.Point(464, 112);
             this.c7_test.Name = "c7_test";
@@ -2803,7 +2795,6 @@
             // 
             // c8_test
             // 
-            this.c8_test.Enabled = false;
             this.c8_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c8_test.Location = new System.Drawing.Point(464, 112);
             this.c8_test.Name = "c8_test";
@@ -3029,7 +3020,6 @@
             // 
             // c12_test
             // 
-            this.c12_test.Enabled = false;
             this.c12_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c12_test.Location = new System.Drawing.Point(464, 112);
             this.c12_test.Name = "c12_test";
@@ -3242,7 +3232,6 @@
             // 
             // c10_test
             // 
-            this.c10_test.Enabled = false;
             this.c10_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c10_test.Location = new System.Drawing.Point(464, 112);
             this.c10_test.Name = "c10_test";
@@ -3454,7 +3443,6 @@
             // 
             // c11_test
             // 
-            this.c11_test.Enabled = false;
             this.c11_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c11_test.Location = new System.Drawing.Point(464, 112);
             this.c11_test.Name = "c11_test";
@@ -3680,7 +3668,6 @@
             // 
             // c15_test
             // 
-            this.c15_test.Enabled = false;
             this.c15_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c15_test.Location = new System.Drawing.Point(464, 112);
             this.c15_test.Name = "c15_test";
@@ -3893,7 +3880,6 @@
             // 
             // c13_test
             // 
-            this.c13_test.Enabled = false;
             this.c13_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c13_test.Location = new System.Drawing.Point(464, 112);
             this.c13_test.Name = "c13_test";
@@ -4107,7 +4093,6 @@
             // 
             // c14_test
             // 
-            this.c14_test.Enabled = false;
             this.c14_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c14_test.Location = new System.Drawing.Point(464, 112);
             this.c14_test.Name = "c14_test";
@@ -4342,7 +4327,6 @@
             // 
             // c16_test
             // 
-            this.c16_test.Enabled = false;
             this.c16_test.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c16_test.Location = new System.Drawing.Point(464, 112);
             this.c16_test.Name = "c16_test";
