@@ -627,7 +627,7 @@ namespace Controller_Design_2
                 led1_light.FillColor = Color.FromArgb(led1_rgb, 0, 0);
                 Thread.Sleep(led1_pulse);
                 led1_light.FillColor = Color.Transparent;
-                Thread.Sleep(led1_delay);
+                Thread.Sleep(led1_pulse);
             }
             led1_light.FillColor = Color.FromArgb(led1_rgb, 0, 0);
         }
@@ -639,7 +639,7 @@ namespace Controller_Design_2
                 led2_light.FillColor = Color.FromArgb(0, led2_rgb, 0);
                 Thread.Sleep(led2_pulse);
                 led2_light.FillColor = Color.Transparent;
-                Thread.Sleep(led2_delay);
+                Thread.Sleep(led2_pulse);
             }
             led2_light.FillColor = Color.FromArgb(0, led2_rgb, 0);
         }
@@ -651,7 +651,7 @@ namespace Controller_Design_2
                 led3_light.FillColor = Color.FromArgb(0, 0, led3_rgb);
                 Thread.Sleep(led3_pulse);
                 led3_light.FillColor = Color.Transparent;
-                Thread.Sleep(led3_delay);
+                Thread.Sleep(led3_pulse);
             }
             led3_light.FillColor = Color.FromArgb(0, 0, led3_rgb);
         }
@@ -663,7 +663,7 @@ namespace Controller_Design_2
                 RGB_light.FillColor = RGB_blink_colour;
                 Thread.Sleep(rgb_pulse);
                 RGB_light.FillColor = Color.Transparent;
-                Thread.Sleep(rgb_delay);
+                Thread.Sleep(rgb_pulse);
             }
             RGB_light.FillColor = RGB_blink_colour;
         }
@@ -2709,7 +2709,7 @@ namespace Controller_Design_2
                             "Strobe Settings\n" +
                             "Users should first select the channel to configure their respective strobe settings. By default, Channel 1 is first selected for the user.\n" +
                             "Pulse > How long the light stays on for.\n" +
-                            "Delay > how long the light stays off for.\n" +
+                            "Delay > How long it takes before the camera snaps.\n" +
                             "Edge > Rising state, Falling state, None. Results are only visible on the device.\n\n" +
 
                             "LED Settings\n" +
