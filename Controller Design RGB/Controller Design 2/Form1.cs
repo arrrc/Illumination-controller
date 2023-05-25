@@ -2609,13 +2609,13 @@ namespace Controller_Design_2
             string g3_addText = displaySettings(g3_setting, "Group 3", "CH7", "CH8", "CH9");
             string g4_addText = displaySettings(g4_setting, "Group 4", "CH10", "CH11", "CH12");
             string g5_addText = displaySettings(g5_setting, "Group 5", "CH13", "CH14", "CH15");
-            string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16] .";
+            string g6_addText = $"\nGroup 6 Settings, [UNGROUPED Red:CH16]";
 
             //uses global list to add data and generate the string to send to the hardware
             config.Clear();
             sendToHardware = "";
 
-            config.Add("MAIN BOARD = " + selectBoard.Text + ".");
+            config.Add("MAIN BOARD = " + selectBoard.Text);
 
             config.Add(g1_addText);
             config.Add(c1_addText);
